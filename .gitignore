@@ -1,0 +1,14 @@
+# Fichiers de configuration
+Config/Db.php
+
+# Dossiers de dépendances
+/vendor/
+/node_modules/
+
+# Fichiers temporaires et logs
+*.log
+*.cache
+
+# Fichiers système
+.DS_Store
+.idea/
