@@ -2,114 +2,92 @@
 
 namespace App\Config;
 
-use App\Controllers\AccueilController;
-use App\Controllers\ErrorController;
+use App\Controllers\HomeController;
 
 class Main
 {
-    /**
-     * Démarre l'application en initialisant la session, gérant les requêtes et contrôlant les routes.
-     */
     public function start()
     {
-        // Démarrage de la session si elle n'est pas déjà active
+        // Démarrage de la session
         if (session_status() === PHP_SESSION_NONE) {
             session_start();
         }
 
-        // Création d'un token CSRF si inexistant pour la sécurité des formulaires
+        // Création de token CSRF s'il n'existe pas déjà
         if (empty($_SESSION['csrf_token'])) {
             $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
         }
 
-        // Gestion du trailing slash dans l'URL pour une cohérence des URLs
+        // Retirer le trailing slash de l'URL si présent
         $uri = $_SERVER['REQUEST_URI'];
+
         if (!empty($uri) && $uri != '/' && $uri[-1] === "/") {
-            $this->redirect(rtrim($uri, '/'));
+            $uri = substr($uri, 0, -1);
+            // Redirection permanente sans le / de fin (301)
+            http_response_code(301);
+            header('Location: ' . $uri);
+            exit();
         }
 
-        // **Condition pour gérer les fichiers statiques directement**
-        // Si l'URI correspond à un fichier dans le dossier public, on le sert directement
+        // ** Nouvelle condition pour gérer les fichiers statiques **
         $filePath = __DIR__ . '/../../public' . $uri;
         if (file_exists($filePath) && is_file($filePath)) {
+            // Le fichier existe, on le sert directement
             header('Content-Type: ' . mime_content_type($filePath));
             readfile($filePath);
             exit();
         }
 
-        // **Vérification et nettoyage CSRF pour les requêtes POST**
+        // Vérification du token CSRF et nettoyage des données POST si la requête est de type POST
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            // Récupération du token CSRF du formulaire ou de l'en-tête pour les requêtes AJAX
+            // Récupérer le token CSRF à partir du corps de la requête (formulaires) ou des en-têtes HTTP (requêtes AJAX)
             $csrfToken = $_POST['csrf_token'] ?? $_SERVER['HTTP_X_CSRF_TOKEN'] ?? '';
-            // Vérification du token CSRF
+            
+            // Appel à la méthode pour vérifier le token CSRF
             $this->checkCsrfToken($csrfToken);
-            // Nettoyage des données POST pour plus de sécurité
+
+            // Nettoyage des données POST pour les requêtes classiques (formulaires)
             $_POST = $this->sanitizeFormData($_POST);
         }
 
-        // Récupération des paramètres d'URL
-        $params = $this->getParams();
+        // Gestion des paramètres d'URL
+        $params = isset($_GET['p']) ? explode('/', $_GET['p']) : [];
 
-        // **Gestion de la route en fonction des paramètres**
+        // Vérifie si des paramètres sont présents dans l'URL
         if (!empty($params[0])) {
-            // Récupération du contrôleur et de la méthode à appeler
-            $controllerName = ucfirst(array_shift($params)) . 'Controller';
-            $controllerClass = '\\App\\Controllers\\' . $controllerName;
+            // Récupération du contrôleur à instancier
+            $controllerName = ucfirst(array_shift($params)) . 'Controller'; // Le nom du contrôleur
+            $controllerClass = '\\App\\Controllers\\' . $controllerName; // Chemin complet vers le contrôleur
 
-            // Vérifie si le contrôleur existe
+            // Vérification si le contrôleur existe
             if (class_exists($controllerClass)) {
-                $controller = new $controllerClass();
+                $controller = new $controllerClass(); // Instanciation du contrôleur
             } else {
-                // Affiche une erreur 404 si le contrôleur n'existe pas
-                $this->error404("Le contrôleur $controllerName n'existe pas.");
-                return;
+                http_response_code(404);
+                echo "Le contrôleur $controllerName n'existe pas.";
+                exit();
             }
 
-            // Récupération de l'action (méthode) par défaut ou depuis l'URL
-            $action = $params[0] ?? 'index';
+            // Récupération du nom de la méthode (action)
+            $action = isset($params[0]) ? array_shift($params) : 'index'; // Méthode par défaut : index
 
-            // Vérifie si la méthode existe dans le contrôleur
+            // Vérification si la méthode existe dans le contrôleur
             if (method_exists($controller, $action)) {
-                call_user_func_array([$controller, $action], array_slice($params, 1));
+                // Appel de la méthode avec les paramètres restants
+                call_user_func_array([$controller, $action], $params);
             } else {
-                // Affiche une erreur 404 si l'action n'existe pas
-                $this->error404("La méthode $action n'existe pas dans le contrôleur $controllerName.");
+                http_response_code(404);
+                echo "La méthode $action n'existe pas dans le contrôleur $controllerName.";
             }
         } else {
-            // Contrôleur par défaut si aucun paramètre dans l'URL
-            $controller = new AccueilController();
+            // Si aucun paramètre dans l'URL, on instancie le contrôleur par défaut (AccueilController)
+            $controller = new HomeController();
             $controller->index();
         }
     }
 
-    /**
-     * Redirige vers une URL sans trailing slash.
-     *
-     * @param string $uri L'URL à rediriger
-     */
-    private function redirect($uri)
-    {
-        http_response_code(301);
-        header('Location: ' . $uri);
-        exit();
-    }
-
-    /**
-     * Récupère les paramètres de l'URL en les éclatant sur "/".
-     *
-     * @return array Les paramètres de l'URL
-     */
-    private function getParams()
-    {
-        return isset($_GET['p']) ? explode('/', $_GET['p']) : [];
-    }
-
-    /**
-     * Vérifie la validité du token CSRF.
-     *
-     * @param string $token Le token CSRF reçu
-     */
-    private function checkCsrfToken($token)
+    // Vérification du token CSRF
+    public function checkCsrfToken($token)
     {
         if (!isset($_SESSION['csrf_token']) || $token !== $_SESSION['csrf_token']) {
             // Token invalide
@@ -119,36 +97,31 @@ class Main
         }
     }
 
-    /**
-     * Nettoie les données des formulaires en supprimant les balises HTML.
-     *
-     * @param array $data Les données du formulaire
-     * @return array Les données nettoyées
-     */
+    // Nettoyage des données POST
     private function sanitizeFormData(array $data)
     {
         $sanitizedData = [];
         foreach ($data as $key => $value) {
+            // Si la valeur est un tableau, on applique récursivement la fonction
             if (is_array($value)) {
-                // Nettoie récursivement les tableaux
                 $sanitizedData[$key] = $this->sanitizeFormData($value);
             } else {
-                // Supprime les balises HTML des chaînes
-                $sanitizedData[$key] = is_string($value) ? strip_tags($value) : $value;
+                // Nettoyage de la valeur
+                if (is_string($value)) {
+                    $sanitizedData[$key] = strip_tags($value);
+                } else {
+                    // On conserve les autres types de données sans les nettoyer
+                    $sanitizedData[$key] = $value;
+                }
             }
         }
         return $sanitizedData;
     }
 
-    /**
-     * Gère les erreurs 404 et affiche un message d'erreur.
-     *
-     * @param string $message Message d'erreur pour affichage
-     */
+    // Gestion des erreurs 404
     private function error404($message)
     {
         http_response_code(404);
-        $controller = new ErrorController();
-        $controller->notFound($message);
+        echo $message;
     }
 }

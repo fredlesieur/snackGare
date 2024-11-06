@@ -1,13 +1,14 @@
 <?php
 
+namespace Tests\Controllers;
 use PHPUnit\Framework\TestCase;
-use App\Controllers\AccueilController;
+use App\Controllers\HomeController;
 
-class AccueilControllerTest extends TestCase
+class HomeControllerTest extends TestCase
 {
     public function testIndex()
     {
-        $controller = new AccueilController();
+        $controller = new HomeController();
         ob_start();
         $controller->index();
         $output = ob_get_clean();

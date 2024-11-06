@@ -47,14 +47,14 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item"><a class="nav-link" href="/">Accueil</a></li>
-                        <li class="nav-item"><a class="nav-link" href="/habitats">Contacts</a></li>
-                        <li class="nav-item"><a class="nav-link" href="/service">Menus</a></li>
-                        <li class="nav-item"><a class="nav-link" href="/contact">Avis</a></li>
-                        <?php if (isset($_SESSION['user_id'])): ?>
+                        <li class="nav-item"><a class="nav-link" href="/contact">Contacts</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/menus">Menus</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/avis">Avis</a></li>
+                        <?php if (isset($_SESSION['id'])): ?>
                             <li class="nav-item"><a class="nav-link" href="/dashboard/index">Tableau de bord <?= $_SESSION['role'] ?></a></li>
-                            <li class="nav-item"><a class="nav-link" href="/connexion/logout">Déconnexion</a></li>
+                            <li class="nav-item"><a class="nav-link" href="/user/logout">Déconnexion</a></li>
                         <?php else: ?>
-                            <li class="nav-item"><a class="nav-link" href="/connexion">Connexion</a></li>
+                            <li class="nav-item"><a class="nav-link" href="/user/showLoginForm">Connexion</a></li>
                         <?php endif; ?>
                     </ul>
                 </div>

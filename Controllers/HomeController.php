@@ -2,7 +2,7 @@
 
 namespace App\Controllers;
 
-class AccueilController extends Controller
+class HomeController extends Controller
 {
     /**
      * Affiche la page d'accueil.
@@ -16,6 +16,6 @@ class AccueilController extends Controller
         ];
 
         // Appelle la méthode render pour charger la vue "accueil"
-        $this->render('accueil', $data);
+        $this->render('home', $data);
     }
 }
