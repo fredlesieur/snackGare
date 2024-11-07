@@ -25,14 +25,21 @@ class HomeController extends Controller
 
     public function index()
     {
-        $page = $this->pageModel->find(1) ?? ['id' => 1, 'title' => 'Accueil'];
+        // Récupérer la page
+        $page = $this->pageModel->find(1); // Assurez-vous que cela renvoie une page valide
+        if (!$page) {
+            // Gérer le cas où la page n'existe pas
+            $page = ['id' => 1, 'title' => 'Accueil']; // Valeurs par défaut
+        }
+    
         $pageId = $page['id'];
-
-        $sections = $this->sectionModel->findByPageId($pageId);
-        $avis = $this->avisModel->getApprovedAvis();
-        $horaires = $this->horaireModel->findByPageId($pageId);
-
-        // Stocker les données pour le test
+    
+        // Assurez-vous que les modèles renvoient des données
+        $sections = $this->sectionModel->findByPageId($pageId) ?? [];
+        $avis = $this->avisModel->getApprovedAvis() ?? [];
+        $horaires = $this->horaireModel->findByPageId($pageId) ?? [];
+    
+        // Stocker les données pour la vue
         $this->data = [
             'title' => 'Accueil',
             'page' => $page,
@@ -40,7 +47,9 @@ class HomeController extends Controller
             'avis' => $avis,
             'horaires' => $horaires,
         ];
-
-        $this->render('home', $this->data); // Passer les données à la vue
+    
+        $this->render('home', $this->data);
     }
+    
+
 }

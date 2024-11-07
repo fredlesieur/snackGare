@@ -8,6 +8,6 @@ class DashboardController extends Controller
     public function index()
     {
         $title = "Tableau de bord";
-        $this->render('dashboard/index', compact('title'));
+        $this->renderDirect('dashboard/index', compact('title'));
     }
 }
