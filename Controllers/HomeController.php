@@ -9,30 +9,38 @@ use App\Models\HoraireModel;
 
 class HomeController extends Controller
 {
+    private $pageModel;
+    private $sectionModel;
+    private $avisModel;
+    private $horaireModel;
+    public $data = [];  // Attribut pour stocker les données
+
+    public function __construct(PageModel $pageModel = null, SectionModel $sectionModel = null, AvisModel $avisModel = null, HoraireModel $horaireModel = null)
+    {
+        $this->pageModel = $pageModel ?? new PageModel();
+        $this->sectionModel = $sectionModel ?? new SectionModel();
+        $this->avisModel = $avisModel ?? new AvisModel();
+        $this->horaireModel = $horaireModel ?? new HoraireModel();
+    }
+
     public function index()
     {
-        // Instanciation des modèles
-        $pageModel = new PageModel();
-        $sectionModel = new SectionModel();
-        $avisModel = new AvisModel();
-        $horaireModel = new HoraireModel();
+        $page = $this->pageModel->find(1) ?? ['id' => 1, 'title' => 'Accueil'];
+        $pageId = $page['id'];
 
-        // Récupération des données de la page d'accueil
-        $page = $pageModel->find(1); // Suppose que l'ID 1 correspond à la page d'accueil
-        $sections = $sectionModel->findByPageId($page['id']);
-        $avis = $avisModel->getApprovedAvis();
-        $horaires = $horaireModel->findByPageId($page['id']);
+        $sections = $this->sectionModel->findByPageId($pageId);
+        $avis = $this->avisModel->getApprovedAvis();
+        $horaires = $this->horaireModel->findByPageId($pageId);
 
-        // Prépare les données à passer à la vue
-        $data = [
+        // Stocker les données pour le test
+        $this->data = [
             'title' => 'Accueil',
             'page' => $page,
             'sections' => $sections,
             'avis' => $avis,
-            'horaires' => $horaires
+            'horaires' => $horaires,
         ];
 
-        // Chargement de la vue
-        $this->render('home', $data);
+        $this->render('home', $this->data); // Passer les données à la vue
     }
 }

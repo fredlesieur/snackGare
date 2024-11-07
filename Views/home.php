@@ -13,12 +13,19 @@
 
 <!-- Affichage des avis -->
 <h2>Vos Avis</h2>
-<?php foreach ($avis as $a): ?>
+<?php foreach ($avis as $item): ?>
     <div class="avis">
-        <p><strong><?= htmlspecialchars($a['nom']) ?></strong> le <?= date('d/m/Y', strtotime($a['dateavis'])) ?></p>
-        <p><?= htmlspecialchars($a['commentaire']) ?></p>
+        <p><strong><?= $item['nom'] ?></strong> 
+            <?php if (isset($item['dateavis']) && $item['dateavis'] !== null): ?>
+                le <?= date('d/m/Y', strtotime($item['dateavis'])) ?>
+            <?php else: ?>
+                <em>Date non spécifiée</em>
+            <?php endif; ?>
+        </p>
+        <p><?= $item['commentaire'] ?></p>
     </div>
 <?php endforeach; ?>
+
 
 <!-- Affichage des horaires -->
 <h2>Horaires</h2>
