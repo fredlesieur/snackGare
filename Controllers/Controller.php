@@ -2,7 +2,7 @@
 
 namespace App\Controllers;
 
-// definir root pour l api et les test unitaires / Remonte deux niveaux depuis Controllers
+
 
 abstract class Controller
 {

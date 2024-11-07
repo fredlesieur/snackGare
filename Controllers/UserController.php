@@ -30,7 +30,7 @@ class UserController extends Controller
                 if ($user && password_verify($password, $user['password'])) {
                     $_SESSION['id'] = $user['id'];
                     $_SESSION['role'] = $user['role'];
-                    header("Location: /dashboard/index"); // Redirection vers le tableau de bord
+                    header("Location: /dashboard/index"); 
                     exit;
                 } else {
                     echo "Nom d'utilisateur ou mot de passe incorrect.";
@@ -44,7 +44,7 @@ class UserController extends Controller
     // Affiche le formulaire d'inscription
     public function showRegisterForm()
     {
-        $this->render('register'); // Assurez-vous d'avoir une vue 'register.php'
+        $this->render('register'); 
     }
 
     // Gère l'enregistrement d'un nouvel utilisateur
@@ -56,7 +56,7 @@ class UserController extends Controller
             $role = $_POST['role'];
 
             $this->userModel->createUser($username, $password, $role);
-            header('Location: /user/showLoginForm'); // Redirection vers la page de connexion après l'inscription
+            header('Location: /user/showLoginForm'); 
             exit;
         }
     }
@@ -66,7 +66,7 @@ class UserController extends Controller
     {
         session_unset();
         session_destroy();
-        header('Location: /'); // Redirection vers la page de connexion
+        header('Location: /'); 
         exit;
     }
 }
