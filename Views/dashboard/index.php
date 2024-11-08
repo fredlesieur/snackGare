@@ -7,5 +7,6 @@
             <?php if ($_SESSION['role'] && $_SESSION['role'] == 'admin'): ?>
                 <li><a class="btn button m-2" href="/user/showRegisterForm">Créer un utilisateur</a></li>
                 <li><a class="btn button m-2" href="/user/listUsers">Liste des utilisateurs</a></li>
+                <li><a class="btn button m-2" href="/contact/createContact">Ajouter un contact</a></li>
             <?php endif; ?>
         </ul>

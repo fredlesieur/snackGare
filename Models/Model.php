@@ -4,6 +4,7 @@ namespace App\Models;
 
 use App\Config\Db;
 
+
 class Model extends Db
 {
     protected $table = 'test_table';
@@ -12,7 +13,7 @@ class Model extends Db
     protected $db;
 
 
-    
+
     public function __construct($pdo = null)
     {
         $this->db = $pdo ?? Db::getInstance();
@@ -81,46 +82,51 @@ class Model extends Db
 
 
     public function update(int $id)
-{
-    $champs = [];
-    $valeurs = [];
+    {
+        $champs = [];
+        $valeurs = [];
 
-    // On boucle pour éclater le tableau
-    foreach ($this as $champ => $valeur) {
-        if ($valeur != null && $champ != 'db' && $champ != 'table') {
-            $champs[] = "$champ = ?";
-            $valeurs[] = $valeur;
+        // On boucle pour éclater le tableau
+        foreach ($this as $champ => $valeur) {
+            if ($valeur != null && $champ != 'db' && $champ != 'table') {
+                $champs[] = "$champ = ?";
+                $valeurs[] = $valeur;
+            }
         }
+        $valeurs[] = $id;
+
+        // On transforme le tableau champ en une chaîne de caractères
+        $liste_champs = implode(', ', $champs);
+
+        // On exécute la requête
+        $query = $this->req('UPDATE ' . $this->table . ' SET ' . $liste_champs . ' WHERE id = ?', $valeurs);
+
+        return $query->rowCount() > 0;
     }
-    $valeurs[] = $id;
-
-    // On transforme le tableau champ en une chaîne de caractères
-    $liste_champs = implode(', ', $champs);
-
-    // On exécute la requête
-    $query = $this->req('UPDATE ' . $this->table . ' SET ' . $liste_champs . ' WHERE id = ?', $valeurs);
-
-    return $query->rowCount() > 0;
-}
 
 
 
-public function delete(int $id)
-{
-    $query = $this->req("DELETE FROM {$this->table} WHERE id = ?", [$id]);
-    return $query->rowCount() > 0;
-}
+    public function delete(int $id)
+    {
+        $query = $this->req("DELETE FROM {$this->table} WHERE id = ?", [$id]);
+        return $query->rowCount() > 0;
+    }
 
 
 
     public function req(string $sql, array $attributs = null)
     {
-        if ($attributs !== null) {
-            $query = $this->db->prepare($sql);
-            $query->execute($attributs);
+        try {
+            if ($attributs !== null) {
+                $query = $this->db->prepare($sql);
+                $query->execute($attributs);
+            } else {
+                $query = $this->db->query($sql);
+            }
             return $query;
-        } else {
-            return $this->db->query($sql);
+        } catch (\PDOException $e) {
+            error_log("Erreur lors de l'exécution de la requête : " . $e->getMessage());
+            return false;
         }
     }
 
