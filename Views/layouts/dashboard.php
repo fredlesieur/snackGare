@@ -1,3 +1,6 @@
+<!DOCTYPE html>
+<html lang="fr">
+
 <head>
     <!-- Meta tags -->
     <meta charset="UTF-8">
@@ -28,14 +31,47 @@
     <link rel="stylesheet" href="/assets/css/dashboard.css">
 
     <title> Snack de la Gare</title>
-
-    <!-- Scripts JavaScript -->
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous" defer></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous" defer></script>
-
-<!-- jQuery et DataTables -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
-<script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js" defer></script>
-<script src="https://cdn.datatables.net/responsive/2.2.9/js/dataTables.responsive.min.js" defer></script>
-
 </head>
+
+<body>
+    <!-- Navigation du tableau de bord -->
+    <nav class="dashboard-nav">
+        <div class="dashboard-header">
+            <img class="logo" src="/assets/logo/logo_snack.png" alt="Logo">
+        </div>
+        <a href="/user/logout" class="logout">Déconnexion</a>
+    </nav>
+
+    <!-- Conteneur principal -->
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <ul>
+                <li><a href="/dashboard/index" class="btn-link">Accueil</a></li>
+                <li><a href="/user/showRegisterForm" class="btn-link">Créer un utilisateur</a></li>
+                <li><a href="/user/list" class="btn-link">Lister les utilisateurs</a></li>
+                <li><a href="/page/create" class="btn-link">Créer une page</a></li>
+                <li><a href="/page/list" class="btn-link">Lister les pages</a></li>
+            </ul>
+        </aside>
+        <main class="content">
+            <?= $content ?? '' ?>
+        </main>
+    </div>
+  <!-- Scripts JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+
+    <!-- jQuery et DataTables -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/responsive/2.2.9/js/dataTables.responsive.min.js"></script>
+
+    <?php if (isset($script)) {
+        echo $script;
+    } ?>
+</body>
+
+</html>
+
+
+

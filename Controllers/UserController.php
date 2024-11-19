@@ -4,6 +4,7 @@ namespace App\Controllers;
 
 use App\Models\UserModel;
 
+
 class UserController extends Controller
 {
     private $userModel;
@@ -16,7 +17,7 @@ class UserController extends Controller
     // Affiche le formulaire de connexion
     public function showLoginForm()
     {
-        $this->renderDirect('login'); 
+        $this->render('login'); 
     }
     // Gère la connexion d'un utilisateur
     public function login()
@@ -44,19 +45,33 @@ class UserController extends Controller
     // Affiche le formulaire d'inscription
     public function showRegisterForm()
     {
-        $this->renderDirect("dashboard/register"); 
+        // Utilise la méthode renderDashboard pour charger la vue
+        $this->render('dashboard/register', ['title' => 'Créer un utilisateur'],true);
     }
-
     // Gère l'enregistrement d'un nouvel utilisateur
-    public function register()
+   public function register()
     {
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            $username = $_POST['username'];
-            $password = $_POST['password'];
-            $role = $_POST['role'];
+            $username = $_POST['username'] ?? '';
+            $password = $_POST['password'] ?? '';
+            $role = $_POST['role'] ?? '';
 
-            $this->userModel->createUser($username, $password, $role);
-            header('Location: /user/showLoginForm'); 
+            if (!empty($username) && !empty($password) && !empty($role)) {
+                // Vérifiez si l'utilisateur existe déjà
+                $existingUser = $this->userModel->findUserByUsername($username);
+                if ($existingUser) {
+                    $_SESSION['flash_error'] = "Un utilisateur avec ce nom existe déjà.";
+                } else {
+                    // Créez l'utilisateur
+                    $this->userModel->createUser($username, $password, $role);
+                    $_SESSION['flash_success'] = "Utilisateur créé avec succès.";
+                }
+            } else {
+                $_SESSION['flash_error'] = "Tous les champs sont requis.";
+            }
+
+            // Redirigez vers le formulaire d'inscription
+            header('Location: /user/showRegisterForm');
             exit;
         }
     }
