@@ -3,6 +3,7 @@
 namespace App\Config;
 
 use App\Controllers\HomeController;
+use App\Controllers\DashboardController;
 
 class Main
 {
@@ -84,8 +85,14 @@ class Main
             $controller = new HomeController();
             $controller->index();
         }
+    
+    if (in_array($uri, ['/dashboard', '/user'])) {
+        // Ici, on veut rendre directement la vue sans passer par default.php
+        $controller = new DashboardController(); // Exemple pour le tableau de bord
+        $controller->index();
+        exit(); // Terminer le script après avoir rendu la vue
     }
-
+}
     // Vérification du token CSRF
     public function checkCsrfToken($token)
     {

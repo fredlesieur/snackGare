@@ -34,66 +34,89 @@
 </head>
 
 <body class="container-fluid p-3">
-    <header>
-        <!-- navbar -->
-        <nav class="navbar navbar-expand-xl bg-light shadow-sm">
-            <div class="container-fluid">
-                <a href="/" class="navbar-brand">
-                    <img class="logo" src="" alt="logo">
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link" href="/">Accueil</a></li>
-                        <li class="nav-item"><a class="nav-link" href="/contact">Contacts</a></li>
-                        <li class="nav-item"><a class="nav-link" href="/menus">Menus</a></li>
-                        <li class="nav-item"><a class="nav-link" href="/avis">Avis</a></li>
-                        <?php if (isset($_SESSION['id'])): ?>
-                            <li class="nav-item"><a class="nav-link" href="/dashboard/index">Tableau de bord <?= $_SESSION['role'] ?></a></li>
-                            <li class="nav-item"><a class="nav-link" href="/user/logout">Déconnexion</a></li>
-                        <?php else: ?>
-                            <li class="nav-item"><a class="nav-link" href="/user/showLoginForm">Connexion</a></li>
-                        <?php endif; ?>
-                    </ul>
-                </div>
+    <nav class="navbar navbar-expand-xl">
+        <div class="container-fluid">
+            <a href="/" class="navbar-brand">
+                <img class="logo" src="/assets/logo/logo_snack.png" alt="Snack de la Gare logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="/">Accueil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/contact">Contacts</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/menus">Menus</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/avis">Avis</a></li>
+                    <?php if (isset($_SESSION['id'])): ?>
+                        <li class="nav-item"><a class="nav-link" href="/dashboard/index">Tableau de bord</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/user/logout">Déconnexion</a></li>
+                    <?php else: ?>
+                        <li class="nav-item"><a class="nav-link" href="/user/showLoginForm">Connexion</a></li>
+                    <?php endif; ?>
+                </ul>
             </div>
-        </nav>
+        </div>
+    </nav>
+    <div class="image-container">
+        <img class="burger-image" src="/assets/logo/burger.webp" alt="Burger">
+        <div class="command-text">
+            <h2 class="size">Commander</h2>
+            <div class="phone-container">
+                <i class="fa-solid fa-phone-volume phone-icon" aria-hidden="true"></i>
+                <span class="size2">04 76 38 59 22</span>
+            </div>
+        </div>
+    </div>
+
     </header>
 
     <main id="main-page" class="w-auto mt-4">
         <?= $content ?>
     </main>
-<!-- footer -->
-    <footer class="bg-dark text-light text-center py-3">
-        <div class="footer">
-            <div class="d-flex justify-content-between align-items-center first-line mb-3">
-                <a href="/"><img src="/assets/logo/logo.jpg" alt="Logo Zoo" class="logo"></a>
-                <div>
-                    <a href="https://instagram.com" target="_blank" class="text-light mx-2" aria-label="Suivez-nous sur Instagram">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a href="https://facebook.com" target="_blank" class="text-light mx-2" aria-label="Suivez-nous sur Facebook">
-                        <i class="fab fa-facebook"></i>
-                    </a>
-                    <a href="https://twitter.com" target="_blank" class="text-light mx-2" aria-label="Suivez-nous sur Twitter">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                    <a href="https://youtube.com" target="_blank" class="text-light mx-2" aria-label="Regardez nos vidéos sur YouTube">
-                        <i class="fab fa-youtube"></i>
-                    </a>
-                </div>
-            </div>
-
-            <div class="second-line">
-                <p class="mb-0 text-white">&copy; - Snack de la gare 2024 - Lesieur Frédéric -</p>
-                <a href="/footer/mentionsLegales" class="text-light m-1">Mentions légales</a>
-                <a href="/footer/rgpd" class="text-light m-1"> RGPD</a>
-                <a href="/footer/cgu" class="text-light m-1">CGU</a>
-            </div>
+    <!-- footer -->
+    <footer class="footer">
+        <!-- Liens réseaux sociaux -->
+        <div class="social-icons ">
+            <a href="https://www.facebook.com" target="_blank" aria-label="Facebook">
+                <i class="fab fa-facebook"></i>
+            </a>
+            <a href="https://www.instagram.com" target="_blank" aria-label="Instagram">
+                <i class="fab fa-instagram p-3"></i>
+            </a>
+            <a href="https://www.twitter.com" target="_blank" aria-label="Twitter">
+                <i class="fab fa-twitter"></i>
+            </a>
         </div>
+
+        <!-- Horaires d'ouverture -->
+        <p class="hours">
+            Ouvert du lundi au vendredi <br>
+            de 11h30 à 13h30 <br>
+            et de 18h30 à 21h30 <br>
+            le dimanche de 18h30 à 21h30
+        </p>
+
+        <!-- Adresse et numéro de téléphone -->
+        <p class="address">
+            95 route de St Lattier<br>
+            38840 St Hilaire du Rosier<br>
+            <a href="tel:0476385922">04 76 38 59 22</a>
+        </p>
+
+        <!-- Liens légaux -->
+        <div class="legal-links">
+            <a href="/footer/mentionsLegales" class="link">Mentions légales</a> |
+            <a href="/footer/rgpd" class="link">RGPD</a> |
+            <a href="/footer/cgu" class="link">CGU</a>
+        </div>
+
+        <!-- Copyright -->
+        <p class="copyright">
+            &copy; 2024 - Snack de la gare
+        </p>
     </footer>
+
 
     <!-- Scripts JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>

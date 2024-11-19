@@ -23,4 +23,16 @@ abstract class Controller
         // Charger la page de layout default.php avec le contenu de la vue
         require_once ROOT . 'views/default.php';
     }
+
+    public function renderDirect(string $file, array $donnees = []): void
+{
+    // Extraire les données à utiliser dans la vue
+    extract($donnees);
+
+    // Charger le fichier de vue directement
+    require_once ROOT . 'views/' . $file . '.php';
+    
+    // Charger le fichier de head
+    require_once ROOT . 'views/head.php';
+}
 }
