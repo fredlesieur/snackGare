@@ -1,0 +1,221 @@
+/* Style de base */
+* {
+    font-size: 0.9rem; /* Taille de base, ajustable pour tout le design */
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif; 
+    background-color: #0F2C33; 
+    color: #f5f0e1;
+}
+
+/* liens */
+a {
+    color: #f5f0e1 !important;
+    text-decoration: none;
+    }
+a:hover {
+    color:#EFA00F ! important ;
+}
+
+
+
+/* Header */
+header {
+    background-color: #0F2C33;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+}
+.navbar-toggler {
+    border: 2px solid #EFA00F;
+    background-color: transparent;
+}
+.logo {
+    width: 10rem;
+}
+
+.navbar-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 1rem;
+}
+
+.navbar-nav .nav-item .nav-link {
+    color: #f5f0e1;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar-nav .nav-link:hover {
+    text-decoration: underline;
+}
+
+/* Style de l'icône du menu burger */
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='%23EFA00F' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+/* banner */
+.burger-image {
+    width: 100%; /* Image s'ajuste à la largeur du conteneur */
+    height: auto; /* Conserve les proportions de l'image */
+    max-height: 300px; /* Hauteur maximum pour mobile */
+    object-fit: cover; /* Permet de couvrir le conteneur sans déformation */
+}
+
+.command-text {
+    text-align: center; 
+    color: #EFA00F; 
+    margin: 10px 0; 
+}
+
+.size {
+    font-size: 1.2rem; 
+    font-style: oblique;
+}
+
+.size2 {
+    font-size: 2rem; 
+}
+
+.phone-container {
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    color: #EFA00F; /
+    
+}
+.phone-icon {
+    transform: rotate(-45deg); 
+    transition: transform 0.3s ease;
+}
+.phone-container i {
+    margin-right: 1rem; 
+    font-size: 2rem; 
+}
+
+/* Footer */
+footer {
+    background-color: #0F2C33;
+    text-align: center;
+    padding: 1.5rem 1rem;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.footer-content a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer-content a:hover {
+    text-decoration: underline;
+}
+
+.footer-content .social-icons {
+    display: flex;
+}
+.fab {
+    font-size: 1.8rem;
+    color: #2e9ca0;
+}
+
+.footer-bottom {
+    font-size: 0.875rem;
+    color: #ffffff;
+    margin-top: 1rem;
+}
+
+/* Media Queries */
+@media (min-width: 768px) {
+    * {
+        font-size: 1.2rem; 
+    }
+    .logo {
+        width: 18rem; /* Taille pour les tablettes */
+    }
+
+    .navbar-nav {
+        gap: 2rem;
+    }
+
+    footer {
+        padding: 2rem;
+    }
+   /*banner*/
+   .burger-image {
+    max-height: 400px; /* Ajuster la hauteur pour les tablettes */
+}
+
+.command-text {
+    font-size: 6rem; /* Taille de police pour tablette */
+}
+
+.size {
+    font-size: 2.5rem; /* Taille du texte pour tablette */
+}
+
+.size2 {
+    font-size: 5rem; /* Taille du texte pour tablette */
+}
+
+.phone-container i {
+    font-size: 5rem; /* Ajustez la taille de l'icône pour tablette */
+    margin-right: 2rem; 
+}
+} 
+
+
+@media (min-width: 1200px) {
+
+    * {
+        font-size: 1.5rem; 
+    }
+    .logo {
+        width: 30rem;
+    }
+    .navbar-nav .nav-item .nav-link {
+        font-size: 1.2rem; 
+    }
+    .footer-content {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    /*banner*/
+    .burger-image {
+        max-height: 500px; 
+    }
+
+
+/*commander*/
+    .size {
+        font-size: 4rem;
+    }
+/* telephone*/
+    .size2 {
+        font-size: 7rem;
+    }
+
+    .phone-container i {
+        font-size: 8rem; 
+        margin-right: 3rem;
+    }
+}
