@@ -4,17 +4,22 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
 use App\Config\Main;
+use Dotenv\Dotenv;
 
-// Définir la constante ROOT pour la racine du projet
 define('ROOT', dirname(__DIR__) . '/');
 
-// Inclure l'autoloader de l'application
-require_once ROOT . 'Autoloader.php';
-App\Autoloader::register();
+// Chargement de l'autoloader de Composer
+require_once ROOT . 'vendor/autoload.php';
 
-// Inclure l'autoloader de Composer
-require_once ROOT . '/vendor/autoload.php';
+// Charger les variables d'environnement
+if (file_exists(ROOT . '.env')) {
+    $dotenv = Dotenv::createImmutable(ROOT);
+    $dotenv->load();
+} else {
+    die("Le fichier .env est introuvable.");
+}
 
-// Démarrer l'application
-$app = new Main;
+// Initialiser et démarrer l'application
+$app = new Main();
 $app->start();
+

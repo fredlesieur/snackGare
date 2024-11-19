@@ -14,14 +14,13 @@ class Main
             session_start();
         }
 
-        // Création de token CSRF s'il n'existe pas déjà
+        // Création du token CSRF s'il n'existe pas déjà
         if (empty($_SESSION['csrf_token'])) {
             $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
         }
 
         // Retirer le trailing slash de l'URL si présent
         $uri = $_SERVER['REQUEST_URI'];
-
         if (!empty($uri) && $uri != '/' && $uri[-1] === "/") {
             $uri = substr($uri, 0, -1);
             // Redirection permanente sans le / de fin (301)
@@ -56,43 +55,43 @@ class Main
 
         // Vérifie si des paramètres sont présents dans l'URL
         if (!empty($params[0])) {
-            // Récupération du contrôleur à instancier
-            $controllerName = ucfirst(array_shift($params)) . 'Controller'; // Le nom du contrôleur
-            $controllerClass = '\\App\\Controllers\\' . $controllerName; // Chemin complet vers le contrôleur
-
-            // Vérification si le contrôleur existe
+            // Récupération du contrôleur
+            $controllerName = ucfirst(array_shift($params)) . 'Controller';
+            $controllerClass = '\\App\\Controllers\\' . $controllerName;
+        
             if (class_exists($controllerClass)) {
-                $controller = new $controllerClass(); // Instanciation du contrôleur
+                $controller = new $controllerClass();
             } else {
-                http_response_code(404);
-                echo "Le contrôleur $controllerName n'existe pas.";
+                $this->error404("Le contrôleur $controllerName n'existe pas.");
                 exit();
             }
-
-            // Récupération du nom de la méthode (action)
-            $action = isset($params[0]) ? array_shift($params) : 'index'; // Méthode par défaut : index
-
+        
+            // Récupération de l'action (méthode)
+            $action = isset($params[0]) ? array_shift($params) : 'index';
+        
+            // Vérification si l'utilisateur essaie d'accéder au Dashboard
+            if (strpos(strtolower($controllerName), 'dashboard') !== false) {
+                if (!isset($_SESSION['id'])) {
+                    // Redirige vers la page de connexion si l'utilisateur n'est pas connecté
+                    header('Location: /user/showLoginForm');
+                    exit();
+                }
+            }
+        
             // Vérification si la méthode existe dans le contrôleur
             if (method_exists($controller, $action)) {
-                // Appel de la méthode avec les paramètres restants
                 call_user_func_array([$controller, $action], $params);
             } else {
-                http_response_code(404);
-                echo "La méthode $action n'existe pas dans le contrôleur $controllerName.";
+                $this->error404("La méthode $action n'existe pas dans le contrôleur $controllerName.");
+                exit();
             }
         } else {
-            // Si aucun paramètre dans l'URL, on instancie le contrôleur par défaut (AccueilController)
+            // Contrôleur par défaut
             $controller = new HomeController();
             $controller->index();
         }
-    
-    if (in_array($uri, ['/dashboard', '/user'])) {
-        // Ici, on veut rendre directement la vue sans passer par default.php
-        $controller = new DashboardController(); // Exemple pour le tableau de bord
-        $controller->index();
-        exit(); // Terminer le script après avoir rendu la vue
+        
     }
-}
     // Vérification du token CSRF
     public function checkCsrfToken($token)
     {

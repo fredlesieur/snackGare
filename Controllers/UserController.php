@@ -16,7 +16,7 @@ class UserController extends Controller
     // Affiche le formulaire de connexion
     public function showLoginForm()
     {
-        $this->render('login'); // Assurez-vous d'avoir une vue 'login.php' dans Views
+        $this->renderDirect('login'); 
     }
     // Gère la connexion d'un utilisateur
     public function login()
@@ -44,7 +44,7 @@ class UserController extends Controller
     // Affiche le formulaire d'inscription
     public function showRegisterForm()
     {
-        $this->render('register'); 
+        $this->renderDirect("dashboard/register"); 
     }
 
     // Gère l'enregistrement d'un nouvel utilisateur

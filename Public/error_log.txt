@@ -1,0 +1,2 @@
+2024-11-18 15:23:32 - SQLSTATE[42S02]: Base table or view not found: 1146 Table 'snackgare.contacts' doesn't exist
+2024-11-18 15:28:52 - SQLSTATE[42S02]: Base table or view not found: 1146 Table 'snackgare.contacts' doesn't exist
