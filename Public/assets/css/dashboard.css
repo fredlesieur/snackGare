@@ -1,120 +1,274 @@
-/* Style de base */
+/* ======= Global styles ======= */
 * {
-    font-size: 0.9rem;
     box-sizing: border-box;
-    text-decoration: none;
-    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 body {
     margin: 0;
-    font-family: Arial, sans-serif; 
-    background-color: #0F2C33; 
+    font-family: Arial, sans-serif;
+    background-color: #0F2C33;
     color: #f5f0e1;
+    height: 100%;
+    overflow-x: hidden; /* Évite le scroll horizontal */
 }
 
-/* Liens */
-a {
-    color: #f5f0e1;
-    text-decoration: none;
-}
-a:hover {
-    color: #EFA00F;
-}
-
-/* Boutons */
-.button, .btn {
-    background-color: #f5d6b3;
-    color: #0F2C33;
-    border: 2px solid #2e9ca0;
-    border-radius: 10px;
-    padding: 8px;
-    transition: background-color 0.3s, color 0.3s;
-    width: 30rem;
-    font-size: 2rem;
+/* ======= Navbar styles ======= */
+/* Barre de navigation en haut du tableau de bord */
+.dashboard-nav {
+    background-color: #0F2C33; /* Même couleur que le fond */
+    padding: 1rem;
+    display: flex;
+    flex-direction: column; /* Permet de mettre logo et bouton sur 2 lignes */
+    align-items: center;
+    color: #EFA00F; /* Couleur dorée pour le texte et éléments */
+    height: auto; /* Ajuste automatiquement la hauteur */
 }
 
-.button:hover, .btn:hover {
-    background-color: #2e9ca0;
-    color: #f5d6b3;
-    border: 2px solid #0F2C33;
-    box-shadow: 5px 2px 10px #FAF4ED;
+.dashboard-nav .dashboard-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem; /* Espacement entre le logo et le texte */
+    width: 100%; /* S'étend sur toute la largeur */
+    justify-content: space-between; /* Sépare logo et bouton de déconnexion */
 }
 
-/* Notifications */
-.success {
-    background-color: #7AA95C;
-    color: white;
-    border: solid 2px rgba(53,35,2,1);
-    box-shadow: 5px 2px 10px #7aa80b;
-    border-radius: 10px;
-    padding: 10px;
-    width: 5rem;
+.dashboard-nav img.logo {
+    height: 50px; /* Hauteur fixe du logo */
 }
 
-.danger {
-    background-color: #9e2f07;
-    color: white;
-    border: solid 2px rgba(53,35,2,1);
-    box-shadow: 5px 2px 10px #621e05;
-    border-radius: 10px;
-    padding: 10px;
-    width: 6rem;
+.dashboard-nav h1 {
+    margin: 0;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #EFA00F; /* Texte doré */
+    line-height: 70px; /* Alignement vertical */
 }
 
-.warning {
-    background-color: rgb(146, 109, 38) !important;
-    color: white;
-    border: solid 2px rgba(53,35,2,1);
-    box-shadow: 5px 2px 10px #b47705;
-    border-radius: 10px;
-    padding: 10px;
-    width: 6rem;
+.dashboard-nav .logout {
+    color: #0F2C33; /* Texte clair */
+    background-color: #EFA00F; /* Fond doré */
+    padding: 0.5rem 1rem; /* Espacement interne */
+    border-radius: 5px; /* Coins arrondis */
+    text-decoration: none; /* Supprime le soulignement */
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap; /* Empêche le texte de passer à la ligne */
+    width: auto; /* S'adapte au contenu */
+    flex-shrink: 0; /* Empêche le bouton de se réduire */
 }
 
-/* Dashboard */
+.dashboard-nav .logout:hover {
+    background-color:  #2b8991; /* Fond clair au survol */
+    color: #fff; /* Texte foncé au survol */
+    transition: 0.3s; /* Transition douce */
+}
+
+/* ======= Dashboard layout ======= */
+/* Structure principale du tableau de bord */
 .dashboard-container {
     display: flex;
-    height: 100vh;
+    flex-direction: column; /* Affichage vertical par défaut */
+    height: auto; /* Ajuste automatiquement la hauteur */
 }
 
-/* Menu latéral */
 .sidebar {
-    width: 250px;
-    background-color: #2e9ca0; /* Couleur du menu latéral */
-    color: #f5f0e1;
-    padding: 20px 10px;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Pleine largeur pour mobile */
+    background-color: #0F2C33; /* Même couleur que le fond */
+    padding: 1rem;
+    overflow-y: auto; /* Ajout d'un défilement vertical si nécessaire */
 }
 
 .sidebar ul {
-    list-style-type: none;
     padding: 0;
+    margin: 0;
+    list-style: none; /* Supprime les puces des listes */
+    display: flex;
+    flex-direction: column; /* Affichage en colonne par défaut */
+    gap: 1rem; /* Espacement entre les boutons */
 }
 
 .sidebar ul li {
-    margin: 15px 0;
+    width: 100%;
 }
 
 .sidebar ul li a {
-    text-decoration: none;
-    color: #f5f0e1;
-    font-weight: bold;
+    background-color: #2e9ca0; /* Bleu ciel des boutons */
+    color: #f5f0e1; /* Texte clair */
+    text-decoration: none; /* Supprime le soulignement */
+    font-size: 1rem; /* Taille du texte */
+    padding: 0.8rem; /* Espacement interne */
+    border-radius: 5px; /* Coins arrondis */
     display: block;
-    padding: 10px;
-    border-radius: 5px;
-    transition: background 0.3s;
+    text-align: center; /* Centrage du texte */
 }
 
 .sidebar ul li a:hover {
-    background-color: #34495e;
-    color: #EFA00F;
+    background-color: #EFA00F; /* Fond plus foncé au survol */
+    color: #0F2C33; /* Texte plus clair au survol */
 }
 
-/* Contenu principal */
+/* ======= Content area ======= */
+/* Zone principale de contenu */
 .content {
-    flex: 1;
-    padding: 20px;
-    background-color: #0F2C33; /* Même couleur que le fond général */
-    overflow-y: auto;
+    flex-grow: 1; /* Prend tout l'espace disponible */
+    padding: 2rem; /* Espacement interne */
+    color: #f5f0e1; /* Texte clair */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centre verticalement */
+    align-items: center; /* Centre horizontalement */
+    background-color: #0F2C33; /* Couleur uniforme */
 }
+
+/* ======= Responsive styles ======= */
+/* Pour les écrans jusqu'à 767px (mobile) */
+@media (max-width: 767px) {
+    .dashboard-nav {
+        flex-direction: column; /* Logo et bouton sur 2 lignes */
+        align-items: center;
+    }
+
+    .dashboard-nav .dashboard-header {
+        flex-direction: column; /* Passe logo et bouton l'un en dessous de l'autre */
+        align-items: center;
+    }
+
+    .dashboard-nav .logout {
+        margin-top: 10px; /* Ajout d'espacement pour le bouton */
+        width: auto; /* S'adapte au contenu */
+        text-align: center;
+    }
+
+    .sidebar ul {
+        align-items: stretch; /* Étend les boutons pour occuper toute la largeur */
+    }
+
+    .sidebar ul li a {
+        text-align: center;
+        padding: 1rem;
+        width: 100%; /* S'assure que les boutons ne dépassent pas */
+    }
+}
+
+/* Pour les écrans entre 768px et 1023px (tablette) */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .dashboard-container {
+        flex-direction: row; /* Affichage en ligne pour tablette */
+    }
+
+    .sidebar {
+        width: 30%; /* 30% pour tablette */
+    }
+
+    .content {
+        width: 70%; /* Le contenu occupe 70% */
+    }
+
+    .dashboard-nav .logout {
+        margin-left: auto; /* Alignement à droite */
+        position: relative; /* Réglage pour tablette */
+        right: -365px;
+        top: 5px;
+    }
+
+    .sidebar ul {
+        flex-direction: column; /* Colonne conservée sur tablette */
+    }
+
+    .sidebar ul li a {
+        text-align: center;
+        padding: 1rem; /* Espacement plus grand */
+    }
+}
+
+/* Pour les écrans à partir de 1024px (desktop) */
+@media (min-width: 1024px) {
+    .dashboard-nav {
+        justify-content: space-between; /* Espacement entre les éléments */
+    }
+
+    .dashboard-nav .logout {
+        position: absolute; /* Position absolue pour garantir l'alignement */
+        right: 20px; /* Décalage par rapport au bord droit */
+        top: 15px; /* Alignement vertical */
+    }
+
+    .dashboard-container {
+        flex-direction: row; /* Disposition en ligne pour grand écran */
+    }
+
+    .sidebar {
+        width: 250px; /* Largeur fixe pour grand écran */
+        flex-shrink: 0; /* Ne rétrécit pas */
+    }
+
+    .content {
+        flex-grow: 1; /* Prend tout l'espace restant */
+    }
+
+    .sidebar ul {
+        flex-direction: column; /* Les boutons restent en colonne */
+    }
+
+    .sidebar ul li a {
+        text-align: center; /* Centrage du texte */
+        padding: 1rem; /* Espacement uniforme */
+    }
+}
+/* ======= Formulaire de création d'utilisateur ======= */
+form {
+    background-color: #2e9ca0!important;
+    color: #ffffff !important;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+form input,
+form select {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+form .btn-primary {
+    background-color: #0F2C33 !important;
+    border: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form .btn-primary:hover {
+    background-color: #EFA00F!important;
+    color: #0F2C33 !important;
+}
+.alert {
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.alert-success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.alert-danger {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+

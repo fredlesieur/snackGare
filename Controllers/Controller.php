@@ -2,13 +2,18 @@
 
 namespace App\Controllers;
 
-
-
 abstract class Controller
 {
-    public function render(string $file, array $donnees = []): void
+    /**
+     * Méthode pour rendre une vue avec un layout.
+     *
+     * @param string $file Chemin de la vue à charger
+     * @param array $donnees Données à passer à la vue
+     * @param bool $isDashboard Indique si le layout à utiliser est celui du dashboard
+     */
+    public function render(string $file, array $donnees = [], bool $isDashboard = false): void
     {
-        // Extraire les données à utiliser dans la vue
+        // Extraire les données pour la vue
         extract($donnees);
 
         // Démarrer la capture de sortie
@@ -20,19 +25,12 @@ abstract class Controller
         // Récupérer le contenu généré par la vue
         $content = ob_get_clean();
 
-        // Charger la page de layout default.php avec le contenu de la vue
-        require_once ROOT . 'views/default.php';
+        // Charger le layout approprié
+        if ($isDashboard) {
+            require_once ROOT . 'views/layouts/dashboard.php';
+        } else {
+            require_once ROOT . 'views/layouts/default.php';
+        }
     }
-
-    public function renderDirect(string $file, array $donnees = []): void
-{
-    // Extraire les données à utiliser dans la vue
-    extract($donnees);
-
-    // Charger le fichier de vue directement
-    require_once ROOT . 'views/' . $file . '.php';
-    
-    // Charger le fichier de head
-    require_once ROOT . 'views/head.php';
 }
-}
+
