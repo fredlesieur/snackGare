@@ -2,23 +2,23 @@
 
 namespace App\Controllers;
 
-use App\Models\UserModel;
-
+use App\Repositories\UserRepository;
 
 class UserController extends Controller
 {
-    private $userModel;
+    private $userRepository;
 
     public function __construct()
     {
-        $this->userModel = new UserModel();
+        $this->userRepository = new UserRepository();
     }
 
     // Affiche le formulaire de connexion
     public function showLoginForm()
     {
-        $this->render('login'); 
+        $this->render('login');
     }
+
     // Gère la connexion d'un utilisateur
     public function login()
     {
@@ -27,11 +27,11 @@ class UserController extends Controller
             $password = $_POST['password'];
 
             if (!empty($username) && !empty($password)) {
-                $user = $this->userModel->findUserByUsername($username);
+                $user = $this->userRepository->findUserByUsername($username);
                 if ($user && password_verify($password, $user['password'])) {
                     $_SESSION['id'] = $user['id'];
                     $_SESSION['role'] = $user['role'];
-                    header("Location: /dashboard/index"); 
+                    header("Location: /dashboard/index");
                     exit;
                 } else {
                     echo "Nom d'utilisateur ou mot de passe incorrect.";
@@ -45,11 +45,11 @@ class UserController extends Controller
     // Affiche le formulaire d'inscription
     public function showRegisterForm()
     {
-        // Utilise la méthode renderDashboard pour charger la vue
-        $this->render('dashboard/register', ['title' => 'Créer un utilisateur'],true);
+        $this->render('dashboard/register', ['title' => 'Créer un utilisateur'], true);
     }
+
     // Gère l'enregistrement d'un nouvel utilisateur
-   public function register()
+    public function register()
     {
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $username = $_POST['username'] ?? '';
@@ -58,12 +58,12 @@ class UserController extends Controller
 
             if (!empty($username) && !empty($password) && !empty($role)) {
                 // Vérifiez si l'utilisateur existe déjà
-                $existingUser = $this->userModel->findUserByUsername($username);
+                $existingUser = $this->userRepository->findUserByUsername($username);
                 if ($existingUser) {
                     $_SESSION['flash_error'] = "Un utilisateur avec ce nom existe déjà.";
                 } else {
                     // Créez l'utilisateur
-                    $this->userModel->createUser($username, $password, $role);
+                    $this->userRepository->createUser($username, $password, $role);
                     $_SESSION['flash_success'] = "Utilisateur créé avec succès.";
                 }
             } else {
@@ -81,7 +81,7 @@ class UserController extends Controller
     {
         session_unset();
         session_destroy();
-        header('Location: /'); 
+        header('Location: /');
         exit;
     }
 }
