@@ -2,54 +2,56 @@
 
 namespace App\Models;
 
+use App\Models\Model;
+
 class UserModel extends Model
 {
-    private $id;
-    private $username;
-    private $password;
-    private $role;
+    protected $id;
+    protected $username;
+    protected $password;
+    protected $role;
 
     // Getters
-    public function getId(): ?int
+    public function getId()
     {
         return $this->id;
     }
 
-    public function getUsername(): ?string
+    public function getUsername()
     {
         return $this->username;
     }
 
-    public function getPassword(): ?string
+    public function getPassword()
     {
         return $this->password;
     }
 
-    public function getRole(): ?string
+    public function getRole()
     {
         return $this->role;
     }
 
     // Setters
-    public function setId(int $id): self
+    public function setId($id)
     {
         $this->id = $id;
         return $this;
     }
 
-    public function setUsername(string $username): self
+    public function setUsername($username)
     {
         $this->username = $username;
         return $this;
     }
 
-    public function setPassword(string $password): self
+    public function setPassword($password)
     {
         $this->password = $password;
         return $this;
     }
 
-    public function setRole(string $role): self
+    public function setRole($role)
     {
         $this->role = $role;
         return $this;

@@ -2,33 +2,54 @@
 
 namespace App\Repositories;
 
-use App\Config\Db;
+use App\Models\Model;
+use App\Models\UserModel;
 
-class UserRepository
+class UserRepository extends UserModel
 {
-    private $db;
-
-    public function __construct()
-    {
-        $this->db = Db::getInstance();
-    }
+    protected $table = 'utilisateurs';
 
     public function findUserByUsername(string $username): array | false
     {
-        $sql = "SELECT * FROM utilisateurs WHERE username = ?";
-        $stmt = $this->db->prepare($sql);
-        $stmt->execute([$username]);
-        return $stmt->fetch();
+        return $this->findBy(['username' => $username])[0] ?? false;
+    }
+    public function findUserById(int $id): array | false
+{
+    $result = $this->find($id);
+    return $result;
+}
+
+
+    public function createUser(string $username, string $password, string $role): bool
+    {
+        $hashedPassword = password_hash($password, PASSWORD_BCRYPT);
+    
+        $result = $this->req(
+            'INSERT INTO utilisateurs (username, password, role) VALUES (?, ?, ?)',
+            [$username, $hashedPassword, $role]
+        );
+    
+        return $result !== false;
+    }
+     
+
+    public function updateUser(int $id, array $data): bool
+{
+    error_log("Données passées à hydrate dans updateUser : " . print_r($data, true));
+    
+    $this->hydrate($data);
+    return $this->update($id);
+}
+
+
+    public function deleteUser(int $id): bool
+    {
+        return $this->delete($id);
     }
 
-    public function createUser(string $username, string $hashedPassword, string $role): bool
+    public function findAllUsers(): array
     {
-        $sql = "INSERT INTO utilisateurs (username, password, role) VALUES (:username, :password, :role)";
-        $stmt = $this->db->prepare($sql);
-        return $stmt->execute([
-            'username' => $username,
-            'password' => $hashedPassword,
-            'role' => $role,
-        ]);
+        return $this->findAll();
     }
 }
+

@@ -4,6 +4,7 @@ namespace App\Controllers;
 
 use App\Repositories\UserRepository;
 
+
 class UserController extends Controller
 {
     private $userRepository;
@@ -45,7 +46,7 @@ class UserController extends Controller
     // Affiche le formulaire d'inscription
     public function showRegisterForm()
     {
-        $this->render('dashboard/register', ['title' => 'Créer un utilisateur'], true);
+        $this->render('dashboard/users/register', ['title' => 'Créer un utilisateur'], true);
     }
 
     // Gère l'enregistrement d'un nouvel utilisateur
@@ -76,6 +77,70 @@ class UserController extends Controller
         }
     }
 
+    // Affiche la liste des utilisateurs
+    public function list()
+    {
+        $users = $this->userRepository->findAllUsers();
+        $this->render('dashboard/users/list', ['title' => 'Liste des utilisateurs', 'users' => $users], true);
+    }
+
+    // Affiche le formulaire pour modifier un utilisateur
+    public function edit(int $id)
+    {
+        $user = $this->userRepository->findUserById($id);
+        if (!$user) {
+            $_SESSION['flash_error'] = "Utilisateur introuvable.";
+            header('Location: /user/list');
+            exit;
+        }
+
+        $this->render('dashboard/users/edit', ['title' => "Modifier l'utilisateur", 'user' => $user], true);
+    }
+
+    // Met à jour un utilisateur
+    public function update(int $id)
+    {
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            $username = $_POST['username'] ?? null;
+            $role = $_POST['role'] ?? null;
+    
+            if (!empty($username) && !empty($role)) {
+                $data = [
+                    'username' => $username,
+                    'role' => $role,
+                ];
+    
+                $success = $this->userRepository->updateUser($id, $data);
+                if ($success) {
+                    $_SESSION['flash_success'] = "Utilisateur mis à jour avec succès.";
+                } else {
+                    $_SESSION['flash_error'] = "Échec de la mise à jour de l'utilisateur.";
+                }
+            } else {
+                $_SESSION['flash_error'] = "Tous les champs sont requis.";
+            }
+    
+            header('Location: /user/list');
+            exit;
+        }
+    }
+    
+    
+    
+    // Supprime un utilisateur
+    public function delete(int $id)
+    {
+        $success = $this->userRepository->deleteUser($id);
+        if ($success) {
+            $_SESSION['flash_success'] = "Utilisateur supprimé avec succès.";
+        } else {
+            $_SESSION['flash_error'] = "Échec de la suppression de l'utilisateur.";
+        }
+
+        header('Location: /user/list');
+        exit;
+    }
+
     // Déconnecte l'utilisateur
     public function logout()
     {
@@ -84,4 +149,5 @@ class UserController extends Controller
         header('Location: /');
         exit;
     }
+
 }
