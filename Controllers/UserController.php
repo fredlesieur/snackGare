@@ -80,23 +80,24 @@ class UserController extends Controller
     // Affiche la liste des utilisateurs
     public function list()
     {
-        $users = $this->userRepository->findAllUsers();
+        $users = $this->userRepository->findAll(); // Appel à la méthode héritée du BaseRepository
         $this->render('dashboard/users/list', ['title' => 'Liste des utilisateurs', 'users' => $users], true);
     }
+    
 
     // Affiche le formulaire pour modifier un utilisateur
     public function edit(int $id)
     {
-        $user = $this->userRepository->findUserById($id);
+        $user = $this->userRepository->find($id); // Utilise la méthode `find` du `BaseRepository`
         if (!$user) {
             $_SESSION['flash_error'] = "Utilisateur introuvable.";
             header('Location: /user/list');
             exit;
         }
-
+    
         $this->render('dashboard/users/edit', ['title' => "Modifier l'utilisateur", 'user' => $user], true);
     }
-
+    
     // Met à jour un utilisateur
     public function update(int $id)
     {

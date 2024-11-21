@@ -91,11 +91,21 @@
 
         <!-- Horaires d'ouverture -->
         <p class="hours">
-            Ouvert du lundi au vendredi <br>
-            de 11h30 à 13h30 <br>
-            et de 18h30 à 21h30 <br>
-            le dimanche de 18h30 à 21h30
-        </p>
+    <?php if (isset($horaires) && !empty($horaires)): ?>
+        <?php foreach ($horaires as $horaire): ?>
+            <?= htmlspecialchars($horaire['jours']) ?> 
+            <?php if ($horaire['opening_time'] === null || $horaire['closing_time'] === null): ?>
+                Fermé<br>
+            <?php else: ?>
+                 <?= date('H:i', strtotime($horaire['opening_time'])) ?> 
+                 à <?= date('H:i', strtotime($horaire['closing_time'])) ?><br>
+            <?php endif; ?>
+        <?php endforeach; ?>
+    <?php else: ?>
+        <em>Horaires non disponibles</em>
+    <?php endif; ?>
+</p>
+
 
         <!-- Adresse et numéro de téléphone -->
         <p class="address">

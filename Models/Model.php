@@ -148,6 +148,10 @@ public function hydrate(array $donnees)
 }
 
 
+public function setTable(string $table)
+{
+    $this->table = $table;
+}
 
 
    public function uploadImage(array $file, string $directory = 'assets/images/')

@@ -35,13 +35,4 @@
     <p>Aucun avis à afficher.</p>
 <?php endif; ?>
 
-<!-- Affichage des horaires -->
-<h2>Horaires</h2>
-<?php if (isset($horaires) && !empty($horaires)): ?>
-    <?php foreach ($horaires as $horaire): ?>
-        <p><?= htmlspecialchars($horaire['jours']) ?> : de <?= htmlspecialchars($horaire['opening_time']) ?> à <?= htmlspecialchars($horaire['closing_time']) ?></p>
-    <?php endforeach; ?>
-<?php else: ?>
-    <p>Aucun horaire à afficher.</p>
-<?php endif; ?>
 
