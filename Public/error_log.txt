@@ -1,2 +1,112 @@
 2024-11-18 15:23:32 - SQLSTATE[42S02]: Base table or view not found: 1146 Table 'snackgare.contacts' doesn't exist
 2024-11-18 15:28:52 - SQLSTATE[42S02]: Base table or view not found: 1146 Table 'snackgare.contacts' doesn't exist
+2024-11-20 13:05:32 - SQLSTATE[HY000]: General error: 1364 Field 'username' doesn't have a default value
+Array
+(
+    [username] => aaa
+    [role] => admin
+)
+Requête SQL: UPDATE utilisateurs SET  WHERE id = ?
+Valeurs: Array
+(
+    [0] => 14
+)
+
+2024-11-20 14:22:55 - Aucun champ valide pour la mise à jour. Données : App\Repositories\UserRepository Object
+(
+    [table:protected] => utilisateurs
+    [db:protected] => App\config\Db Object
+        (
+        )
+
+)
+
+2024-11-20 14:25:45 - Aucun champ valide pour la mise à jour. Données : App\Repositories\UserRepository Object
+(
+    [table:protected] => utilisateurs
+    [db:protected] => App\config\Db Object
+        (
+        )
+
+)
+
+Données reçues du formulaire : Array
+(
+    [csrf_token] => b8fb5e2139acc7745c5c34b1a69c21f5c06f39b12b1c64851183c633450524db
+    [username] => tests
+    [role] => admin
+)
+Hydrate - État de l'objet : App\Repositories\UserRepository Object
+(
+    [table:protected] => utilisateurs
+    [db:protected] => App\config\Db Object
+        (
+        )
+
+)
+Aucun champ valide pour la mise à jour.Données reçues du formulaire : Array
+(
+    [csrf_token] => b8fb5e2139acc7745c5c34b1a69c21f5c06f39b12b1c64851183c633450524db
+    [username] => tests
+    [role] => admin
+)
+Hydrate - État de l'objet : App\Repositories\UserRepository Object
+(
+    [table:protected] => utilisateurs
+    [db:protected] => App\config\Db Object
+        (
+        )
+
+    [id:protected] => 
+    [username:protected] => tests
+    [password:protected] => 
+    [role:protected] => admin
+)
+Requête SQL : UPDATE utilisateurs SET username = ?, role = ? WHERE id = ?Valeurs : Array
+(
+    [0] => tests
+    [1] => admin
+    [2] => 15
+)
+Données reçues du formulaire : Array
+(
+    [csrf_token] => b8fb5e2139acc7745c5c34b1a69c21f5c06f39b12b1c64851183c633450524db
+    [username] => renaude
+    [role] => admin
+)
+Hydrate - État de l'objet : App\Repositories\UserRepository Object
+(
+    [table:protected] => utilisateurs
+    [db:protected] => App\config\Db Object
+        (
+        )
+
+    [id:protected] => 
+    [username:protected] => renaude
+    [password:protected] => 
+    [role:protected] => admin
+)
+Requête SQL : UPDATE utilisateurs SET username = ?, role = ? WHERE id = ?Valeurs : Array
+(
+    [0] => renaude
+    [1] => admin
+    [2] => 16
+)
+Hydrate - État de l'objet : App\Repositories\UserRepository Object
+(
+    [table:protected] => utilisateurs
+    [db:protected] => App\config\Db Object
+        (
+        )
+
+    [id:protected] => 
+    [username:protected] => aaaa
+    [password:protected] => 
+    [role:protected] => collaborateur
+)
+Requête SQL : UPDATE utilisateurs SET username = ?, role = ? WHERE id = ?Valeurs : Array
+(
+    [0] => aaaa
+    [1] => collaborateur
+    [2] => 17
+)

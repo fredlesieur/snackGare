@@ -16,24 +16,4 @@ class DashboardController extends Controller
     }
     
 
-
-   // Exemple : Affiche la liste des utilisateurs
-   public function listUsers()
-   {
-       $users = []; // Appelle ici ton modèle UserModel si nécessaire
-       $this->render('users/list', [
-           'title' => 'Liste des utilisateurs',
-           'users' => $users,
-       ]);
-   }
-
-   // Exemple : Affiche une autre page comme la gestion des pages
-   public function managePages()
-   {
-       $pages = []; // Appelle ici ton modèle PageModel si nécessaire
-       $this->render('pages/list', [
-           'title' => 'Gestion des pages',
-           'pages' => $pages,
-       ]);
-   } 
 }

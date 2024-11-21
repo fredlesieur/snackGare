@@ -55,26 +55,28 @@ public function create()
     $inter = [];
     $valeurs = [];
 
-    //on boucle pour éclater le tableau
-    foreach($this as $champ => $valeur)
-    {
-        // INSERT INTO annonce (titre, description, prix, ...) VALUES (?, ?, ?)
-        if($valeur != null && $champ != 'db' && $champ != 'table'){
+    foreach ($this as $champ => $valeur) {
+        if ($valeur != null && $champ != 'db' && $champ != 'table') {
             $champs[] = $champ;
             $inter[] = "?";
             $valeurs[] = $valeur;
         }
     }
 
-    // on transforme le tableau champ en une chaîne de caractères
     $liste_champs = implode(', ', $champs);
     $liste_inter = implode(', ', $inter);
 
-    // on exécute la requête
-    return $this->req('INSERT INTO '.$this->table. ' ('. $liste_champs.') VALUES('.$liste_inter.')', $valeurs);
+    // Debug : affichez la requête SQL et les valeurs
+    $query = $this->req('INSERT INTO '.$this->table. ' ('. $liste_champs.') VALUES('.$liste_inter.')', $valeurs);
+    if ($query) {
+        echo "Requête exécutée : INSERT INTO {$this->table} ({$liste_champs}) VALUES({$liste_inter})";
+        var_dump($valeurs);
+    } else {
+        echo "Erreur lors de l'exécution de la requête.";
+    }
+
+    return $query;
 }
-
-
 
 public function update(int $id)
 {
@@ -87,16 +89,30 @@ public function update(int $id)
             $valeurs[] = $valeur;
         }
     }
-    $valeurs[] = $id;
-    $listChamps = implode(', ', $champs);
 
-    return $this->req('UPDATE ' . $this->table . ' SET ' . $listChamps . ' WHERE id = ?', $valeurs);
+    if (empty($champs)) {
+   
+        throw new Exception("Aucun champ valide pour la mise à jour.");
+    }
+
+    $valeurs[] = $id;
+    $listeChamps = implode(', ', $champs);
+
+
+    $query = $this->req("UPDATE {$this->table} SET $listeChamps WHERE id = ?", $valeurs);
+    return $query && $query->rowCount() > 0;
 }
 
 
-public function delete(int $id)
+
+
+
+
+public function delete(int $id): bool
 {
-    return $this->req("DELETE FROM {$this->table} WHERE id = ?", [$id]);
+    $query = $this->req("DELETE FROM {$this->table} WHERE id = ?", [$id]);
+    // Vérifiez si la requête a affecté au moins une ligne
+    return $query->rowCount() > 0;
 }
 
 
@@ -114,28 +130,26 @@ public function req(string $sql, array $attributs = null)
             return $this->db->query($sql);
         }
     } catch (Exception $e) {
-        // Journalisez l'erreur dans un fichier
-        file_put_contents('error_log.txt', date('Y-m-d H:i:s') . ' - ' . $e->getMessage() . "\n", FILE_APPEND);
-        return false; // ou gérez l'erreur comme vous le souhaitez
+        echo "Erreur SQL : " . $e->getMessage();
+        return false;
     }
 }
 
 
-   public function hydrate(array $donnees)
-   {
-    foreach($donnees as $key =>$value){
-        // on récupère le nom du setter correspondant à la clé (Key)
-        //titre -> setTitre
-        $setter = 'set'.ucfirst($key);
-        
-        //on vérifie si le setter existe
-        if(method_exists($this, $setter)){
-            // On appelle le setter
+public function hydrate(array $donnees)
+{
+    foreach ($donnees as $key => $value) {
+        $setter = 'set' . ucfirst($key);
+        if (method_exists($this, $setter)) {
             $this->$setter($value);
         }
     }
     return $this;
-   }
+}
+
+
+
+
    public function uploadImage(array $file, string $directory = 'assets/images/')
    {
        // Vérifie si le fichier a bien été uploadé

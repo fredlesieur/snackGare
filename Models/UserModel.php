@@ -6,22 +6,54 @@ use App\Models\Model;
 
 class UserModel extends Model
 {
-    public function hashPassword($password)
+    protected $id;
+    protected $username;
+    protected $password;
+    protected $role;
+
+    // Getters
+    public function getId()
     {
-        return password_hash($password, PASSWORD_BCRYPT);
+        return $this->id;
     }
 
-    public function createUser($username, $password, $role)
+    public function getUsername()
     {
-        $hashedPassword = $this->hashPassword($password);
-        $query = "INSERT INTO utilisateurs (username, password, role) VALUES (:username, :password, :role)";
-        return $this->req($query, ['username' => $username, 'password' => $hashedPassword, 'role' => $role]);
+        return $this->username;
     }
 
-    public function findUserByUsername($username)
+    public function getPassword()
     {
-        $sql = "SELECT * FROM utilisateurs WHERE username = ?";
-        $stmt = $this->req($sql, [$username]);
-        return $stmt->fetch();
+        return $this->password;
+    }
+
+    public function getRole()
+    {
+        return $this->role;
+    }
+
+    // Setters
+    public function setId($id)
+    {
+        $this->id = $id;
+        return $this;
+    }
+
+    public function setUsername($username)
+    {
+        $this->username = $username;
+        return $this;
+    }
+
+    public function setPassword($password)
+    {
+        $this->password = $password;
+        return $this;
+    }
+
+    public function setRole($role)
+    {
+        $this->role = $role;
+        return $this;
     }
 }

@@ -1,6 +1,7 @@
 # Fichiers de configuration
 Config/Db.php
 .env
+
 # Dossiers de dépendances
 /vendor/
 /node_modules/
@@ -12,3 +13,4 @@ Config/Db.php
 # Fichiers système
 .DS_Store
 .idea/
+
