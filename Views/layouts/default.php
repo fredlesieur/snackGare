@@ -94,27 +94,45 @@
             <a href="https://www.twitter.com" target="_blank" aria-label="Twitter">
                 <i class="fab fa-twitter"></i>
             </a>
-        </div>
+        </div><br>
 
-        <!-- Horaires d'ouverture -->
-        <p class="hours">
-    <?php if (isset($horaires) && !empty($horaires)): ?>
-        <?php foreach ($horaires as $horaire): ?>
-            <?= htmlspecialchars($horaire['jours']) ?> 
-            <?php if ($horaire['opening_time'] === null || $horaire['closing_time'] === null): ?>
-                Fermé<br>
-            <?php else: ?>
-                 <?= date('H:i', strtotime($horaire['opening_time'])) ?> 
-                 à <?= date('H:i', strtotime($horaire['closing_time'])) ?><br>
-            <?php endif; ?>
-        <?php endforeach; ?>
-    <?php else: ?>
-        <em>Horaires non disponibles</em>
-    <?php endif; ?>
-</p>
+
+<!-- Horaires d'ouverture -->
+<h2>Horaires d'ouverture</h2>
+<?php if (isset($horaires) && !empty($horaires)): ?>
+    <?php foreach ($horaires as $horaire): ?>
+        <div>
+            <strong><?= htmlspecialchars($horaire['jours']) ?> :</strong>
+            <?php 
+                // Vérification si l'établissement est fermé le midi et le soir
+                if ($horaire['is_closed_lunch'] == 1 && $horaire['is_closed_dinner'] == 1) {
+                    echo "Fermeture";
+                } else {
+                    // Vérification des horaires du midi
+                    if ($horaire['is_closed_lunch'] == 1) {
+                        echo "Fermé le midi";
+                    } else {
+                        echo "Midi : " . date('H:i', strtotime($horaire['opening_time_lunch'])) . " à " . date('H:i', strtotime($horaire['closing_time_lunch']));
+                    }
+
+                    // Vérification des horaires du soir
+                    if ($horaire['is_closed_dinner'] == 1) {
+                        echo " et Fermé le soir";
+                    } else {
+                        echo " et Soir : " . date('H:i', strtotime($horaire['opening_time_dinner'])) . " à " . date('H:i', strtotime($horaire['closing_time_dinner']));
+                    }
+                }
+            ?>
+        </div>
+    <?php endforeach; ?>
+<?php else: ?>
+    <em>Horaires non disponibles</em>
+<?php endif; ?><br>
+
 
 
         <!-- Adresse et numéro de téléphone -->
+        <h2>Contact</h2>
         <p class="address">
             95 route de St Lattier<br>
             38840 St Hilaire du Rosier<br>

@@ -22,5 +22,3 @@
         <button type="submit" class="btn btn-success">Mettre à jour</button>
     </form>
 </div>
-
-

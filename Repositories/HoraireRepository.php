@@ -6,22 +6,28 @@ class HoraireRepository extends BaseRepository
 {
     protected $table = 'horaires';
 
-    public function findByPageId(int $pageId): array
+    public function createHoraire(array $data): bool
     {
-        return $this->findBy(['page_id' => $pageId]);
+        return $this->create($data);
+    }
+
+    public function updateHoraire(int $id, array $data): bool
+    {
+        return $this->update($id, $data);
+    }
+
+    public function deleteHoraire(int $id): bool
+    {
+        return $this->delete($id);
+    }
+
+    public function findHoraireById(int $id): array | false
+    {
+        return $this->find($id);
     }
 
     public function findAllHoraires(): array
     {
         return $this->findAll();
     }
-    public function update(int $id, array $data): bool
-{
-    $fields = array_keys($data);
-    $placeholders = implode(', ', array_map(fn($field) => "$field = :$field", $fields));
-    $sql = "UPDATE {$this->table} SET $placeholders WHERE id = :id";
-    
-    $data['id'] = $id;
-    return $this->req($sql, $data);
-}
 }

@@ -31,4 +31,5 @@ class UserRepository extends BaseRepository
     {
         return $this->delete($id);
     }
+
 }

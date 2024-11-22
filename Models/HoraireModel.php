@@ -5,13 +5,15 @@ namespace App\Models;
 class HoraireModel extends Model
 {
     protected $id;
-    protected $jour;
+    protected $jours;
     protected $opening_time_lunch;
     protected $closing_time_lunch;
     protected $opening_time_dinner;
     protected $closing_time_dinner;
-    protected $page_id;
-    protected $is_closed;
+    protected $is_closed_lunch;
+    protected $is_closed_dinner;
+    protected $created_at;
+    protected $updated_at;
 
     /**
      * Get the value of id
@@ -36,9 +38,9 @@ class HoraireModel extends Model
     /**
      * Get the value of jour
      */ 
-    public function getJour()
+    public function getJours()
     {
-        return $this->jour;
+        return $this->jours;
     }
 
     /**
@@ -46,34 +48,15 @@ class HoraireModel extends Model
      *
      * @return  self
      */ 
-    public function setJour($jour)
+    public function setJours($jours)
     {
-        $this->jour = $jour;
+        $this->jours = $jours;
 
         return $this;
     }
 
 
-    /**
-     * Get the value of page_id
-     */ 
-    public function getPage_id()
-    {
-        return $this->page_id;
-    }
-
-    /**
-     * Set the value of page_id
-     *
-     * @return  self
-     */ 
-    public function setPage_id($page_id)
-    {
-        $this->page_id = $page_id;
-
-        return $this;
-    }
-
+  
     /**
      * Get the value of opening_time_lunch
      */ 
@@ -154,22 +137,84 @@ class HoraireModel extends Model
         return $this;
     }
 
+  
+
     /**
-     * Get the value of is_closed
+     * Get the value of is_closed_lunch
      */ 
-    public function getIs_closed()
+    public function getIs_closed_lunch()
     {
-        return $this->is_closed;
+        return $this->is_closed_lunch;
     }
 
     /**
-     * Set the value of is_closed
+     * Set the value of is_closed_lunch
      *
      * @return  self
      */ 
-    public function setIs_closed($is_closed)
+    public function setIs_closed_lunch($is_closed_lunch)
     {
-        $this->is_closed = $is_closed;
+        $this->is_closed_lunch = $is_closed_lunch;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of is_closed_dinner
+     */ 
+    public function getIs_closed_dinner()
+    {
+        return $this->is_closed_dinner;
+    }
+
+    /**
+     * Set the value of is_closed_dinner
+     *
+     * @return  self
+     */ 
+    public function setIs_closed_dinner($is_closed_dinner)
+    {
+        $this->is_closed_dinner = $is_closed_dinner;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of created_at
+     */ 
+    public function getCreated_at()
+    {
+        return $this->created_at;
+    }
+
+    /**
+     * Set the value of created_at
+     *
+     * @return  self
+     */ 
+    public function setCreated_at($created_at)
+    {
+        $this->created_at = $created_at;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of updated_at
+     */ 
+    public function getUpdated_at()
+    {
+        return $this->updated_at;
+    }
+
+    /**
+     * Set the value of updated_at
+     *
+     * @return  self
+     */ 
+    public function setUpdated_at($updated_at)
+    {
+        $this->updated_at = $updated_at;
 
         return $this;
     }
