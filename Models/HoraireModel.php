@@ -6,9 +6,12 @@ class HoraireModel extends Model
 {
     protected $id;
     protected $jour;
-    protected $opening_time;
-    protected $closing_time;
+    protected $opening_time_lunch;
+    protected $closing_time_lunch;
+    protected $opening_time_dinner;
+    protected $closing_time_dinner;
     protected $page_id;
+    protected $is_closed;
 
     /**
      * Get the value of id
@@ -50,45 +53,6 @@ class HoraireModel extends Model
         return $this;
     }
 
-    /**
-     * Get the value of opening_time
-     */ 
-    public function getOpening_time()
-    {
-        return $this->opening_time;
-    }
-
-    /**
-     * Set the value of opening_time
-     *
-     * @return  self
-     */ 
-    public function setOpening_time($opening_time)
-    {
-        $this->opening_time = $opening_time;
-
-        return $this;
-    }
-
-    /**
-     * Get the value of closing_time
-     */ 
-    public function getClosing_time()
-    {
-        return $this->closing_time;
-    }
-
-    /**
-     * Set the value of closing_time
-     *
-     * @return  self
-     */ 
-    public function setClosing_time($closing_time)
-    {
-        $this->closing_time = $closing_time;
-
-        return $this;
-    }
 
     /**
      * Get the value of page_id
@@ -106,6 +70,106 @@ class HoraireModel extends Model
     public function setPage_id($page_id)
     {
         $this->page_id = $page_id;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of opening_time_lunch
+     */ 
+    public function getOpening_time_lunch()
+    {
+        return $this->opening_time_lunch;
+    }
+
+    /**
+     * Set the value of opening_time_lunch
+     *
+     * @return  self
+     */ 
+    public function setOpening_time_lunch($opening_time_lunch)
+    {
+        $this->opening_time_lunch = $opening_time_lunch;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of closing_time_lunch
+     */ 
+    public function getClosing_time_lunch()
+    {
+        return $this->closing_time_lunch;
+    }
+
+    /**
+     * Set the value of closing_time_lunch
+     *
+     * @return  self
+     */ 
+    public function setClosing_time_lunch($closing_time_lunch)
+    {
+        $this->closing_time_lunch = $closing_time_lunch;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of opening_time_dinner
+     */ 
+    public function getOpening_time_dinner()
+    {
+        return $this->opening_time_dinner;
+    }
+
+    /**
+     * Set the value of opening_time_dinner
+     *
+     * @return  self
+     */ 
+    public function setOpening_time_dinner($opening_time_dinner)
+    {
+        $this->opening_time_dinner = $opening_time_dinner;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of closing_time_dinner
+     */ 
+    public function getClosing_time_dinner()
+    {
+        return $this->closing_time_dinner;
+    }
+
+    /**
+     * Set the value of closing_time_dinner
+     *
+     * @return  self
+     */ 
+    public function setClosing_time_dinner($closing_time_dinner)
+    {
+        $this->closing_time_dinner = $closing_time_dinner;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of is_closed
+     */ 
+    public function getIs_closed()
+    {
+        return $this->is_closed;
+    }
+
+    /**
+     * Set the value of is_closed
+     *
+     * @return  self
+     */ 
+    public function setIs_closed($is_closed)
+    {
+        $this->is_closed = $is_closed;
 
         return $this;
     }

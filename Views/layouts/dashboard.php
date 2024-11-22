@@ -51,6 +51,9 @@
                 <li><a href="/user/list" class="btn-link">Lister les utilisateurs</a></li>
                 <li><a href="/page/create" class="btn-link">Créer une page</a></li>
                 <li><a href="/page/list" class="btn-link">Lister les pages</a></li>
+                <li><a href="/dashboard/showHoraires" class="btn-link">Lister les horaires</a></li>
+                <li><a href="/dashboard/showHorairesForm" class="btn-link">Ajouter des horaires</a></li>
+
             </ul>
         </aside>
         <main class="content">

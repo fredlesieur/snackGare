@@ -54,21 +54,26 @@ class Main
         $params = isset($_GET['p']) ? explode('/', $_GET['p']) : [];
 
         // Vérifie si des paramètres sont présents dans l'URL
-        if (!empty($params[0])) {
+        if (empty($params[0]) || $params[0] === '/') {
+            // Gérer le slug "/" ou une URL vide comme page d'accueil
+            $controller = new HomeController();
+            $controller->index();
+            return; // Fin de l'exécution pour éviter les erreurs plus bas
+        } elseif (!empty($params[0])) {
             // Récupération du contrôleur
             $controllerName = ucfirst(array_shift($params)) . 'Controller';
             $controllerClass = '\\App\\Controllers\\' . $controllerName;
-        
+
             if (class_exists($controllerClass)) {
                 $controller = new $controllerClass();
             } else {
                 $this->error404("Le contrôleur $controllerName n'existe pas.");
                 exit();
             }
-        
+
             // Récupération de l'action (méthode)
             $action = isset($params[0]) ? array_shift($params) : 'index';
-        
+
             // Vérification si l'utilisateur essaie d'accéder au Dashboard
             if (strpos(strtolower($controllerName), 'dashboard') !== false) {
                 if (!isset($_SESSION['id'])) {
@@ -77,7 +82,7 @@ class Main
                     exit();
                 }
             }
-        
+
             // Vérification si la méthode existe dans le contrôleur
             if (method_exists($controller, $action)) {
                 call_user_func_array([$controller, $action], $params);
@@ -90,8 +95,8 @@ class Main
             $controller = new HomeController();
             $controller->index();
         }
-        
     }
+
     // Vérification du token CSRF
     public function checkCsrfToken($token)
     {

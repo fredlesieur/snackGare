@@ -2,8 +2,17 @@
 
 namespace App\Controllers;
 
+use App\Repositories\PageRepository;
+
 abstract class Controller
 {
+    protected $pageRepository;
+
+    public function __construct()
+    {
+        $this->pageRepository = new PageRepository();
+    }
+
     /**
      * Méthode pour rendre une vue avec un layout.
      *
@@ -13,6 +22,11 @@ abstract class Controller
      */
     public function render(string $file, array $donnees = [], bool $isDashboard = false): void
     {
+        // Charger les pages disponibles pour la navigation
+        if (!array_key_exists('pages', $donnees)) {
+            $donnees['pages'] = $this->pageRepository->findAll();
+        }
+
         // Extraire les données pour la vue
         extract($donnees);
 

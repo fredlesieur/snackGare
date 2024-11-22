@@ -2,6 +2,8 @@
 
 namespace App\Repositories;
 
+use App\Repositories\BaseRepository;
+
 class PageRepository extends BaseRepository
 {
     protected $table = 'pages';
