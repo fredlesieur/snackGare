@@ -10,5 +10,11 @@ class AvisRepository extends BaseRepository
     {
         return $this->findBy(['statut' => 1]);
     }
+
+    public function findAvisById(int $id): array | false
+{
+    return $this->find($id);
+}
+
 }
 

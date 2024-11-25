@@ -12,5 +12,11 @@ class PageRepository extends BaseRepository
     {
         return $this->find($id);
     }
+
+    public function getAllPages(): array
+{
+    return $this->findAll();
+}
+
 }
 

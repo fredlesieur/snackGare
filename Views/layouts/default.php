@@ -29,7 +29,9 @@
 
     <!-- CSS personnalisé -->
     <link rel="stylesheet" href="/assets/css/default.css">
-
+    <?php if (isset($css)) : ?>
+        <link rel="stylesheet" href="<?= htmlspecialchars($css) ?>">
+    <?php endif; ?>
     <title> Snack de la Gare</title>
 </head>
 
@@ -150,8 +152,8 @@
         <p class="copyright">
             &copy; 2024 - Snack de la gare
         </p>
-    </footer>
 
+    </footer>
 
     <!-- Scripts JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>

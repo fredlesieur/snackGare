@@ -3,7 +3,6 @@
 namespace App\Config;
 
 use App\Controllers\HomeController;
-use App\Controllers\DashboardController;
 
 class Main
 {
@@ -30,12 +29,18 @@ class Main
         }
 
         // ** Nouvelle condition pour gérer les fichiers statiques **
-        $filePath = __DIR__ . '/../../public' . $uri;
-        if (file_exists($filePath) && is_file($filePath)) {
+        $filePath = realpath(__DIR__ . '/../../Public' . $uri);
+        if ($filePath && file_exists($filePath) && is_file($filePath)) {
             // Le fichier existe, on le sert directement
-            header('Content-Type: ' . mime_content_type($filePath));
-            readfile($filePath);
-            exit();
+            if (strpos($filePath, realpath(__DIR__ . '/../../Public')) === 0) {
+                header('Content-Type: ' . mime_content_type($filePath));
+                readfile($filePath);
+                exit();
+            } else {
+                http_response_code(403);
+                echo "Accès refusé.";
+                exit();
+            }
         }
 
         // Vérification du token CSRF et nettoyage des données POST si la requête est de type POST

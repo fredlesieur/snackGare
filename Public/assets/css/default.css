@@ -1,6 +1,6 @@
 /* Style de base */
 * {
-    font-size: 0.9rem; /* Taille de base, ajustable pour tout le design */
+    font-size: 0.9rem; /* Taille de base ajustable */
     box-sizing: border-box;
     text-decoration: none;
     list-style: none;
@@ -8,21 +8,21 @@
 
 body {
     margin: 0;
-    font-family: Arial, sans-serif; 
-    background-color: #0F2C33; 
-    color: #f5f0e1;
+    font-family: Arial, sans-serif;
+    background-color: #0F2C33; /* Couleur de fond générale */
+    color: #f5f0e1; /* Couleur de texte par défaut */
+    overflow-x: hidden; /* Empêche le scroll horizontal */
 }
 
-/* liens */
+/* Liens */
 a {
     color: #f5f0e1 !important;
     text-decoration: none;
-    }
-a:hover {
-    color:#EFA00F ! important ;
 }
 
-
+a:hover {
+    color: #EFA00F !important;
+}
 
 /* Header */
 header {
@@ -38,10 +38,12 @@ header {
     display: flex;
     align-items: center;
 }
+
 .navbar-toggler {
     border: 2px solid #EFA00F;
     background-color: transparent;
 }
+
 .logo {
     width: 10rem;
 }
@@ -51,13 +53,15 @@ header {
     padding: 0;
     margin: 0;
     display: flex;
-    gap: 1rem;
+    gap: 0.5rem; /* Réduction de l'espacement entre les liens */
 }
 
 .navbar-nav .nav-item .nav-link {
     color: #f5f0e1;
     text-decoration: none;
     font-weight: bold;
+    font-size: 0.8rem; /* Taille réduite des liens */
+    padding: 0.3rem; /* Réduction des marges internes */
 }
 
 .navbar-nav .nav-link:hover {
@@ -68,50 +72,54 @@ header {
 .navbar-toggler-icon {
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='%23EFA00F' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
-/* banner */
+
+/* Banner */
 .burger-image {
-    width: 100%; /* Image s'ajuste à la largeur du conteneur */
-    height: auto; /* Conserve les proportions de l'image */
-    max-height: 300px; /* Hauteur maximum pour mobile */
-    object-fit: cover; /* Permet de couvrir le conteneur sans déformation */
+    display: block;
+    margin: 0 auto; /* Centre l'image horizontalement */
+    width: 100%; /* Prend la largeur de son conteneur */
+    height: auto; /* Respecte les proportions */
+    object-fit: cover; /* Évite l'étirement */
 }
 
 .command-text {
-    text-align: center; 
-    color: #EFA00F; 
-    margin: 10px 0; 
+    text-align: center;
+    color: #EFA00F;
+    margin: 10px 0;
 }
 
 .size {
-    font-size: 1.2rem; 
-    font-style: oblique;
+    font-size: 2rem; /* Taille par défaut pour mobile */
+    font-weight: bold;
+    text-align: center;
+    margin: 1rem 0;
+    color: #EFA00F;
 }
 
-.size2 {
-    font-size: 2rem; 
-}
-
+/* Téléphone */
 .phone-container {
-    display: flex; 
-    align-items: center; 
-    justify-content: center; 
-    color: #EFA00F; /
-    
+    display: flex;
+    align-items: center; /* Aligner verticalement au centre */
+    justify-content: center; /* Centrer horizontalement */
+    gap: 0.5rem; /* Espacement entre l'icône et le numéro */
+    color: #EFA00F; /* Couleur spécifique */
+    margin-top: 1rem;
 }
-.phone-icon {
-    transform: rotate(-45deg); 
-    transition: transform 0.3s ease;
-}
+
 .phone-container i {
-    margin-right: 1rem; 
-    font-size: 2rem; 
+    font-size: 2.5rem; /* Taille de l'icône pour mobile */
+}
+
+.phone-container span {
+    font-size: 2rem; /* Taille du numéro pour mobile */
+    font-weight: bold;
+    text-align: center;
 }
 
 /* Footer */
 footer {
     background-color: #0F2C33;
     text-align: center;
-    padding: 1.5rem 1rem;
 }
 
 .footer-content {
@@ -133,6 +141,7 @@ footer {
 .footer-content .social-icons {
     display: flex;
 }
+
 .fab {
     font-size: 1.8rem;
     color: #2e9ca0;
@@ -141,81 +150,86 @@ footer {
 .footer-bottom {
     font-size: 0.875rem;
     color: #ffffff;
-    margin-top: 1rem;
+}
+
+/* Footer Border */
+.footer-border .border-decoration {
+    transform: rotate(180deg);
+    position: relative;
+    margin: 0;
+    padding: 0;
+    bottom: 0;
+    width: 100%;
 }
 
 /* Media Queries */
 @media (min-width: 768px) {
-    * {
-        font-size: 1.2rem; 
-    }
     .logo {
-        width: 18rem; /* Taille pour les tablettes */
+        width: 18rem; /* Taille pour tablette */
     }
 
     .navbar-nav {
-        gap: 2rem;
+        gap: 0.8rem; /* Réduction de l'espacement entre les liens */
     }
 
-    footer {
-        padding: 2rem;
+    .navbar-nav .nav-link {
+        font-size: 0.75rem; /* Taille réduite pour tablette */
     }
-   /*banner*/
-   .burger-image {
-    max-height: 400px; /* Ajuster la hauteur pour les tablettes */
-}
 
-.command-text {
-    font-size: 6rem; /* Taille de police pour tablette */
-}
+    .burger-image {
+        max-height: 400px; /* Hauteur ajustée pour tablette */
+    }
 
-.size {
-    font-size: 2.5rem; /* Taille du texte pour tablette */
-}
+    .command-text {
+        font-size: 3rem; /* Taille de police pour tablette */
+    }
 
-.size2 {
-    font-size: 5rem; /* Taille du texte pour tablette */
-}
+    .size {
+        font-size: 2.5rem; /* Taille ajustée pour tablette */
+    }
 
-.phone-container i {
-    font-size: 5rem; /* Ajustez la taille de l'icône pour tablette */
-    margin-right: 2rem; 
-}
-} 
+    .phone-container {
+        flex-direction: row; /* Aligner l'icône et le numéro horizontalement */
+        justify-content: center;
+        gap: 1rem; /* Espacement augmenté */
+    }
 
+    .phone-container i {
+        font-size: 4rem; /* Taille de l'icône pour tablette */
+    }
+
+    .phone-container span {
+        font-size: 3rem; /* Taille du numéro pour tablette */
+    }
+}
 
 @media (min-width: 1200px) {
-
-    * {
-        font-size: 1.5rem; 
-    }
     .logo {
-        width: 30rem;
+        width: 30rem; /* Taille pour desktop large */
     }
+
     .navbar-nav .nav-item .nav-link {
-        font-size: 1.2rem; 
+        font-size: 0.7rem; /* Taille encore réduite pour desktop large */
     }
+
     .footer-content {
         flex-direction: row;
         justify-content: space-between;
     }
-    /*banner*/
+
     .burger-image {
-        max-height: 500px; 
+        max-height: 500px; /* Hauteur ajustée pour desktop large */
     }
 
-
-/*commander*/
     .size {
-        font-size: 4rem;
+        font-size: 3rem; /* Taille ajustée pour desktop large */
     }
-/* telephone*/
-    .size2 {
-        font-size: 7rem;
+
+    .phone-container span {
+        font-size: 4.5rem; /* Taille maximale du numéro */
     }
 
     .phone-container i {
-        font-size: 8rem; 
-        margin-right: 3rem;
+        font-size: 5rem; /* Taille maximale de l'icône */
     }
 }
