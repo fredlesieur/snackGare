@@ -2,7 +2,9 @@
 
 namespace App\Models;
 
-class ContactModel extends Model
+use App\Repositories\BaseRepository;
+
+class ContactModel extends BaseRepository
 {
     protected $table = 'contact';
 

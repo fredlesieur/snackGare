@@ -2,7 +2,9 @@
 
 namespace App\Models;
 
-class AvisModel extends Model
+use App\Repositories\BaseRepository;
+
+class AvisModel extends BaseRepository
 {
     protected $id;
     protected $nom;

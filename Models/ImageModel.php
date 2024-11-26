@@ -2,7 +2,9 @@
 
 namespace App\Models;
 
-class ImageModel extends Model
+use App\Repositories\BaseRepository;
+
+class ImageModel extends BaseRepository
 {
     protected $id;
     protected $url;

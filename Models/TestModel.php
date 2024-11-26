@@ -2,9 +2,9 @@
 
 namespace App\Models;
 
-use App\Models\Model;
+use App\Repositories\BaseRepository;
 
-class TestModel extends Model
+class TestModel extends BaseRepository
 {
     public function __construct($pdo)
     {

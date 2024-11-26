@@ -2,7 +2,7 @@
 
 namespace App\Controllers;
 
-use App\Config\CloudinaryService;
+use App\Services\CloudinaryService;
 use App\Models\ContactModel;
 
 class ContactController extends Controller

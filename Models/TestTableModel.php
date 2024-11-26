@@ -2,7 +2,9 @@
 
 namespace App\Models;
 
-class TestTableModel extends Model
+use App\Repositories\BaseRepository;
+
+class TestTableModel extends BaseRepository
 {
     protected $table = 'test_table';
     

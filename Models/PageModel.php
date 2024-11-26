@@ -2,7 +2,9 @@
 
 namespace App\Models;
 
-class PageModel extends Model
+use App\Repositories\BaseRepository;
+
+class PageModel extends BaseRepository
 {
     protected $id;
     protected $tittle;

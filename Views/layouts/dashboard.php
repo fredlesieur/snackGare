@@ -51,6 +51,8 @@
                 <li><a href="/user/list" class="btn-link">Lister les utilisateurs</a></li>
                 <li><a href="/horaire/list" class="btn-link">Lister les horaires</a></li>
                 <li><a href="/horaire/showAddForm" class="btn-link">Ajouter un horaire</a></li>
+                <li><a href="/section/list">Liste des Sections</a></li>
+                <li><a href="/section/add">Ajouter une Section</a></li>
             </ul>
 
         </aside>

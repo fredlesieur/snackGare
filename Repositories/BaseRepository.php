@@ -13,10 +13,17 @@ class BaseRepository
     {
         $this->db = Db::getInstance();
     }
-
+    protected function ensureTableIsSet(): void
+    {
+        if (empty($this->table)) {
+            throw new \Exception("La propriété \$table n'est pas définie dans le repository.");
+        }
+    }
     // Méthode pour exécuter une requête avec ou sans paramètres
     protected function req(string $sql, array $attributs = null)
     {
+        $this->ensureTableIsSet(); // Vérifie que $table est défini
+    
         try {
             if ($attributs !== null) {
                 $query = $this->db->prepare($sql);
@@ -30,6 +37,7 @@ class BaseRepository
             return false;
         }
     }
+    
 
     // Méthode pour hydrater un objet avec un tableau de données
     public function hydrate(array $donnees)

@@ -2,7 +2,9 @@
 
 namespace App\Models;
 
-class HoraireModel extends Model
+use App\Repositories\BaseRepository;
+
+class HoraireModel extends BaseRepository
 {
     protected $id;
     protected $jours;

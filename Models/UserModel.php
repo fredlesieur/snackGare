@@ -2,9 +2,10 @@
 
 namespace App\Models;
 
-use App\Models\Model;
 
-class UserModel extends Model
+use App\Repositories\BaseRepository;
+
+class UserModel extends BaseRepository
 {
     protected $id;
     protected $username;
