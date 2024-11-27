@@ -46,15 +46,70 @@
     <div class="dashboard-container">
         <aside class="sidebar">
             <ul>
-                <li><a href="/dashboard/index" class="btn-link">Accueil</a></li>
-                <li><a href="/user/showRegisterForm" class="btn-link">Créer un utilisateur</a></li>
-                <li><a href="/user/list" class="btn-link">Lister les utilisateurs</a></li>
-                <li><a href="/horaire/list" class="btn-link">Lister les horaires</a></li>
-                <li><a href="/horaire/showAddForm" class="btn-link">Ajouter un horaire</a></li>
-                <li><a href="/section/list">Liste des Sections</a></li>
-                <li><a href="/section/add">Ajouter une Section</a></li>
-            </ul>
+                <!-- Accueil -->
+                <li>
+                    <a href="/dashboard/index" class="btn-link">Accueil</a>
+                </li>
 
+                <!-- Utilisateurs -->
+                <li>
+                    <a class="btn-link" data-bs-toggle="collapse" href="#utilisateurs-menu" role="button" aria-expanded="false" aria-controls="utilisateurs-menu">
+                        Utilisateurs
+                    </a>
+                    <ul class="collapse" id="utilisateurs-menu">
+                        <li><a href="/user/showRegisterForm">Créer un utilisateur</a></li>
+                        <li><a href="/user/list">Lister les utilisateurs</a></li>
+                    </ul>
+                </li>
+
+                <!-- Horaires -->
+                <li>
+                    <a class="btn-link" data-bs-toggle="collapse" href="#horaires-menu" role="button" aria-expanded="false" aria-controls="horaires-menu">
+                        Horaires
+                    </a>
+                    <ul class="collapse" id="horaires-menu">
+                        <li><a href="/horaire/list">Lister les horaires</a></li>
+                        <li><a href="/horaire/showAddForm">Ajouter un horaire</a></li>
+                    </ul>
+                </li>
+
+                <!-- Page d'accueil -->
+                <li>
+                    <a class="btn-link" data-bs-toggle="collapse" href="#accueil-menu" role="button" aria-expanded="false" aria-controls="accueil-menu">
+                        Page d'accueil
+                    </a>
+                    <ul class="collapse" id="accueil-menu">
+                        <li><a href="/accueil/list">Liste des éléments</a></li>
+                        <li><a href="/accueil/add">Ajouter un élément</a></li>
+                    </ul>
+                </li>
+
+                <!-- Menu -->
+                <li>
+                    <a class="btn-link" data-bs-toggle="collapse" href="#menu-categories" role="button" aria-expanded="false" aria-controls="menu-categories">
+                        Menu
+                    </a>
+                    <ul class="collapse" id="menu-categories">
+                        <li><a href="/menu/burgers">Burgers</a></li>
+                        <li><a href="/menu/tacos">Tacos</a></li>
+                        <li><a href="/menu/kebabs">Kebabs</a></li>
+                        <li><a href="/menu/salades">Salades</a></li>
+                        <li><a href="/menu/snacks">Snacks</a></li>
+                        <li><a href="/menu/boissons">Boissons</a></li>
+                    </ul>
+                </li>
+
+                <!-- Images -->
+                <li>
+                    <a class="btn-link" data-bs-toggle="collapse" href="#images-menu" role="button" aria-expanded="false" aria-controls="images-menu">
+                        Images
+                    </a>
+                    <ul class="collapse" id="images-menu">
+                        <li><a href="/image/list">Liste des images</a></li>
+                        <li><a href="/image/add">Ajouter une image</a></li>
+                    </ul>
+                </li>
+            </ul>
         </aside>
         <main class="content">
             <?= $content ?? '' ?>

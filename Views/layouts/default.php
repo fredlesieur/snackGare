@@ -45,24 +45,19 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ms-auto">
-    <?php if (isset($pages) && !empty($pages)): ?>
-        <?php foreach ($pages as $page): ?>
-            <li class="nav-item">
-                <a class="nav-link" href="/<?= htmlspecialchars($page['slug']) ?>">
-                    <?= htmlspecialchars($page['title']) ?>
-                </a>
-            </li>
-        <?php endforeach; ?>
-    <?php endif; ?>
-
-    <?php if (isset($_SESSION['id'])): ?>
-        <li class="nav-item"><a class="nav-link" href="/dashboard/index">Tableau de bord</a></li>
-        <li class="nav-item"><a class="nav-link" href="/user/logout">Déconnexion</a></li>
-    <?php else: ?>
-        <li class="nav-item"><a class="nav-link" href="/user/showLoginForm">Connexion</a></li>
-    <?php endif; ?>
-</ul>
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="/">Accueil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/contact">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/menu">Menu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/avis">Avis</a></li>
+                   
+                    <?php if (isset($_SESSION['id'])): ?>
+                        <li class="nav-item"><a class="nav-link" href="/dashboard/index">Tableau de bord</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/user/logout">Déconnexion</a></li>
+                    <?php else: ?>
+                        <li class="nav-item"><a class="nav-link" href="/user/showLoginForm">Connexion</a></li>
+                    <?php endif; ?>
+                </ul>
 
             </div>
         </div>
@@ -99,37 +94,37 @@
         </div><br>
 
 
-<!-- Horaires d'ouverture -->
-<h2>Horaires d'ouverture</h2>
-<?php if (isset($horaires) && !empty($horaires)): ?>
-    <?php foreach ($horaires as $horaire): ?>
-        <div>
-            <strong><?= htmlspecialchars($horaire['jours']) ?> :</strong>
-            <?php 
-                // Vérification si l'établissement est fermé le midi et le soir
-                if ($horaire['is_closed_lunch'] == 1 && $horaire['is_closed_dinner'] == 1) {
-                    echo "Fermeture";
-                } else {
-                    // Vérification des horaires du midi
-                    if ($horaire['is_closed_lunch'] == 1) {
-                        echo "Fermé le midi";
+        <!-- Horaires d'ouverture -->
+        <h2>Horaires d'ouverture</h2>
+        <?php if (isset($horaires) && !empty($horaires)): ?>
+            <?php foreach ($horaires as $horaire): ?>
+                <div>
+                    <strong><?= htmlspecialchars($horaire['jours']) ?> :</strong>
+                    <?php
+                    // Vérification si l'établissement est fermé le midi et le soir
+                    if ($horaire['is_closed_lunch'] == 1 && $horaire['is_closed_dinner'] == 1) {
+                        echo "Fermeture";
                     } else {
-                        echo "Midi : " . date('H:i', strtotime($horaire['opening_time_lunch'])) . " à " . date('H:i', strtotime($horaire['closing_time_lunch']));
-                    }
+                        // Vérification des horaires du midi
+                        if ($horaire['is_closed_lunch'] == 1) {
+                            echo "Fermé le midi";
+                        } else {
+                            echo "Midi : " . date('H:i', strtotime($horaire['opening_time_lunch'])) . " à " . date('H:i', strtotime($horaire['closing_time_lunch']));
+                        }
 
-                    // Vérification des horaires du soir
-                    if ($horaire['is_closed_dinner'] == 1) {
-                        echo " et Fermé le soir";
-                    } else {
-                        echo " et Soir : " . date('H:i', strtotime($horaire['opening_time_dinner'])) . " à " . date('H:i', strtotime($horaire['closing_time_dinner']));
+                        // Vérification des horaires du soir
+                        if ($horaire['is_closed_dinner'] == 1) {
+                            echo " et Fermé le soir";
+                        } else {
+                            echo " et Soir : " . date('H:i', strtotime($horaire['opening_time_dinner'])) . " à " . date('H:i', strtotime($horaire['closing_time_dinner']));
+                        }
                     }
-                }
-            ?>
-        </div>
-    <?php endforeach; ?>
-<?php else: ?>
-    <em>Horaires non disponibles</em>
-<?php endif; ?><br>
+                    ?>
+                </div>
+            <?php endforeach; ?>
+        <?php else: ?>
+            <em>Horaires non disponibles</em>
+        <?php endif; ?><br>
 
 
 

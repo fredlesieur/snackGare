@@ -2,15 +2,17 @@
 
 namespace App\Controllers;
 
-use App\Repositories\PageRepository;
+use App\Repositories\AccueilRepository;
 
 abstract class Controller
 {
-    protected $pageRepository;
+    // Déclaration du repository pour la page d'accueil
+    protected $accueilRepository;
 
     public function __construct()
     {
-        $this->pageRepository = new PageRepository();
+        // On initialise le repository pour gérer les éléments de la page d'accueil
+        $this->accueilRepository = new AccueilRepository();
     }
 
     /**
@@ -22,9 +24,9 @@ abstract class Controller
      */
     public function render(string $file, array $donnees = [], bool $isDashboard = false): void
     {
-        // Charger les pages disponibles pour la navigation
-        if (!array_key_exists('pages', $donnees)) {
-            $donnees['pages'] = $this->pageRepository->findAll();
+        // Charger les éléments de la page d'accueil pour la navigation
+        if (!array_key_exists('elements', $donnees)) {
+            $donnees['elements'] = $this->accueilRepository->findAllWithImages(); // Utilisation du bon repository
         }
 
         // Extraire les données pour la vue
@@ -47,4 +49,5 @@ abstract class Controller
         }
     }
 }
+
 

@@ -110,3 +110,913 @@ Requête SQL : UPDATE utilisateurs SET username = ?, role = ? WHERE id = ?Valeur
     [1] => collaborateur
     [2] => 17
 )
+
+[27-Nov-2024 10:19:05 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method App\Repositories\AccueilRepository::getImagesForAccueil() in C:\snack_gare\Controllers\AccueilController.php:95
+Stack trace:
+#0 [internal function]: App\Controllers\AccueilController->edit(9)
+#1 C:\snack_gare\Config\Main.php(93): call_user_func_array(Array, Array)
+#2 C:\snack_gare\Public\index.php(27): App\Config\Main->start()
+#3 {main}
+  thrown in C:\snack_gare\Controllers\AccueilController.php on line 95
+[27-Nov-2024 10:32:57 UTC] Association des images pour l'élément 11: Array
+(
+    [0] => 25
+)
+
+[27-Nov-2024 11:32:33 UTC] Formulaire de modification soumis ? Méthode : GET
+[27-Nov-2024 11:32:40 UTC] Formulaire de modification soumis ? Méthode : POST
+[27-Nov-2024 11:34:19 UTC] Formulaire de modification soumis ? Méthode : GET
+[27-Nov-2024 11:34:24 UTC] Formulaire de modification soumis ? Méthode : POST
+[27-Nov-2024 11:36:07 UTC] Formulaire de modification soumis ? Méthode : GET
+[27-Nov-2024 11:36:10 UTC] Formulaire de modification soumis ? Méthode : POST
+[27-Nov-2024 11:39:50 UTC] Formulaire de modification soumis ? Méthode : GET
+[27-Nov-2024 11:39:54 UTC] Vérification initiale - Méthode appelée avec ID : 9
+[27-Nov-2024 11:39:54 UTC] Type de requête : POST
+[27-Nov-2024 11:39:54 UTC] PHP Warning:  Array to string conversion in C:\snack_gare\Controllers\AccueilController.php on line 117
+[27-Nov-2024 11:39:54 UTC] Array vide : Non
+[27-Nov-2024 11:39:54 UTC] PHP Warning:  Array to string conversion in C:\snack_gare\Controllers\AccueilController.php on line 118
+[27-Nov-2024 11:39:54 UTC] Array vide : Non
+[27-Nov-2024 11:39:54 UTC] Méthode update appelée avec ID : 9
+[27-Nov-2024 11:39:54 UTC] Contenu de $_POST : Array
+(
+    [csrf_token] => a4fbe09c9fb7aad10357a2cbf226791d1d0745e870c444258d6742e02207095a
+    [title] => fred eee
+    [content] => fred
+    [display_order] => 8
+    [image_ids] => Array
+        (
+            [0] => 35
+        )
+
+)
+
+[27-Nov-2024 11:39:54 UTC] Données reçues dans update: Array
+(
+    [csrf_token] => a4fbe09c9fb7aad10357a2cbf226791d1d0745e870c444258d6742e02207095a
+    [title] => fred eee
+    [content] => fred
+    [display_order] => 8
+    [image_ids] => Array
+        (
+            [0] => 35
+        )
+
+)
+
+[27-Nov-2024 11:39:54 UTC] Données traitées pour updateAccueil : Array
+(
+    [title] => fred eee
+    [content] => fred
+    [display_order] => 8
+    [image_ids] => Array
+        (
+            [0] => 35
+        )
+
+)
+
+[27-Nov-2024 11:39:54 UTC] Début de updateAccueil pour l'ID 9.
+[27-Nov-2024 11:39:54 UTC] Données reçues : Array
+(
+    [title] => fred eee
+    [content] => fred
+    [display_order] => 8
+    [image_ids] => Array
+        (
+            [0] => 35
+        )
+
+)
+
+[27-Nov-2024 11:39:54 UTC] Mise à jour des données principales réussie pour l'élément 9.
+[27-Nov-2024 11:39:54 UTC] Mise à jour des images associées pour l'élément 9.
+[27-Nov-2024 11:39:54 UTC] Début de associateImages pour l'élément 9.
+[27-Nov-2024 11:39:54 UTC] Images à associer : Array
+(
+    [0] => 35
+)
+
+[27-Nov-2024 11:39:54 UTC] Associations mises à jour avec succès pour l'élément 9.
+[27-Nov-2024 11:39:54 UTC] updateAccueil terminé avec succès pour l'élément 9.
+[27-Nov-2024 11:39:54 UTC] Mise à jour réussie pour l'élément 9.
+[27-Nov-2024 11:41:59 UTC] Formulaire de modification soumis ? Méthode : GET
+[27-Nov-2024 11:42:10 UTC] Vérification initiale - Méthode appelée avec ID : 9
+[27-Nov-2024 11:42:10 UTC] Type de requête : POST
+[27-Nov-2024 11:42:10 UTC] PHP Warning:  Array to string conversion in C:\snack_gare\Controllers\AccueilController.php on line 117
+[27-Nov-2024 11:42:10 UTC] Array vide : Non
+[27-Nov-2024 11:42:10 UTC] PHP Warning:  Array to string conversion in C:\snack_gare\Controllers\AccueilController.php on line 118
+[27-Nov-2024 11:42:10 UTC] Array vide : Non
+[27-Nov-2024 11:42:10 UTC] Méthode update appelée avec ID : 9
+[27-Nov-2024 11:42:10 UTC] Contenu de $_POST : Array
+(
+    [csrf_token] => a4fbe09c9fb7aad10357a2cbf226791d1d0745e870c444258d6742e02207095a
+    [title] => fred eee
+    [content] => fred
+    [display_order] => 8
+)
+
+[27-Nov-2024 11:42:10 UTC] Données reçues dans update: Array
+(
+    [csrf_token] => a4fbe09c9fb7aad10357a2cbf226791d1d0745e870c444258d6742e02207095a
+    [title] => fred eee
+    [content] => fred
+    [display_order] => 8
+)
+
+[27-Nov-2024 11:42:10 UTC] Données traitées pour updateAccueil : Array
+(
+    [title] => fred eee
+    [content] => fred
+    [display_order] => 8
+    [image_ids] => Array
+        (
+        )
+
+)
+
+[27-Nov-2024 11:42:10 UTC] Début de updateAccueil pour l'ID 9.
+[27-Nov-2024 11:42:10 UTC] Données reçues : Array
+(
+    [title] => fred eee
+    [content] => fred
+    [display_order] => 8
+    [image_ids] => Array
+        (
+        )
+
+)
+
+[27-Nov-2024 11:42:10 UTC] Mise à jour des données principales réussie pour l'élément 9.
+[27-Nov-2024 11:42:10 UTC] updateAccueil terminé avec succès pour l'élément 9.
+[27-Nov-2024 11:42:10 UTC] Mise à jour réussie pour l'élément 9.
+[27-Nov-2024 11:42:15 UTC] Formulaire de modification soumis ? Méthode : GET
+[27-Nov-2024 11:42:26 UTC] Vérification initiale - Méthode appelée avec ID : 9
+[27-Nov-2024 11:42:26 UTC] Type de requête : POST
+[27-Nov-2024 11:42:26 UTC] PHP Warning:  Array to string conversion in C:\snack_gare\Controllers\AccueilController.php on line 117
+[27-Nov-2024 11:42:26 UTC] Array vide : Non
+[27-Nov-2024 11:42:26 UTC] PHP Warning:  Array to string conversion in C:\snack_gare\Controllers\AccueilController.php on line 118
+[27-Nov-2024 11:42:26 UTC] Array vide : Non
+[27-Nov-2024 11:42:26 UTC] Méthode update appelée avec ID : 9
+[27-Nov-2024 11:42:26 UTC] Contenu de $_POST : Array
+(
+    [csrf_token] => a4fbe09c9fb7aad10357a2cbf226791d1d0745e870c444258d6742e02207095a
+    [title] => fred eee
+    [content] => fred
+    [display_order] => 8
+    [image_ids] => Array
+        (
+            [0] => 35
+        )
+
+)
+
+[27-Nov-2024 11:42:26 UTC] Données reçues dans update: Array
+(
+    [csrf_token] => a4fbe09c9fb7aad10357a2cbf226791d1d0745e870c444258d6742e02207095a
+    [title] => fred eee
+    [content] => fred
+    [display_order] => 8
+    [image_ids] => Array
+        (
+            [0] => 35
+        )
+
+)
+
+[27-Nov-2024 11:42:26 UTC] Données traitées pour updateAccueil : Array
+(
+    [title] => fred eee
+    [content] => fred
+    [display_order] => 8
+    [image_ids] => Array
+        (
+            [0] => 35
+        )
+
+)
+
+[27-Nov-2024 11:42:26 UTC] Début de updateAccueil pour l'ID 9.
+[27-Nov-2024 11:42:26 UTC] Données reçues : Array
+(
+    [title] => fred eee
+    [content] => fred
+    [display_order] => 8
+    [image_ids] => Array
+        (
+            [0] => 35
+        )
+
+)
+
+[27-Nov-2024 11:42:26 UTC] Mise à jour des données principales réussie pour l'élément 9.
+[27-Nov-2024 11:42:26 UTC] Mise à jour des images associées pour l'élément 9.
+[27-Nov-2024 11:42:26 UTC] Début de associateImages pour l'élément 9.
+[27-Nov-2024 11:42:26 UTC] Images à associer : Array
+(
+    [0] => 35
+)
+
+[27-Nov-2024 11:42:26 UTC] Associations mises à jour avec succès pour l'élément 9.
+[27-Nov-2024 11:42:26 UTC] updateAccueil terminé avec succès pour l'élément 9.
+[27-Nov-2024 11:42:26 UTC] Mise à jour réussie pour l'élément 9.
+[27-Nov-2024 11:42:32 UTC] Formulaire de modification soumis ? Méthode : GET
+[27-Nov-2024 11:42:43 UTC] Vérification initiale - Méthode appelée avec ID : 9
+[27-Nov-2024 11:42:43 UTC] Type de requête : POST
+[27-Nov-2024 11:42:43 UTC] PHP Warning:  Array to string conversion in C:\snack_gare\Controllers\AccueilController.php on line 117
+[27-Nov-2024 11:42:43 UTC] Array vide : Non
+[27-Nov-2024 11:42:43 UTC] PHP Warning:  Array to string conversion in C:\snack_gare\Controllers\AccueilController.php on line 118
+[27-Nov-2024 11:42:43 UTC] Array vide : Non
+[27-Nov-2024 11:42:43 UTC] Méthode update appelée avec ID : 9
+[27-Nov-2024 11:42:43 UTC] Contenu de $_POST : Array
+(
+    [csrf_token] => a4fbe09c9fb7aad10357a2cbf226791d1d0745e870c444258d6742e02207095a
+    [title] => fred eee
+    [content] => fred
+    [display_order] => 8
+)
+
+[27-Nov-2024 11:42:43 UTC] Données reçues dans update: Array
+(
+    [csrf_token] => a4fbe09c9fb7aad10357a2cbf226791d1d0745e870c444258d6742e02207095a
+    [title] => fred eee
+    [content] => fred
+    [display_order] => 8
+)
+
+[27-Nov-2024 11:42:43 UTC] Données traitées pour updateAccueil : Array
+(
+    [title] => fred eee
+    [content] => fred
+    [display_order] => 8
+    [image_ids] => Array
+        (
+        )
+
+)
+
+[27-Nov-2024 11:42:43 UTC] Début de updateAccueil pour l'ID 9.
+[27-Nov-2024 11:42:43 UTC] Données reçues : Array
+(
+    [title] => fred eee
+    [content] => fred
+    [display_order] => 8
+    [image_ids] => Array
+        (
+        )
+
+)
+
+[27-Nov-2024 11:42:43 UTC] Mise à jour des données principales réussie pour l'élément 9.
+[27-Nov-2024 11:42:43 UTC] updateAccueil terminé avec succès pour l'élément 9.
+[27-Nov-2024 11:42:43 UTC] Mise à jour réussie pour l'élément 9.
+[27-Nov-2024 11:55:52 UTC] Formulaire de modification soumis ? Méthode : GET
+[27-Nov-2024 11:56:07 UTC] Vérification initiale - Méthode appelée avec ID : 9
+[27-Nov-2024 11:56:07 UTC] Type de requête : POST
+[27-Nov-2024 11:56:07 UTC] PHP Warning:  Array to string conversion in C:\snack_gare\Controllers\AccueilController.php on line 117
+[27-Nov-2024 11:56:07 UTC] Array vide : Non
+[27-Nov-2024 11:56:07 UTC] PHP Warning:  Array to string conversion in C:\snack_gare\Controllers\AccueilController.php on line 118
+[27-Nov-2024 11:56:07 UTC] Array vide : Non
+[27-Nov-2024 11:56:07 UTC] Méthode update appelée avec ID : 9
+[27-Nov-2024 11:56:07 UTC] Contenu de $_POST : Array
+(
+    [csrf_token] => a4fbe09c9fb7aad10357a2cbf226791d1d0745e870c444258d6742e02207095a
+    [title] => fred test
+    [content] => fred
+    [display_order] => 8
+    [image_ids] => Array
+        (
+            [0] => 35
+        )
+
+)
+
+[27-Nov-2024 11:56:07 UTC] Données reçues dans update: Array
+(
+    [csrf_token] => a4fbe09c9fb7aad10357a2cbf226791d1d0745e870c444258d6742e02207095a
+    [title] => fred test
+    [content] => fred
+    [display_order] => 8
+    [image_ids] => Array
+        (
+            [0] => 35
+        )
+
+)
+
+[27-Nov-2024 11:56:07 UTC] Données traitées pour updateAccueil : Array
+(
+    [title] => fred test
+    [content] => fred
+    [display_order] => 8
+    [image_ids] => Array
+        (
+            [0] => 35
+        )
+
+)
+
+[27-Nov-2024 11:56:07 UTC] Début de updateAccueil pour l'ID 9.
+[27-Nov-2024 11:56:07 UTC] Données reçues : Array
+(
+    [title] => fred test
+    [content] => fred
+    [display_order] => 8
+    [image_ids] => Array
+        (
+            [0] => 35
+        )
+
+)
+
+[27-Nov-2024 11:56:07 UTC] Mise à jour des données principales réussie pour l'élément 9.
+[27-Nov-2024 11:56:07 UTC] Mise à jour des images associées pour l'élément 9.
+[27-Nov-2024 11:56:07 UTC] Début de associateImages pour l'élément 9.
+[27-Nov-2024 11:56:07 UTC] Images à associer : Array
+(
+    [0] => 35
+)
+
+[27-Nov-2024 11:56:07 UTC] Anciennes associations supprimées pour accueil_id : 9
+[27-Nov-2024 11:56:07 UTC] Association ajoutée : accueil_id = 9, image_id = 35
+[27-Nov-2024 11:56:07 UTC] Associations mises à jour avec succès pour l'élément 9.
+[27-Nov-2024 11:56:07 UTC] updateAccueil terminé avec succès pour l'élément 9.
+[27-Nov-2024 11:56:07 UTC] Mise à jour réussie pour l'élément 9.
+[27-Nov-2024 12:01:39 UTC] Formulaire de modification soumis ? Méthode : GET
+[27-Nov-2024 12:03:33 UTC] Vérification initiale - Méthode appelée avec ID : 5
+[27-Nov-2024 12:03:33 UTC] Type de requête : POST
+[27-Nov-2024 12:03:33 UTC] PHP Warning:  Array to string conversion in C:\snack_gare\Controllers\AccueilController.php on line 117
+[27-Nov-2024 12:03:33 UTC] Array vide : Non
+[27-Nov-2024 12:03:33 UTC] PHP Warning:  Array to string conversion in C:\snack_gare\Controllers\AccueilController.php on line 118
+[27-Nov-2024 12:03:33 UTC] Array vide : Non
+[27-Nov-2024 12:03:33 UTC] Méthode update appelée avec ID : 5
+[27-Nov-2024 12:03:33 UTC] Contenu de $_POST : Array
+(
+    [csrf_token] => a4fbe09c9fb7aad10357a2cbf226791d1d0745e870c444258d6742e02207095a
+    [title] => Nos spécialités
+    [content] => Tacos, burger, kebab
+    [display_order] => 4
+)
+
+[27-Nov-2024 12:03:33 UTC] Données reçues dans update: Array
+(
+    [csrf_token] => a4fbe09c9fb7aad10357a2cbf226791d1d0745e870c444258d6742e02207095a
+    [title] => Nos spécialités
+    [content] => Tacos, burger, kebab
+    [display_order] => 4
+)
+
+[27-Nov-2024 12:03:33 UTC] Données traitées pour updateAccueil : Array
+(
+    [title] => Nos spécialités
+    [content] => Tacos, burger, kebab
+    [display_order] => 4
+    [image_ids] => Array
+        (
+        )
+
+)
+
+[27-Nov-2024 12:03:33 UTC] Début de updateAccueil pour l'ID 5.
+[27-Nov-2024 12:03:33 UTC] Données reçues : Array
+(
+    [title] => Nos spécialités
+    [content] => Tacos, burger, kebab
+    [display_order] => 4
+    [image_ids] => Array
+        (
+        )
+
+)
+
+[27-Nov-2024 12:03:33 UTC] Mise à jour des données principales réussie pour l'élément 5.
+[27-Nov-2024 12:03:33 UTC] updateAccueil terminé avec succès pour l'élément 5.
+[27-Nov-2024 12:03:33 UTC] Mise à jour réussie pour l'élément 5.
+[27-Nov-2024 12:06:11 UTC] Formulaire de modification soumis ? Méthode : GET
+[27-Nov-2024 12:06:19 UTC] PHP Warning:  Undefined array key "image_ids" in C:\snack_gare\Controllers\AccueilController.php on line 113
+[27-Nov-2024 12:06:19 UTC] Images sélectionnées reçues : 
+[27-Nov-2024 12:06:19 UTC] Vérification initiale - Méthode appelée avec ID : 9
+[27-Nov-2024 12:06:19 UTC] Type de requête : POST
+[27-Nov-2024 12:06:19 UTC] PHP Warning:  Array to string conversion in C:\snack_gare\Controllers\AccueilController.php on line 118
+[27-Nov-2024 12:06:19 UTC] Array vide : Non
+[27-Nov-2024 12:06:19 UTC] PHP Warning:  Array to string conversion in C:\snack_gare\Controllers\AccueilController.php on line 119
+[27-Nov-2024 12:06:19 UTC] Array vide : Non
+[27-Nov-2024 12:06:19 UTC] Méthode update appelée avec ID : 9
+[27-Nov-2024 12:06:19 UTC] Contenu de $_POST : Array
+(
+    [csrf_token] => a4fbe09c9fb7aad10357a2cbf226791d1d0745e870c444258d6742e02207095a
+    [title] => fred test
+    [content] => fred
+    [display_order] => 8
+)
+
+[27-Nov-2024 12:06:19 UTC] Données reçues dans update: Array
+(
+    [csrf_token] => a4fbe09c9fb7aad10357a2cbf226791d1d0745e870c444258d6742e02207095a
+    [title] => fred test
+    [content] => fred
+    [display_order] => 8
+)
+
+[27-Nov-2024 12:06:19 UTC] Données traitées pour updateAccueil : Array
+(
+    [title] => fred test
+    [content] => fred
+    [display_order] => 8
+    [image_ids] => Array
+        (
+        )
+
+)
+
+[27-Nov-2024 12:06:19 UTC] Début de updateAccueil pour l'ID 9.
+[27-Nov-2024 12:06:19 UTC] Données reçues : Array
+(
+    [title] => fred test
+    [content] => fred
+    [display_order] => 8
+    [image_ids] => Array
+        (
+        )
+
+)
+
+[27-Nov-2024 12:06:19 UTC] Mise à jour des données principales réussie pour l'élément 9.
+[27-Nov-2024 12:06:19 UTC] updateAccueil terminé avec succès pour l'élément 9.
+[27-Nov-2024 12:06:19 UTC] Mise à jour réussie pour l'élément 9.
+[27-Nov-2024 12:09:14 UTC] Formulaire de modification soumis ? Méthode : GET
+[27-Nov-2024 12:09:20 UTC] PHP Warning:  Undefined array key "image_ids" in C:\snack_gare\Controllers\AccueilController.php on line 113
+[27-Nov-2024 12:09:20 UTC] Images sélectionnées reçues : 
+[27-Nov-2024 12:09:20 UTC] Vérification initiale - Méthode appelée avec ID : 9
+[27-Nov-2024 12:09:20 UTC] Type de requête : POST
+[27-Nov-2024 12:09:20 UTC] PHP Warning:  Array to string conversion in C:\snack_gare\Controllers\AccueilController.php on line 118
+[27-Nov-2024 12:09:20 UTC] Array vide : Non
+[27-Nov-2024 12:09:20 UTC] PHP Warning:  Array to string conversion in C:\snack_gare\Controllers\AccueilController.php on line 119
+[27-Nov-2024 12:09:20 UTC] Array vide : Non
+[27-Nov-2024 12:09:20 UTC] Méthode update appelée avec ID : 9
+[27-Nov-2024 12:09:20 UTC] Contenu de $_POST : Array
+(
+    [csrf_token] => a4fbe09c9fb7aad10357a2cbf226791d1d0745e870c444258d6742e02207095a
+    [title] => fred test
+    [content] => fred
+    [display_order] => 8
+)
+
+[27-Nov-2024 12:09:20 UTC] Données reçues dans update: Array
+(
+    [csrf_token] => a4fbe09c9fb7aad10357a2cbf226791d1d0745e870c444258d6742e02207095a
+    [title] => fred test
+    [content] => fred
+    [display_order] => 8
+)
+
+[27-Nov-2024 12:09:20 UTC] Données traitées pour updateAccueil : Array
+(
+    [title] => fred test
+    [content] => fred
+    [display_order] => 8
+    [image_ids] => Array
+        (
+        )
+
+)
+
+[27-Nov-2024 12:09:20 UTC] Aucune image sélectionnée dans le formulaire.
+[27-Nov-2024 12:09:20 UTC] Début de updateAccueil pour l'ID 9.
+[27-Nov-2024 12:09:20 UTC] Données reçues : Array
+(
+    [title] => fred test
+    [content] => fred
+    [display_order] => 8
+    [image_ids] => Array
+        (
+        )
+
+)
+
+[27-Nov-2024 12:09:20 UTC] Mise à jour des données principales réussie pour l'élément 9.
+[27-Nov-2024 12:09:20 UTC] updateAccueil terminé avec succès pour l'élément 9.
+[27-Nov-2024 12:09:20 UTC] Mise à jour réussie pour l'élément 9.
+[27-Nov-2024 12:13:00 UTC] Formulaire de modification soumis ? Méthode : GET
+[27-Nov-2024 12:13:09 UTC] Formulaire de modification soumis ? Méthode : GET
+[27-Nov-2024 12:13:19 UTC] Images sélectionnées reçues : Array
+(
+    [0] => 
+)
+
+[27-Nov-2024 12:13:19 UTC] Vérification initiale - Méthode appelée avec ID : 5
+[27-Nov-2024 12:13:19 UTC] Type de requête : POST
+[27-Nov-2024 12:13:19 UTC] PHP Warning:  Array to string conversion in C:\snack_gare\Controllers\AccueilController.php on line 118
+[27-Nov-2024 12:13:19 UTC] Array vide : Non
+[27-Nov-2024 12:13:19 UTC] PHP Warning:  Array to string conversion in C:\snack_gare\Controllers\AccueilController.php on line 119
+[27-Nov-2024 12:13:19 UTC] Array vide : Non
+[27-Nov-2024 12:13:19 UTC] Méthode update appelée avec ID : 5
+[27-Nov-2024 12:13:19 UTC] Contenu de $_POST : Array
+(
+    [csrf_token] => a4fbe09c9fb7aad10357a2cbf226791d1d0745e870c444258d6742e02207095a
+    [title] => Nos spécialités
+    [content] => Tacos, burger, kebab
+    [display_order] => 4
+    [image_ids] => Array
+        (
+            [0] => 
+        )
+
+)
+
+[27-Nov-2024 12:13:19 UTC] Données reçues dans update: Array
+(
+    [csrf_token] => a4fbe09c9fb7aad10357a2cbf226791d1d0745e870c444258d6742e02207095a
+    [title] => Nos spécialités
+    [content] => Tacos, burger, kebab
+    [display_order] => 4
+    [image_ids] => Array
+        (
+            [0] => 
+        )
+
+)
+
+[27-Nov-2024 12:13:19 UTC] Données traitées pour updateAccueil : Array
+(
+    [title] => Nos spécialités
+    [content] => Tacos, burger, kebab
+    [display_order] => 4
+    [image_ids] => Array
+        (
+            [0] => 
+        )
+
+)
+
+[27-Nov-2024 12:13:19 UTC] Images sélectionnées dans le formulaire : Array
+(
+    [0] => 
+)
+
+[27-Nov-2024 12:13:19 UTC] Début de updateAccueil pour l'ID 5.
+[27-Nov-2024 12:13:19 UTC] Données reçues : Array
+(
+    [title] => Nos spécialités
+    [content] => Tacos, burger, kebab
+    [display_order] => 4
+    [image_ids] => Array
+        (
+            [0] => 
+        )
+
+)
+
+[27-Nov-2024 12:13:19 UTC] Mise à jour des données principales réussie pour l'élément 5.
+[27-Nov-2024 12:13:19 UTC] Mise à jour des images associées pour l'élément 5.
+[27-Nov-2024 12:13:19 UTC] Début de associateImages pour l'élément 5.
+[27-Nov-2024 12:13:19 UTC] Images à associer : Array
+(
+    [0] => 
+)
+
+[27-Nov-2024 12:13:19 UTC] Anciennes associations supprimées pour accueil_id : 5
+[27-Nov-2024 12:13:19 UTC] Erreur SQL : SQLSTATE[HY000]: General error: 1366 Incorrect integer value: '' for column 'image_id' at row 1
+[27-Nov-2024 12:13:19 UTC] Association ajoutée : accueil_id = 5, image_id = 
+[27-Nov-2024 12:13:19 UTC] Associations mises à jour avec succès pour l'élément 5.
+[27-Nov-2024 12:13:19 UTC] updateAccueil terminé avec succès pour l'élément 5.
+[27-Nov-2024 12:13:19 UTC] Mise à jour réussie pour l'élément 5.
+[27-Nov-2024 12:35:30 UTC] Formulaire de modification soumis ? Méthode : GET
+[27-Nov-2024 12:35:32 UTC] Méthode update appelée avec ID : 5
+[27-Nov-2024 12:35:32 UTC] Type de requête : POST
+[27-Nov-2024 12:35:32 UTC] Données reçues dans update : Array
+(
+    [csrf_token] => a4fbe09c9fb7aad10357a2cbf226791d1d0745e870c444258d6742e02207095a
+    [title] => Nos spécialités
+    [content] => Tacos, burger, kebab
+    [display_order] => 4
+    [image_ids] => Array
+        (
+            [0] => 
+        )
+
+)
+
+[27-Nov-2024 12:35:32 UTC] Données traitées pour updateAccueil : Array
+(
+    [title] => Nos spécialités
+    [content] => Tacos, burger, kebab
+    [display_order] => 4
+    [image_ids] => Array
+        (
+            [0] => 
+        )
+
+)
+
+[27-Nov-2024 12:35:32 UTC] Début de updateAccueil pour l'ID 5.
+[27-Nov-2024 12:35:32 UTC] Données reçues : Array
+(
+    [title] => Nos spécialités
+    [content] => Tacos, burger, kebab
+    [display_order] => 4
+    [image_ids] => Array
+        (
+            [0] => 
+        )
+
+)
+
+[27-Nov-2024 12:35:32 UTC] Mise à jour des données principales réussie pour l'élément 5.
+[27-Nov-2024 12:35:32 UTC] Mise à jour des images associées pour l'élément 5.
+[27-Nov-2024 12:35:32 UTC] Début de associateImages pour l'élément 5.
+[27-Nov-2024 12:35:32 UTC] Images à associer : Array
+(
+    [0] => 
+)
+
+[27-Nov-2024 12:35:32 UTC] Anciennes associations supprimées pour accueil_id : 5
+[27-Nov-2024 12:35:32 UTC] Erreur SQL : SQLSTATE[HY000]: General error: 1366 Incorrect integer value: '' for column 'image_id' at row 1
+[27-Nov-2024 12:35:32 UTC] Association ajoutée : accueil_id = 5, image_id = 
+[27-Nov-2024 12:35:32 UTC] Associations mises à jour avec succès pour l'élément 5.
+[27-Nov-2024 12:35:32 UTC] updateAccueil terminé avec succès pour l'élément 5.
+[27-Nov-2024 12:35:32 UTC] Mise à jour réussie pour l'élément 5.
+[27-Nov-2024 12:35:35 UTC] Formulaire de modification soumis ? Méthode : GET
+[27-Nov-2024 12:35:44 UTC] Méthode update appelée avec ID : 5
+[27-Nov-2024 12:35:44 UTC] Type de requête : POST
+[27-Nov-2024 12:35:44 UTC] Données reçues dans update : Array
+(
+    [csrf_token] => a4fbe09c9fb7aad10357a2cbf226791d1d0745e870c444258d6742e02207095a
+    [title] => Nos spécialités
+    [content] => Tacos, burger, kebab
+    [display_order] => 4
+    [image_ids] => Array
+        (
+            [0] => 
+        )
+
+)
+
+[27-Nov-2024 12:35:44 UTC] Données traitées pour updateAccueil : Array
+(
+    [title] => Nos spécialités
+    [content] => Tacos, burger, kebab
+    [display_order] => 4
+    [image_ids] => Array
+        (
+            [0] => 
+        )
+
+)
+
+[27-Nov-2024 12:35:47 UTC] Nouvelle image ajoutée avec ID : 1
+[27-Nov-2024 12:35:47 UTC] Début de updateAccueil pour l'ID 5.
+[27-Nov-2024 12:35:47 UTC] Données reçues : Array
+(
+    [title] => Nos spécialités
+    [content] => Tacos, burger, kebab
+    [display_order] => 4
+    [image_ids] => Array
+        (
+            [0] => 
+            [1] => 1
+        )
+
+)
+
+[27-Nov-2024 12:35:47 UTC] Mise à jour des données principales réussie pour l'élément 5.
+[27-Nov-2024 12:35:47 UTC] Mise à jour des images associées pour l'élément 5.
+[27-Nov-2024 12:35:47 UTC] Début de associateImages pour l'élément 5.
+[27-Nov-2024 12:35:47 UTC] Images à associer : Array
+(
+    [0] => 
+    [1] => 1
+)
+
+[27-Nov-2024 12:35:47 UTC] Anciennes associations supprimées pour accueil_id : 5
+[27-Nov-2024 12:35:47 UTC] Erreur SQL : SQLSTATE[HY000]: General error: 1366 Incorrect integer value: '' for column 'image_id' at row 1
+[27-Nov-2024 12:35:47 UTC] Association ajoutée : accueil_id = 5, image_id = 
+[27-Nov-2024 12:35:47 UTC] Erreur SQL : SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`snackgare`.`accueil_images`, CONSTRAINT `accueil_images_ibfk_2` FOREIGN KEY (`image_id`) REFERENCES `images` (`id`) ON DELETE CASCADE)
+[27-Nov-2024 12:35:47 UTC] Association ajoutée : accueil_id = 5, image_id = 1
+[27-Nov-2024 12:35:47 UTC] Associations mises à jour avec succès pour l'élément 5.
+[27-Nov-2024 12:35:47 UTC] updateAccueil terminé avec succès pour l'élément 5.
+[27-Nov-2024 12:35:47 UTC] Mise à jour réussie pour l'élément 5.
+[27-Nov-2024 12:51:48 UTC] Formulaire de modification soumis ? Méthode : GET
+[27-Nov-2024 12:52:00 UTC] Erreur SQL : SQLSTATE[HY000]: General error: 1366 Incorrect integer value: '' for column 'image_id' at row 1
+[27-Nov-2024 12:52:00 UTC] Erreur SQL : SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`snackgare`.`accueil_images`, CONSTRAINT `accueil_images_ibfk_2` FOREIGN KEY (`image_id`) REFERENCES `images` (`id`) ON DELETE CASCADE)
+[27-Nov-2024 12:52:11 UTC] Formulaire de modification soumis ? Méthode : GET
+[27-Nov-2024 12:52:25 UTC] Erreur SQL : SQLSTATE[HY000]: General error: 1366 Incorrect integer value: '' for column 'image_id' at row 1
+[27-Nov-2024 12:52:25 UTC] Erreur SQL : SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`snackgare`.`accueil_images`, CONSTRAINT `accueil_images_ibfk_2` FOREIGN KEY (`image_id`) REFERENCES `images` (`id`) ON DELETE CASCADE)
+[27-Nov-2024 12:56:40 UTC] Formulaire de modification soumis ? Méthode : GET
+[27-Nov-2024 12:56:54 UTC] Début de associateImages pour l'élément 5.
+[27-Nov-2024 12:56:54 UTC] Images à associer avant filtrage : Array
+(
+    [0] => 1
+)
+
+[27-Nov-2024 12:56:54 UTC] Images à associer après filtrage : Array
+(
+)
+
+[27-Nov-2024 12:56:54 UTC] Anciennes associations supprimées pour accueil_id : 5
+[27-Nov-2024 12:56:54 UTC] Associations mises à jour avec succès pour l'élément 5.
+[27-Nov-2024 12:59:25 UTC] Formulaire de modification soumis ? Méthode : GET
+[27-Nov-2024 12:59:32 UTC] Images reçues avant filtrage : Array
+(
+    [0] => 
+)
+
+[27-Nov-2024 12:59:32 UTC] Images après filtrage : Array
+(
+)
+
+[27-Nov-2024 12:59:36 UTC] Images finales à associer : Array
+(
+    [0] => 1
+)
+
+[27-Nov-2024 12:59:36 UTC] Début de associateImages pour l'élément 5.
+[27-Nov-2024 12:59:36 UTC] Images à associer avant filtrage : Array
+(
+    [0] => 1
+)
+
+[27-Nov-2024 12:59:36 UTC] Images à associer après filtrage : Array
+(
+)
+
+[27-Nov-2024 12:59:36 UTC] Anciennes associations supprimées pour accueil_id : 5
+[27-Nov-2024 12:59:36 UTC] Associations mises à jour avec succès pour l'élément 5.
+[27-Nov-2024 13:01:03 UTC] Formulaire de modification soumis ? Méthode : GET
+[27-Nov-2024 13:01:09 UTC] Images reçues avant filtrage : Array
+(
+    [0] => 
+)
+
+[27-Nov-2024 13:01:09 UTC] Images après filtrage : Array
+(
+)
+
+[27-Nov-2024 13:01:12 UTC] Images finales à associer : Array
+(
+    [0] => 1
+)
+
+[27-Nov-2024 13:01:12 UTC] Début de associateImages pour l'élément 5.
+[27-Nov-2024 13:01:12 UTC] Images à associer : Array
+(
+    [0] => 1
+)
+
+[27-Nov-2024 13:01:12 UTC] Anciennes associations supprimées pour accueil_id : 5
+[27-Nov-2024 13:01:12 UTC] Erreur SQL : SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`snackgare`.`accueil_images`, CONSTRAINT `accueil_images_ibfk_2` FOREIGN KEY (`image_id`) REFERENCES `images` (`id`) ON DELETE CASCADE)
+[27-Nov-2024 13:01:12 UTC] Association ajoutée : accueil_id = 5, image_id = 1
+[27-Nov-2024 13:01:12 UTC] Associations mises à jour avec succès pour l'élément 5.
+[27-Nov-2024 13:08:12 UTC] Formulaire de modification soumis ? Méthode : GET
+[27-Nov-2024 13:08:22 UTC] Début de associateImages pour l'élément 5.
+[27-Nov-2024 13:08:22 UTC] Images à associer : Array
+(
+    [0] => 45
+)
+
+[27-Nov-2024 13:08:22 UTC] Anciennes associations supprimées pour accueil_id : 5
+[27-Nov-2024 13:08:22 UTC] Association ajoutée : accueil_id = 5, image_id = 45
+[27-Nov-2024 13:08:22 UTC] Associations mises à jour avec succès pour l'élément 5.
+[27-Nov-2024 13:08:29 UTC] Formulaire de modification soumis ? Méthode : GET
+[27-Nov-2024 13:08:42 UTC] Début de associateImages pour l'élément 9.
+[27-Nov-2024 13:08:42 UTC] Images à associer : Array
+(
+    [0] => 46
+)
+
+[27-Nov-2024 13:08:42 UTC] Anciennes associations supprimées pour accueil_id : 9
+[27-Nov-2024 13:08:42 UTC] Association ajoutée : accueil_id = 9, image_id = 46
+[27-Nov-2024 13:08:42 UTC] Associations mises à jour avec succès pour l'élément 9.
+[27-Nov-2024 13:08:45 UTC] Formulaire de modification soumis ? Méthode : GET
+[27-Nov-2024 13:08:57 UTC] Début de associateImages pour l'élément 10.
+[27-Nov-2024 13:08:57 UTC] Images à associer : Array
+(
+    [0] => 47
+)
+
+[27-Nov-2024 13:08:57 UTC] Anciennes associations supprimées pour accueil_id : 10
+[27-Nov-2024 13:08:57 UTC] Association ajoutée : accueil_id = 10, image_id = 47
+[27-Nov-2024 13:08:57 UTC] Associations mises à jour avec succès pour l'élément 10.
+[27-Nov-2024 13:18:46 UTC] Début de associateImages pour l'élément 2.
+[27-Nov-2024 13:18:46 UTC] Images à associer : Array
+(
+    [0] => 23
+    [1] => 48
+)
+
+[27-Nov-2024 13:18:46 UTC] Anciennes associations supprimées pour accueil_id : 2
+[27-Nov-2024 13:18:46 UTC] Association ajoutée : accueil_id = 2, image_id = 23
+[27-Nov-2024 13:18:46 UTC] Association ajoutée : accueil_id = 2, image_id = 48
+[27-Nov-2024 13:18:46 UTC] Associations mises à jour avec succès pour l'élément 2.
+[27-Nov-2024 13:19:59 UTC] Début de associateImages pour l'élément 2.
+[27-Nov-2024 13:19:59 UTC] Images à associer : Array
+(
+    [0] => 48
+)
+
+[27-Nov-2024 13:19:59 UTC] Anciennes associations supprimées pour accueil_id : 2
+[27-Nov-2024 13:19:59 UTC] Association ajoutée : accueil_id = 2, image_id = 48
+[27-Nov-2024 13:19:59 UTC] Associations mises à jour avec succès pour l'élément 2.
+[27-Nov-2024 13:20:14 UTC] Début de associateImages pour l'élément 2.
+[27-Nov-2024 13:20:14 UTC] Images à associer : Array
+(
+    [0] => 48
+    [1] => 49
+)
+
+[27-Nov-2024 13:20:14 UTC] Anciennes associations supprimées pour accueil_id : 2
+[27-Nov-2024 13:20:14 UTC] Association ajoutée : accueil_id = 2, image_id = 48
+[27-Nov-2024 13:20:14 UTC] Association ajoutée : accueil_id = 2, image_id = 49
+[27-Nov-2024 13:20:14 UTC] Associations mises à jour avec succès pour l'élément 2.
+[27-Nov-2024 13:26:48 UTC] PHP Warning:  Undefined variable $cloudinaryImages in C:\snack_gare\Views\dashboard\accueil\edit.php on line 24
+[27-Nov-2024 13:26:48 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in C:\snack_gare\Views\dashboard\accueil\edit.php on line 24
+[27-Nov-2024 13:36:05 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method Cloudinary\Api\Admin\AdminApi::resources() in C:\snack_gare\Services\CloudinaryService.php:52
+Stack trace:
+#0 C:\snack_gare\Controllers\AccueilController.php(88): App\Services\CloudinaryService->getImages()
+#1 C:\snack_gare\Controllers\AccueilController.php(106): App\Controllers\AccueilController->getCloudinaryImages()
+#2 [internal function]: App\Controllers\AccueilController->edit(9)
+#3 C:\snack_gare\Config\Main.php(93): call_user_func_array(Array, Array)
+#4 C:\snack_gare\Public\index.php(27): App\Config\Main->start()
+#5 {main}
+  thrown in C:\snack_gare\Services\CloudinaryService.php on line 52
+[27-Nov-2024 13:38:25 UTC] Début de associateImages pour l'élément 9.
+[27-Nov-2024 13:38:25 UTC] Images à associer : Array
+(
+    [0] => 47
+)
+
+[27-Nov-2024 13:38:25 UTC] Anciennes associations supprimées pour accueil_id : 9
+[27-Nov-2024 13:38:25 UTC] Association ajoutée : accueil_id = 9, image_id = 47
+[27-Nov-2024 13:38:25 UTC] Associations mises à jour avec succès pour l'élément 9.
+[27-Nov-2024 13:52:28 UTC] Début de associateImages pour l'élément 12.
+[27-Nov-2024 13:52:28 UTC] Images à associer : Array
+(
+    [0] => 26
+    [1] => 31
+    [2] => 50
+)
+
+[27-Nov-2024 13:52:28 UTC] Anciennes associations supprimées pour accueil_id : 12
+[27-Nov-2024 13:52:28 UTC] Association ajoutée : accueil_id = 12, image_id = 26
+[27-Nov-2024 13:52:28 UTC] Association ajoutée : accueil_id = 12, image_id = 31
+[27-Nov-2024 13:52:28 UTC] Association ajoutée : accueil_id = 12, image_id = 50
+[27-Nov-2024 13:52:28 UTC] Associations mises à jour avec succès pour l'élément 12.
+[27-Nov-2024 13:54:14 UTC] Début de associateImages pour l'élément 3.
+[27-Nov-2024 13:54:14 UTC] Images à associer : Array
+(
+    [0] => 25
+    [1] => 51
+)
+
+[27-Nov-2024 13:54:14 UTC] Anciennes associations supprimées pour accueil_id : 3
+[27-Nov-2024 13:54:14 UTC] Association ajoutée : accueil_id = 3, image_id = 25
+[27-Nov-2024 13:54:14 UTC] Association ajoutée : accueil_id = 3, image_id = 51
+[27-Nov-2024 13:54:14 UTC] Associations mises à jour avec succès pour l'élément 3.
+[27-Nov-2024 13:54:48 UTC] [2024-11-27T13:54:48.807413+00:00] cloudinary.CRITICAL: Request to Cloudinary server returned an error {"statusCode":400,"message":"File size too large. Got 10897755. Maximum is 10485760. Upgrade your plan to enjoy higher limits https://www.cloudinary.com/pricing/upgrades/file-limit"} []
+[27-Nov-2024 13:54:48 UTC] [2024-11-27T13:54:48.838080+00:00] cloudinary.CRITICAL: Async request failed {"code":0,"message":"File size too large. Got 10897755. Maximum is 10485760. Upgrade your plan to enjoy higher limits https://www.cloudinary.com/pricing/upgrades/file-limit"} []
+[27-Nov-2024 13:54:48 UTC] Cloudinary upload error: File size too large. Got 10897755. Maximum is 10485760. Upgrade your plan to enjoy higher limits https://www.cloudinary.com/pricing/upgrades/file-limit
+[27-Nov-2024 13:54:48 UTC] Début de associateImages pour l'élément 3.
+[27-Nov-2024 13:54:48 UTC] Images à associer : Array
+(
+    [0] => 25
+    [1] => 51
+)
+
+[27-Nov-2024 13:54:48 UTC] Anciennes associations supprimées pour accueil_id : 3
+[27-Nov-2024 13:54:48 UTC] Association ajoutée : accueil_id = 3, image_id = 25
+[27-Nov-2024 13:54:48 UTC] Association ajoutée : accueil_id = 3, image_id = 51
+[27-Nov-2024 13:54:48 UTC] Associations mises à jour avec succès pour l'élément 3.
+[27-Nov-2024 13:55:21 UTC] Début de associateImages pour l'élément 3.
+[27-Nov-2024 13:55:21 UTC] Images à associer : Array
+(
+    [0] => 25
+    [1] => 51
+    [2] => 52
+)
+
+[27-Nov-2024 13:55:21 UTC] Anciennes associations supprimées pour accueil_id : 3
+[27-Nov-2024 13:55:21 UTC] Association ajoutée : accueil_id = 3, image_id = 25
+[27-Nov-2024 13:55:21 UTC] Association ajoutée : accueil_id = 3, image_id = 51
+[27-Nov-2024 13:55:21 UTC] Association ajoutée : accueil_id = 3, image_id = 52
+[27-Nov-2024 13:55:21 UTC] Associations mises à jour avec succès pour l'élément 3.
+[27-Nov-2024 13:57:04 UTC] Début de associateImages pour l'élément 13.
+[27-Nov-2024 13:57:04 UTC] Images à associer : Array
+(
+    [0] => 53
+)
+
+[27-Nov-2024 13:57:04 UTC] Anciennes associations supprimées pour accueil_id : 13
+[27-Nov-2024 13:57:04 UTC] Association ajoutée : accueil_id = 13, image_id = 53
+[27-Nov-2024 13:57:04 UTC] Associations mises à jour avec succès pour l'élément 13.
+[27-Nov-2024 13:58:24 UTC] Début de associateImages pour l'élément 14.
+[27-Nov-2024 13:58:24 UTC] Images à associer : Array
+(
+    [0] => 28
+    [1] => 29
+    [2] => 38
+)
+
+[27-Nov-2024 13:58:24 UTC] Anciennes associations supprimées pour accueil_id : 14
+[27-Nov-2024 13:58:24 UTC] Association ajoutée : accueil_id = 14, image_id = 28
+[27-Nov-2024 13:58:24 UTC] Association ajoutée : accueil_id = 14, image_id = 29
+[27-Nov-2024 13:58:24 UTC] Association ajoutée : accueil_id = 14, image_id = 38
+[27-Nov-2024 13:58:24 UTC] Associations mises à jour avec succès pour l'élément 14.

@@ -1,7 +1,10 @@
 <?php
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
+ini_set('log_errors', 1); // Activer l'enregistrement des erreurs
+ini_set('error_log', __DIR__ . '/error_log.txt'); // Spécifier le fichier pour les erreurs
 error_reporting(E_ALL);
+
 
 use App\Config\Main;
 use Dotenv\Dotenv;

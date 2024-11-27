@@ -2,64 +2,47 @@
 
 namespace App\Repositories;
 
-use App\Services\CloudinaryService;
-use Exception;
-
 class ImageRepository extends BaseRepository
 {
     protected $table = 'images';
-    
-    // Déclaration de l'instance de CloudinaryService
-    private $cloudinaryService;
 
     public function __construct()
     {
         parent::__construct();
-        $this->cloudinaryService = new CloudinaryService();  // Initialisation de l'instance CloudinaryService
+        $this->table = 'images';
     }
 
-    // Ajouter une image à la base de données
-    public function addImage(?string $imageUrl, string $description): int
+    /**
+     * Récupère le dernier ID inséré.
+     */
+    public function getLastInsertedId(): int
     {
-        if (empty($imageUrl)) {
-            throw new \Exception('L\'URL de l\'image est vide.');
-        }
-    
-        // Prépare les données pour l'insertion
-        $data = [
-            'url' => $imageUrl,
-            'alt_text' => $description,
-        ];
-    
-        // Utilise `create()` pour insérer les données
-        if ($this->create($data)) {
-            // Retourne l'ID de l'image insérée
+        return (int)$this->db->lastInsertId();
+    }
+
+    /**
+     * Crée une nouvelle image dans la base de données.
+     *
+     * @param string $url L'URL de l'image.
+     * @param string $altText Le texte alternatif pour l'image.
+     * @return int L'ID de l'image nouvellement créée.
+     */
+    public function createImage(string $url, string $altText): int
+    {
+        try {
+            $sql = "INSERT INTO images (url, alt_text) VALUES (?, ?)";
+            $this->req($sql, [$url, $altText]);
             return $this->db->lastInsertId();
+        } catch (\Exception $e) {
+            error_log("Erreur dans createImage : " . $e->getMessage());
+            return 0;
         }
-    
-        throw new \Exception("Erreur lors de l'insertion de l'image.");
     }
-    // Trouver une image par son texte alternatif (alt)
-    public function findImageByAlt(string $altText): ?array
-    {
-        $result = $this->findBy(['alt_text' => $altText]);
-        return $result ? $result[0] : null; // Retourne le premier résultat ou null
-    }
-
-    // Supprimer une image depuis Cloudinary en utilisant son public_id
-    public function deleteImage(string $publicId): bool
-    {
-        // Appel au service Cloudinary pour supprimer l'image
-        return $this->cloudinaryService->deleteFile($publicId);
-    }
-
-    public function getImageUrlById(int $imageId): ?string
-    {
-        $sql = "SELECT url FROM images WHERE id = :id";
-        $stmt = $this->req($sql, ['id' => $imageId]);
-        $result = $stmt->fetch();
-        
-        return $result ? $result['url'] : null;  // Retourne l'URL de l'image ou null si l'image n'existe pas
-    }
+    public function exists(int $imageId): bool
+{
+    $sql = "SELECT COUNT(*) FROM images WHERE id = ?";
+    $result = $this->req($sql, [$imageId])->fetchColumn();
+    return $result > 0;
 }
 
+}

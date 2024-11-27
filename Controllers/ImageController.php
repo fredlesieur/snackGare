@@ -2,25 +2,79 @@
 
 namespace App\Controllers;
 
+use App\Repositories\ImageRepository;
+use App\Services\CloudinaryService;
+
 class ImageController extends Controller
 {
-    public function serveBorder()
-    {
-        $file = dirname(__DIR__, 2) . '/Public/assets/images/decorative-border.svg';
+    private $imageRepository;
+    private $cloudinaryService;
 
-        // Vérifiez si le fichier existe
-        if (!file_exists($file)) {
-            header("HTTP/1.0 404 Not Found");
-            echo "Fichier introuvable : " . $file;
-            exit;
+    public function __construct()
+    {
+        parent::__construct();
+        $this->imageRepository = new ImageRepository();
+        $this->cloudinaryService = new CloudinaryService();
+    }
+
+    public function list()
+    {
+        try {
+            $images = $this->imageRepository->findAll();
+            $this->render('dashboard/images/list', ['images' => $images], true);
+        } catch (\Exception $e) {
+            $_SESSION['flash_error'] = "Erreur lors de la récupération des images.";
+            header('Location: /dashboard/index');
+        }
+    }
+
+    public function add()
+    {
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            if (!empty($_FILES['image']['tmp_name'])) {
+                try {
+                    $uploadedUrl = $this->cloudinaryService->uploadFile($_FILES['image']['tmp_name'], 'images/');
+                    if ($uploadedUrl) {
+                        $data = [
+                            'url' => $uploadedUrl,
+                            'alt_text' => $_POST['alt_text'] ?? ''
+                        ];
+                        $this->imageRepository->create($data);
+                        $_SESSION['flash_success'] = "Image ajoutée avec succès.";
+                    } else {
+                        $_SESSION['flash_error'] = "Erreur lors de l'upload de l'image.";
+                    }
+                } catch (\Exception $e) {
+                    $_SESSION['flash_error'] = "Une erreur est survenue lors de l'upload de l'image.";
+                }
+            } else {
+                $_SESSION['flash_error'] = "Aucune image sélectionnée.";
+            }
+            header('Location: /image/list');
+        } else {
+            $this->render('dashboard/images/add', [], true);
+        }
+    }
+
+    public function delete(int $id)
+    {
+        try {
+            $image = $this->imageRepository->find($id);
+            if ($image) {
+                // Supprime l'image de Cloudinary
+                $publicId = basename($image['url'], '.' . pathinfo($image['url'], PATHINFO_EXTENSION));
+                $this->cloudinaryService->deleteFile($publicId);
+
+                // Supprime l'entrée dans la base de données
+                $this->imageRepository->delete($id);
+                $_SESSION['flash_success'] = "Image supprimée avec succès.";
+            } else {
+                $_SESSION['flash_error'] = "Image introuvable.";
+            }
+        } catch (\Exception $e) {
+            $_SESSION['flash_error'] = "Une erreur est survenue lors de la suppression de l'image.";
         }
 
-        // Définit l'en-tête MIME pour les fichiers SVG
-        header("Content-Type: image/svg+xml");
-        header("Content-Length: " . filesize($file));
-
-        // Lit et affiche le fichier
-        readfile($file);
-        exit;
+        header('Location: /image/list');
     }
 }

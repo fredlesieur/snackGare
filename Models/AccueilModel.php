@@ -4,15 +4,12 @@ namespace App\Models;
 
 use App\Repositories\BaseRepository;
 
-class SectionModel extends BaseRepository
+class AccueilModel extends BaseRepository
 {
     protected $id;
-    protected $page_id;
     protected $title;
-    protected $display_order;
     protected $content;
-    protected $image_id;
-
+    protected $display_order;
 
     /**
      * Get the value of id
@@ -30,26 +27,6 @@ class SectionModel extends BaseRepository
     public function setId($id)
     {
         $this->id = $id;
-
-        return $this;
-    }
-
-    /**
-     * Get the value of page_id
-     */ 
-    public function getPage_id()
-    {
-        return $this->page_id;
-    }
-
-    /**
-     * Set the value of page_id
-     *
-     * @return  self
-     */ 
-    public function setPage_id($page_id)
-    {
-        $this->page_id = $page_id;
 
         return $this;
     }
@@ -75,27 +52,6 @@ class SectionModel extends BaseRepository
     }
 
     /**
-     * Get the value of display_order
-     */ 
-    public function getDisplay_order()
-    {
-        return $this->display_order;
-    }
-
-    /**
-     * Set the value of display_order
-     *
-     * @return  self
-     */ 
-    public function setDisplay_order($display_order)
-    {
-        $this->display_order = $display_order;
-
-        return $this;
-    }
-
-
-    /**
      * Get the value of content
      */ 
     public function getContent()
@@ -115,22 +71,23 @@ class SectionModel extends BaseRepository
         return $this;
     }
 
+   
     /**
-     * Get the value of image_id
+     * Get the value of display_order
      */ 
-    public function getImage_id()
+    public function getDisplay_order()
     {
-        return $this->image_id;
+        return $this->display_order;
     }
 
     /**
-     * Set the value of image_id
+     * Set the value of display_order
      *
      * @return  self
      */ 
-    public function setImage_id($image_id)
+    public function setDisplay_order($display_order)
     {
-        $this->image_id = $image_id;
+        $this->display_order = $display_order;
 
         return $this;
     }

@@ -120,4 +120,9 @@ class BaseRepository
     return $query && $query->rowCount() > 0;
 }
 
+public function getLastInsertedId(): int
+{
+    return (int) $this->db->lastInsertId();
+}
+
 }
