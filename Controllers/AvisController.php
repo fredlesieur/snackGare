@@ -2,6 +2,7 @@
 
 namespace App\Controllers;
 
+use App\Repositories\HoraireRepository;
 use App\Services\AvisService;
 use App\Utils\Redirect;
 
@@ -13,6 +14,7 @@ class AvisController extends Controller
     {
         $this->avisService = new AvisService();
     }
+
     public function form()
 {
     $this->showForm();
@@ -22,11 +24,17 @@ class AvisController extends Controller
      * Affiche le formulaire pour soumettre un avis.
      */
     public function showForm()
-    {
-        $this->render('avis/form', [
-            'title' => 'Laisser un avis',
-        ]);
-    }
+{
+    $horaireRepo = new HoraireRepository();
+    $horaires = $horaireRepo->findAll(); // Horaires
+
+    $css = '/assets/css/avis.css'; // Chemin vers le fichier CSS pour le formulaire des avis
+    $this->render('avis/form', [
+        'title' => 'Laisser un avis',
+        'css' => $css,
+        'horaires'=> $horaires // Passer le chemin du CSS à la vue
+    ]);
+}
 
     /**
      * Traite l'ajout d'un avis.

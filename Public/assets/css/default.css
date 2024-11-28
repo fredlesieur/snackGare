@@ -14,6 +14,15 @@ body {
     overflow-x: hidden; /* Empêche le scroll horizontal */
 }
 
+.tittlePages {
+    color: #2e9ca0;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 2rem;
+    text-align: center;
+    font-style: italic;
+    font-weight: 900;
+}
 /* Liens */
 a {
     color: #f5f0e1 !important;
@@ -72,7 +81,7 @@ header {
 .navbar-toggler-icon {
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='%23EFA00F' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
-/* Style personnalisé pour le modal */
+/* Style personnalisé pour le modal de connexion*/
 .custom-modal {
     background-color: #2e9ca0; /* Fond sombre pour s'accorder à votre thème */
     color: #f5f0e1; /* Texte clair */
@@ -128,6 +137,27 @@ header {
 .custom-modal .btn-primary:hover {
     background-color: #f5f0e1; /* Texte clair */
     color: #06283d; /* Texte sombre */
+}
+/*modal des liens legaux*/
+.modal-content {
+    background-color: #0F2C33; /* Couleur de fond */
+    color: #f5f0e1; /* Texte clair */
+    border-radius: 10px; /* Bords arrondis */
+    padding: 1rem; /* Espacement interne */
+}
+
+.modal-header {
+    border-bottom: 1px solid #EFA00F; /* Ligne sous le titre */
+}
+
+.modal-title {
+    color: #EFA00F; /* Couleur du titre */
+    font-weight: bold;
+}
+
+.modal-body p {
+    font-size: 1rem;
+    line-height: 1.6;
 }
 
 /* Banner */

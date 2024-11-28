@@ -37,7 +37,10 @@
     <!-- Navigation du tableau de bord -->
     <nav class="dashboard-nav">
         <div class="dashboard-header">
-            <img class="logo" src="/assets/logo/logo_snack.png" alt="Logo">
+
+            <a href="/" class="navbar-brand">
+                <img class="logo" src="/assets/logo/logo_snack.png" alt="Snack de la Gare logo">
+            </a>
         </div>
         <a href="/user/logout" class="logout">Déconnexion</a>
     </nav>

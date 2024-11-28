@@ -18,4 +18,7 @@ class DashboardController extends Controller
         $this->render('dashboard/home', ['title' => 'Bienvenue sur le Dashboard'], true);
     }
 
+   
+
+
 }

@@ -1,0 +1,121 @@
+/* Conteneur du formulaire */
+.form-container {
+    background-color: transparent; /* Pas de couleur de fond, utilise le fond global */
+    border: 2px solid #2e9ca0; /* Bordure autour du formulaire */
+    border-radius: 10px; /* Coins arrondis */
+    padding: 20px; /* Espacement interne */
+    width: 90%; /* Largeur ajustée pour le responsive */
+    max-width: 400px; /* Largeur maximale */
+    margin: 20px auto; /* Centré horizontalement */
+    text-align: center; /* Centrer le contenu */
+}
+
+/* Titre principal */
+.form-container h1 {
+    font-size: 1.8rem;
+    color: #EFA00F; /* Couleur dorée */
+    margin-bottom: 15px;
+    text-shadow: 1px 1px #06283d; /* Ombre légère */
+}
+
+/* Sous-titre */
+.form-container h2 {
+    font-size: 1.2rem;
+    color: #FFFFFF;
+    margin-bottom: 10px;
+}
+
+/* Étoiles */
+.stars {
+    margin: 15px 0;
+}
+
+.stars i {
+    font-size: 1.5rem;
+    color: #EFA00F; /* Couleur dorée */
+    margin: 0 5px;
+}
+
+/* Champs de saisie et sélection */
+.form-container .form-control, 
+.form-container .form-select {
+    background-color: #f5f0e1; /* Fond transparent */
+    color: #0f2c33; /* Texte blanc */
+    padding: 10px;
+    font-size: 1rem;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+.form-container .form-control:focus, 
+.form-container .form-select:focus {
+    border-color: #ffffff; /* Bordure blanche au focus */
+    outline: none;
+}
+
+/* Bouton d'envoi */
+.form-container .btn {
+    background-color: #2e9ca0; /* Couleur dorée */
+    color: #ffffff; /* Texte sombre */
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form-container .btn:hover {
+    background-color: #e6900e; /* Couleur dorée plus foncée au survol */
+}
+/* Conteneur des étoiles */
+
+.rating {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+/* Cache les boutons radio */
+.rating input {
+    display: none;
+}
+
+/* Style des étoiles */
+.rating label {
+    font-size: 2rem; /* Taille des étoiles */
+    color: #ccc; /* Couleur des étoiles inactives */
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+/* Couleur des étoiles actives */
+.rating input:checked ~ label,
+.rating label:hover,
+.rating label:hover ~ label {
+    color: #EFA00F; /* Couleur des étoiles actives (dorée) */
+}
+
+
+
+
+/* Messages de succès et d'erreur */
+.alert {
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+.alert-success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.alert-danger {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}

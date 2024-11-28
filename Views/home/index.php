@@ -1,44 +1,48 @@
+<h1 class="tittlePages">Accueil</h1>
+
 <?php if (isset($css)) echo '<link rel="stylesheet" href="' . htmlspecialchars($css) . '">'; ?>
 <main class="home-page">
     <!-- Bannière principale -->
     <div class="hero-banner">
         <div class="text-container">
-            <h1 class="main-title">Tous les jours<br><span>sauf le samedi</span></h1>
-            <h2 class="linkhours">Voir nos horaires</h2> <!-- Lien vers la page contact -->
+            <h2 class="main-title">Tous les jours<br><span class="text-center">sauf le samedi</span></h2>
+            <h3 class="linkhours">Voir nos horaires</h3>
             <a href="#" class="btn-order">Commander</a>
         </div>
     </div>
 
-    <!-- Parcourir toutes les sections -->
-    <?php if (!empty($sections)): ?>
+  <!-- Parcourir toutes les sections -->
+  <?php if (!empty($sections)): ?>
         <?php foreach ($sections as $section): ?>
             <section class="section">
-                <h2><?= htmlspecialchars($section['title'] ?? 'Titre indisponible'); ?></h2>
-                <p><?= htmlspecialchars($section['content'] ?? 'Contenu indisponible'); ?></p>
-
-                <!-- Carousel Bootstrap -->
+                <div class="text-container">
+                    <h2><?= htmlspecialchars($section['title'] ?? 'Titre indisponible'); ?></h2>
+                    <p><?= htmlspecialchars($section['content'] ?? 'Contenu indisponible'); ?></p>
+                </div>
                 <?php if (!empty($section['image_urls'])): ?>
-                    <div id="carouselSection<?= htmlspecialchars($section['id']); ?>" class="carousel slide" data-bs-ride="carousel">
-                        <div class="carousel-inner">
-                            <?php 
-                            $imageUrls = explode(',', $section['image_urls']);
-                            $imageAltTexts = explode(',', $section['image_alt_texts']);
-                            foreach ($imageUrls as $index => $url): ?>
-                                <div class="carousel-item <?= $index === 0 ? 'active' : ''; ?>">
-                                    <img src="<?= htmlspecialchars($url); ?>" 
-                                         class="d-block w-100" 
-                                         alt="<?= htmlspecialchars($imageAltTexts[$index] ?? 'Image'); ?>">
-                                </div>
-                            <?php endforeach; ?>
+                    <div class="carousel-container">
+                        <div id="carouselSection<?= htmlspecialchars($section['id']); ?>" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <?php 
+                                $imageUrls = explode(',', $section['image_urls']);
+                                $imageAltTexts = explode(',', $section['image_alt_texts']);
+                                foreach ($imageUrls as $index => $url): ?>
+                                    <div class="carousel-item <?= $index === 0 ? 'active' : ''; ?>">
+                                        <img src="<?= htmlspecialchars($url); ?>" 
+                                             class="d-block w-100" 
+                                             alt="<?= htmlspecialchars($imageAltTexts[$index] ?? 'Image'); ?>">
+                                    </div>
+                                <?php endforeach; ?>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselSection<?= htmlspecialchars($section['id']); ?>" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Précédent</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselSection<?= htmlspecialchars($section['id']); ?>" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Suivant</span>
+                            </button>
                         </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselSection<?= htmlspecialchars($section['id']); ?>" data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Précédent</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselSection<?= htmlspecialchars($section['id']); ?>" data-bs-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Suivant</span>
-                        </button>
                     </div>
                 <?php endif; ?>
             </section>

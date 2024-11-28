@@ -24,7 +24,7 @@ abstract class Controller
      */
     public function render(string $file, array $donnees = [], bool $isDashboard = false): void
     {
-
+     
         // Extraire les données pour la vue
         extract($donnees);
 
