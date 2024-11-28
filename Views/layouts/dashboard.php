@@ -84,6 +84,17 @@
                     </ul>
                 </li>
 
+                <!-- Avis -->
+                <li>
+                    <a class="btn-link" data-bs-toggle="collapse" href="#avis-menu" role="button" aria-expanded="false" aria-controls="avis-menu">
+                        Avis
+                    </a>
+                    <ul class="collapse" id="avis-menu">
+                        <li><a href="/avis/listPending">Lister les avis</a></li>
+                    </ul>
+                </li>
+
+
                 <!-- Menu -->
                 <li>
                     <a class="btn-link" data-bs-toggle="collapse" href="#menu-categories" role="button" aria-expanded="false" aria-controls="menu-categories">

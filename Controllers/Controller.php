@@ -24,10 +24,6 @@ abstract class Controller
      */
     public function render(string $file, array $donnees = [], bool $isDashboard = false): void
     {
-        // Charger les éléments de la page d'accueil pour la navigation
-        if (!array_key_exists('elements', $donnees)) {
-            $donnees['elements'] = $this->accueilRepository->findAllWithImages(); // Utilisation du bon repository
-        }
 
         // Extraire les données pour la vue
         extract($donnees);

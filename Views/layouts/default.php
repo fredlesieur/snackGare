@@ -36,32 +36,61 @@
 </head>
 
 <body class="container-fluid p-3">
-    <nav class="navbar navbar-expand-xl">
-        <div class="container-fluid">
-            <a href="/" class="navbar-brand">
-                <img class="logo" src="/assets/logo/logo_snack.png" alt="Snack de la Gare logo">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="/">Accueil</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/contact">Contact</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/menu">Menu</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/avis">Avis</a></li>
-                   
-                    <?php if (isset($_SESSION['id'])): ?>
-                        <li class="nav-item"><a class="nav-link" href="/dashboard/index">Tableau de bord</a></li>
-                        <li class="nav-item"><a class="nav-link" href="/user/logout">Déconnexion</a></li>
-                    <?php else: ?>
-                        <li class="nav-item"><a class="nav-link" href="/user/showLoginForm">Connexion</a></li>
-                    <?php endif; ?>
-                </ul>
+<nav class="navbar navbar-expand-xl">
+    <div class="container-fluid">
+        <a href="/" class="navbar-brand">
+            <img class="logo" src="/assets/logo/logo_snack.png" alt="Snack de la Gare logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="/home">Accueil</a></li>
+                <li class="nav-item"><a class="nav-link" href="/contact">Contact</a></li>
+                <li class="nav-item"><a class="nav-link" href="/menu">Menu</a></li>
+                <li class="nav-item"><a class="nav-link" href="/avis/form">Avis</a></li>
 
+                <!-- Lien connexion -->
+                <?php if (isset($_SESSION['id'])): ?>
+                    <li class="nav-item"><a class="nav-link" href="/dashboard/index">Tableau de bord</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/user/logout">Déconnexion</a></li>
+                <?php else: ?>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#loginModal">Connexion</a>
+                    </li>
+                <?php endif; ?>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!-- Modal pour la connexion -->
+<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content custom-modal">
+            <div class="modal-header">
+                <h5 class="modal-title" id="loginModalLabel">Connexion</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form action="/user/login" method="POST">
+                    <div class="mb-3">
+                        <label for="username" class="form-label">Nom d'utilisateur</label>
+                        <input type="text" name="username" id="username" class="form-control" placeholder="Nom d'utilisateur" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Mot de passe</label>
+                        <input type="password" name="password" id="password" class="form-control" placeholder="Mot de passe" required>
+                    </div>
+                    <input type="hidden" name="csrf_token" value="<?= $_SESSION['csrf_token'] ?? '' ?>">
+                    <button type="submit" class="btn btn-primary w-100">Se connecter</button>
+                </form>
             </div>
         </div>
-    </nav>
+    </div>
+</div>
+
+
     <div class="image-container">
         <img class="burger-image" src="/assets/logo/burger.webp" alt="Burger">
         <div class="command-text">
