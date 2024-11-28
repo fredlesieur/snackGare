@@ -26,6 +26,17 @@
         <label for="commentaire" class="form-label">Votre avis</label>
         <textarea name="commentaire" id="commentaire" class="form-control" rows="5" required></textarea>
     </div>
+    
+    <div class="mb-3">
+    <label for="rating" class="form-label">Note</label>
+    <select name="rating" id="rating" class="form-select" required>
+        <option value="1">1 étoile</option>
+        <option value="2">2 étoiles</option>
+        <option value="3">3 étoiles</option>
+        <option value="4">4 étoiles</option>
+        <option value="5">5 étoiles</option>
+    </select>
+</div>
 
     <button type="submit" class="btn btn-primary">Envoyer</button>
 </form>

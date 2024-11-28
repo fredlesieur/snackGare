@@ -36,32 +36,33 @@ class AvisController extends Controller
         try {
             $nom = $_POST['nom'] ?? null;
             $commentaire = $_POST['commentaire'] ?? null;
+            $rating = $_POST['rating'] ?? null;
     
-            // Log des données reçues
-            error_log("Données reçues dans le contrôleur : nom=$nom, commentaire=$commentaire");
-    
-            if (!$nom || !$commentaire) {
+            if (!$nom || !$commentaire || !$rating) {
                 throw new \Exception("Tous les champs sont obligatoires.");
+            }
+    
+            // Vérification de la validité de la note
+            if ($rating < 1 || $rating > 5) {
+                throw new \Exception("La note doit être comprise entre 1 et 5.");
             }
     
             // Appel au service
             $this->avisService->addReview([
                 'nom' => $nom,
                 'commentaire' => $commentaire,
+                'rating' => $rating,
             ]);
-    
-            // Log de confirmation avant redirection
-            error_log("Avis ajouté avec succès. Redirection vers /avis/form.");
     
             $_SESSION['success'] = "Votre avis a été soumis avec succès et sera examiné sous peu.";
             Redirect::to('/avis/form');
         } catch (\Exception $e) {
             // Log de l'erreur
-            error_log("Erreur dans le contrôleur : " . $e->getMessage());
             $_SESSION['error'] = "Erreur : " . $e->getMessage();
             Redirect::to('/avis/form');
         }
     }
+    
     
     public function listPending()
 {

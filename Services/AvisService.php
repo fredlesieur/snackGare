@@ -22,23 +22,21 @@ class AvisService
     public function addReview(array $data): bool
     {
         if (strlen($data['commentaire']) > 400) {
-            throw new \Exception("Le commentaire doit contenir  moins de 400 caractères.");
+            throw new \Exception("Le commentaire doit contenir moins de 400 caractères.");
+        }
+    
+        // Vérification de la validité de la note
+        if (!isset($data['rating']) || $data['rating'] < 1 || $data['rating'] > 5) {
+            throw new \Exception("La note doit être comprise entre 1 et 5.");
         }
     
         $data['statut'] = 0; // Non validé par défaut
         $data['dateavis'] = date('Y-m-d H:i:s');
     
-        // Log des données avant l'insertion
-        error_log("Données préparées pour insertion : " . print_r($data, true));
-    
         // Appel au repository
-        $result = $this->avisRepository->addReview($data);
-    
-        // Log de confirmation après insertion
-        error_log("Résultat de l'insertion dans le repository : " . ($result ? "succès" : "échec"));
-    
-        return $result;
+        return $this->avisRepository->addReview($data);
     }
+    
 
     /**
      * Récupère tous les avis non validés.

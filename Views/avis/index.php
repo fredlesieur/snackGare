@@ -9,6 +9,15 @@
                             <div class="card-body">
                                 <h5 class="card-title"><?= htmlspecialchars($review['nom']) ?></h5>
                                 <p class="card-text"><?= htmlspecialchars($review['commentaire']) ?></p>
+                                <div class="stars">
+                                    <?php for ($i = 1; $i <= 5; $i++): ?>
+                                        <?php if ($i <= $review['rating']): ?>
+                                            <i class="fas fa-star text-warning"></i> <!-- Star pleine -->
+                                        <?php else: ?>
+                                            <i class="far fa-star text-warning"></i> <!-- Star vide -->
+                                        <?php endif; ?>
+                                    <?php endfor; ?>
+                                </div>
                                 <p class="card-footer text-muted">
                                     Posté le <?= date('d-m-Y', strtotime($review['dateavis'])) ?>
                                 </p>
@@ -22,7 +31,6 @@
                 </div>
             <?php endif; ?>
         </div>
-        <!-- Contrôles -->
         <button class="carousel-control-prev" type="button" data-bs-target="#avisCarousel" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Précédent</span>
