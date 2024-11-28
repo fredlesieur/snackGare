@@ -1,6 +1,5 @@
 <h1 class="tittlePages">Accueil</h1>
 
-<?php if (isset($css)) echo '<link rel="stylesheet" href="' . htmlspecialchars($css) . '">'; ?>
 <main class="home-page">
     <!-- Bannière principale -->
     <div class="hero-banner">
@@ -94,7 +93,7 @@
             <span class="visually-hidden">Suivant</span>
         </button>
     </div>
-</section>
+</section> <br> <br>
 
 </main>
 

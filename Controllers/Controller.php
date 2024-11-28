@@ -6,12 +6,11 @@ use App\Repositories\AccueilRepository;
 
 abstract class Controller
 {
-    // Déclaration du repository pour la page d'accueil
+    // Déclaration des repositories nécessaires
     protected $accueilRepository;
 
     public function __construct()
     {
-        // On initialise le repository pour gérer les éléments de la page d'accueil
         $this->accueilRepository = new AccueilRepository();
     }
 
@@ -24,7 +23,9 @@ abstract class Controller
      */
     public function render(string $file, array $donnees = [], bool $isDashboard = false): void
     {
-     
+        // Les horaires sont déjà disponibles dans $_SESSION['horaires']
+        $donnees['horaires'] = $_SESSION['horaires'] ?? [];
+
         // Extraire les données pour la vue
         extract($donnees);
 
@@ -45,5 +46,3 @@ abstract class Controller
         }
     }
 }
-
-

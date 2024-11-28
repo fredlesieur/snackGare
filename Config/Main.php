@@ -28,7 +28,7 @@ class Main
             exit();
         }
 
-        // ** Nouvelle condition pour gérer les fichiers statiques **
+        // ** Gestion des fichiers statiques **
         $filePath = realpath(__DIR__ . '/../../Public' . $uri);
         if ($filePath && file_exists($filePath) && is_file($filePath)) {
             // Le fichier existe, on le sert directement
@@ -43,27 +43,30 @@ class Main
             }
         }
 
-        // Vérification du token CSRF et nettoyage des données POST si la requête est de type POST
+        // Vérification du token CSRF et nettoyage des données POST
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            // Récupérer le token CSRF à partir du corps de la requête (formulaires) ou des en-têtes HTTP (requêtes AJAX)
+            // Récupérer le token CSRF
             $csrfToken = $_POST['csrf_token'] ?? $_SERVER['HTTP_X_CSRF_TOKEN'] ?? '';
-            
-            // Appel à la méthode pour vérifier le token CSRF
+
+            // Vérification du token CSRF
             $this->checkCsrfToken($csrfToken);
 
-            // Nettoyage des données POST pour les requêtes classiques (formulaires)
+            // Nettoyage des données POST
             $_POST = $this->sanitizeFormData($_POST);
         }
+
+        // Charger les horaires pour toutes les pages
+        $horaireRepo = new \App\Repositories\HoraireRepository();
+        $horairesGlobaux = $horaireRepo->findAll();
+        $_SESSION['horaires'] = $horairesGlobaux;
 
         // Gestion des paramètres d'URL
         $params = isset($_GET['p']) ? explode('/', $_GET['p']) : [];
 
-        // Vérifie si des paramètres sont présents dans l'URL
         if (empty($params[0]) || $params[0] === '/') {
             // Gérer le slug "/" ou une URL vide comme page d'accueil
             $controller = new HomeController();
             $controller->index();
-            return; // Fin de l'exécution pour éviter les erreurs plus bas
         } elseif (!empty($params[0])) {
             // Récupération du contrôleur
             $controllerName = ucfirst(array_shift($params)) . 'Controller';

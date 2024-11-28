@@ -227,8 +227,14 @@ footer {
 
 .footer-content .social-icons {
     display: flex;
+  
 }
-
+.social-icons a {
+  padding :20px;
+}
+.social-icons {
+    padding : 30px;
+}
 .fab {
     font-size: 1.8rem;
     color: #2e9ca0;
@@ -288,35 +294,67 @@ footer {
     .phone-container span {
         font-size: 3rem; /* Taille du numéro pour tablette */
     }
+    .fab {
+        font-size: 4rem;
+        color: #2e9ca0;
+    }
 }
-
+/* Styles pour les écrans Desktop (largeur minimum 1200px) */
 @media (min-width: 1200px) {
-    .logo {
-        width: 30rem; /* Taille pour desktop large */
-    }
-
-    .navbar-nav .nav-item .nav-link {
-        font-size: 0.7rem; /* Taille encore réduite pour desktop large */
-    }
-
-    .footer-content {
-        flex-direction: row;
+    .footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         justify-content: space-between;
+        text-align: left;
+        padding: 40px 10%;
     }
 
-    .burger-image {
-        max-height: 500px; /* Hauteur ajustée pour desktop large */
+    /* Section Horaires, Réseaux sociaux et Contact sur une même ligne */
+    .footer-sections {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        align-items: center;
+        margin-bottom: 30px;
     }
 
-    .size {
-        font-size: 3rem; /* Taille ajustée pour desktop large */
+    /* Section Horaires */
+    .footer-sections .horaires, 
+    .footer-sections .contact, 
+    .footer-sections .social-icons {
+        flex: 1;
+        text-align: center; /* Centrer les éléments dans chaque section */
     }
 
-    .phone-container span {
-        font-size: 4.5rem; /* Taille maximale du numéro */
+    .footer-sections .social-icons {
+        display: flex;
+        justify-content: center;
     }
 
-    .phone-container i {
-        font-size: 5rem; /* Taille maximale de l'icône */
+    .social-icons a {
+        margin: 0 10px; /* Espacement entre les icônes */
+    }
+
+    /* Liens légaux et Copyright sur 2 lignes */
+    .legal-links, .copyright {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        text-align: center;
+    }
+
+    .legal-links a {
+        margin: 0 10px;
+    }
+
+    .copyright {
+        font-size: 0.9rem;
+        margin-top: 10px;
+    }
+
+    .fab {
+        font-size: 6rem;
+        color: #2e9ca0;
     }
 }

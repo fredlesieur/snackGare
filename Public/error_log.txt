@@ -1364,3 +1364,468 @@ Stack trace:
 [28-Nov-2024 11:44:08 UTC] PHP Warning:  Trying to access array offset on null in C:\snack_gare\Views\dashboard\avis\list.php on line 6
 [28-Nov-2024 11:44:08 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\snack_gare\Views\dashboard\avis\list.php on line 6
 [28-Nov-2024 13:48:31 UTC] PHP Warning:  compact(): Undefined variable $css in C:\snack_gare\Controllers\AvisController.php on line 26
+[28-Nov-2024 16:16:31 UTC] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in C:\snack_gare\Views\layouts\default.php:131
+Stack trace:
+#0 C:\snack_gare\Controllers\Controller.php(44): require_once()
+#1 C:\snack_gare\Controllers\ContactController.php(14): App\Controllers\Controller->render('contact/index', Array)
+#2 [internal function]: App\Controllers\ContactController->index()
+#3 C:\snack_gare\Config\Main.php(93): call_user_func_array(Array, Array)
+#4 C:\snack_gare\Public\index.php(27): App\Config\Main->start()
+#5 {main}
+  thrown in C:\snack_gare\Views\layouts\default.php on line 131
+[28-Nov-2024 16:17:34 UTC] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in C:\snack_gare\Views\layouts\default.php:131
+Stack trace:
+#0 C:\snack_gare\Controllers\Controller.php(44): require_once()
+#1 C:\snack_gare\Controllers\ContactController.php(14): App\Controllers\Controller->render('contact/index', Array)
+#2 [internal function]: App\Controllers\ContactController->index()
+#3 C:\snack_gare\Config\Main.php(93): call_user_func_array(Array, Array)
+#4 C:\snack_gare\Public\index.php(27): App\Config\Main->start()
+#5 {main}
+  thrown in C:\snack_gare\Views\layouts\default.php on line 131
+[28-Nov-2024 16:18:07 UTC] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in C:\snack_gare\Views\layouts\default.php:131
+Stack trace:
+#0 C:\snack_gare\Controllers\Controller.php(44): require_once()
+#1 C:\snack_gare\Controllers\ContactController.php(14): App\Controllers\Controller->render('contact/index', Array)
+#2 [internal function]: App\Controllers\ContactController->index()
+#3 C:\snack_gare\Config\Main.php(93): call_user_func_array(Array, Array)
+#4 C:\snack_gare\Public\index.php(27): App\Config\Main->start()
+#5 {main}
+  thrown in C:\snack_gare\Views\layouts\default.php on line 131
+[28-Nov-2024 16:18:29 UTC] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in C:\snack_gare\Views\layouts\default.php:131
+Stack trace:
+#0 C:\snack_gare\Controllers\Controller.php(44): require_once()
+#1 C:\snack_gare\Controllers\ContactController.php(14): App\Controllers\Controller->render('contact/index', Array)
+#2 [internal function]: App\Controllers\ContactController->index()
+#3 C:\snack_gare\Config\Main.php(93): call_user_func_array(Array, Array)
+#4 C:\snack_gare\Public\index.php(27): App\Config\Main->start()
+#5 {main}
+  thrown in C:\snack_gare\Views\layouts\default.php on line 131
+[28-Nov-2024 16:18:53 UTC] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in C:\snack_gare\Views\layouts\default.php:131
+Stack trace:
+#0 C:\snack_gare\Controllers\Controller.php(44): require_once()
+#1 C:\snack_gare\Controllers\ContactController.php(14): App\Controllers\Controller->render('contact/index', Array)
+#2 [internal function]: App\Controllers\ContactController->index()
+#3 C:\snack_gare\Config\Main.php(93): call_user_func_array(Array, Array)
+#4 C:\snack_gare\Public\index.php(27): App\Config\Main->start()
+#5 {main}
+  thrown in C:\snack_gare\Views\layouts\default.php on line 131
+[28-Nov-2024 16:19:20 UTC] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in C:\snack_gare\Views\layouts\default.php:131
+Stack trace:
+#0 C:\snack_gare\Controllers\Controller.php(44): require_once()
+#1 C:\snack_gare\Controllers\ContactController.php(14): App\Controllers\Controller->render('contact/index', Array)
+#2 [internal function]: App\Controllers\ContactController->index()
+#3 C:\snack_gare\Config\Main.php(93): call_user_func_array(Array, Array)
+#4 C:\snack_gare\Public\index.php(27): App\Config\Main->start()
+#5 {main}
+  thrown in C:\snack_gare\Views\layouts\default.php on line 131
+[28-Nov-2024 16:19:45 UTC] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in C:\snack_gare\Views\layouts\default.php:131
+Stack trace:
+#0 C:\snack_gare\Controllers\Controller.php(44): require_once()
+#1 C:\snack_gare\Controllers\ContactController.php(14): App\Controllers\Controller->render('contact/index', Array)
+#2 [internal function]: App\Controllers\ContactController->index()
+#3 C:\snack_gare\Config\Main.php(93): call_user_func_array(Array, Array)
+#4 C:\snack_gare\Public\index.php(27): App\Config\Main->start()
+#5 {main}
+  thrown in C:\snack_gare\Views\layouts\default.php on line 131
+[28-Nov-2024 16:20:27 UTC] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in C:\snack_gare\Views\layouts\default.php:131
+Stack trace:
+#0 C:\snack_gare\Controllers\Controller.php(44): require_once()
+#1 C:\snack_gare\Controllers\ContactController.php(14): App\Controllers\Controller->render('contact/index', Array)
+#2 [internal function]: App\Controllers\ContactController->index()
+#3 C:\snack_gare\Config\Main.php(93): call_user_func_array(Array, Array)
+#4 C:\snack_gare\Public\index.php(27): App\Config\Main->start()
+#5 {main}
+  thrown in C:\snack_gare\Views\layouts\default.php on line 131
+[28-Nov-2024 16:20:52 UTC] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in C:\snack_gare\Views\layouts\default.php:131
+Stack trace:
+#0 C:\snack_gare\Controllers\Controller.php(44): require_once()
+#1 C:\snack_gare\Controllers\ContactController.php(14): App\Controllers\Controller->render('contact/index', Array)
+#2 [internal function]: App\Controllers\ContactController->index()
+#3 C:\snack_gare\Config\Main.php(93): call_user_func_array(Array, Array)
+#4 C:\snack_gare\Public\index.php(27): App\Config\Main->start()
+#5 {main}
+  thrown in C:\snack_gare\Views\layouts\default.php on line 131
+[28-Nov-2024 16:21:27 UTC] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in C:\snack_gare\Views\layouts\default.php:131
+Stack trace:
+#0 C:\snack_gare\Controllers\Controller.php(44): require_once()
+#1 C:\snack_gare\Controllers\ContactController.php(14): App\Controllers\Controller->render('contact/index', Array)
+#2 [internal function]: App\Controllers\ContactController->index()
+#3 C:\snack_gare\Config\Main.php(93): call_user_func_array(Array, Array)
+#4 C:\snack_gare\Public\index.php(27): App\Config\Main->start()
+#5 {main}
+  thrown in C:\snack_gare\Views\layouts\default.php on line 131
+[28-Nov-2024 16:22:53 UTC] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in C:\snack_gare\Views\layouts\default.php:131
+Stack trace:
+#0 C:\snack_gare\Controllers\Controller.php(44): require_once()
+#1 C:\snack_gare\Controllers\ContactController.php(14): App\Controllers\Controller->render('contact/index', Array)
+#2 [internal function]: App\Controllers\ContactController->index()
+#3 C:\snack_gare\Config\Main.php(93): call_user_func_array(Array, Array)
+#4 C:\snack_gare\Public\index.php(27): App\Config\Main->start()
+#5 {main}
+  thrown in C:\snack_gare\Views\layouts\default.php on line 131
+[28-Nov-2024 16:22:59 UTC] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in C:\snack_gare\Views\layouts\default.php:131
+Stack trace:
+#0 C:\snack_gare\Controllers\Controller.php(44): require_once()
+#1 C:\snack_gare\Controllers\ContactController.php(14): App\Controllers\Controller->render('contact/index', Array)
+#2 [internal function]: App\Controllers\ContactController->index()
+#3 C:\snack_gare\Config\Main.php(93): call_user_func_array(Array, Array)
+#4 C:\snack_gare\Public\index.php(27): App\Config\Main->start()
+#5 {main}
+  thrown in C:\snack_gare\Views\layouts\default.php on line 131
+[28-Nov-2024 16:24:48 UTC] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in C:\snack_gare\Views\layouts\default.php:131
+Stack trace:
+#0 C:\snack_gare\Controllers\Controller.php(44): require_once()
+#1 C:\snack_gare\Controllers\ContactController.php(14): App\Controllers\Controller->render('contact/index', Array)
+#2 [internal function]: App\Controllers\ContactController->index()
+#3 C:\snack_gare\Config\Main.php(93): call_user_func_array(Array, Array)
+#4 C:\snack_gare\Public\index.php(27): App\Config\Main->start()
+#5 {main}
+  thrown in C:\snack_gare\Views\layouts\default.php on line 131
+[28-Nov-2024 16:25:56 UTC] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in C:\snack_gare\Views\layouts\default.php:131
+Stack trace:
+#0 C:\snack_gare\Controllers\Controller.php(44): require_once()
+#1 C:\snack_gare\Controllers\ContactController.php(14): App\Controllers\Controller->render('contact/index', Array)
+#2 [internal function]: App\Controllers\ContactController->index()
+#3 C:\snack_gare\Config\Main.php(93): call_user_func_array(Array, Array)
+#4 C:\snack_gare\Public\index.php(27): App\Config\Main->start()
+#5 {main}
+  thrown in C:\snack_gare\Views\layouts\default.php on line 131
+[28-Nov-2024 16:26:40 UTC] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in C:\snack_gare\Views\layouts\default.php:131
+Stack trace:
+#0 C:\snack_gare\Controllers\Controller.php(44): require_once()
+#1 C:\snack_gare\Controllers\ContactController.php(14): App\Controllers\Controller->render('contact/index', Array)
+#2 [internal function]: App\Controllers\ContactController->index()
+#3 C:\snack_gare\Config\Main.php(93): call_user_func_array(Array, Array)
+#4 C:\snack_gare\Public\index.php(27): App\Config\Main->start()
+#5 {main}
+  thrown in C:\snack_gare\Views\layouts\default.php on line 131
+[28-Nov-2024 16:27:34 UTC] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in C:\snack_gare\Views\layouts\default.php:131
+Stack trace:
+#0 C:\snack_gare\Controllers\Controller.php(44): require_once()
+#1 C:\snack_gare\Controllers\ContactController.php(14): App\Controllers\Controller->render('contact/index', Array)
+#2 [internal function]: App\Controllers\ContactController->index()
+#3 C:\snack_gare\Config\Main.php(93): call_user_func_array(Array, Array)
+#4 C:\snack_gare\Public\index.php(27): App\Config\Main->start()
+#5 {main}
+  thrown in C:\snack_gare\Views\layouts\default.php on line 131
+[28-Nov-2024 16:28:00 UTC] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in C:\snack_gare\Views\layouts\default.php:131
+Stack trace:
+#0 C:\snack_gare\Controllers\Controller.php(44): require_once()
+#1 C:\snack_gare\Controllers\ContactController.php(14): App\Controllers\Controller->render('contact/index', Array)
+#2 [internal function]: App\Controllers\ContactController->index()
+#3 C:\snack_gare\Config\Main.php(93): call_user_func_array(Array, Array)
+#4 C:\snack_gare\Public\index.php(27): App\Config\Main->start()
+#5 {main}
+  thrown in C:\snack_gare\Views\layouts\default.php on line 131
+[28-Nov-2024 16:32:25 UTC] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in C:\snack_gare\Views\layouts\default.php:131
+Stack trace:
+#0 C:\snack_gare\Controllers\Controller.php(44): require_once()
+#1 C:\snack_gare\Controllers\ContactController.php(15): App\Controllers\Controller->render('contact/index', Array)
+#2 [internal function]: App\Controllers\ContactController->index()
+#3 C:\snack_gare\Config\Main.php(93): call_user_func_array(Array, Array)
+#4 C:\snack_gare\Public\index.php(27): App\Config\Main->start()
+#5 {main}
+  thrown in C:\snack_gare\Views\layouts\default.php on line 131
+[28-Nov-2024 16:32:32 UTC] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in C:\snack_gare\Views\layouts\default.php:131
+Stack trace:
+#0 C:\snack_gare\Controllers\Controller.php(44): require_once()
+#1 C:\snack_gare\Controllers\ContactController.php(15): App\Controllers\Controller->render('contact/index', Array)
+#2 [internal function]: App\Controllers\ContactController->index()
+#3 C:\snack_gare\Config\Main.php(93): call_user_func_array(Array, Array)
+#4 C:\snack_gare\Public\index.php(27): App\Config\Main->start()
+#5 {main}
+  thrown in C:\snack_gare\Views\layouts\default.php on line 131
+[28-Nov-2024 16:33:52 UTC] PHP Warning:  Undefined array key "jours" in C:\snack_gare\Views\contact\index.php on line 10
+[28-Nov-2024 16:33:52 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\snack_gare\Views\contact\index.php on line 10
+[28-Nov-2024 16:33:52 UTC] PHP Warning:  Undefined array key "is_closed_lunch" in C:\snack_gare\Views\contact\index.php on line 13
+[28-Nov-2024 16:33:52 UTC] PHP Warning:  Array to string conversion in C:\snack_gare\Views\contact\index.php on line 23
+[28-Nov-2024 16:33:52 UTC] PHP Warning:  Array to string conversion in C:\snack_gare\Views\contact\index.php on line 23
+[28-Nov-2024 16:33:52 UTC] PHP Warning:  Array to string conversion in C:\snack_gare\Views\contact\index.php on line 23
+[28-Nov-2024 16:33:52 UTC] PHP Warning:  Array to string conversion in C:\snack_gare\Views\contact\index.php on line 23
+[28-Nov-2024 16:33:52 UTC] PHP Warning:  Array to string conversion in C:\snack_gare\Views\contact\index.php on line 23
+[28-Nov-2024 16:33:52 UTC] PHP Warning:  Array to string conversion in C:\snack_gare\Views\contact\index.php on line 23
+[28-Nov-2024 16:33:52 UTC] PHP Warning:  Array to string conversion in C:\snack_gare\Views\contact\index.php on line 23
+[28-Nov-2024 16:33:52 UTC] PHP Warning:  Undefined array key "jours" in C:\snack_gare\Views\contact\index.php on line 10
+[28-Nov-2024 16:33:52 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\snack_gare\Views\contact\index.php on line 10
+[28-Nov-2024 16:33:52 UTC] PHP Warning:  Undefined array key "is_closed_lunch" in C:\snack_gare\Views\contact\index.php on line 13
+[28-Nov-2024 16:33:52 UTC] PHP Warning:  Array to string conversion in C:\snack_gare\Views\contact\index.php on line 23
+[28-Nov-2024 16:33:52 UTC] PHP Warning:  Array to string conversion in C:\snack_gare\Views\contact\index.php on line 23
+[28-Nov-2024 16:33:52 UTC] PHP Warning:  Array to string conversion in C:\snack_gare\Views\contact\index.php on line 23
+[28-Nov-2024 16:33:52 UTC] PHP Warning:  Array to string conversion in C:\snack_gare\Views\contact\index.php on line 23
+[28-Nov-2024 16:33:52 UTC] PHP Warning:  Array to string conversion in C:\snack_gare\Views\contact\index.php on line 23
+[28-Nov-2024 16:33:52 UTC] PHP Warning:  Array to string conversion in C:\snack_gare\Views\contact\index.php on line 23
+[28-Nov-2024 16:33:52 UTC] PHP Warning:  Array to string conversion in C:\snack_gare\Views\contact\index.php on line 23
+[28-Nov-2024 16:33:52 UTC] PHP Warning:  Undefined array key "jours" in C:\snack_gare\Views\contact\index.php on line 10
+[28-Nov-2024 16:33:52 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\snack_gare\Views\contact\index.php on line 10
+[28-Nov-2024 16:33:52 UTC] PHP Warning:  Undefined array key "is_closed_lunch" in C:\snack_gare\Views\contact\index.php on line 13
+[28-Nov-2024 16:33:52 UTC] PHP Warning:  Array to string conversion in C:\snack_gare\Views\contact\index.php on line 23
+[28-Nov-2024 16:33:52 UTC] PHP Warning:  Array to string conversion in C:\snack_gare\Views\contact\index.php on line 23
+[28-Nov-2024 16:33:52 UTC] PHP Warning:  Array to string conversion in C:\snack_gare\Views\contact\index.php on line 23
+[28-Nov-2024 16:33:52 UTC] PHP Warning:  Array to string conversion in C:\snack_gare\Views\contact\index.php on line 23
+[28-Nov-2024 16:33:52 UTC] PHP Warning:  Array to string conversion in C:\snack_gare\Views\contact\index.php on line 23
+[28-Nov-2024 16:33:52 UTC] PHP Warning:  Array to string conversion in C:\snack_gare\Views\contact\index.php on line 23
+[28-Nov-2024 16:33:52 UTC] PHP Warning:  Array to string conversion in C:\snack_gare\Views\contact\index.php on line 23
+[28-Nov-2024 16:33:52 UTC] PHP Warning:  Undefined array key "jours" in C:\snack_gare\Views\contact\index.php on line 10
+[28-Nov-2024 16:33:52 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\snack_gare\Views\contact\index.php on line 10
+[28-Nov-2024 16:33:52 UTC] PHP Warning:  Undefined array key "is_closed_lunch" in C:\snack_gare\Views\contact\index.php on line 13
+[28-Nov-2024 16:33:52 UTC] PHP Warning:  Array to string conversion in C:\snack_gare\Views\contact\index.php on line 23
+[28-Nov-2024 16:33:52 UTC] PHP Warning:  Array to string conversion in C:\snack_gare\Views\contact\index.php on line 23
+[28-Nov-2024 16:33:52 UTC] PHP Warning:  Array to string conversion in C:\snack_gare\Views\contact\index.php on line 23
+[28-Nov-2024 16:33:52 UTC] PHP Warning:  Array to string conversion in C:\snack_gare\Views\contact\index.php on line 23
+[28-Nov-2024 16:33:52 UTC] PHP Warning:  Array to string conversion in C:\snack_gare\Views\contact\index.php on line 23
+[28-Nov-2024 16:33:52 UTC] PHP Warning:  Array to string conversion in C:\snack_gare\Views\contact\index.php on line 23
+[28-Nov-2024 16:33:52 UTC] PHP Warning:  Array to string conversion in C:\snack_gare\Views\contact\index.php on line 23
+[28-Nov-2024 16:33:52 UTC] PHP Warning:  Undefined array key "jours" in C:\snack_gare\Views\contact\index.php on line 10
+[28-Nov-2024 16:33:52 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\snack_gare\Views\contact\index.php on line 10
+[28-Nov-2024 16:33:52 UTC] PHP Warning:  Undefined array key "is_closed_lunch" in C:\snack_gare\Views\contact\index.php on line 13
+[28-Nov-2024 16:33:52 UTC] PHP Warning:  Array to string conversion in C:\snack_gare\Views\contact\index.php on line 23
+[28-Nov-2024 16:33:52 UTC] PHP Warning:  Array to string conversion in C:\snack_gare\Views\contact\index.php on line 23
+[28-Nov-2024 16:33:52 UTC] PHP Warning:  Array to string conversion in C:\snack_gare\Views\contact\index.php on line 23
+[28-Nov-2024 16:33:52 UTC] PHP Warning:  Array to string conversion in C:\snack_gare\Views\contact\index.php on line 23
+[28-Nov-2024 16:33:52 UTC] PHP Warning:  Array to string conversion in C:\snack_gare\Views\contact\index.php on line 23
+[28-Nov-2024 16:33:52 UTC] PHP Warning:  Array to string conversion in C:\snack_gare\Views\contact\index.php on line 23
+[28-Nov-2024 16:33:52 UTC] PHP Warning:  Array to string conversion in C:\snack_gare\Views\contact\index.php on line 23
+[28-Nov-2024 16:33:52 UTC] PHP Warning:  Undefined array key "jours" in C:\snack_gare\Views\contact\index.php on line 10
+[28-Nov-2024 16:33:52 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\snack_gare\Views\contact\index.php on line 10
+[28-Nov-2024 16:33:52 UTC] PHP Warning:  Undefined array key "is_closed_lunch" in C:\snack_gare\Views\contact\index.php on line 13
+[28-Nov-2024 16:33:52 UTC] PHP Warning:  Array to string conversion in C:\snack_gare\Views\contact\index.php on line 23
+[28-Nov-2024 16:33:52 UTC] PHP Warning:  Array to string conversion in C:\snack_gare\Views\contact\index.php on line 23
+[28-Nov-2024 16:33:52 UTC] PHP Warning:  Array to string conversion in C:\snack_gare\Views\contact\index.php on line 23
+[28-Nov-2024 16:33:52 UTC] PHP Warning:  Array to string conversion in C:\snack_gare\Views\contact\index.php on line 23
+[28-Nov-2024 16:33:52 UTC] PHP Warning:  Array to string conversion in C:\snack_gare\Views\contact\index.php on line 23
+[28-Nov-2024 16:33:52 UTC] PHP Warning:  Array to string conversion in C:\snack_gare\Views\contact\index.php on line 23
+[28-Nov-2024 16:33:52 UTC] PHP Warning:  Array to string conversion in C:\snack_gare\Views\contact\index.php on line 23
+[28-Nov-2024 16:33:52 UTC] PHP Warning:  Undefined array key "jours" in C:\snack_gare\Views\contact\index.php on line 10
+[28-Nov-2024 16:33:52 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\snack_gare\Views\contact\index.php on line 10
+[28-Nov-2024 16:33:52 UTC] PHP Warning:  Undefined array key "is_closed_lunch" in C:\snack_gare\Views\contact\index.php on line 13
+[28-Nov-2024 16:33:52 UTC] PHP Warning:  Array to string conversion in C:\snack_gare\Views\contact\index.php on line 23
+[28-Nov-2024 16:33:52 UTC] PHP Warning:  Array to string conversion in C:\snack_gare\Views\contact\index.php on line 23
+[28-Nov-2024 16:33:52 UTC] PHP Warning:  Array to string conversion in C:\snack_gare\Views\contact\index.php on line 23
+[28-Nov-2024 16:33:52 UTC] PHP Warning:  Array to string conversion in C:\snack_gare\Views\contact\index.php on line 23
+[28-Nov-2024 16:33:52 UTC] PHP Warning:  Array to string conversion in C:\snack_gare\Views\contact\index.php on line 23
+[28-Nov-2024 16:33:52 UTC] PHP Warning:  Array to string conversion in C:\snack_gare\Views\contact\index.php on line 23
+[28-Nov-2024 16:33:52 UTC] PHP Warning:  Array to string conversion in C:\snack_gare\Views\contact\index.php on line 23
+[28-Nov-2024 16:35:28 UTC] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in C:\snack_gare\Views\layouts\default.php:131
+Stack trace:
+#0 C:\snack_gare\Controllers\Controller.php(44): require_once()
+#1 C:\snack_gare\Controllers\ContactController.php(14): App\Controllers\Controller->render('contact/index', Array)
+#2 [internal function]: App\Controllers\ContactController->index()
+#3 C:\snack_gare\Config\Main.php(93): call_user_func_array(Array, Array)
+#4 C:\snack_gare\Public\index.php(27): App\Config\Main->start()
+#5 {main}
+  thrown in C:\snack_gare\Views\layouts\default.php on line 131
+[28-Nov-2024 16:39:19 UTC] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in C:\snack_gare\Views\layouts\default.php:131
+Stack trace:
+#0 C:\snack_gare\Controllers\Controller.php(49): require_once()
+#1 C:\snack_gare\Controllers\ContactController.php(14): App\Controllers\Controller->render('contact/index', Array)
+#2 [internal function]: App\Controllers\ContactController->index()
+#3 C:\snack_gare\Config\Main.php(93): call_user_func_array(Array, Array)
+#4 C:\snack_gare\Public\index.php(27): App\Config\Main->start()
+#5 {main}
+  thrown in C:\snack_gare\Views\layouts\default.php on line 131
+[28-Nov-2024 16:39:26 UTC] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in C:\snack_gare\Views\layouts\default.php:131
+Stack trace:
+#0 C:\snack_gare\Controllers\Controller.php(49): require_once()
+#1 C:\snack_gare\Controllers\ContactController.php(14): App\Controllers\Controller->render('contact/index', Array)
+#2 [internal function]: App\Controllers\ContactController->index()
+#3 C:\snack_gare\Config\Main.php(93): call_user_func_array(Array, Array)
+#4 C:\snack_gare\Public\index.php(27): App\Config\Main->start()
+#5 {main}
+  thrown in C:\snack_gare\Views\layouts\default.php on line 131
+[28-Nov-2024 16:39:39 UTC] PHP Fatal error:  Uncaught Error: Call to a member function findAll() on null in C:\snack_gare\Controllers\Controller.php:31
+Stack trace:
+#0 C:\snack_gare\Controllers\AvisController.php(29): App\Controllers\Controller->render('avis/form', Array)
+#1 C:\snack_gare\Controllers\AvisController.php(19): App\Controllers\AvisController->showForm()
+#2 [internal function]: App\Controllers\AvisController->form()
+#3 C:\snack_gare\Config\Main.php(93): call_user_func_array(Array, Array)
+#4 C:\snack_gare\Public\index.php(27): App\Config\Main->start()
+#5 {main}
+  thrown in C:\snack_gare\Controllers\Controller.php on line 31
+[28-Nov-2024 16:40:54 UTC] PHP Fatal error:  Uncaught Error: Call to a member function findAll() on null in C:\snack_gare\Controllers\Controller.php:31
+Stack trace:
+#0 C:\snack_gare\Controllers\AvisController.php(30): App\Controllers\Controller->render('avis/form', Array)
+#1 C:\snack_gare\Controllers\AvisController.php(19): App\Controllers\AvisController->showForm()
+#2 [internal function]: App\Controllers\AvisController->form()
+#3 C:\snack_gare\Config\Main.php(93): call_user_func_array(Array, Array)
+#4 C:\snack_gare\Public\index.php(27): App\Config\Main->start()
+#5 {main}
+  thrown in C:\snack_gare\Controllers\Controller.php on line 31
+[28-Nov-2024 16:40:55 UTC] PHP Fatal error:  Uncaught Error: Call to a member function findAll() on null in C:\snack_gare\Controllers\Controller.php:31
+Stack trace:
+#0 C:\snack_gare\Controllers\AvisController.php(30): App\Controllers\Controller->render('avis/form', Array)
+#1 C:\snack_gare\Controllers\AvisController.php(19): App\Controllers\AvisController->showForm()
+#2 [internal function]: App\Controllers\AvisController->form()
+#3 C:\snack_gare\Config\Main.php(93): call_user_func_array(Array, Array)
+#4 C:\snack_gare\Public\index.php(27): App\Config\Main->start()
+#5 {main}
+  thrown in C:\snack_gare\Controllers\Controller.php on line 31
+[28-Nov-2024 16:40:55 UTC] PHP Fatal error:  Uncaught Error: Call to a member function findAll() on null in C:\snack_gare\Controllers\Controller.php:31
+Stack trace:
+#0 C:\snack_gare\Controllers\AvisController.php(30): App\Controllers\Controller->render('avis/form', Array)
+#1 C:\snack_gare\Controllers\AvisController.php(19): App\Controllers\AvisController->showForm()
+#2 [internal function]: App\Controllers\AvisController->form()
+#3 C:\snack_gare\Config\Main.php(93): call_user_func_array(Array, Array)
+#4 C:\snack_gare\Public\index.php(27): App\Config\Main->start()
+#5 {main}
+  thrown in C:\snack_gare\Controllers\Controller.php on line 31
+[28-Nov-2024 16:40:55 UTC] PHP Fatal error:  Uncaught Error: Call to a member function findAll() on null in C:\snack_gare\Controllers\Controller.php:31
+Stack trace:
+#0 C:\snack_gare\Controllers\AvisController.php(30): App\Controllers\Controller->render('avis/form', Array)
+#1 C:\snack_gare\Controllers\AvisController.php(19): App\Controllers\AvisController->showForm()
+#2 [internal function]: App\Controllers\AvisController->form()
+#3 C:\snack_gare\Config\Main.php(93): call_user_func_array(Array, Array)
+#4 C:\snack_gare\Public\index.php(27): App\Config\Main->start()
+#5 {main}
+  thrown in C:\snack_gare\Controllers\Controller.php on line 31
+[28-Nov-2024 16:40:56 UTC] PHP Fatal error:  Uncaught Error: Call to a member function findAll() on null in C:\snack_gare\Controllers\Controller.php:31
+Stack trace:
+#0 C:\snack_gare\Controllers\AvisController.php(30): App\Controllers\Controller->render('avis/form', Array)
+#1 C:\snack_gare\Controllers\AvisController.php(19): App\Controllers\AvisController->showForm()
+#2 [internal function]: App\Controllers\AvisController->form()
+#3 C:\snack_gare\Config\Main.php(93): call_user_func_array(Array, Array)
+#4 C:\snack_gare\Public\index.php(27): App\Config\Main->start()
+#5 {main}
+  thrown in C:\snack_gare\Controllers\Controller.php on line 31
+[28-Nov-2024 16:44:05 UTC] PHP Fatal error:  Uncaught Error: Call to a member function findAll() on null in C:\snack_gare\Controllers\Controller.php:31
+Stack trace:
+#0 C:\snack_gare\Controllers\AvisController.php(32): App\Controllers\Controller->render('avis/form', Array)
+#1 C:\snack_gare\Controllers\AvisController.php(20): App\Controllers\AvisController->showForm()
+#2 [internal function]: App\Controllers\AvisController->form()
+#3 C:\snack_gare\Config\Main.php(93): call_user_func_array(Array, Array)
+#4 C:\snack_gare\Public\index.php(27): App\Config\Main->start()
+#5 {main}
+  thrown in C:\snack_gare\Controllers\Controller.php on line 31
+[28-Nov-2024 16:44:06 UTC] PHP Fatal error:  Uncaught Error: Call to a member function findAll() on null in C:\snack_gare\Controllers\Controller.php:31
+Stack trace:
+#0 C:\snack_gare\Controllers\AvisController.php(32): App\Controllers\Controller->render('avis/form', Array)
+#1 C:\snack_gare\Controllers\AvisController.php(20): App\Controllers\AvisController->showForm()
+#2 [internal function]: App\Controllers\AvisController->form()
+#3 C:\snack_gare\Config\Main.php(93): call_user_func_array(Array, Array)
+#4 C:\snack_gare\Public\index.php(27): App\Config\Main->start()
+#5 {main}
+  thrown in C:\snack_gare\Controllers\Controller.php on line 31
+[28-Nov-2024 16:44:09 UTC] PHP Fatal error:  Uncaught Error: Call to a member function findAll() on null in C:\snack_gare\Controllers\Controller.php:31
+Stack trace:
+#0 C:\snack_gare\Controllers\AvisController.php(32): App\Controllers\Controller->render('avis/form', Array)
+#1 C:\snack_gare\Controllers\AvisController.php(20): App\Controllers\AvisController->showForm()
+#2 [internal function]: App\Controllers\AvisController->form()
+#3 C:\snack_gare\Config\Main.php(93): call_user_func_array(Array, Array)
+#4 C:\snack_gare\Public\index.php(27): App\Config\Main->start()
+#5 {main}
+  thrown in C:\snack_gare\Controllers\Controller.php on line 31
+[28-Nov-2024 16:45:32 UTC] PHP Fatal error:  Uncaught Error: Call to a member function findAll() on null in C:\snack_gare\Controllers\AvisController.php:28
+Stack trace:
+#0 C:\snack_gare\Controllers\AvisController.php(20): App\Controllers\AvisController->showForm()
+#1 [internal function]: App\Controllers\AvisController->form()
+#2 C:\snack_gare\Config\Main.php(93): call_user_func_array(Array, Array)
+#3 C:\snack_gare\Public\index.php(27): App\Config\Main->start()
+#4 {main}
+  thrown in C:\snack_gare\Controllers\AvisController.php on line 28
+[28-Nov-2024 16:47:23 UTC] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in C:\snack_gare\Views\layouts\default.php:131
+Stack trace:
+#0 C:\snack_gare\Controllers\Controller.php(49): require_once()
+#1 C:\snack_gare\Controllers\ContactController.php(14): App\Controllers\Controller->render('contact/index', Array)
+#2 [internal function]: App\Controllers\ContactController->index()
+#3 C:\snack_gare\Config\Main.php(93): call_user_func_array(Array, Array)
+#4 C:\snack_gare\Public\index.php(27): App\Config\Main->start()
+#5 {main}
+  thrown in C:\snack_gare\Views\layouts\default.php on line 131
+[28-Nov-2024 16:56:01 UTC] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in C:\snack_gare\Views\layouts\default.php:131
+Stack trace:
+#0 C:\snack_gare\Controllers\Controller.php(49): require_once()
+#1 C:\snack_gare\Controllers\ContactController.php(14): App\Controllers\Controller->render('contact/index', Array)
+#2 [internal function]: App\Controllers\ContactController->index()
+#3 C:\snack_gare\Config\Main.php(93): call_user_func_array(Array, Array)
+#4 C:\snack_gare\Public\index.php(27): App\Config\Main->start()
+#5 {main}
+  thrown in C:\snack_gare\Views\layouts\default.php on line 131
+[28-Nov-2024 16:56:04 UTC] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in C:\snack_gare\Views\layouts\default.php:131
+Stack trace:
+#0 C:\snack_gare\Controllers\Controller.php(49): require_once()
+#1 C:\snack_gare\Controllers\ContactController.php(14): App\Controllers\Controller->render('contact/index', Array)
+#2 [internal function]: App\Controllers\ContactController->index()
+#3 C:\snack_gare\Config\Main.php(93): call_user_func_array(Array, Array)
+#4 C:\snack_gare\Public\index.php(27): App\Config\Main->start()
+#5 {main}
+  thrown in C:\snack_gare\Views\layouts\default.php on line 131
+[28-Nov-2024 16:57:35 UTC] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in C:\snack_gare\Views\layouts\default.php:131
+Stack trace:
+#0 C:\snack_gare\Controllers\Controller.php(49): require_once()
+#1 C:\snack_gare\Controllers\ContactController.php(14): App\Controllers\Controller->render('contact/index', Array)
+#2 [internal function]: App\Controllers\ContactController->index()
+#3 C:\snack_gare\Config\Main.php(93): call_user_func_array(Array, Array)
+#4 C:\snack_gare\Public\index.php(27): App\Config\Main->start()
+#5 {main}
+  thrown in C:\snack_gare\Views\layouts\default.php on line 131
+[28-Nov-2024 17:08:33 UTC] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in C:\snack_gare\Views\layouts\default.php:131
+Stack trace:
+#0 C:\snack_gare\Controllers\Controller.php(49): require_once()
+#1 C:\snack_gare\Controllers\ContactController.php(14): App\Controllers\Controller->render('contact/index', Array)
+#2 [internal function]: App\Controllers\ContactController->index()
+#3 C:\snack_gare\Config\Main.php(93): call_user_func_array(Array, Array)
+#4 C:\snack_gare\Public\index.php(27): App\Config\Main->start()
+#5 {main}
+  thrown in C:\snack_gare\Views\layouts\default.php on line 131
+[28-Nov-2024 17:08:33 UTC] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in C:\snack_gare\Views\layouts\default.php:131
+Stack trace:
+#0 C:\snack_gare\Controllers\Controller.php(49): require_once()
+#1 C:\snack_gare\Controllers\ContactController.php(14): App\Controllers\Controller->render('contact/index', Array)
+#2 [internal function]: App\Controllers\ContactController->index()
+#3 C:\snack_gare\Config\Main.php(93): call_user_func_array(Array, Array)
+#4 C:\snack_gare\Public\index.php(27): App\Config\Main->start()
+#5 {main}
+  thrown in C:\snack_gare\Views\layouts\default.php on line 131
+[28-Nov-2024 17:08:37 UTC] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in C:\snack_gare\Views\layouts\default.php:131
+Stack trace:
+#0 C:\snack_gare\Controllers\Controller.php(49): require_once()
+#1 C:\snack_gare\Controllers\ContactController.php(14): App\Controllers\Controller->render('contact/index', Array)
+#2 [internal function]: App\Controllers\ContactController->index()
+#3 C:\snack_gare\Config\Main.php(93): call_user_func_array(Array, Array)
+#4 C:\snack_gare\Public\index.php(27): App\Config\Main->start()
+#5 {main}
+  thrown in C:\snack_gare\Views\layouts\default.php on line 131
+[28-Nov-2024 17:11:38 UTC] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in C:\snack_gare\Views\layouts\default.php:131
+Stack trace:
+#0 C:\snack_gare\Controllers\Controller.php(49): require_once()
+#1 C:\snack_gare\Controllers\ContactController.php(14): App\Controllers\Controller->render('contact/index', Array)
+#2 [internal function]: App\Controllers\ContactController->index()
+#3 C:\snack_gare\Config\Main.php(93): call_user_func_array(Array, Array)
+#4 C:\snack_gare\Public\index.php(27): App\Config\Main->start()
+#5 {main}
+  thrown in C:\snack_gare\Views\layouts\default.php on line 131
+[28-Nov-2024 17:29:27 UTC] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in C:\snack_gare\Views\layouts\default.php:131
+Stack trace:
+#0 C:\snack_gare\Controllers\Controller.php(45): require_once()
+#1 C:\snack_gare\Controllers\ContactController.php(14): App\Controllers\Controller->render('contact/index', Array)
+#2 [internal function]: App\Controllers\ContactController->index()
+#3 C:\snack_gare\Config\Main.php(96): call_user_func_array(Array, Array)
+#4 C:\snack_gare\Public\index.php(27): App\Config\Main->start()
+#5 {main}
+  thrown in C:\snack_gare\Views\layouts\default.php on line 131
+[28-Nov-2024 17:29:31 UTC] PHP Warning:  Undefined property: App\Controllers\AvisController::$horaireRepository in C:\snack_gare\Controllers\AvisController.php on line 28
+[28-Nov-2024 17:29:31 UTC] PHP Fatal error:  Uncaught Error: Call to a member function findAll() on null in C:\snack_gare\Controllers\AvisController.php:28
+Stack trace:
+#0 C:\snack_gare\Controllers\AvisController.php(20): App\Controllers\AvisController->showForm()
+#1 [internal function]: App\Controllers\AvisController->form()
+#2 C:\snack_gare\Config\Main.php(96): call_user_func_array(Array, Array)
+#3 C:\snack_gare\Public\index.php(27): App\Config\Main->start()
+#4 {main}
+  thrown in C:\snack_gare\Controllers\AvisController.php on line 28
+[28-Nov-2024 17:30:14 UTC] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in C:\snack_gare\Views\layouts\default.php:131
+Stack trace:
+#0 C:\snack_gare\Controllers\Controller.php(45): require_once()
+#1 C:\snack_gare\Controllers\ContactController.php(14): App\Controllers\Controller->render('contact/index', Array)
+#2 [internal function]: App\Controllers\ContactController->index()
+#3 C:\snack_gare\Config\Main.php(96): call_user_func_array(Array, Array)
+#4 C:\snack_gare\Public\index.php(27): App\Config\Main->start()
+#5 {main}
+  thrown in C:\snack_gare\Views\layouts\default.php on line 131
+[28-Nov-2024 17:30:18 UTC] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in C:\snack_gare\Views\layouts\default.php:131
+Stack trace:
+#0 C:\snack_gare\Controllers\Controller.php(45): require_once()
+#1 C:\snack_gare\Controllers\ContactController.php(14): App\Controllers\Controller->render('contact/index', Array)
+#2 [internal function]: App\Controllers\ContactController->index()
+#3 C:\snack_gare\Config\Main.php(96): call_user_func_array(Array, Array)
+#4 C:\snack_gare\Public\index.php(27): App\Config\Main->start()
+#5 {main}
+  thrown in C:\snack_gare\Views\layouts\default.php on line 131

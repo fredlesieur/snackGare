@@ -107,190 +107,75 @@
     <main id="main-page" class="w-auto mt-4">
         <?= $content ?>
     </main>
-    <!-- footer -->
-    <footer class="footer">
-        <!-- Liens réseaux sociaux -->
-        <div class="social-icons ">
+<!-- footer -->
+<footer class="footer">
+    <div class="footer-sections">
+        <!-- Horaires -->
+        <div class="horaires">
+            <h2>Horaires d'ouverture</h2>
+            <?php if (!empty($_SESSION['horaires'])): ?>
+                <?php foreach ($_SESSION['horaires'] as $horaire): ?>
+                    <div>
+                        <strong><?= htmlspecialchars($horaire['jours']) ?> :</strong>
+                        <?php
+                            if ($horaire['is_closed_lunch'] == 1 && $horaire['is_closed_dinner'] == 1) {
+                                echo "Fermeture";
+                            } else {
+                                $horaires = [];
+                                if ($horaire['is_closed_lunch'] != 1) {
+                                    $horaires[] = date('H:i', strtotime($horaire['opening_time_lunch'])) . "-" . date('H:i', strtotime($horaire['closing_time_lunch']));
+                                }
+                                if ($horaire['is_closed_dinner'] != 1) {
+                                    $horaires[] = date('H:i', strtotime($horaire['opening_time_dinner'])) . "-" . date('H:i', strtotime($horaire['closing_time_dinner']));
+                                }
+                                echo implode(" et ", $horaires);
+                            }
+                        ?>
+                    </div>
+                <?php endforeach; ?>
+            <?php else: ?>
+                <em>Horaires non disponibles</em>
+            <?php endif; ?>
+        </div>
+
+        <!-- Réseaux Sociaux -->
+        <div class="social-icons">
             <a href="https://www.facebook.com" target="_blank" aria-label="Facebook">
                 <i class="fab fa-facebook"></i>
             </a>
             <a href="https://www.instagram.com" target="_blank" aria-label="Instagram">
-                <i class="fab fa-instagram p-3"></i>
+                <i class="fab fa-instagram"></i>
             </a>
             <a href="https://www.twitter.com" target="_blank" aria-label="Twitter">
                 <i class="fab fa-twitter"></i>
             </a>
-        </div><br>
-
-
-        <!-- Horaires d'ouverture -->
-        <h2>Horaires d'ouverture</h2>
-        <?php if (isset($horaires) && !empty($horaires)): ?>
-            <?php foreach ($horaires as $horaire): ?>
-                <div>
-                    <strong><?= htmlspecialchars($horaire['jours']) ?> :</strong>
-                    <?php
-                    // Vérification si l'établissement est fermé le midi et le soir
-                    if ($horaire['is_closed_lunch'] == 1 && $horaire['is_closed_dinner'] == 1) {
-                        echo "Fermeture";
-                    } else {
-                        // Vérification des horaires du midi
-                        if ($horaire['is_closed_lunch'] == 1) {
-                            echo "Fermé le midi";
-                        } else {
-                            echo "Midi : " . date('H:i', strtotime($horaire['opening_time_lunch'])) . " à " . date('H:i', strtotime($horaire['closing_time_lunch']));
-                        }
-
-                        // Vérification des horaires du soir
-                        if ($horaire['is_closed_dinner'] == 1) {
-                            echo " et Fermé le soir";
-                        } else {
-                            echo " et Soir : " . date('H:i', strtotime($horaire['opening_time_dinner'])) . " à " . date('H:i', strtotime($horaire['closing_time_dinner']));
-                        }
-                    }
-                    ?>
-                </div>
-            <?php endforeach; ?>
-        <?php else: ?>
-            <em>Horaires non disponibles</em>
-        <?php endif; ?><br>
-
-
-
-        <!-- Adresse et numéro de téléphone -->
-        <h2>Contact</h2>
-        <p class="address">
-            95 route de St Lattier<br>
-            38840 St Hilaire du Rosier<br>
-            <a href="tel:0476385922">04 76 38 59 22</a>
-        </p>
-
-        <!-- Liens légaux -->
-        <div class="legal-links">
-            <a href="#" class="link" data-bs-toggle="modal" data-bs-target="#modalMentionsLegales">Mentions légales</a> |
-            <a href="#" class="link" data-bs-toggle="modal" data-bs-target="#modalRGPD">RGPD</a> |
-            <a href="#" class="link" data-bs-toggle="modal" data-bs-target="#modalCGU">CGU</a>
-        </div>
-        <!-- Modal Mentions Légales -->
-        <div class="modal fade" id="modalMentionsLegales" tabindex="-1" aria-labelledby="modalMentionsLegalesLabel" aria-hidden="true">
-            <div class="modal-dialog modal-lg">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="modalMentionsLegalesLabel">Mentions Légales</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <p> Propriétaire du site : Snack de La Gare <br>
-                            Nom du responsable : Walter MORELL <br>
-
-                            Adresse : 95 route de St Lattier 38840 St Hilaire du Rosier <br>
-
-                            Téléphone : 04 76 38 59 22 <br>
-                            Email : snackdelagare@gmail.com<br>
-                            Numéro SIRET : 009352696 <br>
-                            RCS : saint hilaire <br>
-                            Directeur de la publication : Frédéric LESIEUR <br>
-
-                            Hébergement : <br>
-                            Nom de l’hébergeur : Heroku <br>
-                            Adresse de l’hébergeur : San Francisco, Californie, États-Unis <br>
-
-                            Propriété intellectuelle : <br>
-                            Le contenu du site (textes, images, graphismes, logo, etc.) est la propriété exclusive du Snack de la Gare et est protégé par les lois relatives à la propriété intellectuelle. Toute reproduction totale ou partielle est strictement interdite sans l'accord préalable du Snack de la Gare. <br>
-                            <br>
-                            Limitation de responsabilité : <br>
-                            Le snack de la Gare ne saurait être tenue responsable des dommages directs ou indirects résultant de l'accès ou de l'utilisation de ce site.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="modal fade" id="modalRGPD" tabindex="-1" aria-labelledby="modalRGPDLabel" aria-hidden="true">
-            <div class="modal-dialog modal-lg">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="modalRGPDLabel">Politique de Confidentialité (RGPD)</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <p>1. **Collecte des données** <br>
-                            Les informations collectées via le formulaire de contact ou lors de la soumission d'avis (nom, email, etc.) sont nécessaires pour répondre aux mails des utilisateurs et afficher des avis sur le zoo. Ces données sont traitées par Le Snack de la Gare.<br>
-                            <br>
-                            2. **Utilisation des données** <br>
-                            Les données personnelles recueillies sur le site sont utilisées pour répondre aux demandes par email et pour permettre l'affichage d'avis des clients. <br>
-                            <br>
-                            3. **Conservation des données** <br>
-                            Les données collectées sont conservées pendant une durée de 1 an à compter du dernier contact avec l'utilisateur.<br>
-                            <br>
-                            4. **Droit d'accès, de rectification et d'opposition** <br>
-                            Conformément à la loi « Informatique et Libertés », vous disposez d’un droit d’accès, de rectification, de suppression et d'opposition des données vous concernant. Vous pouvez exercer ce droit en nous contactant à l'adresse suivante : contact.snakdelagare@gmail.com.<br>
-                            <br>
-                            5. **Cookies** <br>
-                            Le site utilise des cookies pour améliorer l'expérience utilisateur et mesurer l'audience. Vous pouvez configurer votre navigateur pour refuser les cookies.<br>
-                            <br>
-                            6. **Transmission des données à des tiers** <br>
-                            Le Snack de la Gare s'engage à ne pas vendre, louer ou céder les données personnelles à des tiers sans consentement préalable, sauf obligation légale.<br>
-                            <br>
-                            7. **Hébergement des données** <br>
-                            Les données sont hébergées par Heroku, situé à San Francisco, Californie, États-Unis.<br>
-                            <br>
-                            8. **Sécurité des données** <br>
-                            Le Snack de la Gare met en œuvre toutes les mesures techniques et organisationnelles pour protéger les données personnelles contre toute altération, perte ou accès non autorisé.
-                        </p>
-                        </p>
-                    </div>
-                </div>
-            </div>
         </div>
 
-
-
-        <!-- Modal CGU -->
-        <div class="modal fade" id="modalCGU" tabindex="-1" aria-labelledby="modalCGULabel" aria-hidden="true">
-            <div class="modal-dialog modal-lg">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="modalCGULabel">Conditions Générales d'Utilisation (CGU)</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <p> 1. **Objet** <br>
-                            Les présentes CGU régissent l'accès et l'utilisation du site le Snack de la Gare. En accédant à ce site, l'utilisateur accepte sans réserve les présentes conditions. <br>
-                            <br>
-                            2. **Accès au site** <br>
-                            L'accès au site est possible 24/7, sauf interruption, programmée ou non, pour des raisons de maintenance ou en cas de force majeure. le Snack de la Gare ne saurait être tenue responsable en cas de modification, interruption ou suspension des services. <br>
-                            <br>
-                            3. **Services fournis** <br>
-                            Le site Snack de la Gare a pour objet de fournir des informations sur le restaurant, de répondre aux demandes des utilisateurs, et de permettre l’affichage des avis. <br>
-                            <br>
-                            4. **Propriété intellectuelle** <br>
-                            Le contenu du site est protégé par les lois relatives à la propriété intellectuelle. Toute reproduction, diffusion, modification ou utilisation du contenu, sans l'autorisation expresse de Snack de la Gare, est interdite. <br>
-                            <br>
-                            5. **Responsabilité** <br>
-                            L'utilisateur est seul responsable de l'utilisation des informations disponibles sur le site. Le Snack de la Gare décline toute responsabilité quant aux dommages résultant de l'utilisation des informations ou services proposés sur le site. <br>
-                            <br>
-                            6. **Liens hypertextes** <br>
-                            Le site peut contenir des liens vers d'autres sites web. Le Snack de la Gare n'est pas responsable du contenu de ces sites tiers et décline toute responsabilité à cet égard. <br>
-                            <br>
-                            7. **Données personnelles** <br>
-                            Les informations collectées lors de l'inscription ou de la navigation sur le site sont traitées conformément à la politique de confidentialité (voir ci-dessous). <br>
-                            <br>
-                            8. **Modification des CGU** <br>
-                            Le Snack de la Gare se réserve le droit de modifier à tout moment les présentes CGU. Il est conseillé à l'utilisateur de les consulter régulièrement.
-                        </p>
-                    </div>
-                </div>
-            </div>
+        <!-- Contact -->
+        <div class="contact">
+            <h2>Contact</h2>
+            <p class="addressFooter">
+                95 route de St Lattier<br>
+                38840 St Hilaire du Rosier<br>
+                <a class="tel" href="tel:0476385922">04 76 38 59 22</a>
+            </p>
         </div>
+    </div>
 
-        </div>
+    <!-- Liens légaux -->
+    <div class="legal-links">
+        <a href="#" class="link" data-bs-toggle="modal" data-bs-target="#modalMentionsLegales">Mentions légales</a> |
+        <a href="#" class="link" data-bs-toggle="modal" data-bs-target="#modalRGPD">RGPD</a> |
+        <a href="#" class="link" data-bs-toggle="modal" data-bs-target="#modalCGU">CGU</a>
+    </div>
 
-        <!-- Copyright -->
-        <p class="copyright">
-            &copy; 2024 - Snack de la gare
-        </p>
+    <!-- Copyright -->
+    <div class="copyright">
+        <p>&copy; 2024 - Snack de la gare</p>
+    </div>
+</footer>
 
-    </footer>
+
 
     <!-- Scripts JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
