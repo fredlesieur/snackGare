@@ -1829,3 +1829,31 @@ Stack trace:
 #4 C:\snack_gare\Public\index.php(27): App\Config\Main->start()
 #5 {main}
   thrown in C:\snack_gare\Views\layouts\default.php on line 131
+[29-Nov-2024 10:39:05 UTC] PHP Warning:  require_once(C:\snack_gare/views/burgers/list.php): Failed to open stream: No such file or directory in C:\snack_gare\Controllers\Controller.php on line 36
+[29-Nov-2024 10:39:05 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\snack_gare/views/burgers/list.php' (include_path='.;C:\php\pear') in C:\snack_gare\Controllers\Controller.php:36
+Stack trace:
+#0 C:\snack_gare\Controllers\BurgerController.php(22): App\Controllers\Controller->render('burgers/list', Array)
+#1 [internal function]: App\Controllers\BurgerController->list()
+#2 C:\snack_gare\Config\Main.php(96): call_user_func_array(Array, Array)
+#3 C:\snack_gare\Public\index.php(27): App\Config\Main->start()
+#4 {main}
+  thrown in C:\snack_gare\Controllers\Controller.php on line 36
+[29-Nov-2024 10:39:20 UTC] PHP Warning:  require_once(C:\snack_gare/views/burgers/add.php): Failed to open stream: No such file or directory in C:\snack_gare\Controllers\Controller.php on line 36
+[29-Nov-2024 10:39:20 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\snack_gare/views/burgers/add.php' (include_path='.;C:\php\pear') in C:\snack_gare\Controllers\Controller.php:36
+Stack trace:
+#0 C:\snack_gare\Controllers\BurgerController.php(30): App\Controllers\Controller->render('burgers/add')
+#1 [internal function]: App\Controllers\BurgerController->add()
+#2 C:\snack_gare\Config\Main.php(96): call_user_func_array(Array, Array)
+#3 C:\snack_gare\Public\index.php(27): App\Config\Main->start()
+#4 {main}
+  thrown in C:\snack_gare\Controllers\Controller.php on line 36
+[29-Nov-2024 10:39:34 UTC] PHP Warning:  require_once(C:\snack_gare/views/burgers/list.php): Failed to open stream: No such file or directory in C:\snack_gare\Controllers\Controller.php on line 36
+[29-Nov-2024 10:39:34 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\snack_gare/views/burgers/list.php' (include_path='.;C:\php\pear') in C:\snack_gare\Controllers\Controller.php:36
+Stack trace:
+#0 C:\snack_gare\Controllers\BurgerController.php(22): App\Controllers\Controller->render('burgers/list', Array)
+#1 [internal function]: App\Controllers\BurgerController->list()
+#2 C:\snack_gare\Config\Main.php(96): call_user_func_array(Array, Array)
+#3 C:\snack_gare\Public\index.php(27): App\Config\Main->start()
+#4 {main}
+  thrown in C:\snack_gare\Controllers\Controller.php on line 36
+[29-Nov-2024 11:13:19 UTC] Erreur SQL : SQLSTATE[42S22]: Column not found: 1054 Unknown column 'csrf_token' in 'field list'

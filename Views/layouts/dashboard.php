@@ -104,12 +104,71 @@
                         Menu
                     </a>
                     <ul class="collapse" id="menu-categories">
-                        <li><a href="/menu/burgers">Burgers</a></li>
-                        <li><a href="/menu/tacos">Tacos</a></li>
-                        <li><a href="/menu/kebabs">Kebabs</a></li>
-                        <li><a href="/menu/salades">Salades</a></li>
-                        <li><a href="/menu/snacks">Snacks</a></li>
-                        <li><a href="/menu/boissons">Boissons</a></li>
+                        <!-- Burgers -->
+                        <li>
+                            <a class="btn-link" data-bs-toggle="collapse" href="#menu-burgers" role="button" aria-expanded="false" aria-controls="menu-burgers">
+                                Burgers
+                            </a>
+                            <ul class="collapse" id="menu-burgers">
+                                <li><a href="/burger/list">Lister les burgers</a></li>
+                                <li><a href="/burger/add">Ajouter un burger</a></li>
+                            </ul>
+                        </li>
+
+                        <!-- Tacos -->
+                        <li>
+                            <a class="btn-link" data-bs-toggle="collapse" href="#menu-tacos" role="button" aria-expanded="false" aria-controls="menu-tacos">
+                                Tacos
+                            </a>
+                            <ul class="collapse" id="menu-tacos">
+                                <li><a href="/tacos/list">Lister les tacos</a></li>
+                                <li><a href="/tacos/add">Ajouter un taco</a></li>
+                            </ul>
+                        </li>
+
+                        <!-- Kebabs -->
+                        <li>
+                            <a class="btn-link" data-bs-toggle="collapse" href="#menu-kebabs" role="button" aria-expanded="false" aria-controls="menu-kebabs">
+                                Kebabs
+                            </a>
+                            <ul class="collapse" id="menu-kebabs">
+                                <li><a href="/kebab/list">Lister les kebabs</a></li>
+                                <li><a href="/kebab/add">Ajouter un kebab</a></li>
+                            </ul>
+                        </li>
+
+                        <!-- Salades -->
+                        <li>
+                            <a class="btn-link" data-bs-toggle="collapse" href="#menu-salades" role="button" aria-expanded="false" aria-controls="menu-salades">
+                                Salades
+                            </a>
+                            <ul class="collapse" id="menu-salades">
+                                <li><a href="/salade/list">Lister les salades</a></li>
+                                <li><a href="/salade/add">Ajouter une salade</a></li>
+                            </ul>
+                        </li>
+
+                        <!-- Snacks -->
+                        <li>
+                            <a class="btn-link" data-bs-toggle="collapse" href="#menu-snacks" role="button" aria-expanded="false" aria-controls="menu-snacks">
+                                Snacks
+                            </a>
+                            <ul class="collapse" id="menu-snacks">
+                                <li><a href="/snack/list">Lister les snacks</a></li>
+                                <li><a href="/snack/add">Ajouter un snack</a></li>
+                            </ul>
+                        </li>
+
+                        <!-- Boissons -->
+                        <li>
+                            <a class="btn-link" data-bs-toggle="collapse" href="#menu-boissons" role="button" aria-expanded="false" aria-controls="menu-boissons">
+                                Boissons
+                            </a>
+                            <ul class="collapse" id="menu-boissons">
+                                <li><a href="/boisson/list">Lister les boissons</a></li>
+                                <li><a href="/boisson/add">Ajouter une boisson</a></li>
+                            </ul>
+                        </li>
                     </ul>
                 </li>
 
