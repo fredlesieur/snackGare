@@ -1883,3 +1883,34 @@ Stack trace:
 [29-Nov-2024 14:16:26 UTC] Erreur SQL : SQLSTATE[42S22]: Column not found: 1054 Unknown column 'category' in 'field list'
 [29-Nov-2024 14:37:04 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\snack_gare\Views\dashboard\boissons\list.php on line 26
 [29-Nov-2024 14:42:25 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\snack_gare\Views\dashboard\boissons\edit.php on line 16
+[29-Nov-2024 19:16:57 UTC] PHP Warning:  Undefined variable $burgers in C:\snack_gare\Views\Menus\index.php on line 11
+[29-Nov-2024 19:16:57 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in C:\snack_gare\Views\Menus\index.php on line 11
+[29-Nov-2024 19:16:57 UTC] PHP Warning:  Undefined array key "name" in C:\snack_gare\Views\Menus\index.php on line 41
+[29-Nov-2024 19:16:57 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\snack_gare\Views\Menus\index.php on line 41
+[29-Nov-2024 19:17:17 UTC] PHP Warning:  Undefined variable $burgers in C:\snack_gare\Views\Menus\index.php on line 11
+[29-Nov-2024 19:17:17 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in C:\snack_gare\Views\Menus\index.php on line 11
+[29-Nov-2024 19:17:17 UTC] PHP Warning:  Undefined array key "name" in C:\snack_gare\Views\Menus\index.php on line 41
+[29-Nov-2024 19:17:17 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\snack_gare\Views\Menus\index.php on line 41
+[29-Nov-2024 19:30:43 UTC] PHP Warning:  Undefined variable $options in C:\snack_gare\Views\Menus\index.php on line 40
+[29-Nov-2024 19:30:43 UTC] PHP Warning:  Trying to access array offset on null in C:\snack_gare\Views\Menus\index.php on line 40
+[29-Nov-2024 19:30:43 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in C:\snack_gare\Views\Menus\index.php on line 40
+[29-Nov-2024 19:30:43 UTC] PHP Warning:  Undefined variable $options in C:\snack_gare\Views\Menus\index.php on line 46
+[29-Nov-2024 19:30:43 UTC] PHP Warning:  Trying to access array offset on null in C:\snack_gare\Views\Menus\index.php on line 46
+[29-Nov-2024 19:30:43 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in C:\snack_gare\Views\Menus\index.php on line 46
+[29-Nov-2024 19:30:43 UTC] PHP Warning:  Undefined variable $options in C:\snack_gare\Views\Menus\index.php on line 52
+[29-Nov-2024 19:30:43 UTC] PHP Warning:  Trying to access array offset on null in C:\snack_gare\Views\Menus\index.php on line 52
+[29-Nov-2024 19:30:43 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in C:\snack_gare\Views\Menus\index.php on line 52
+[29-Nov-2024 19:35:42 UTC] PHP Warning:  Undefined array key "viandes" in C:\snack_gare\Views\Menus\index.php on line 40
+[29-Nov-2024 19:35:42 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in C:\snack_gare\Views\Menus\index.php on line 40
+[29-Nov-2024 19:35:42 UTC] PHP Warning:  Undefined array key "sauces" in C:\snack_gare\Views\Menus\index.php on line 46
+[29-Nov-2024 19:35:42 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in C:\snack_gare\Views\Menus\index.php on line 46
+[29-Nov-2024 19:35:42 UTC] PHP Warning:  Undefined array key "suppléments" in C:\snack_gare\Views\Menus\index.php on line 52
+[29-Nov-2024 19:35:42 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in C:\snack_gare\Views\Menus\index.php on line 52
+[29-Nov-2024 19:46:12 UTC] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 262144 bytes) in C:\snack_gare\Repositories\OptionRepository.php on line 11
+[29-Nov-2024 20:25:55 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\snack_gare\Views\dashboard\options\edit.php on line 13
+[29-Nov-2024 20:54:55 UTC] PHP Warning:  Undefined variable $kebabs in C:\snack_gare\Views\Menus\index.php on line 58
+[29-Nov-2024 20:54:55 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in C:\snack_gare\Views\Menus\index.php on line 58
+[29-Nov-2024 20:57:22 UTC] PHP Warning:  Undefined variable $kebabs in C:\snack_gare\Views\Menus\index.php on line 60
+[29-Nov-2024 20:57:22 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in C:\snack_gare\Views\Menus\index.php on line 60
+[29-Nov-2024 21:14:15 UTC] PHP Warning:  Undefined variable $sauces in C:\snack_gare\Views\Menus\index.php on line 73
+[29-Nov-2024 21:14:15 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in C:\snack_gare\Views\Menus\index.php on line 73

@@ -6,6 +6,7 @@ class OptionRepository extends BaseRepository
 {
     protected $table = 'options';
 
+    
     /**
      * Récupère toutes les options d'une catégorie
      * @param string $category

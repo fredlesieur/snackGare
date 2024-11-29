@@ -2,16 +2,17 @@
 
 namespace App\Controllers;
 
-use App\Repositories\BurgerRepository;
+use App\Services\BurgerService;
 use App\Utils\Redirect;
 
 class BurgerController extends Controller
 {
-    private $burgerRepository;
+    private $burgerService;
 
     public function __construct()
     {
-        $this->burgerRepository = new BurgerRepository();
+        // Instancier le service au lieu du repository
+        $this->burgerService = new BurgerService();
     }
 
     /**
@@ -19,7 +20,8 @@ class BurgerController extends Controller
      */
     public function list(): void
     {
-        $burgers = $this->burgerRepository->findAllBurgers();
+        // Appeler le service pour récupérer les burgers
+        $burgers = $this->burgerService->getAllBurgers();
         $this->render('dashboard/burgers/list', ['burgers' => $burgers]);
     }
 
@@ -37,7 +39,8 @@ class BurgerController extends Controller
      */
     public function edit(int $id): void
     {
-        $burger = $this->burgerRepository->findBurgerById($id);
+        // Appeler le service pour récupérer le burger à modifier
+        $burger = $this->burgerService->getBurgerById($id);
 
         if (!$burger) {
             throw new \Exception("Burger non trouvé");
@@ -60,33 +63,35 @@ class BurgerController extends Controller
             'price' => $data['price'] ?? null,
             'price_menu' => $data['price_menu'] ?? null,
         ];
-    
+
+        // Vérifier si c'est une création ou une mise à jour
         if (isset($data['id']) && !empty($data['id'])) {
-            // Mise à jour d'un burger existant
-            $success = $this->burgerRepository->updateBurger((int)$data['id'], $filteredData);
+            // Mise à jour d'un burger existant via le service
+            $success = $this->burgerService->updateBurger((int)$data['id'], $filteredData);
         } else {
-            // Création d'un nouveau burger
-            $success = $this->burgerRepository->createBurger($filteredData);
+            // Création d'un nouveau burger via le service
+            $success = $this->burgerService->createBurger($filteredData);
         }
-    
+
         // Messages flash pour le retour utilisateur
         if ($success) {
             $_SESSION['flash_success'] = "Le burger a été enregistré avec succès.";
         } else {
             $_SESSION['flash_error'] = "Une erreur s'est produite lors de l'enregistrement du burger.";
         }
-    
+
+        // Redirection vers la liste des burgers
         Redirect::to('/burger/list');
     }
+
     /**
      * Supprime un burger
      * @param int $id
      */
     public function delete(int $id): void
     {
-        $this->burgerRepository->deleteBurger($id);
+        // Appeler le service pour supprimer le burger
+        $this->burgerService->deleteBurger($id);
         Redirect::to('/burger/list');
     }
 }
-
-

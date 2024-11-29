@@ -12,7 +12,7 @@ class KebabRepository extends BaseRepository
      */
     public function findAllKebabs(): array
     {
-        return $this->findAll();
+        return $this->findAll(); // Récupère tous les kebabs depuis la table 'kebabs'
     }
 
     /**
@@ -22,7 +22,7 @@ class KebabRepository extends BaseRepository
      */
     public function findKebabById(int $id): ?array
     {
-        return $this->find($id) ?: null;
+        return $this->find($id); // Récupère un kebab par son ID
     }
 
     /**
@@ -32,7 +32,7 @@ class KebabRepository extends BaseRepository
      */
     public function createKebab(array $data): bool
     {
-        return $this->create($data);
+        return $this->create($data); // Crée un kebab dans la table
     }
 
     /**
@@ -43,7 +43,7 @@ class KebabRepository extends BaseRepository
      */
     public function updateKebab(int $id, array $data): bool
     {
-        return $this->update($id, $data);
+        return $this->update($id, $data); // Met à jour un kebab
     }
 
     /**
@@ -53,6 +53,6 @@ class KebabRepository extends BaseRepository
      */
     public function deleteKebab(int $id): bool
     {
-        return $this->delete($id);
+        return $this->delete($id); // Supprime un kebab
     }
 }
