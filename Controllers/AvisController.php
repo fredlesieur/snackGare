@@ -2,9 +2,10 @@
 
 namespace App\Controllers;
 
-
+use App\Repositories\AvisRepository;
 use App\Services\AvisService;
 use App\Utils\Redirect;
+
 
 class AvisController extends Controller
 {
@@ -25,12 +26,14 @@ class AvisController extends Controller
      */
     public function showForm()
 {
-  
+    $avisRepository = new AvisRepository();
+    $avis = $avisRepository->findBy(['statut' => 1]);
 
     $css = '/assets/css/avis.css'; // Chemin vers le fichier CSS pour le formulaire des avis
     $this->render('avis/form', [
         'title' => 'Laisser un avis',
-        'css' => $css
+        'css' => $css,
+        'avis' => $avis,
       
     ]);
 }
