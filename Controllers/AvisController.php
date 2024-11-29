@@ -2,90 +2,118 @@
 
 namespace App\Controllers;
 
-use App\Repositories\BoissonRepository;
+use App\Repositories\HoraireRepository;
+use App\Services\AvisService;
 use App\Utils\Redirect;
 
-class BoissonController extends Controller
+class AvisController extends Controller
 {
-    private $boissonRepository;
+    private $avisService;
 
     public function __construct()
     {
-        $this->boissonRepository = new BoissonRepository();
+        $this->avisService = new AvisService();
     }
 
-    /**
-     * Affiche la liste des boissons
-     */
-    public function list(): void
-    {
-        $boissons = $this->boissonRepository->findAllBoissons();
-        $this->render('dashboard/boissons/list', ['boissons' => $boissons]);
-    }
-
-    /**
-     * Affiche le formulaire d'ajout
-     */
-    public function add(): void
-    {
-        $this->render('dashboard/boissons/add');
-    }
-
-    /**
-     * Affiche le formulaire de modification
-     * @param int $id
-     */
-    public function edit(int $id): void
-    {
-        $boisson = $this->boissonRepository->findBoissonById($id);
-
-        if (!$boisson) {
-            throw new \Exception("Boisson non trouvée");
-        }
-
-        $this->render('dashboard/boissons/edit', ['boisson' => $boisson]);
-    }
-
-    /**
-     * Traite l'ajout ou la modification d'une boisson
-     */
-    public function save(): void
-    {
-        $data = $_POST;
-
-        // Filtrer les champs
-        $filteredData = [
-            'name' => $data['name'] ?? null,
-            'description' => $data['description'] ?? null,
-            'price_bottle' => $data['price_bottle'] !== '' ? $data['price_bottle'] : null,
-            'price_can' => $data['price_can'] !== '' ? $data['price_can'] : null,
-        ];
-
-        if (isset($data['id']) && !empty($data['id'])) {
-            // Mise à jour
-            $success = $this->boissonRepository->updateBoisson((int)$data['id'], $filteredData);
-        } else {
-            // Création
-            $success = $this->boissonRepository->createBoisson($filteredData);
-        }
-
-        if ($success) {
-            $_SESSION['flash_success'] = "La boisson a été enregistrée avec succès.";
-        } else {
-            $_SESSION['flash_error'] = "Une erreur s'est produite lors de l'enregistrement.";
-        }
-
-        Redirect::to('/boisson/list');
-    }
-
-    /**
-     * Supprime une boisson
-     * @param int $id
-     */
-    public function delete(int $id): void
-    {
-        $this->boissonRepository->deleteBoisson($id);
-        Redirect::to('/boisson/list');
-    }
+    public function form()
+{
+    $this->showForm();
 }
 
+    /**
+     * Affiche le formulaire pour soumettre un avis.
+     */
+    public function showForm()
+{
+    $horaireRepo = new HoraireRepository();
+    $horaires = $horaireRepo->findAll(); // Horaires
+
+    $css = '/assets/css/avis.css'; // Chemin vers le fichier CSS pour le formulaire des avis
+    $this->render('avis/form', [
+        'title' => 'Laisser un avis',
+        'css' => $css,
+        'horaires'=> $horaires // Passer le chemin du CSS à la vue
+    ]);
+}
+
+    /**
+     * Traite l'ajout d'un avis.
+     */
+    public function add()
+    {
+        try {
+            $nom = $_POST['nom'] ?? null;
+            $commentaire = $_POST['commentaire'] ?? null;
+            $rating = $_POST['rating'] ?? null;
+    
+            if (!$nom || !$commentaire || !$rating) {
+                throw new \Exception("Tous les champs sont obligatoires.");
+            }
+    
+            // Vérification de la validité de la note
+            if ($rating < 1 || $rating > 5) {
+                throw new \Exception("La note doit être comprise entre 1 et 5.");
+            }
+    
+            // Appel au service
+            $this->avisService->addReview([
+                'nom' => $nom,
+                'commentaire' => $commentaire,
+                'rating' => $rating,
+            ]);
+    
+            $_SESSION['success'] = "Votre avis a été soumis avec succès et sera examiné sous peu.";
+            Redirect::to('/avis/form');
+        } catch (\Exception $e) {
+            // Log de l'erreur
+            $_SESSION['error'] = "Erreur : " . $e->getMessage();
+            Redirect::to('/avis/form');
+        }
+    }
+    
+    
+    public function listPending()
+{
+    try {
+        $reviews = $this->avisService->getPendingReviews(); // Récupérer les avis non validés
+        $this->render('dashboard/avis/list', [
+            'title' => 'Avis en attente',
+            'reviews' => $reviews, // Transmettre les avis à la vue
+        ], true);
+    } catch (\Exception $e) {
+        $_SESSION['error'] = "Erreur lors de la récupération des avis.";
+        Redirect::to('/dashboard/index');
+    }
+}
+    /**
+     * Valide un avis.
+     */
+    public function approve()
+    {
+        $id = $_POST['id'];
+        $this->avisService->approveReview((int) $id);
+        Redirect::to('/avis/listPending');
+    }
+
+    /**
+     * Supprime un avis.
+     */
+    public function delete()
+    {
+        $id = $_POST['id'];
+        $this->avisService->deleteReview((int) $id);
+        Redirect::to('/avis/listPending');
+    }
+
+    /**
+     * Affiche les avis validés sur la page publique.
+     */
+    public function listApproved()
+    {
+        $reviews = $this->avisService->getApprovedReviews();
+        $this->render('avis/index', [
+            'title' => 'Avis clients',
+            'reviews' => $reviews,
+        ]);
+    }
+}
