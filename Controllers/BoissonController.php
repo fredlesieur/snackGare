@@ -88,4 +88,3 @@ class BoissonController extends Controller
         Redirect::to('/boisson/list');
     }
 }
-

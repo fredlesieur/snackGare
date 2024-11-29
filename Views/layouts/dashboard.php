@@ -168,6 +168,17 @@
                                 <li><a href="/boisson/list">Lister les boissons</a></li>
                                 <li><a href="/boisson/add">Ajouter une boisson</a></li>
                             </ul>
+
+                        <!--  Options -->
+                        <li>
+                            <a class="btn-link" data-bs-toggle="collapse" href="#menu-options" role="button" aria-expanded="false" aria-controls="menu-options">
+                               Options
+                            </a>
+                            <ul class="collapse" id="menu-options">
+                                <li><a href="/option/list">Lister les options</a></li>
+                                <li><a href="/option/add">Ajouter une option</a></li>
+                            </ul>
+                        </li>
                         </li>
                     </ul>
                 </li>
