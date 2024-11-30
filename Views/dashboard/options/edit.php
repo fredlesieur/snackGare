@@ -7,8 +7,9 @@
     <input type="text" name="category" class="form-control" value="<?= htmlspecialchars($option['category']); ?>" required>
 
     <label>Description :</label>
-    <input type="text" name="description" class="form-control" value="<?= htmlspecialchars($option['description']); ?>" required>
-
+    
+    
+    <textarea name="description" class="form-control" rows="4" required><?= htmlspecialchars($option['description']); ?></textarea>
     <label>Prix (si applicable) :</label>
     <input type="number" step="0.01" name="price" class="form-control" value="<?= htmlspecialchars($option['price']); ?>">
 

@@ -6,7 +6,7 @@
     <input type="text" name="category" class="form-control" required>
 
     <label>Description :</label>
-    <input type="text" name="description" class="form-control" required>
+    <textarea id="description" name="description" rows="4" cols="50"required></textarea>
 
     <label>Prix (si applicable) :</label>
     <input type="number" step="0.01" name="price" class="form-control">

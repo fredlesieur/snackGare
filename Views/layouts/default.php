@@ -97,7 +97,7 @@
             <h2 class="size">Commander</h2>
             <div class="phone-container">
                 <i class="fa-solid fa-phone-volume phone-icon" aria-hidden="true"></i>
-                <span class="size2">04 76 38 59 22</span>
+                <a class="size2" href="tel:0476385922">04 76 38 59 22</a>
             </div>
         </div>
     </div>

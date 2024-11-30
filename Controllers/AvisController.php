@@ -2,9 +2,11 @@
 
 namespace App\Controllers;
 
+use App\Repositories\AvisRepository;
 use App\Repositories\HoraireRepository;
 use App\Services\AvisService;
 use App\Utils\Redirect;
+
 
 class AvisController extends Controller
 {
@@ -28,11 +30,16 @@ class AvisController extends Controller
     $horaireRepo = new HoraireRepository();
     $horaires = $horaireRepo->findAll(); // Horaires
 
+    $avisRepository = new AvisRepository();
+    $avis = $avisRepository->findBy(['statut' => 1]);
+
+
     $css = '/assets/css/avis.css'; // Chemin vers le fichier CSS pour le formulaire des avis
     $this->render('avis/form', [
         'title' => 'Laisser un avis',
         'css' => $css,
-        'horaires'=> $horaires // Passer le chemin du CSS à la vue
+        'horaires'=> $horaires,
+        'avis' => $avis
     ]);
 }
 
@@ -109,11 +116,15 @@ class AvisController extends Controller
      * Affiche les avis validés sur la page publique.
      */
     public function listApproved()
-    {
+    {     
+        
+       
+
         $reviews = $this->avisService->getApprovedReviews();
         $this->render('avis/index', [
             'title' => 'Avis clients',
             'reviews' => $reviews,
+        
         ]);
     }
 }

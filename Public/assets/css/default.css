@@ -13,7 +13,7 @@ body {
     margin-right :auto;
     font-family: Arial, sans-serif;
     background-color: #0F2C33; /* Couleur de fond générale */
-    color: #f5f0e1; /* Couleur de texte par défaut */
+    color: #E6D1B4; /* Couleur de texte par défaut */
     overflow-x: hidden; /* Empêche le scroll horizontal */
 }
 
@@ -28,8 +28,9 @@ body {
 }
 /* Liens */
 a {
-    color: #f5f0e1 !important;
+    color: #E6D1B4 !important;
     text-decoration: none;
+
 }
 
 a:hover {
@@ -69,7 +70,7 @@ header {
 }
 
 .navbar-nav .nav-item .nav-link {
-    color: #f5f0e1;
+    color: #E6D1B4;
     text-decoration: none;
     font-weight: bold;
     font-size: 0.8rem; /* Taille réduite des liens */
@@ -87,7 +88,7 @@ header {
 /* Style personnalisé pour le modal de connexion*/
 .custom-modal {
     background-color: #2e9ca0; /* Fond sombre pour s'accorder à votre thème */
-    color: #f5f0e1; /* Texte clair */
+    color: #E6D1B4; /* Texte clair */
     border-radius: 10px; /* Arrondir les coins */
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5); /* Ombre élégante */
 }
@@ -98,14 +99,14 @@ header {
 
 .custom-modal .modal-title {
     font-family: 'Roboto', sans-serif;
-    color: #f5f0e1; /* Couleur dorée */
+    color: #E6D1B4; /* Couleur dorée */
     font-size: 1.5rem;
     text-shadow: 1px 1px #0F2C33; /* Légère ombre */
 }
 
 .custom-modal .btn-close {
     background-color: transparent;
-    color: #f5f0e1;
+    color: #E6D1B4;
 }
 
 .custom-modal .modal-body {
@@ -114,18 +115,18 @@ header {
 
 .custom-modal .form-label {
     font-weight: bold;
-    color: #f5f0e1; /* Texte doré */
+    color: #E6D1B4; /* Texte doré */
 }
 
 .custom-modal .form-control {
     background-color: #0F2C33; /* Fond du champ */
-    color: #f5f0e1; /* Texte clair */
+    color: #E6D1B4; /* Texte clair */
     border: 1px solid #EFA00F; /* Bordure dorée */
     border-radius: 5px;
 }
 
 .custom-modal .form-control:focus {
-    border-color: #f5f0e1;
+    border-color: #E6D1B4;
     box-shadow: 0 0 5px #EFA00F; /* Lumière dorée autour */
 }
 
@@ -138,13 +139,13 @@ header {
 }
 
 .custom-modal .btn-primary:hover {
-    background-color: #f5f0e1; /* Texte clair */
+    background-color: #E6D1B4; /* Texte clair */
     color: #06283d; /* Texte sombre */
 }
 /*modal des liens legaux*/
 .modal-content {
     background-color: #0F2C33; /* Couleur de fond */
-    color: #f5f0e1; /* Texte clair */
+    color: #E6D1B4; /* Texte clair */
     border-radius: 10px; /* Bords arrondis */
     padding: 1rem; /* Espacement interne */
 }
@@ -198,12 +199,14 @@ header {
 
 .phone-container i {
     font-size: 2.5rem; /* Taille de l'icône pour mobile */
+    color:#E6D1B4;
 }
 
-.phone-container span {
+.phone-container a{
     font-size: 2rem; /* Taille du numéro pour mobile */
     font-weight: bold;
     text-align: center;
+
 }
 
 /* Footer */
@@ -264,12 +267,12 @@ footer {
         width: 18rem; /* Taille pour tablette */
     }
 
-    .navbar-nav {
+    .navbar-nav{
         gap: 0.8rem; /* Réduction de l'espacement entre les liens */
     }
 
-    .navbar-nav .nav-link {
-        font-size: 0.75rem; /* Taille réduite pour tablette */
+    .nav-link a{
+        font-size: 1rem; /* Taille réduite pour tablette */
     }
 
     .burger-image {
@@ -294,7 +297,7 @@ footer {
         font-size: 4rem; /* Taille de l'icône pour tablette */
     }
 
-    .phone-container span {
+    .phone-container a {
         font-size: 3rem; /* Taille du numéro pour tablette */
     }
     .fab {
@@ -304,7 +307,9 @@ footer {
 }
 /* Styles pour les écrans Desktop (largeur minimum 1200px) */
 @media (min-width: 1200px) {
-
+    .navbar-nav .nav-item .nav-link {
+        font-size: 1.2rem; /* Taille de police pour desktop */
+    }
     .footer {
         display: flex;
         flex-direction: column;
@@ -360,5 +365,12 @@ footer {
     .fab {
         font-size: 6rem;
         color: #2e9ca0;
+    }
+    .phone-container i {
+        font-size: 5rem; /* Taille de l'icône pour tablette */
+    }
+
+    .phone-container a {
+        font-size: 4rem; /* Taille du numéro pour tablette */
     }
 }

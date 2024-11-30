@@ -22,5 +22,8 @@ class OptionService
         return $this->optionRepository->findAll(); // Récupère toutes les options sans filtrage
     }
 
-    
+    public function getOptionById(int $id): ?array
+    {
+        return $this->optionRepository->findOptionById($id); // Récupère l'option avec l'ID spécifié
+    }
 }

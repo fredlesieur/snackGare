@@ -1914,3 +1914,72 @@ Stack trace:
 [29-Nov-2024 20:57:22 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in C:\snack_gare\Views\Menus\index.php on line 60
 [29-Nov-2024 21:14:15 UTC] PHP Warning:  Undefined variable $sauces in C:\snack_gare\Views\Menus\index.php on line 73
 [29-Nov-2024 21:14:15 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in C:\snack_gare\Views\Menus\index.php on line 73
+[30-Nov-2024 10:48:16 UTC] PHP Warning:  Undefined variable $sauces in C:\snack_gare\Views\Menus\index.php on line 73
+[30-Nov-2024 10:48:16 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in C:\snack_gare\Views\Menus\index.php on line 73
+[30-Nov-2024 10:52:36 UTC] PHP Warning:  Undefined variable $sauces in C:\snack_gare\Views\Menus\index.php on line 73
+[30-Nov-2024 10:52:36 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in C:\snack_gare\Views\Menus\index.php on line 73
+[30-Nov-2024 11:49:26 UTC] PHP Warning:  Trying to access array offset on int in C:\snack_gare\Views\Menus\index.php on line 78
+[30-Nov-2024 11:49:26 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\snack_gare\Views\Menus\index.php on line 78
+[30-Nov-2024 11:49:26 UTC] PHP Warning:  Trying to access array offset on int in C:\snack_gare\Views\Menus\index.php on line 80
+[30-Nov-2024 11:49:26 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\snack_gare\Views\Menus\index.php on line 80
+[30-Nov-2024 11:49:26 UTC] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in C:\snack_gare\Views\Menus\index.php:78
+Stack trace:
+#0 C:\snack_gare\Controllers\Controller.php(34): require_once()
+#1 C:\snack_gare\Controllers\MenuController.php(46): App\Controllers\Controller->render('menus/index', Array)
+#2 [internal function]: App\Controllers\MenuController->index()
+#3 C:\snack_gare\Config\Main.php(96): call_user_func_array(Array, Array)
+#4 C:\snack_gare\Public\index.php(27): App\Config\Main->start()
+#5 {main}
+  thrown in C:\snack_gare\Views\Menus\index.php on line 78
+[30-Nov-2024 12:23:37 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\snack_gare\Views\dashboard\options\edit.php on line 13
+[30-Nov-2024 12:24:17 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\snack_gare\Views\dashboard\options\edit.php on line 13
+[30-Nov-2024 12:24:21 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\snack_gare\Views\dashboard\options\edit.php on line 13
+[30-Nov-2024 12:24:29 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\snack_gare\Views\dashboard\options\edit.php on line 13
+[30-Nov-2024 12:26:08 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\snack_gare\Views\dashboard\options\edit.php on line 13
+[30-Nov-2024 12:26:09 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\snack_gare\Views\dashboard\options\edit.php on line 13
+[30-Nov-2024 12:26:15 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\snack_gare\Views\dashboard\options\edit.php on line 13
+[30-Nov-2024 12:27:43 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\snack_gare\Views\dashboard\options\edit.php on line 13
+[30-Nov-2024 12:28:01 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\snack_gare\Views\dashboard\options\edit.php on line 13
+[30-Nov-2024 12:28:29 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\snack_gare\Views\dashboard\options\edit.php on line 14
+[30-Nov-2024 12:31:12 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\snack_gare\Views\dashboard\options\edit.php on line 14
+[30-Nov-2024 12:54:29 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\snack_gare\Views\dashboard\options\edit.php on line 14
+[30-Nov-2024 13:04:23 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\snack_gare\Views\dashboard\options\edit.php on line 14
+[30-Nov-2024 13:04:34 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\snack_gare\Views\dashboard\options\edit.php on line 14
+[30-Nov-2024 13:13:44 UTC] PHP Warning:  Undefined variable $kebabOption in C:\snack_gare\Views\Menus\index.php on line 83
+[30-Nov-2024 13:13:44 UTC] PHP Warning:  Undefined array key "category" in C:\snack_gare\Views\Menus\index.php on line 101
+[30-Nov-2024 13:13:44 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\snack_gare\Views\Menus\index.php on line 101
+[30-Nov-2024 13:13:44 UTC] PHP Warning:  Undefined array key "category" in C:\snack_gare\Views\Menus\index.php on line 101
+[30-Nov-2024 13:13:44 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\snack_gare\Views\Menus\index.php on line 101
+[30-Nov-2024 13:13:44 UTC] PHP Warning:  Undefined array key "category" in C:\snack_gare\Views\Menus\index.php on line 101
+[30-Nov-2024 13:13:44 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\snack_gare\Views\Menus\index.php on line 101
+[30-Nov-2024 13:13:44 UTC] PHP Warning:  Undefined array key "category" in C:\snack_gare\Views\Menus\index.php on line 101
+[30-Nov-2024 13:13:44 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\snack_gare\Views\Menus\index.php on line 101
+[30-Nov-2024 13:13:44 UTC] PHP Warning:  Undefined array key "category" in C:\snack_gare\Views\Menus\index.php on line 101
+[30-Nov-2024 13:13:44 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\snack_gare\Views\Menus\index.php on line 101
+[30-Nov-2024 13:15:13 UTC] PHP Warning:  Undefined variable $kebabOption in C:\snack_gare\Views\Menus\index.php on line 83
+[30-Nov-2024 13:15:16 UTC] PHP Warning:  Undefined variable $kebabOption in C:\snack_gare\Views\Menus\index.php on line 83
+[30-Nov-2024 13:15:19 UTC] PHP Warning:  Undefined variable $kebabOption in C:\snack_gare\Views\Menus\index.php on line 83
+[30-Nov-2024 13:18:28 UTC] PHP Warning:  Undefined array key "category" in C:\snack_gare\Views\Menus\index.php on line 101
+[30-Nov-2024 13:18:28 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\snack_gare\Views\Menus\index.php on line 101
+[30-Nov-2024 13:18:28 UTC] PHP Warning:  Undefined array key "category" in C:\snack_gare\Views\Menus\index.php on line 101
+[30-Nov-2024 13:18:28 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\snack_gare\Views\Menus\index.php on line 101
+[30-Nov-2024 13:18:28 UTC] PHP Warning:  Undefined array key "category" in C:\snack_gare\Views\Menus\index.php on line 101
+[30-Nov-2024 13:18:28 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\snack_gare\Views\Menus\index.php on line 101
+[30-Nov-2024 13:18:28 UTC] PHP Warning:  Undefined array key "category" in C:\snack_gare\Views\Menus\index.php on line 101
+[30-Nov-2024 13:18:28 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\snack_gare\Views\Menus\index.php on line 101
+[30-Nov-2024 13:18:28 UTC] PHP Warning:  Undefined array key "category" in C:\snack_gare\Views\Menus\index.php on line 101
+[30-Nov-2024 13:18:28 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\snack_gare\Views\Menus\index.php on line 101
+[30-Nov-2024 13:20:24 UTC] PHP Warning:  Undefined array key "category" in C:\snack_gare\Views\Menus\index.php on line 100
+[30-Nov-2024 13:20:24 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\snack_gare\Views\Menus\index.php on line 100
+[30-Nov-2024 13:20:24 UTC] PHP Warning:  Undefined array key "category" in C:\snack_gare\Views\Menus\index.php on line 100
+[30-Nov-2024 13:20:24 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\snack_gare\Views\Menus\index.php on line 100
+[30-Nov-2024 13:20:24 UTC] PHP Warning:  Undefined array key "category" in C:\snack_gare\Views\Menus\index.php on line 100
+[30-Nov-2024 13:20:24 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\snack_gare\Views\Menus\index.php on line 100
+[30-Nov-2024 13:20:24 UTC] PHP Warning:  Undefined array key "category" in C:\snack_gare\Views\Menus\index.php on line 100
+[30-Nov-2024 13:20:24 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\snack_gare\Views\Menus\index.php on line 100
+[30-Nov-2024 13:20:24 UTC] PHP Warning:  Undefined array key "category" in C:\snack_gare\Views\Menus\index.php on line 100
+[30-Nov-2024 13:20:24 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\snack_gare\Views\Menus\index.php on line 100
+[30-Nov-2024 13:56:27 UTC] PHP Warning:  Undefined variable $boissons in C:\snack_gare\Views\Menus\index.php on line 129
+[30-Nov-2024 13:56:27 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in C:\snack_gare\Views\Menus\index.php on line 129
+[30-Nov-2024 14:31:54 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\snack_gare\Views\dashboard\boissons\edit.php on line 16
+[30-Nov-2024 14:33:04 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\snack_gare\Views\dashboard\boissons\edit.php on line 16
