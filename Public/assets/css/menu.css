@@ -1,0 +1,107 @@
+.menu-container {
+    background-color: #0F2C33;
+    color: #E6D1B4;
+    font-family: 'Roboto', sans-serif;
+    max-width: 768px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.menu-title h2 {
+    color: #E6D1B4;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+
+.menu-section {
+    background-color: #2e9ca0;
+    border-top-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    color:#0F2C33;
+    width:100%;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.menu-section.burgers {
+   
+    color: #fff;
+}
+.bleum {
+    color: #0F2C33;
+    font-weight: 700;
+}
+.bleuc{
+    color: #2e9ca0;
+    font-size: 0.9rem;
+    font-style: italic;
+}
+.fa-pepper-hot{
+    color: rgb(182, 8, 8);
+}
+.section-title {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+
+.menu-items {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.menu-item {
+    color: #E6D1B4;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.boisson {
+    color:#E6D1B4;
+}
+.prix {
+    color:#0F2C33;
+}
+.menu-item h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: #0F2C33;
+    font-weight: bold;
+}
+
+.menu-item p {
+    margin: 5px 0;
+}
+
+.menu-note {
+    text-align: center;
+    font-size: 0.9rem;
+    margin-top: 15px;
+    font-style: italic;
+    color: #fff;
+}
+
+h2, h4 {
+    text-align: center;
+    color:#0F2C33;
+}
+.border_deco {
+   background-color: #E6D1B4;
+   border-top-left-radius: 40px;
+   border-bottom-right-radius: 40px;
+   border-end-start-radius: 10px;
+   color:#0F2C33;
+   width:100%;
+   padding:15px;
+   text-align: center;
+   margin-bottom: 15px;
+}
+.options p {
+    color:#E6D1B4;
+}

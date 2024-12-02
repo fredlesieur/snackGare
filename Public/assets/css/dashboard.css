@@ -124,6 +124,52 @@ body {
     background-color: #0F2C33; /* Couleur uniforme */
 }
 
+/*Formulaire add acceuil*/
+
+.image-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.image-item {
+    position: relative;
+    cursor: pointer;
+}
+
+.image-item img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border: 2px solid transparent;
+    transition: transform 0.2s, border-color 0.2s;
+}
+
+.image-item input[type="checkbox"]:checked + img {
+    border-color: #007bff;
+    transform: scale(1.1);
+}
+/*formulaire list acceuil*/
+
+/* Conteneur pour les images */
+.images-list {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+/* Style pour les miniatures des images */
+.image-thumbnail {
+    max-width: 100px;
+    max-height: 100px;
+    border: 1px solid #ddd;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
 /* ======= Responsive styles ======= */
 /* Pour les écrans jusqu'à 767px (mobile) */
 @media (max-width: 767px) {

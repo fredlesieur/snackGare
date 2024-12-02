@@ -2,86 +2,121 @@
 
 namespace App\Controllers;
 
-use App\Models\UserModel;
-
+use App\Services\UserService;
+use App\Utils\Redirect;
 
 class UserController extends Controller
 {
-    private $userModel;
+    private $userService;
 
     public function __construct()
     {
-        $this->userModel = new UserModel();
+        parent::__construct();
+        $this->userService = new UserService();
     }
 
-    // Affiche le formulaire de connexion
     public function showLoginForm()
     {
-        $this->render('login'); 
+        $this->render('login', ['title' => 'Connexion']);
     }
-    // Gère la connexion d'un utilisateur
+
     public function login()
     {
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            $username = $_POST['username'];
-            $password = $_POST['password'];
+            $result = $this->userService->authenticateUser($_POST['username'], $_POST['password']);
 
-            if (!empty($username) && !empty($password)) {
-                $user = $this->userModel->findUserByUsername($username);
-                if ($user && password_verify($password, $user['password'])) {
-                    $_SESSION['id'] = $user['id'];
-                    $_SESSION['role'] = $user['role'];
-                    header("Location: /dashboard/index"); 
-                    exit;
-                } else {
-                    echo "Nom d'utilisateur ou mot de passe incorrect.";
-                }
+            if ($result['success']) {
+                $_SESSION['id'] = $result['user']['id'];
+                $_SESSION['role'] = $result['user']['role'];
+                Redirect::to('/dashboard/index');
             } else {
-                echo "Veuillez remplir tous les champs.";
+                $_SESSION['error'] = $result['message'];
+                Redirect::to('/user/showLoginForm');
             }
         }
     }
 
-    // Affiche le formulaire d'inscription
-    public function showRegisterForm()
-    {
-        // Utilise la méthode renderDashboard pour charger la vue
-        $this->render('dashboard/register', ['title' => 'Créer un utilisateur'],true);
-    }
-    // Gère l'enregistrement d'un nouvel utilisateur
-   public function register()
-    {
-        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            $username = $_POST['username'] ?? '';
-            $password = $_POST['password'] ?? '';
-            $role = $_POST['role'] ?? '';
-
-            if (!empty($username) && !empty($password) && !empty($role)) {
-                // Vérifiez si l'utilisateur existe déjà
-                $existingUser = $this->userModel->findUserByUsername($username);
-                if ($existingUser) {
-                    $_SESSION['flash_error'] = "Un utilisateur avec ce nom existe déjà.";
-                } else {
-                    // Créez l'utilisateur
-                    $this->userModel->createUser($username, $password, $role);
-                    $_SESSION['flash_success'] = "Utilisateur créé avec succès.";
-                }
-            } else {
-                $_SESSION['flash_error'] = "Tous les champs sont requis.";
-            }
-
-            // Redirigez vers le formulaire d'inscription
-            header('Location: /user/showRegisterForm');
-            exit;
-        }
-    }
-
-    // Déconnecte l'utilisateur
     public function logout()
     {
         session_unset();
         session_destroy();
-        header('Location: /'); 
-        exit;
+        Redirect::to('/');
+    }
+
+    public function showRegisterForm()
+    {
+        $this->render('dashboard/users/register', ['title' => 'Créer un utilisateur'], true);
+    }
+
+    public function register()
+    {
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            $result = $this->userService->registerUser($_POST);
+
+            if ($result['success']) {
+                $_SESSION['success'] = $result['message'];
+            } else {
+                $_SESSION['error'] = $result['message'];
+            }
+
+            Redirect::to('/user/showRegisterForm');
+        }
+    }
+
+    public function list()
+    {
+        $users = $this->userService->getAllUsers();
+        $this->render('dashboard/users/list', ['title' => 'Liste des utilisateurs', 'users' => $users], true);
+    }
+
+    public function edit(int $id)
+    {
+        $user = $this->userService->getUserById($id);
+        if (!$user) {
+            $_SESSION['flash_error'] = "Utilisateur introuvable.";
+            Redirect::to('/user/list');
+            return;
+        }
+
+        $this->render('dashboard/users/edit', [
+            'title' => "Modifier l'utilisateur",
+            'user' => $user,
+        ], true);
+    }
+
+    public function update(int $id)
+    {
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            $data = [
+                'username' => $_POST['username'] ?? null,
+                'role' => $_POST['role'] ?? null,
+            ];
+
+            $result = $this->userService->updateUser($id, $data);
+
+            if ($result['success']) {
+                $_SESSION['flash_success'] = $result['message'];
+            } else {
+                $_SESSION['flash_error'] = $result['message'];
+            }
+
+            Redirect::to('/user/list');
+        } else {
+            $_SESSION['flash_error'] = "Méthode non autorisée.";
+            Redirect::to('/user/list');
+        }
+    }
+
+    public function delete(int $id)
+    {
+        $result = $this->userService->deleteUser($id);
+
+        if ($result['success']) {
+            $_SESSION['flash_success'] = $result['message'];
+        } else {
+            $_SESSION['flash_error'] = $result['message'];
+        }
+
+        Redirect::to('/user/list');
     }
 }

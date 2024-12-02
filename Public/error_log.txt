@@ -1,2 +1,1985 @@
 2024-11-18 15:23:32 - SQLSTATE[42S02]: Base table or view not found: 1146 Table 'snackgare.contacts' doesn't exist
 2024-11-18 15:28:52 - SQLSTATE[42S02]: Base table or view not found: 1146 Table 'snackgare.contacts' doesn't exist
+2024-11-20 13:05:32 - SQLSTATE[HY000]: General error: 1364 Field 'username' doesn't have a default value
+Array
+(
+    [username] => aaa
+    [role] => admin
+)
+Requête SQL: UPDATE utilisateurs SET  WHERE id = ?
+Valeurs: Array
+(
+    [0] => 14
+)
+
+2024-11-20 14:22:55 - Aucun champ valide pour la mise à jour. Données : App\Repositories\UserRepository Object
+(
+    [table:protected] => utilisateurs
+    [db:protected] => App\config\Db Object
+        (
+        )
+
+)
+
+2024-11-20 14:25:45 - Aucun champ valide pour la mise à jour. Données : App\Repositories\UserRepository Object
+(
+    [table:protected] => utilisateurs
+    [db:protected] => App\config\Db Object
+        (
+        )
+
+)
+
+Données reçues du formulaire : Array
+(
+    [csrf_token] => b8fb5e2139acc7745c5c34b1a69c21f5c06f39b12b1c64851183c633450524db
+    [username] => tests
+    [role] => admin
+)
+Hydrate - État de l'objet : App\Repositories\UserRepository Object
+(
+    [table:protected] => utilisateurs
+    [db:protected] => App\config\Db Object
+        (
+        )
+
+)
+Aucun champ valide pour la mise à jour.Données reçues du formulaire : Array
+(
+    [csrf_token] => b8fb5e2139acc7745c5c34b1a69c21f5c06f39b12b1c64851183c633450524db
+    [username] => tests
+    [role] => admin
+)
+Hydrate - État de l'objet : App\Repositories\UserRepository Object
+(
+    [table:protected] => utilisateurs
+    [db:protected] => App\config\Db Object
+        (
+        )
+
+    [id:protected] => 
+    [username:protected] => tests
+    [password:protected] => 
+    [role:protected] => admin
+)
+Requête SQL : UPDATE utilisateurs SET username = ?, role = ? WHERE id = ?Valeurs : Array
+(
+    [0] => tests
+    [1] => admin
+    [2] => 15
+)
+Données reçues du formulaire : Array
+(
+    [csrf_token] => b8fb5e2139acc7745c5c34b1a69c21f5c06f39b12b1c64851183c633450524db
+    [username] => renaude
+    [role] => admin
+)
+Hydrate - État de l'objet : App\Repositories\UserRepository Object
+(
+    [table:protected] => utilisateurs
+    [db:protected] => App\config\Db Object
+        (
+        )
+
+    [id:protected] => 
+    [username:protected] => renaude
+    [password:protected] => 
+    [role:protected] => admin
+)
+Requête SQL : UPDATE utilisateurs SET username = ?, role = ? WHERE id = ?Valeurs : Array
+(
+    [0] => renaude
+    [1] => admin
+    [2] => 16
+)
+Hydrate - État de l'objet : App\Repositories\UserRepository Object
+(
+    [table:protected] => utilisateurs
+    [db:protected] => App\config\Db Object
+        (
+        )
+
+    [id:protected] => 
+    [username:protected] => aaaa
+    [password:protected] => 
+    [role:protected] => collaborateur
+)
+Requête SQL : UPDATE utilisateurs SET username = ?, role = ? WHERE id = ?Valeurs : Array
+(
+    [0] => aaaa
+    [1] => collaborateur
+    [2] => 17
+)
+
+[27-Nov-2024 10:19:05 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method App\Repositories\AccueilRepository::getImagesForAccueil() in C:\snack_gare\Controllers\AccueilController.php:95
+Stack trace:
+#0 [internal function]: App\Controllers\AccueilController->edit(9)
+#1 C:\snack_gare\Config\Main.php(93): call_user_func_array(Array, Array)
+#2 C:\snack_gare\Public\index.php(27): App\Config\Main->start()
+#3 {main}
+  thrown in C:\snack_gare\Controllers\AccueilController.php on line 95
+[27-Nov-2024 10:32:57 UTC] Association des images pour l'élément 11: Array
+(
+    [0] => 25
+)
+
+[27-Nov-2024 11:32:33 UTC] Formulaire de modification soumis ? Méthode : GET
+[27-Nov-2024 11:32:40 UTC] Formulaire de modification soumis ? Méthode : POST
+[27-Nov-2024 11:34:19 UTC] Formulaire de modification soumis ? Méthode : GET
+[27-Nov-2024 11:34:24 UTC] Formulaire de modification soumis ? Méthode : POST
+[27-Nov-2024 11:36:07 UTC] Formulaire de modification soumis ? Méthode : GET
+[27-Nov-2024 11:36:10 UTC] Formulaire de modification soumis ? Méthode : POST
+[27-Nov-2024 11:39:50 UTC] Formulaire de modification soumis ? Méthode : GET
+[27-Nov-2024 11:39:54 UTC] Vérification initiale - Méthode appelée avec ID : 9
+[27-Nov-2024 11:39:54 UTC] Type de requête : POST
+[27-Nov-2024 11:39:54 UTC] PHP Warning:  Array to string conversion in C:\snack_gare\Controllers\AccueilController.php on line 117
+[27-Nov-2024 11:39:54 UTC] Array vide : Non
+[27-Nov-2024 11:39:54 UTC] PHP Warning:  Array to string conversion in C:\snack_gare\Controllers\AccueilController.php on line 118
+[27-Nov-2024 11:39:54 UTC] Array vide : Non
+[27-Nov-2024 11:39:54 UTC] Méthode update appelée avec ID : 9
+[27-Nov-2024 11:39:54 UTC] Contenu de $_POST : Array
+(
+    [csrf_token] => a4fbe09c9fb7aad10357a2cbf226791d1d0745e870c444258d6742e02207095a
+    [title] => fred eee
+    [content] => fred
+    [display_order] => 8
+    [image_ids] => Array
+        (
+            [0] => 35
+        )
+
+)
+
+[27-Nov-2024 11:39:54 UTC] Données reçues dans update: Array
+(
+    [csrf_token] => a4fbe09c9fb7aad10357a2cbf226791d1d0745e870c444258d6742e02207095a
+    [title] => fred eee
+    [content] => fred
+    [display_order] => 8
+    [image_ids] => Array
+        (
+            [0] => 35
+        )
+
+)
+
+[27-Nov-2024 11:39:54 UTC] Données traitées pour updateAccueil : Array
+(
+    [title] => fred eee
+    [content] => fred
+    [display_order] => 8
+    [image_ids] => Array
+        (
+            [0] => 35
+        )
+
+)
+
+[27-Nov-2024 11:39:54 UTC] Début de updateAccueil pour l'ID 9.
+[27-Nov-2024 11:39:54 UTC] Données reçues : Array
+(
+    [title] => fred eee
+    [content] => fred
+    [display_order] => 8
+    [image_ids] => Array
+        (
+            [0] => 35
+        )
+
+)
+
+[27-Nov-2024 11:39:54 UTC] Mise à jour des données principales réussie pour l'élément 9.
+[27-Nov-2024 11:39:54 UTC] Mise à jour des images associées pour l'élément 9.
+[27-Nov-2024 11:39:54 UTC] Début de associateImages pour l'élément 9.
+[27-Nov-2024 11:39:54 UTC] Images à associer : Array
+(
+    [0] => 35
+)
+
+[27-Nov-2024 11:39:54 UTC] Associations mises à jour avec succès pour l'élément 9.
+[27-Nov-2024 11:39:54 UTC] updateAccueil terminé avec succès pour l'élément 9.
+[27-Nov-2024 11:39:54 UTC] Mise à jour réussie pour l'élément 9.
+[27-Nov-2024 11:41:59 UTC] Formulaire de modification soumis ? Méthode : GET
+[27-Nov-2024 11:42:10 UTC] Vérification initiale - Méthode appelée avec ID : 9
+[27-Nov-2024 11:42:10 UTC] Type de requête : POST
+[27-Nov-2024 11:42:10 UTC] PHP Warning:  Array to string conversion in C:\snack_gare\Controllers\AccueilController.php on line 117
+[27-Nov-2024 11:42:10 UTC] Array vide : Non
+[27-Nov-2024 11:42:10 UTC] PHP Warning:  Array to string conversion in C:\snack_gare\Controllers\AccueilController.php on line 118
+[27-Nov-2024 11:42:10 UTC] Array vide : Non
+[27-Nov-2024 11:42:10 UTC] Méthode update appelée avec ID : 9
+[27-Nov-2024 11:42:10 UTC] Contenu de $_POST : Array
+(
+    [csrf_token] => a4fbe09c9fb7aad10357a2cbf226791d1d0745e870c444258d6742e02207095a
+    [title] => fred eee
+    [content] => fred
+    [display_order] => 8
+)
+
+[27-Nov-2024 11:42:10 UTC] Données reçues dans update: Array
+(
+    [csrf_token] => a4fbe09c9fb7aad10357a2cbf226791d1d0745e870c444258d6742e02207095a
+    [title] => fred eee
+    [content] => fred
+    [display_order] => 8
+)
+
+[27-Nov-2024 11:42:10 UTC] Données traitées pour updateAccueil : Array
+(
+    [title] => fred eee
+    [content] => fred
+    [display_order] => 8
+    [image_ids] => Array
+        (
+        )
+
+)
+
+[27-Nov-2024 11:42:10 UTC] Début de updateAccueil pour l'ID 9.
+[27-Nov-2024 11:42:10 UTC] Données reçues : Array
+(
+    [title] => fred eee
+    [content] => fred
+    [display_order] => 8
+    [image_ids] => Array
+        (
+        )
+
+)
+
+[27-Nov-2024 11:42:10 UTC] Mise à jour des données principales réussie pour l'élément 9.
+[27-Nov-2024 11:42:10 UTC] updateAccueil terminé avec succès pour l'élément 9.
+[27-Nov-2024 11:42:10 UTC] Mise à jour réussie pour l'élément 9.
+[27-Nov-2024 11:42:15 UTC] Formulaire de modification soumis ? Méthode : GET
+[27-Nov-2024 11:42:26 UTC] Vérification initiale - Méthode appelée avec ID : 9
+[27-Nov-2024 11:42:26 UTC] Type de requête : POST
+[27-Nov-2024 11:42:26 UTC] PHP Warning:  Array to string conversion in C:\snack_gare\Controllers\AccueilController.php on line 117
+[27-Nov-2024 11:42:26 UTC] Array vide : Non
+[27-Nov-2024 11:42:26 UTC] PHP Warning:  Array to string conversion in C:\snack_gare\Controllers\AccueilController.php on line 118
+[27-Nov-2024 11:42:26 UTC] Array vide : Non
+[27-Nov-2024 11:42:26 UTC] Méthode update appelée avec ID : 9
+[27-Nov-2024 11:42:26 UTC] Contenu de $_POST : Array
+(
+    [csrf_token] => a4fbe09c9fb7aad10357a2cbf226791d1d0745e870c444258d6742e02207095a
+    [title] => fred eee
+    [content] => fred
+    [display_order] => 8
+    [image_ids] => Array
+        (
+            [0] => 35
+        )
+
+)
+
+[27-Nov-2024 11:42:26 UTC] Données reçues dans update: Array
+(
+    [csrf_token] => a4fbe09c9fb7aad10357a2cbf226791d1d0745e870c444258d6742e02207095a
+    [title] => fred eee
+    [content] => fred
+    [display_order] => 8
+    [image_ids] => Array
+        (
+            [0] => 35
+        )
+
+)
+
+[27-Nov-2024 11:42:26 UTC] Données traitées pour updateAccueil : Array
+(
+    [title] => fred eee
+    [content] => fred
+    [display_order] => 8
+    [image_ids] => Array
+        (
+            [0] => 35
+        )
+
+)
+
+[27-Nov-2024 11:42:26 UTC] Début de updateAccueil pour l'ID 9.
+[27-Nov-2024 11:42:26 UTC] Données reçues : Array
+(
+    [title] => fred eee
+    [content] => fred
+    [display_order] => 8
+    [image_ids] => Array
+        (
+            [0] => 35
+        )
+
+)
+
+[27-Nov-2024 11:42:26 UTC] Mise à jour des données principales réussie pour l'élément 9.
+[27-Nov-2024 11:42:26 UTC] Mise à jour des images associées pour l'élément 9.
+[27-Nov-2024 11:42:26 UTC] Début de associateImages pour l'élément 9.
+[27-Nov-2024 11:42:26 UTC] Images à associer : Array
+(
+    [0] => 35
+)
+
+[27-Nov-2024 11:42:26 UTC] Associations mises à jour avec succès pour l'élément 9.
+[27-Nov-2024 11:42:26 UTC] updateAccueil terminé avec succès pour l'élément 9.
+[27-Nov-2024 11:42:26 UTC] Mise à jour réussie pour l'élément 9.
+[27-Nov-2024 11:42:32 UTC] Formulaire de modification soumis ? Méthode : GET
+[27-Nov-2024 11:42:43 UTC] Vérification initiale - Méthode appelée avec ID : 9
+[27-Nov-2024 11:42:43 UTC] Type de requête : POST
+[27-Nov-2024 11:42:43 UTC] PHP Warning:  Array to string conversion in C:\snack_gare\Controllers\AccueilController.php on line 117
+[27-Nov-2024 11:42:43 UTC] Array vide : Non
+[27-Nov-2024 11:42:43 UTC] PHP Warning:  Array to string conversion in C:\snack_gare\Controllers\AccueilController.php on line 118
+[27-Nov-2024 11:42:43 UTC] Array vide : Non
+[27-Nov-2024 11:42:43 UTC] Méthode update appelée avec ID : 9
+[27-Nov-2024 11:42:43 UTC] Contenu de $_POST : Array
+(
+    [csrf_token] => a4fbe09c9fb7aad10357a2cbf226791d1d0745e870c444258d6742e02207095a
+    [title] => fred eee
+    [content] => fred
+    [display_order] => 8
+)
+
+[27-Nov-2024 11:42:43 UTC] Données reçues dans update: Array
+(
+    [csrf_token] => a4fbe09c9fb7aad10357a2cbf226791d1d0745e870c444258d6742e02207095a
+    [title] => fred eee
+    [content] => fred
+    [display_order] => 8
+)
+
+[27-Nov-2024 11:42:43 UTC] Données traitées pour updateAccueil : Array
+(
+    [title] => fred eee
+    [content] => fred
+    [display_order] => 8
+    [image_ids] => Array
+        (
+        )
+
+)
+
+[27-Nov-2024 11:42:43 UTC] Début de updateAccueil pour l'ID 9.
+[27-Nov-2024 11:42:43 UTC] Données reçues : Array
+(
+    [title] => fred eee
+    [content] => fred
+    [display_order] => 8
+    [image_ids] => Array
+        (
+        )
+
+)
+
+[27-Nov-2024 11:42:43 UTC] Mise à jour des données principales réussie pour l'élément 9.
+[27-Nov-2024 11:42:43 UTC] updateAccueil terminé avec succès pour l'élément 9.
+[27-Nov-2024 11:42:43 UTC] Mise à jour réussie pour l'élément 9.
+[27-Nov-2024 11:55:52 UTC] Formulaire de modification soumis ? Méthode : GET
+[27-Nov-2024 11:56:07 UTC] Vérification initiale - Méthode appelée avec ID : 9
+[27-Nov-2024 11:56:07 UTC] Type de requête : POST
+[27-Nov-2024 11:56:07 UTC] PHP Warning:  Array to string conversion in C:\snack_gare\Controllers\AccueilController.php on line 117
+[27-Nov-2024 11:56:07 UTC] Array vide : Non
+[27-Nov-2024 11:56:07 UTC] PHP Warning:  Array to string conversion in C:\snack_gare\Controllers\AccueilController.php on line 118
+[27-Nov-2024 11:56:07 UTC] Array vide : Non
+[27-Nov-2024 11:56:07 UTC] Méthode update appelée avec ID : 9
+[27-Nov-2024 11:56:07 UTC] Contenu de $_POST : Array
+(
+    [csrf_token] => a4fbe09c9fb7aad10357a2cbf226791d1d0745e870c444258d6742e02207095a
+    [title] => fred test
+    [content] => fred
+    [display_order] => 8
+    [image_ids] => Array
+        (
+            [0] => 35
+        )
+
+)
+
+[27-Nov-2024 11:56:07 UTC] Données reçues dans update: Array
+(
+    [csrf_token] => a4fbe09c9fb7aad10357a2cbf226791d1d0745e870c444258d6742e02207095a
+    [title] => fred test
+    [content] => fred
+    [display_order] => 8
+    [image_ids] => Array
+        (
+            [0] => 35
+        )
+
+)
+
+[27-Nov-2024 11:56:07 UTC] Données traitées pour updateAccueil : Array
+(
+    [title] => fred test
+    [content] => fred
+    [display_order] => 8
+    [image_ids] => Array
+        (
+            [0] => 35
+        )
+
+)
+
+[27-Nov-2024 11:56:07 UTC] Début de updateAccueil pour l'ID 9.
+[27-Nov-2024 11:56:07 UTC] Données reçues : Array
+(
+    [title] => fred test
+    [content] => fred
+    [display_order] => 8
+    [image_ids] => Array
+        (
+            [0] => 35
+        )
+
+)
+
+[27-Nov-2024 11:56:07 UTC] Mise à jour des données principales réussie pour l'élément 9.
+[27-Nov-2024 11:56:07 UTC] Mise à jour des images associées pour l'élément 9.
+[27-Nov-2024 11:56:07 UTC] Début de associateImages pour l'élément 9.
+[27-Nov-2024 11:56:07 UTC] Images à associer : Array
+(
+    [0] => 35
+)
+
+[27-Nov-2024 11:56:07 UTC] Anciennes associations supprimées pour accueil_id : 9
+[27-Nov-2024 11:56:07 UTC] Association ajoutée : accueil_id = 9, image_id = 35
+[27-Nov-2024 11:56:07 UTC] Associations mises à jour avec succès pour l'élément 9.
+[27-Nov-2024 11:56:07 UTC] updateAccueil terminé avec succès pour l'élément 9.
+[27-Nov-2024 11:56:07 UTC] Mise à jour réussie pour l'élément 9.
+[27-Nov-2024 12:01:39 UTC] Formulaire de modification soumis ? Méthode : GET
+[27-Nov-2024 12:03:33 UTC] Vérification initiale - Méthode appelée avec ID : 5
+[27-Nov-2024 12:03:33 UTC] Type de requête : POST
+[27-Nov-2024 12:03:33 UTC] PHP Warning:  Array to string conversion in C:\snack_gare\Controllers\AccueilController.php on line 117
+[27-Nov-2024 12:03:33 UTC] Array vide : Non
+[27-Nov-2024 12:03:33 UTC] PHP Warning:  Array to string conversion in C:\snack_gare\Controllers\AccueilController.php on line 118
+[27-Nov-2024 12:03:33 UTC] Array vide : Non
+[27-Nov-2024 12:03:33 UTC] Méthode update appelée avec ID : 5
+[27-Nov-2024 12:03:33 UTC] Contenu de $_POST : Array
+(
+    [csrf_token] => a4fbe09c9fb7aad10357a2cbf226791d1d0745e870c444258d6742e02207095a
+    [title] => Nos spécialités
+    [content] => Tacos, burger, kebab
+    [display_order] => 4
+)
+
+[27-Nov-2024 12:03:33 UTC] Données reçues dans update: Array
+(
+    [csrf_token] => a4fbe09c9fb7aad10357a2cbf226791d1d0745e870c444258d6742e02207095a
+    [title] => Nos spécialités
+    [content] => Tacos, burger, kebab
+    [display_order] => 4
+)
+
+[27-Nov-2024 12:03:33 UTC] Données traitées pour updateAccueil : Array
+(
+    [title] => Nos spécialités
+    [content] => Tacos, burger, kebab
+    [display_order] => 4
+    [image_ids] => Array
+        (
+        )
+
+)
+
+[27-Nov-2024 12:03:33 UTC] Début de updateAccueil pour l'ID 5.
+[27-Nov-2024 12:03:33 UTC] Données reçues : Array
+(
+    [title] => Nos spécialités
+    [content] => Tacos, burger, kebab
+    [display_order] => 4
+    [image_ids] => Array
+        (
+        )
+
+)
+
+[27-Nov-2024 12:03:33 UTC] Mise à jour des données principales réussie pour l'élément 5.
+[27-Nov-2024 12:03:33 UTC] updateAccueil terminé avec succès pour l'élément 5.
+[27-Nov-2024 12:03:33 UTC] Mise à jour réussie pour l'élément 5.
+[27-Nov-2024 12:06:11 UTC] Formulaire de modification soumis ? Méthode : GET
+[27-Nov-2024 12:06:19 UTC] PHP Warning:  Undefined array key "image_ids" in C:\snack_gare\Controllers\AccueilController.php on line 113
+[27-Nov-2024 12:06:19 UTC] Images sélectionnées reçues : 
+[27-Nov-2024 12:06:19 UTC] Vérification initiale - Méthode appelée avec ID : 9
+[27-Nov-2024 12:06:19 UTC] Type de requête : POST
+[27-Nov-2024 12:06:19 UTC] PHP Warning:  Array to string conversion in C:\snack_gare\Controllers\AccueilController.php on line 118
+[27-Nov-2024 12:06:19 UTC] Array vide : Non
+[27-Nov-2024 12:06:19 UTC] PHP Warning:  Array to string conversion in C:\snack_gare\Controllers\AccueilController.php on line 119
+[27-Nov-2024 12:06:19 UTC] Array vide : Non
+[27-Nov-2024 12:06:19 UTC] Méthode update appelée avec ID : 9
+[27-Nov-2024 12:06:19 UTC] Contenu de $_POST : Array
+(
+    [csrf_token] => a4fbe09c9fb7aad10357a2cbf226791d1d0745e870c444258d6742e02207095a
+    [title] => fred test
+    [content] => fred
+    [display_order] => 8
+)
+
+[27-Nov-2024 12:06:19 UTC] Données reçues dans update: Array
+(
+    [csrf_token] => a4fbe09c9fb7aad10357a2cbf226791d1d0745e870c444258d6742e02207095a
+    [title] => fred test
+    [content] => fred
+    [display_order] => 8
+)
+
+[27-Nov-2024 12:06:19 UTC] Données traitées pour updateAccueil : Array
+(
+    [title] => fred test
+    [content] => fred
+    [display_order] => 8
+    [image_ids] => Array
+        (
+        )
+
+)
+
+[27-Nov-2024 12:06:19 UTC] Début de updateAccueil pour l'ID 9.
+[27-Nov-2024 12:06:19 UTC] Données reçues : Array
+(
+    [title] => fred test
+    [content] => fred
+    [display_order] => 8
+    [image_ids] => Array
+        (
+        )
+
+)
+
+[27-Nov-2024 12:06:19 UTC] Mise à jour des données principales réussie pour l'élément 9.
+[27-Nov-2024 12:06:19 UTC] updateAccueil terminé avec succès pour l'élément 9.
+[27-Nov-2024 12:06:19 UTC] Mise à jour réussie pour l'élément 9.
+[27-Nov-2024 12:09:14 UTC] Formulaire de modification soumis ? Méthode : GET
+[27-Nov-2024 12:09:20 UTC] PHP Warning:  Undefined array key "image_ids" in C:\snack_gare\Controllers\AccueilController.php on line 113
+[27-Nov-2024 12:09:20 UTC] Images sélectionnées reçues : 
+[27-Nov-2024 12:09:20 UTC] Vérification initiale - Méthode appelée avec ID : 9
+[27-Nov-2024 12:09:20 UTC] Type de requête : POST
+[27-Nov-2024 12:09:20 UTC] PHP Warning:  Array to string conversion in C:\snack_gare\Controllers\AccueilController.php on line 118
+[27-Nov-2024 12:09:20 UTC] Array vide : Non
+[27-Nov-2024 12:09:20 UTC] PHP Warning:  Array to string conversion in C:\snack_gare\Controllers\AccueilController.php on line 119
+[27-Nov-2024 12:09:20 UTC] Array vide : Non
+[27-Nov-2024 12:09:20 UTC] Méthode update appelée avec ID : 9
+[27-Nov-2024 12:09:20 UTC] Contenu de $_POST : Array
+(
+    [csrf_token] => a4fbe09c9fb7aad10357a2cbf226791d1d0745e870c444258d6742e02207095a
+    [title] => fred test
+    [content] => fred
+    [display_order] => 8
+)
+
+[27-Nov-2024 12:09:20 UTC] Données reçues dans update: Array
+(
+    [csrf_token] => a4fbe09c9fb7aad10357a2cbf226791d1d0745e870c444258d6742e02207095a
+    [title] => fred test
+    [content] => fred
+    [display_order] => 8
+)
+
+[27-Nov-2024 12:09:20 UTC] Données traitées pour updateAccueil : Array
+(
+    [title] => fred test
+    [content] => fred
+    [display_order] => 8
+    [image_ids] => Array
+        (
+        )
+
+)
+
+[27-Nov-2024 12:09:20 UTC] Aucune image sélectionnée dans le formulaire.
+[27-Nov-2024 12:09:20 UTC] Début de updateAccueil pour l'ID 9.
+[27-Nov-2024 12:09:20 UTC] Données reçues : Array
+(
+    [title] => fred test
+    [content] => fred
+    [display_order] => 8
+    [image_ids] => Array
+        (
+        )
+
+)
+
+[27-Nov-2024 12:09:20 UTC] Mise à jour des données principales réussie pour l'élément 9.
+[27-Nov-2024 12:09:20 UTC] updateAccueil terminé avec succès pour l'élément 9.
+[27-Nov-2024 12:09:20 UTC] Mise à jour réussie pour l'élément 9.
+[27-Nov-2024 12:13:00 UTC] Formulaire de modification soumis ? Méthode : GET
+[27-Nov-2024 12:13:09 UTC] Formulaire de modification soumis ? Méthode : GET
+[27-Nov-2024 12:13:19 UTC] Images sélectionnées reçues : Array
+(
+    [0] => 
+)
+
+[27-Nov-2024 12:13:19 UTC] Vérification initiale - Méthode appelée avec ID : 5
+[27-Nov-2024 12:13:19 UTC] Type de requête : POST
+[27-Nov-2024 12:13:19 UTC] PHP Warning:  Array to string conversion in C:\snack_gare\Controllers\AccueilController.php on line 118
+[27-Nov-2024 12:13:19 UTC] Array vide : Non
+[27-Nov-2024 12:13:19 UTC] PHP Warning:  Array to string conversion in C:\snack_gare\Controllers\AccueilController.php on line 119
+[27-Nov-2024 12:13:19 UTC] Array vide : Non
+[27-Nov-2024 12:13:19 UTC] Méthode update appelée avec ID : 5
+[27-Nov-2024 12:13:19 UTC] Contenu de $_POST : Array
+(
+    [csrf_token] => a4fbe09c9fb7aad10357a2cbf226791d1d0745e870c444258d6742e02207095a
+    [title] => Nos spécialités
+    [content] => Tacos, burger, kebab
+    [display_order] => 4
+    [image_ids] => Array
+        (
+            [0] => 
+        )
+
+)
+
+[27-Nov-2024 12:13:19 UTC] Données reçues dans update: Array
+(
+    [csrf_token] => a4fbe09c9fb7aad10357a2cbf226791d1d0745e870c444258d6742e02207095a
+    [title] => Nos spécialités
+    [content] => Tacos, burger, kebab
+    [display_order] => 4
+    [image_ids] => Array
+        (
+            [0] => 
+        )
+
+)
+
+[27-Nov-2024 12:13:19 UTC] Données traitées pour updateAccueil : Array
+(
+    [title] => Nos spécialités
+    [content] => Tacos, burger, kebab
+    [display_order] => 4
+    [image_ids] => Array
+        (
+            [0] => 
+        )
+
+)
+
+[27-Nov-2024 12:13:19 UTC] Images sélectionnées dans le formulaire : Array
+(
+    [0] => 
+)
+
+[27-Nov-2024 12:13:19 UTC] Début de updateAccueil pour l'ID 5.
+[27-Nov-2024 12:13:19 UTC] Données reçues : Array
+(
+    [title] => Nos spécialités
+    [content] => Tacos, burger, kebab
+    [display_order] => 4
+    [image_ids] => Array
+        (
+            [0] => 
+        )
+
+)
+
+[27-Nov-2024 12:13:19 UTC] Mise à jour des données principales réussie pour l'élément 5.
+[27-Nov-2024 12:13:19 UTC] Mise à jour des images associées pour l'élément 5.
+[27-Nov-2024 12:13:19 UTC] Début de associateImages pour l'élément 5.
+[27-Nov-2024 12:13:19 UTC] Images à associer : Array
+(
+    [0] => 
+)
+
+[27-Nov-2024 12:13:19 UTC] Anciennes associations supprimées pour accueil_id : 5
+[27-Nov-2024 12:13:19 UTC] Erreur SQL : SQLSTATE[HY000]: General error: 1366 Incorrect integer value: '' for column 'image_id' at row 1
+[27-Nov-2024 12:13:19 UTC] Association ajoutée : accueil_id = 5, image_id = 
+[27-Nov-2024 12:13:19 UTC] Associations mises à jour avec succès pour l'élément 5.
+[27-Nov-2024 12:13:19 UTC] updateAccueil terminé avec succès pour l'élément 5.
+[27-Nov-2024 12:13:19 UTC] Mise à jour réussie pour l'élément 5.
+[27-Nov-2024 12:35:30 UTC] Formulaire de modification soumis ? Méthode : GET
+[27-Nov-2024 12:35:32 UTC] Méthode update appelée avec ID : 5
+[27-Nov-2024 12:35:32 UTC] Type de requête : POST
+[27-Nov-2024 12:35:32 UTC] Données reçues dans update : Array
+(
+    [csrf_token] => a4fbe09c9fb7aad10357a2cbf226791d1d0745e870c444258d6742e02207095a
+    [title] => Nos spécialités
+    [content] => Tacos, burger, kebab
+    [display_order] => 4
+    [image_ids] => Array
+        (
+            [0] => 
+        )
+
+)
+
+[27-Nov-2024 12:35:32 UTC] Données traitées pour updateAccueil : Array
+(
+    [title] => Nos spécialités
+    [content] => Tacos, burger, kebab
+    [display_order] => 4
+    [image_ids] => Array
+        (
+            [0] => 
+        )
+
+)
+
+[27-Nov-2024 12:35:32 UTC] Début de updateAccueil pour l'ID 5.
+[27-Nov-2024 12:35:32 UTC] Données reçues : Array
+(
+    [title] => Nos spécialités
+    [content] => Tacos, burger, kebab
+    [display_order] => 4
+    [image_ids] => Array
+        (
+            [0] => 
+        )
+
+)
+
+[27-Nov-2024 12:35:32 UTC] Mise à jour des données principales réussie pour l'élément 5.
+[27-Nov-2024 12:35:32 UTC] Mise à jour des images associées pour l'élément 5.
+[27-Nov-2024 12:35:32 UTC] Début de associateImages pour l'élément 5.
+[27-Nov-2024 12:35:32 UTC] Images à associer : Array
+(
+    [0] => 
+)
+
+[27-Nov-2024 12:35:32 UTC] Anciennes associations supprimées pour accueil_id : 5
+[27-Nov-2024 12:35:32 UTC] Erreur SQL : SQLSTATE[HY000]: General error: 1366 Incorrect integer value: '' for column 'image_id' at row 1
+[27-Nov-2024 12:35:32 UTC] Association ajoutée : accueil_id = 5, image_id = 
+[27-Nov-2024 12:35:32 UTC] Associations mises à jour avec succès pour l'élément 5.
+[27-Nov-2024 12:35:32 UTC] updateAccueil terminé avec succès pour l'élément 5.
+[27-Nov-2024 12:35:32 UTC] Mise à jour réussie pour l'élément 5.
+[27-Nov-2024 12:35:35 UTC] Formulaire de modification soumis ? Méthode : GET
+[27-Nov-2024 12:35:44 UTC] Méthode update appelée avec ID : 5
+[27-Nov-2024 12:35:44 UTC] Type de requête : POST
+[27-Nov-2024 12:35:44 UTC] Données reçues dans update : Array
+(
+    [csrf_token] => a4fbe09c9fb7aad10357a2cbf226791d1d0745e870c444258d6742e02207095a
+    [title] => Nos spécialités
+    [content] => Tacos, burger, kebab
+    [display_order] => 4
+    [image_ids] => Array
+        (
+            [0] => 
+        )
+
+)
+
+[27-Nov-2024 12:35:44 UTC] Données traitées pour updateAccueil : Array
+(
+    [title] => Nos spécialités
+    [content] => Tacos, burger, kebab
+    [display_order] => 4
+    [image_ids] => Array
+        (
+            [0] => 
+        )
+
+)
+
+[27-Nov-2024 12:35:47 UTC] Nouvelle image ajoutée avec ID : 1
+[27-Nov-2024 12:35:47 UTC] Début de updateAccueil pour l'ID 5.
+[27-Nov-2024 12:35:47 UTC] Données reçues : Array
+(
+    [title] => Nos spécialités
+    [content] => Tacos, burger, kebab
+    [display_order] => 4
+    [image_ids] => Array
+        (
+            [0] => 
+            [1] => 1
+        )
+
+)
+
+[27-Nov-2024 12:35:47 UTC] Mise à jour des données principales réussie pour l'élément 5.
+[27-Nov-2024 12:35:47 UTC] Mise à jour des images associées pour l'élément 5.
+[27-Nov-2024 12:35:47 UTC] Début de associateImages pour l'élément 5.
+[27-Nov-2024 12:35:47 UTC] Images à associer : Array
+(
+    [0] => 
+    [1] => 1
+)
+
+[27-Nov-2024 12:35:47 UTC] Anciennes associations supprimées pour accueil_id : 5
+[27-Nov-2024 12:35:47 UTC] Erreur SQL : SQLSTATE[HY000]: General error: 1366 Incorrect integer value: '' for column 'image_id' at row 1
+[27-Nov-2024 12:35:47 UTC] Association ajoutée : accueil_id = 5, image_id = 
+[27-Nov-2024 12:35:47 UTC] Erreur SQL : SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`snackgare`.`accueil_images`, CONSTRAINT `accueil_images_ibfk_2` FOREIGN KEY (`image_id`) REFERENCES `images` (`id`) ON DELETE CASCADE)
+[27-Nov-2024 12:35:47 UTC] Association ajoutée : accueil_id = 5, image_id = 1
+[27-Nov-2024 12:35:47 UTC] Associations mises à jour avec succès pour l'élément 5.
+[27-Nov-2024 12:35:47 UTC] updateAccueil terminé avec succès pour l'élément 5.
+[27-Nov-2024 12:35:47 UTC] Mise à jour réussie pour l'élément 5.
+[27-Nov-2024 12:51:48 UTC] Formulaire de modification soumis ? Méthode : GET
+[27-Nov-2024 12:52:00 UTC] Erreur SQL : SQLSTATE[HY000]: General error: 1366 Incorrect integer value: '' for column 'image_id' at row 1
+[27-Nov-2024 12:52:00 UTC] Erreur SQL : SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`snackgare`.`accueil_images`, CONSTRAINT `accueil_images_ibfk_2` FOREIGN KEY (`image_id`) REFERENCES `images` (`id`) ON DELETE CASCADE)
+[27-Nov-2024 12:52:11 UTC] Formulaire de modification soumis ? Méthode : GET
+[27-Nov-2024 12:52:25 UTC] Erreur SQL : SQLSTATE[HY000]: General error: 1366 Incorrect integer value: '' for column 'image_id' at row 1
+[27-Nov-2024 12:52:25 UTC] Erreur SQL : SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`snackgare`.`accueil_images`, CONSTRAINT `accueil_images_ibfk_2` FOREIGN KEY (`image_id`) REFERENCES `images` (`id`) ON DELETE CASCADE)
+[27-Nov-2024 12:56:40 UTC] Formulaire de modification soumis ? Méthode : GET
+[27-Nov-2024 12:56:54 UTC] Début de associateImages pour l'élément 5.
+[27-Nov-2024 12:56:54 UTC] Images à associer avant filtrage : Array
+(
+    [0] => 1
+)
+
+[27-Nov-2024 12:56:54 UTC] Images à associer après filtrage : Array
+(
+)
+
+[27-Nov-2024 12:56:54 UTC] Anciennes associations supprimées pour accueil_id : 5
+[27-Nov-2024 12:56:54 UTC] Associations mises à jour avec succès pour l'élément 5.
+[27-Nov-2024 12:59:25 UTC] Formulaire de modification soumis ? Méthode : GET
+[27-Nov-2024 12:59:32 UTC] Images reçues avant filtrage : Array
+(
+    [0] => 
+)
+
+[27-Nov-2024 12:59:32 UTC] Images après filtrage : Array
+(
+)
+
+[27-Nov-2024 12:59:36 UTC] Images finales à associer : Array
+(
+    [0] => 1
+)
+
+[27-Nov-2024 12:59:36 UTC] Début de associateImages pour l'élément 5.
+[27-Nov-2024 12:59:36 UTC] Images à associer avant filtrage : Array
+(
+    [0] => 1
+)
+
+[27-Nov-2024 12:59:36 UTC] Images à associer après filtrage : Array
+(
+)
+
+[27-Nov-2024 12:59:36 UTC] Anciennes associations supprimées pour accueil_id : 5
+[27-Nov-2024 12:59:36 UTC] Associations mises à jour avec succès pour l'élément 5.
+[27-Nov-2024 13:01:03 UTC] Formulaire de modification soumis ? Méthode : GET
+[27-Nov-2024 13:01:09 UTC] Images reçues avant filtrage : Array
+(
+    [0] => 
+)
+
+[27-Nov-2024 13:01:09 UTC] Images après filtrage : Array
+(
+)
+
+[27-Nov-2024 13:01:12 UTC] Images finales à associer : Array
+(
+    [0] => 1
+)
+
+[27-Nov-2024 13:01:12 UTC] Début de associateImages pour l'élément 5.
+[27-Nov-2024 13:01:12 UTC] Images à associer : Array
+(
+    [0] => 1
+)
+
+[27-Nov-2024 13:01:12 UTC] Anciennes associations supprimées pour accueil_id : 5
+[27-Nov-2024 13:01:12 UTC] Erreur SQL : SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`snackgare`.`accueil_images`, CONSTRAINT `accueil_images_ibfk_2` FOREIGN KEY (`image_id`) REFERENCES `images` (`id`) ON DELETE CASCADE)
+[27-Nov-2024 13:01:12 UTC] Association ajoutée : accueil_id = 5, image_id = 1
+[27-Nov-2024 13:01:12 UTC] Associations mises à jour avec succès pour l'élément 5.
+[27-Nov-2024 13:08:12 UTC] Formulaire de modification soumis ? Méthode : GET
+[27-Nov-2024 13:08:22 UTC] Début de associateImages pour l'élément 5.
+[27-Nov-2024 13:08:22 UTC] Images à associer : Array
+(
+    [0] => 45
+)
+
+[27-Nov-2024 13:08:22 UTC] Anciennes associations supprimées pour accueil_id : 5
+[27-Nov-2024 13:08:22 UTC] Association ajoutée : accueil_id = 5, image_id = 45
+[27-Nov-2024 13:08:22 UTC] Associations mises à jour avec succès pour l'élément 5.
+[27-Nov-2024 13:08:29 UTC] Formulaire de modification soumis ? Méthode : GET
+[27-Nov-2024 13:08:42 UTC] Début de associateImages pour l'élément 9.
+[27-Nov-2024 13:08:42 UTC] Images à associer : Array
+(
+    [0] => 46
+)
+
+[27-Nov-2024 13:08:42 UTC] Anciennes associations supprimées pour accueil_id : 9
+[27-Nov-2024 13:08:42 UTC] Association ajoutée : accueil_id = 9, image_id = 46
+[27-Nov-2024 13:08:42 UTC] Associations mises à jour avec succès pour l'élément 9.
+[27-Nov-2024 13:08:45 UTC] Formulaire de modification soumis ? Méthode : GET
+[27-Nov-2024 13:08:57 UTC] Début de associateImages pour l'élément 10.
+[27-Nov-2024 13:08:57 UTC] Images à associer : Array
+(
+    [0] => 47
+)
+
+[27-Nov-2024 13:08:57 UTC] Anciennes associations supprimées pour accueil_id : 10
+[27-Nov-2024 13:08:57 UTC] Association ajoutée : accueil_id = 10, image_id = 47
+[27-Nov-2024 13:08:57 UTC] Associations mises à jour avec succès pour l'élément 10.
+[27-Nov-2024 13:18:46 UTC] Début de associateImages pour l'élément 2.
+[27-Nov-2024 13:18:46 UTC] Images à associer : Array
+(
+    [0] => 23
+    [1] => 48
+)
+
+[27-Nov-2024 13:18:46 UTC] Anciennes associations supprimées pour accueil_id : 2
+[27-Nov-2024 13:18:46 UTC] Association ajoutée : accueil_id = 2, image_id = 23
+[27-Nov-2024 13:18:46 UTC] Association ajoutée : accueil_id = 2, image_id = 48
+[27-Nov-2024 13:18:46 UTC] Associations mises à jour avec succès pour l'élément 2.
+[27-Nov-2024 13:19:59 UTC] Début de associateImages pour l'élément 2.
+[27-Nov-2024 13:19:59 UTC] Images à associer : Array
+(
+    [0] => 48
+)
+
+[27-Nov-2024 13:19:59 UTC] Anciennes associations supprimées pour accueil_id : 2
+[27-Nov-2024 13:19:59 UTC] Association ajoutée : accueil_id = 2, image_id = 48
+[27-Nov-2024 13:19:59 UTC] Associations mises à jour avec succès pour l'élément 2.
+[27-Nov-2024 13:20:14 UTC] Début de associateImages pour l'élément 2.
+[27-Nov-2024 13:20:14 UTC] Images à associer : Array
+(
+    [0] => 48
+    [1] => 49
+)
+
+[27-Nov-2024 13:20:14 UTC] Anciennes associations supprimées pour accueil_id : 2
+[27-Nov-2024 13:20:14 UTC] Association ajoutée : accueil_id = 2, image_id = 48
+[27-Nov-2024 13:20:14 UTC] Association ajoutée : accueil_id = 2, image_id = 49
+[27-Nov-2024 13:20:14 UTC] Associations mises à jour avec succès pour l'élément 2.
+[27-Nov-2024 13:26:48 UTC] PHP Warning:  Undefined variable $cloudinaryImages in C:\snack_gare\Views\dashboard\accueil\edit.php on line 24
+[27-Nov-2024 13:26:48 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in C:\snack_gare\Views\dashboard\accueil\edit.php on line 24
+[27-Nov-2024 13:36:05 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method Cloudinary\Api\Admin\AdminApi::resources() in C:\snack_gare\Services\CloudinaryService.php:52
+Stack trace:
+#0 C:\snack_gare\Controllers\AccueilController.php(88): App\Services\CloudinaryService->getImages()
+#1 C:\snack_gare\Controllers\AccueilController.php(106): App\Controllers\AccueilController->getCloudinaryImages()
+#2 [internal function]: App\Controllers\AccueilController->edit(9)
+#3 C:\snack_gare\Config\Main.php(93): call_user_func_array(Array, Array)
+#4 C:\snack_gare\Public\index.php(27): App\Config\Main->start()
+#5 {main}
+  thrown in C:\snack_gare\Services\CloudinaryService.php on line 52
+[27-Nov-2024 13:38:25 UTC] Début de associateImages pour l'élément 9.
+[27-Nov-2024 13:38:25 UTC] Images à associer : Array
+(
+    [0] => 47
+)
+
+[27-Nov-2024 13:38:25 UTC] Anciennes associations supprimées pour accueil_id : 9
+[27-Nov-2024 13:38:25 UTC] Association ajoutée : accueil_id = 9, image_id = 47
+[27-Nov-2024 13:38:25 UTC] Associations mises à jour avec succès pour l'élément 9.
+[27-Nov-2024 13:52:28 UTC] Début de associateImages pour l'élément 12.
+[27-Nov-2024 13:52:28 UTC] Images à associer : Array
+(
+    [0] => 26
+    [1] => 31
+    [2] => 50
+)
+
+[27-Nov-2024 13:52:28 UTC] Anciennes associations supprimées pour accueil_id : 12
+[27-Nov-2024 13:52:28 UTC] Association ajoutée : accueil_id = 12, image_id = 26
+[27-Nov-2024 13:52:28 UTC] Association ajoutée : accueil_id = 12, image_id = 31
+[27-Nov-2024 13:52:28 UTC] Association ajoutée : accueil_id = 12, image_id = 50
+[27-Nov-2024 13:52:28 UTC] Associations mises à jour avec succès pour l'élément 12.
+[27-Nov-2024 13:54:14 UTC] Début de associateImages pour l'élément 3.
+[27-Nov-2024 13:54:14 UTC] Images à associer : Array
+(
+    [0] => 25
+    [1] => 51
+)
+
+[27-Nov-2024 13:54:14 UTC] Anciennes associations supprimées pour accueil_id : 3
+[27-Nov-2024 13:54:14 UTC] Association ajoutée : accueil_id = 3, image_id = 25
+[27-Nov-2024 13:54:14 UTC] Association ajoutée : accueil_id = 3, image_id = 51
+[27-Nov-2024 13:54:14 UTC] Associations mises à jour avec succès pour l'élément 3.
+[27-Nov-2024 13:54:48 UTC] [2024-11-27T13:54:48.807413+00:00] cloudinary.CRITICAL: Request to Cloudinary server returned an error {"statusCode":400,"message":"File size too large. Got 10897755. Maximum is 10485760. Upgrade your plan to enjoy higher limits https://www.cloudinary.com/pricing/upgrades/file-limit"} []
+[27-Nov-2024 13:54:48 UTC] [2024-11-27T13:54:48.838080+00:00] cloudinary.CRITICAL: Async request failed {"code":0,"message":"File size too large. Got 10897755. Maximum is 10485760. Upgrade your plan to enjoy higher limits https://www.cloudinary.com/pricing/upgrades/file-limit"} []
+[27-Nov-2024 13:54:48 UTC] Cloudinary upload error: File size too large. Got 10897755. Maximum is 10485760. Upgrade your plan to enjoy higher limits https://www.cloudinary.com/pricing/upgrades/file-limit
+[27-Nov-2024 13:54:48 UTC] Début de associateImages pour l'élément 3.
+[27-Nov-2024 13:54:48 UTC] Images à associer : Array
+(
+    [0] => 25
+    [1] => 51
+)
+
+[27-Nov-2024 13:54:48 UTC] Anciennes associations supprimées pour accueil_id : 3
+[27-Nov-2024 13:54:48 UTC] Association ajoutée : accueil_id = 3, image_id = 25
+[27-Nov-2024 13:54:48 UTC] Association ajoutée : accueil_id = 3, image_id = 51
+[27-Nov-2024 13:54:48 UTC] Associations mises à jour avec succès pour l'élément 3.
+[27-Nov-2024 13:55:21 UTC] Début de associateImages pour l'élément 3.
+[27-Nov-2024 13:55:21 UTC] Images à associer : Array
+(
+    [0] => 25
+    [1] => 51
+    [2] => 52
+)
+
+[27-Nov-2024 13:55:21 UTC] Anciennes associations supprimées pour accueil_id : 3
+[27-Nov-2024 13:55:21 UTC] Association ajoutée : accueil_id = 3, image_id = 25
+[27-Nov-2024 13:55:21 UTC] Association ajoutée : accueil_id = 3, image_id = 51
+[27-Nov-2024 13:55:21 UTC] Association ajoutée : accueil_id = 3, image_id = 52
+[27-Nov-2024 13:55:21 UTC] Associations mises à jour avec succès pour l'élément 3.
+[27-Nov-2024 13:57:04 UTC] Début de associateImages pour l'élément 13.
+[27-Nov-2024 13:57:04 UTC] Images à associer : Array
+(
+    [0] => 53
+)
+
+[27-Nov-2024 13:57:04 UTC] Anciennes associations supprimées pour accueil_id : 13
+[27-Nov-2024 13:57:04 UTC] Association ajoutée : accueil_id = 13, image_id = 53
+[27-Nov-2024 13:57:04 UTC] Associations mises à jour avec succès pour l'élément 13.
+[27-Nov-2024 13:58:24 UTC] Début de associateImages pour l'élément 14.
+[27-Nov-2024 13:58:24 UTC] Images à associer : Array
+(
+    [0] => 28
+    [1] => 29
+    [2] => 38
+)
+
+[27-Nov-2024 13:58:24 UTC] Anciennes associations supprimées pour accueil_id : 14
+[27-Nov-2024 13:58:24 UTC] Association ajoutée : accueil_id = 14, image_id = 28
+[27-Nov-2024 13:58:24 UTC] Association ajoutée : accueil_id = 14, image_id = 29
+[27-Nov-2024 13:58:24 UTC] Association ajoutée : accueil_id = 14, image_id = 38
+[27-Nov-2024 13:58:24 UTC] Associations mises à jour avec succès pour l'élément 14.
+[27-Nov-2024 15:02:48 UTC] PHP Warning:  Undefined variable $section in C:\snack_gare\Views\home.php on line 13
+[27-Nov-2024 15:02:48 UTC] PHP Warning:  Trying to access array offset on null in C:\snack_gare\Views\home.php on line 13
+[27-Nov-2024 15:02:48 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\snack_gare\Views\home.php on line 13
+[27-Nov-2024 15:02:48 UTC] PHP Warning:  Undefined variable $section in C:\snack_gare\Views\home.php on line 14
+[27-Nov-2024 15:02:48 UTC] PHP Warning:  Trying to access array offset on null in C:\snack_gare\Views\home.php on line 14
+[27-Nov-2024 15:02:48 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\snack_gare\Views\home.php on line 14
+[27-Nov-2024 15:02:48 UTC] PHP Warning:  Undefined variable $section in C:\snack_gare\Views\home.php on line 17
+[27-Nov-2024 15:02:48 UTC] PHP Warning:  Trying to access array offset on null in C:\snack_gare\Views\home.php on line 17
+[27-Nov-2024 15:02:48 UTC] PHP Warning:  Undefined variable $section in C:\snack_gare\Views\home.php on line 20
+[27-Nov-2024 15:02:48 UTC] PHP Warning:  Trying to access array offset on null in C:\snack_gare\Views\home.php on line 20
+[27-Nov-2024 15:02:48 UTC] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\snack_gare\Views\home.php on line 20
+[27-Nov-2024 15:02:48 UTC] PHP Warning:  Undefined variable $section in C:\snack_gare\Views\home.php on line 21
+[27-Nov-2024 15:02:48 UTC] PHP Warning:  Trying to access array offset on null in C:\snack_gare\Views\home.php on line 21
+[27-Nov-2024 15:02:48 UTC] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\snack_gare\Views\home.php on line 21
+[27-Nov-2024 15:02:48 UTC] PHP Warning:  Undefined variable $section in C:\snack_gare\Views\home.php on line 30
+[27-Nov-2024 15:02:48 UTC] PHP Warning:  Trying to access array offset on null in C:\snack_gare\Views\home.php on line 30
+[27-Nov-2024 15:02:48 UTC] PHP Warning:  Undefined variable $section in C:\snack_gare\Views\home.php on line 34
+[27-Nov-2024 15:02:48 UTC] PHP Warning:  Trying to access array offset on null in C:\snack_gare\Views\home.php on line 34
+[27-Nov-2024 16:52:04 UTC] Début de associateImages pour l'élément 3.
+[27-Nov-2024 16:52:04 UTC] Images à associer : Array
+(
+    [0] => 58
+    [1] => 59
+    [2] => 62
+    [3] => 63
+    [4] => 64
+)
+
+[27-Nov-2024 16:52:04 UTC] Anciennes associations supprimées pour accueil_id : 3
+[27-Nov-2024 16:52:04 UTC] Association ajoutée : accueil_id = 3, image_id = 58
+[27-Nov-2024 16:52:04 UTC] Association ajoutée : accueil_id = 3, image_id = 59
+[27-Nov-2024 16:52:04 UTC] Association ajoutée : accueil_id = 3, image_id = 62
+[27-Nov-2024 16:52:04 UTC] Association ajoutée : accueil_id = 3, image_id = 63
+[27-Nov-2024 16:52:04 UTC] Association ajoutée : accueil_id = 3, image_id = 64
+[27-Nov-2024 16:52:04 UTC] Associations mises à jour avec succès pour l'élément 3.
+[27-Nov-2024 16:52:25 UTC] Début de associateImages pour l'élément 12.
+[27-Nov-2024 16:52:25 UTC] Images à associer : Array
+(
+    [0] => 55
+    [1] => 57
+)
+
+[27-Nov-2024 16:52:25 UTC] Anciennes associations supprimées pour accueil_id : 12
+[27-Nov-2024 16:52:25 UTC] Association ajoutée : accueil_id = 12, image_id = 55
+[27-Nov-2024 16:52:25 UTC] Association ajoutée : accueil_id = 12, image_id = 57
+[27-Nov-2024 16:52:25 UTC] Associations mises à jour avec succès pour l'élément 12.
+[27-Nov-2024 16:52:35 UTC] Début de associateImages pour l'élément 13.
+[27-Nov-2024 16:52:35 UTC] Images à associer : Array
+(
+    [0] => 56
+)
+
+[27-Nov-2024 16:52:35 UTC] Anciennes associations supprimées pour accueil_id : 13
+[27-Nov-2024 16:52:35 UTC] Association ajoutée : accueil_id = 13, image_id = 56
+[27-Nov-2024 16:52:35 UTC] Associations mises à jour avec succès pour l'élément 13.
+[27-Nov-2024 16:53:03 UTC] Début de associateImages pour l'élément 14.
+[27-Nov-2024 16:53:03 UTC] Images à associer : Array
+(
+    [0] => 54
+    [1] => 61
+    [2] => 65
+)
+
+[27-Nov-2024 16:53:03 UTC] Anciennes associations supprimées pour accueil_id : 14
+[27-Nov-2024 16:53:03 UTC] Association ajoutée : accueil_id = 14, image_id = 54
+[27-Nov-2024 16:53:03 UTC] Association ajoutée : accueil_id = 14, image_id = 61
+[27-Nov-2024 16:53:03 UTC] Association ajoutée : accueil_id = 14, image_id = 65
+[27-Nov-2024 16:53:03 UTC] Associations mises à jour avec succès pour l'élément 14.
+[27-Nov-2024 17:42:32 UTC] Début de associateImages pour l'élément 3.
+[27-Nov-2024 17:42:32 UTC] Images à associer : Array
+(
+    [0] => 58
+    [1] => 59
+    [2] => 62
+    [3] => 63
+    [4] => 64
+    [5] => 66
+)
+
+[27-Nov-2024 17:42:32 UTC] Anciennes associations supprimées pour accueil_id : 3
+[27-Nov-2024 17:42:32 UTC] Association ajoutée : accueil_id = 3, image_id = 58
+[27-Nov-2024 17:42:32 UTC] Association ajoutée : accueil_id = 3, image_id = 59
+[27-Nov-2024 17:42:32 UTC] Association ajoutée : accueil_id = 3, image_id = 62
+[27-Nov-2024 17:42:32 UTC] Association ajoutée : accueil_id = 3, image_id = 63
+[27-Nov-2024 17:42:32 UTC] Association ajoutée : accueil_id = 3, image_id = 64
+[27-Nov-2024 17:42:32 UTC] Association ajoutée : accueil_id = 3, image_id = 66
+[27-Nov-2024 17:42:32 UTC] Associations mises à jour avec succès pour l'élément 3.
+[28-Nov-2024 08:37:46 UTC] PHP Warning:  require_once(C:\snack_gare/views/dashboard/avis/index.php): Failed to open stream: No such file or directory in C:\snack_gare\Controllers\Controller.php on line 39
+[28-Nov-2024 08:37:46 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\snack_gare/views/dashboard/avis/index.php' (include_path='.;C:\php\pear') in C:\snack_gare\Controllers\Controller.php:39
+Stack trace:
+#0 C:\snack_gare\Controllers\AvisController.php(14): App\Controllers\Controller->render('dashboard/avis/...', Array)
+#1 [internal function]: App\Controllers\AvisController->index()
+#2 C:\snack_gare\Config\Main.php(93): call_user_func_array(Array, Array)
+#3 C:\snack_gare\Public\index.php(27): App\Config\Main->start()
+#4 {main}
+  thrown in C:\snack_gare\Controllers\Controller.php on line 39
+[28-Nov-2024 09:09:02 UTC] PHP Fatal error:  Uncaught Error: Call to a member function findAllWithImages() on null in C:\snack_gare\Controllers\Controller.php:29
+Stack trace:
+#0 C:\snack_gare\Controllers\AvisController.php(25): App\Controllers\Controller->render('dashboard/avis/...', Array, true)
+#1 [internal function]: App\Controllers\AvisController->list()
+#2 C:\snack_gare\Config\Main.php(93): call_user_func_array(Array, Array)
+#3 C:\snack_gare\Public\index.php(27): App\Config\Main->start()
+#4 {main}
+  thrown in C:\snack_gare\Controllers\Controller.php on line 29
+[28-Nov-2024 09:15:15 UTC] PHP Warning:  Undefined variable $pendingReviews in C:\snack_gare\Views\dashboard\avis\list.php on line 12
+[28-Nov-2024 09:15:15 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in C:\snack_gare\Views\dashboard\avis\list.php on line 12
+[28-Nov-2024 09:15:27 UTC] PHP Warning:  Undefined variable $pendingReviews in C:\snack_gare\Views\dashboard\avis\list.php on line 12
+[28-Nov-2024 09:15:27 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in C:\snack_gare\Views\dashboard\avis\list.php on line 12
+[28-Nov-2024 09:18:16 UTC] PHP Warning:  require_once(C:\snack_gare/views/avis/index.php): Failed to open stream: No such file or directory in C:\snack_gare\Controllers\Controller.php on line 35
+[28-Nov-2024 09:18:16 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\snack_gare/views/avis/index.php' (include_path='.;C:\php\pear') in C:\snack_gare\Controllers\Controller.php:35
+Stack trace:
+#0 C:\snack_gare\Controllers\AvisController.php(19): App\Controllers\Controller->render('avis/index', Array)
+#1 [internal function]: App\Controllers\AvisController->index()
+#2 C:\snack_gare\Config\Main.php(93): call_user_func_array(Array, Array)
+#3 C:\snack_gare\Public\index.php(27): App\Config\Main->start()
+#4 {main}
+  thrown in C:\snack_gare\Controllers\Controller.php on line 35
+[28-Nov-2024 09:56:02 UTC] PHP Warning:  require_once(C:\snack_gare/views/home.php): Failed to open stream: No such file or directory in C:\snack_gare\Controllers\Controller.php on line 35
+[28-Nov-2024 09:56:02 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\snack_gare/views/home.php' (include_path='.;C:\php\pear') in C:\snack_gare\Controllers\Controller.php:35
+Stack trace:
+#0 C:\snack_gare\Controllers\HomeController.php(25): App\Controllers\Controller->render('home', Array)
+#1 C:\snack_gare\Config\Main.php(65): App\Controllers\HomeController->index()
+#2 C:\snack_gare\Public\index.php(27): App\Config\Main->start()
+#3 {main}
+  thrown in C:\snack_gare\Controllers\Controller.php on line 35
+[28-Nov-2024 09:56:05 UTC] PHP Warning:  require_once(C:\snack_gare/views/home.php): Failed to open stream: No such file or directory in C:\snack_gare\Controllers\Controller.php on line 35
+[28-Nov-2024 09:56:05 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\snack_gare/views/home.php' (include_path='.;C:\php\pear') in C:\snack_gare\Controllers\Controller.php:35
+Stack trace:
+#0 C:\snack_gare\Controllers\HomeController.php(25): App\Controllers\Controller->render('home', Array)
+#1 C:\snack_gare\Config\Main.php(65): App\Controllers\HomeController->index()
+#2 C:\snack_gare\Public\index.php(27): App\Config\Main->start()
+#3 {main}
+  thrown in C:\snack_gare\Controllers\Controller.php on line 35
+[28-Nov-2024 09:56:28 UTC] PHP Warning:  require_once(C:\snack_gare/views/home.php): Failed to open stream: No such file or directory in C:\snack_gare\Controllers\Controller.php on line 35
+[28-Nov-2024 09:56:28 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\snack_gare/views/home.php' (include_path='.;C:\php\pear') in C:\snack_gare\Controllers\Controller.php:35
+Stack trace:
+#0 C:\snack_gare\Controllers\HomeController.php(25): App\Controllers\Controller->render('home', Array)
+#1 C:\snack_gare\Config\Main.php(65): App\Controllers\HomeController->index()
+#2 C:\snack_gare\Public\index.php(27): App\Config\Main->start()
+#3 {main}
+  thrown in C:\snack_gare\Controllers\Controller.php on line 35
+[28-Nov-2024 09:56:31 UTC] PHP Warning:  require_once(C:\snack_gare/views/home.php): Failed to open stream: No such file or directory in C:\snack_gare\Controllers\Controller.php on line 35
+[28-Nov-2024 09:56:31 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\snack_gare/views/home.php' (include_path='.;C:\php\pear') in C:\snack_gare\Controllers\Controller.php:35
+Stack trace:
+#0 C:\snack_gare\Controllers\HomeController.php(25): App\Controllers\Controller->render('home', Array)
+#1 C:\snack_gare\Config\Main.php(65): App\Controllers\HomeController->index()
+#2 C:\snack_gare\Public\index.php(27): App\Config\Main->start()
+#3 {main}
+  thrown in C:\snack_gare\Controllers\Controller.php on line 35
+[28-Nov-2024 09:56:45 UTC] PHP Warning:  require_once(C:\snack_gare/views/home.php): Failed to open stream: No such file or directory in C:\snack_gare\Controllers\Controller.php on line 35
+[28-Nov-2024 09:56:45 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\snack_gare/views/home.php' (include_path='.;C:\php\pear') in C:\snack_gare\Controllers\Controller.php:35
+Stack trace:
+#0 C:\snack_gare\Controllers\HomeController.php(25): App\Controllers\Controller->render('home', Array)
+#1 C:\snack_gare\Config\Main.php(65): App\Controllers\HomeController->index()
+#2 C:\snack_gare\Public\index.php(27): App\Config\Main->start()
+#3 {main}
+  thrown in C:\snack_gare\Controllers\Controller.php on line 35
+[28-Nov-2024 09:57:39 UTC] PHP Warning:  require_once(C:\snack_gare/views/home.php): Failed to open stream: No such file or directory in C:\snack_gare\Controllers\Controller.php on line 35
+[28-Nov-2024 09:57:39 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\snack_gare/views/home.php' (include_path='.;C:\php\pear') in C:\snack_gare\Controllers\Controller.php:35
+Stack trace:
+#0 C:\snack_gare\Controllers\HomeController.php(25): App\Controllers\Controller->render('home', Array)
+#1 C:\snack_gare\Config\Main.php(65): App\Controllers\HomeController->index()
+#2 C:\snack_gare\Public\index.php(27): App\Config\Main->start()
+#3 {main}
+  thrown in C:\snack_gare\Controllers\Controller.php on line 35
+[28-Nov-2024 09:57:40 UTC] PHP Warning:  require_once(C:\snack_gare/views/home.php): Failed to open stream: No such file or directory in C:\snack_gare\Controllers\Controller.php on line 35
+[28-Nov-2024 09:57:40 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\snack_gare/views/home.php' (include_path='.;C:\php\pear') in C:\snack_gare\Controllers\Controller.php:35
+Stack trace:
+#0 C:\snack_gare\Controllers\HomeController.php(25): App\Controllers\Controller->render('home', Array)
+#1 C:\snack_gare\Config\Main.php(65): App\Controllers\HomeController->index()
+#2 C:\snack_gare\Public\index.php(27): App\Config\Main->start()
+#3 {main}
+  thrown in C:\snack_gare\Controllers\Controller.php on line 35
+[28-Nov-2024 09:57:40 UTC] PHP Warning:  require_once(C:\snack_gare/views/home.php): Failed to open stream: No such file or directory in C:\snack_gare\Controllers\Controller.php on line 35
+[28-Nov-2024 09:57:40 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\snack_gare/views/home.php' (include_path='.;C:\php\pear') in C:\snack_gare\Controllers\Controller.php:35
+Stack trace:
+#0 C:\snack_gare\Controllers\HomeController.php(25): App\Controllers\Controller->render('home', Array)
+#1 C:\snack_gare\Config\Main.php(65): App\Controllers\HomeController->index()
+#2 C:\snack_gare\Public\index.php(27): App\Config\Main->start()
+#3 {main}
+  thrown in C:\snack_gare\Controllers\Controller.php on line 35
+[28-Nov-2024 09:57:40 UTC] PHP Warning:  require_once(C:\snack_gare/views/home.php): Failed to open stream: No such file or directory in C:\snack_gare\Controllers\Controller.php on line 35
+[28-Nov-2024 09:57:40 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\snack_gare/views/home.php' (include_path='.;C:\php\pear') in C:\snack_gare\Controllers\Controller.php:35
+Stack trace:
+#0 C:\snack_gare\Controllers\HomeController.php(25): App\Controllers\Controller->render('home', Array)
+#1 C:\snack_gare\Config\Main.php(65): App\Controllers\HomeController->index()
+#2 C:\snack_gare\Public\index.php(27): App\Config\Main->start()
+#3 {main}
+  thrown in C:\snack_gare\Controllers\Controller.php on line 35
+[28-Nov-2024 09:57:41 UTC] PHP Warning:  require_once(C:\snack_gare/views/home.php): Failed to open stream: No such file or directory in C:\snack_gare\Controllers\Controller.php on line 35
+[28-Nov-2024 09:57:41 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\snack_gare/views/home.php' (include_path='.;C:\php\pear') in C:\snack_gare\Controllers\Controller.php:35
+Stack trace:
+#0 C:\snack_gare\Controllers\HomeController.php(25): App\Controllers\Controller->render('home', Array)
+#1 C:\snack_gare\Config\Main.php(65): App\Controllers\HomeController->index()
+#2 C:\snack_gare\Public\index.php(27): App\Config\Main->start()
+#3 {main}
+  thrown in C:\snack_gare\Controllers\Controller.php on line 35
+[28-Nov-2024 09:57:41 UTC] PHP Warning:  require_once(C:\snack_gare/views/home.php): Failed to open stream: No such file or directory in C:\snack_gare\Controllers\Controller.php on line 35
+[28-Nov-2024 09:57:41 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\snack_gare/views/home.php' (include_path='.;C:\php\pear') in C:\snack_gare\Controllers\Controller.php:35
+Stack trace:
+#0 C:\snack_gare\Controllers\HomeController.php(25): App\Controllers\Controller->render('home', Array)
+#1 C:\snack_gare\Config\Main.php(65): App\Controllers\HomeController->index()
+#2 C:\snack_gare\Public\index.php(27): App\Config\Main->start()
+#3 {main}
+  thrown in C:\snack_gare\Controllers\Controller.php on line 35
+[28-Nov-2024 09:57:41 UTC] PHP Warning:  require_once(C:\snack_gare/views/home.php): Failed to open stream: No such file or directory in C:\snack_gare\Controllers\Controller.php on line 35
+[28-Nov-2024 09:57:41 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\snack_gare/views/home.php' (include_path='.;C:\php\pear') in C:\snack_gare\Controllers\Controller.php:35
+Stack trace:
+#0 C:\snack_gare\Controllers\HomeController.php(25): App\Controllers\Controller->render('home', Array)
+#1 C:\snack_gare\Config\Main.php(65): App\Controllers\HomeController->index()
+#2 C:\snack_gare\Public\index.php(27): App\Config\Main->start()
+#3 {main}
+  thrown in C:\snack_gare\Controllers\Controller.php on line 35
+[28-Nov-2024 09:57:41 UTC] PHP Warning:  require_once(C:\snack_gare/views/home.php): Failed to open stream: No such file or directory in C:\snack_gare\Controllers\Controller.php on line 35
+[28-Nov-2024 09:57:41 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\snack_gare/views/home.php' (include_path='.;C:\php\pear') in C:\snack_gare\Controllers\Controller.php:35
+Stack trace:
+#0 C:\snack_gare\Controllers\HomeController.php(25): App\Controllers\Controller->render('home', Array)
+#1 C:\snack_gare\Config\Main.php(65): App\Controllers\HomeController->index()
+#2 C:\snack_gare\Public\index.php(27): App\Config\Main->start()
+#3 {main}
+  thrown in C:\snack_gare\Controllers\Controller.php on line 35
+[28-Nov-2024 09:57:41 UTC] PHP Warning:  require_once(C:\snack_gare/views/home.php): Failed to open stream: No such file or directory in C:\snack_gare\Controllers\Controller.php on line 35
+[28-Nov-2024 09:57:41 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\snack_gare/views/home.php' (include_path='.;C:\php\pear') in C:\snack_gare\Controllers\Controller.php:35
+Stack trace:
+#0 C:\snack_gare\Controllers\HomeController.php(25): App\Controllers\Controller->render('home', Array)
+#1 C:\snack_gare\Config\Main.php(65): App\Controllers\HomeController->index()
+#2 C:\snack_gare\Public\index.php(27): App\Config\Main->start()
+#3 {main}
+  thrown in C:\snack_gare\Controllers\Controller.php on line 35
+[28-Nov-2024 11:33:57 UTC] Données reçues dans le contrôleur : nom=test, commentaire=testons
+[28-Nov-2024 11:33:57 UTC] Erreur dans le contrôleur : Le commentaire doit contenir au moins 10 caractères.
+[28-Nov-2024 11:39:34 UTC] Données reçues dans le contrôleur : nom=ced, commentaire=tessss
+[28-Nov-2024 11:39:34 UTC] Données préparées pour insertion : Array
+(
+    [nom] => ced
+    [commentaire] => tessss
+    [statut] => 0
+    [dateavis] => 2024-11-28 11:39:34
+)
+
+[28-Nov-2024 11:39:34 UTC] Requête SQL : INSERT INTO avis (nom, commentaire, dateavis, statut)
+            VALUES (:nom, :commentaire, :dateavis, :statut)
+[28-Nov-2024 11:39:34 UTC] Données SQL : Array
+(
+    [nom] => ced
+    [commentaire] => tessss
+    [statut] => 0
+    [dateavis] => 2024-11-28 11:39:34
+)
+
+[28-Nov-2024 11:39:34 UTC] Insertion réussie.
+[28-Nov-2024 11:39:34 UTC] Résultat de l'insertion dans le repository : succès
+[28-Nov-2024 11:39:34 UTC] Avis ajouté avec succès. Redirection vers /avis/form.
+[28-Nov-2024 11:40:31 UTC] Données reçues dans le contrôleur : nom=Alice, commentaire=Super service et délicieux tacos!
+[28-Nov-2024 11:40:31 UTC] Données préparées pour insertion : Array
+(
+    [nom] => Alice
+    [commentaire] => Super service et délicieux tacos!
+    [statut] => 0
+    [dateavis] => 2024-11-28 11:40:31
+)
+
+[28-Nov-2024 11:40:31 UTC] Requête SQL : INSERT INTO avis (nom, commentaire, dateavis, statut)
+            VALUES (:nom, :commentaire, :dateavis, :statut)
+[28-Nov-2024 11:40:31 UTC] Données SQL : Array
+(
+    [nom] => Alice
+    [commentaire] => Super service et délicieux tacos!
+    [statut] => 0
+    [dateavis] => 2024-11-28 11:40:31
+)
+
+[28-Nov-2024 11:40:31 UTC] Insertion réussie.
+[28-Nov-2024 11:40:31 UTC] Résultat de l'insertion dans le repository : succès
+[28-Nov-2024 11:40:31 UTC] Avis ajouté avec succès. Redirection vers /avis/form.
+[28-Nov-2024 11:40:51 UTC] Données reçues dans le contrôleur : nom=Bob, commentaire=Je recommande vivement ce restaurant.
+[28-Nov-2024 11:40:51 UTC] Données préparées pour insertion : Array
+(
+    [nom] => Bob
+    [commentaire] => Je recommande vivement ce restaurant.
+    [statut] => 0
+    [dateavis] => 2024-11-28 11:40:51
+)
+
+[28-Nov-2024 11:40:51 UTC] Requête SQL : INSERT INTO avis (nom, commentaire, dateavis, statut)
+            VALUES (:nom, :commentaire, :dateavis, :statut)
+[28-Nov-2024 11:40:51 UTC] Données SQL : Array
+(
+    [nom] => Bob
+    [commentaire] => Je recommande vivement ce restaurant.
+    [statut] => 0
+    [dateavis] => 2024-11-28 11:40:51
+)
+
+[28-Nov-2024 11:40:51 UTC] Insertion réussie.
+[28-Nov-2024 11:40:51 UTC] Résultat de l'insertion dans le repository : succès
+[28-Nov-2024 11:40:51 UTC] Avis ajouté avec succès. Redirection vers /avis/form.
+[28-Nov-2024 11:41:14 UTC] Données reçues dans le contrôleur : nom=Charlie, commentaire=Des produits de qualité à un prix raisonnable.
+[28-Nov-2024 11:41:14 UTC] Données préparées pour insertion : Array
+(
+    [nom] => Charlie
+    [commentaire] => Des produits de qualité à un prix raisonnable.
+    [statut] => 0
+    [dateavis] => 2024-11-28 11:41:14
+)
+
+[28-Nov-2024 11:41:14 UTC] Requête SQL : INSERT INTO avis (nom, commentaire, dateavis, statut)
+            VALUES (:nom, :commentaire, :dateavis, :statut)
+[28-Nov-2024 11:41:14 UTC] Données SQL : Array
+(
+    [nom] => Charlie
+    [commentaire] => Des produits de qualité à un prix raisonnable.
+    [statut] => 0
+    [dateavis] => 2024-11-28 11:41:14
+)
+
+[28-Nov-2024 11:41:14 UTC] Insertion réussie.
+[28-Nov-2024 11:41:14 UTC] Résultat de l'insertion dans le repository : succès
+[28-Nov-2024 11:41:14 UTC] Avis ajouté avec succès. Redirection vers /avis/form.
+[28-Nov-2024 11:43:11 UTC] PHP Warning:  Undefined variable $review in C:\snack_gare\Views\dashboard\avis\list.php on line 2
+[28-Nov-2024 11:43:11 UTC] PHP Warning:  Trying to access array offset on null in C:\snack_gare\Views\dashboard\avis\list.php on line 2
+[28-Nov-2024 11:43:11 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\snack_gare\Views\dashboard\avis\list.php on line 2
+[28-Nov-2024 11:43:11 UTC] PHP Warning:  Undefined variable $review in C:\snack_gare\Views\dashboard\avis\list.php on line 6
+[28-Nov-2024 11:43:11 UTC] PHP Warning:  Trying to access array offset on null in C:\snack_gare\Views\dashboard\avis\list.php on line 6
+[28-Nov-2024 11:43:11 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\snack_gare\Views\dashboard\avis\list.php on line 6
+[28-Nov-2024 11:44:04 UTC] PHP Warning:  Undefined variable $review in C:\snack_gare\Views\dashboard\avis\list.php on line 2
+[28-Nov-2024 11:44:04 UTC] PHP Warning:  Trying to access array offset on null in C:\snack_gare\Views\dashboard\avis\list.php on line 2
+[28-Nov-2024 11:44:04 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\snack_gare\Views\dashboard\avis\list.php on line 2
+[28-Nov-2024 11:44:04 UTC] PHP Warning:  Undefined variable $review in C:\snack_gare\Views\dashboard\avis\list.php on line 6
+[28-Nov-2024 11:44:04 UTC] PHP Warning:  Trying to access array offset on null in C:\snack_gare\Views\dashboard\avis\list.php on line 6
+[28-Nov-2024 11:44:04 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\snack_gare\Views\dashboard\avis\list.php on line 6
+[28-Nov-2024 11:44:06 UTC] PHP Warning:  Undefined variable $review in C:\snack_gare\Views\dashboard\avis\list.php on line 2
+[28-Nov-2024 11:44:06 UTC] PHP Warning:  Trying to access array offset on null in C:\snack_gare\Views\dashboard\avis\list.php on line 2
+[28-Nov-2024 11:44:06 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\snack_gare\Views\dashboard\avis\list.php on line 2
+[28-Nov-2024 11:44:06 UTC] PHP Warning:  Undefined variable $review in C:\snack_gare\Views\dashboard\avis\list.php on line 6
+[28-Nov-2024 11:44:06 UTC] PHP Warning:  Trying to access array offset on null in C:\snack_gare\Views\dashboard\avis\list.php on line 6
+[28-Nov-2024 11:44:06 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\snack_gare\Views\dashboard\avis\list.php on line 6
+[28-Nov-2024 11:44:08 UTC] PHP Warning:  Undefined variable $review in C:\snack_gare\Views\dashboard\avis\list.php on line 2
+[28-Nov-2024 11:44:08 UTC] PHP Warning:  Trying to access array offset on null in C:\snack_gare\Views\dashboard\avis\list.php on line 2
+[28-Nov-2024 11:44:08 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\snack_gare\Views\dashboard\avis\list.php on line 2
+[28-Nov-2024 11:44:08 UTC] PHP Warning:  Undefined variable $review in C:\snack_gare\Views\dashboard\avis\list.php on line 6
+[28-Nov-2024 11:44:08 UTC] PHP Warning:  Trying to access array offset on null in C:\snack_gare\Views\dashboard\avis\list.php on line 6
+[28-Nov-2024 11:44:08 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\snack_gare\Views\dashboard\avis\list.php on line 6
+[28-Nov-2024 13:48:31 UTC] PHP Warning:  compact(): Undefined variable $css in C:\snack_gare\Controllers\AvisController.php on line 26
+[28-Nov-2024 16:16:31 UTC] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in C:\snack_gare\Views\layouts\default.php:131
+Stack trace:
+#0 C:\snack_gare\Controllers\Controller.php(44): require_once()
+#1 C:\snack_gare\Controllers\ContactController.php(14): App\Controllers\Controller->render('contact/index', Array)
+#2 [internal function]: App\Controllers\ContactController->index()
+#3 C:\snack_gare\Config\Main.php(93): call_user_func_array(Array, Array)
+#4 C:\snack_gare\Public\index.php(27): App\Config\Main->start()
+#5 {main}
+  thrown in C:\snack_gare\Views\layouts\default.php on line 131
+[28-Nov-2024 16:17:34 UTC] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in C:\snack_gare\Views\layouts\default.php:131
+Stack trace:
+#0 C:\snack_gare\Controllers\Controller.php(44): require_once()
+#1 C:\snack_gare\Controllers\ContactController.php(14): App\Controllers\Controller->render('contact/index', Array)
+#2 [internal function]: App\Controllers\ContactController->index()
+#3 C:\snack_gare\Config\Main.php(93): call_user_func_array(Array, Array)
+#4 C:\snack_gare\Public\index.php(27): App\Config\Main->start()
+#5 {main}
+  thrown in C:\snack_gare\Views\layouts\default.php on line 131
+[28-Nov-2024 16:18:07 UTC] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in C:\snack_gare\Views\layouts\default.php:131
+Stack trace:
+#0 C:\snack_gare\Controllers\Controller.php(44): require_once()
+#1 C:\snack_gare\Controllers\ContactController.php(14): App\Controllers\Controller->render('contact/index', Array)
+#2 [internal function]: App\Controllers\ContactController->index()
+#3 C:\snack_gare\Config\Main.php(93): call_user_func_array(Array, Array)
+#4 C:\snack_gare\Public\index.php(27): App\Config\Main->start()
+#5 {main}
+  thrown in C:\snack_gare\Views\layouts\default.php on line 131
+[28-Nov-2024 16:18:29 UTC] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in C:\snack_gare\Views\layouts\default.php:131
+Stack trace:
+#0 C:\snack_gare\Controllers\Controller.php(44): require_once()
+#1 C:\snack_gare\Controllers\ContactController.php(14): App\Controllers\Controller->render('contact/index', Array)
+#2 [internal function]: App\Controllers\ContactController->index()
+#3 C:\snack_gare\Config\Main.php(93): call_user_func_array(Array, Array)
+#4 C:\snack_gare\Public\index.php(27): App\Config\Main->start()
+#5 {main}
+  thrown in C:\snack_gare\Views\layouts\default.php on line 131
+[28-Nov-2024 16:18:53 UTC] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in C:\snack_gare\Views\layouts\default.php:131
+Stack trace:
+#0 C:\snack_gare\Controllers\Controller.php(44): require_once()
+#1 C:\snack_gare\Controllers\ContactController.php(14): App\Controllers\Controller->render('contact/index', Array)
+#2 [internal function]: App\Controllers\ContactController->index()
+#3 C:\snack_gare\Config\Main.php(93): call_user_func_array(Array, Array)
+#4 C:\snack_gare\Public\index.php(27): App\Config\Main->start()
+#5 {main}
+  thrown in C:\snack_gare\Views\layouts\default.php on line 131
+[28-Nov-2024 16:19:20 UTC] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in C:\snack_gare\Views\layouts\default.php:131
+Stack trace:
+#0 C:\snack_gare\Controllers\Controller.php(44): require_once()
+#1 C:\snack_gare\Controllers\ContactController.php(14): App\Controllers\Controller->render('contact/index', Array)
+#2 [internal function]: App\Controllers\ContactController->index()
+#3 C:\snack_gare\Config\Main.php(93): call_user_func_array(Array, Array)
+#4 C:\snack_gare\Public\index.php(27): App\Config\Main->start()
+#5 {main}
+  thrown in C:\snack_gare\Views\layouts\default.php on line 131
+[28-Nov-2024 16:19:45 UTC] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in C:\snack_gare\Views\layouts\default.php:131
+Stack trace:
+#0 C:\snack_gare\Controllers\Controller.php(44): require_once()
+#1 C:\snack_gare\Controllers\ContactController.php(14): App\Controllers\Controller->render('contact/index', Array)
+#2 [internal function]: App\Controllers\ContactController->index()
+#3 C:\snack_gare\Config\Main.php(93): call_user_func_array(Array, Array)
+#4 C:\snack_gare\Public\index.php(27): App\Config\Main->start()
+#5 {main}
+  thrown in C:\snack_gare\Views\layouts\default.php on line 131
+[28-Nov-2024 16:20:27 UTC] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in C:\snack_gare\Views\layouts\default.php:131
+Stack trace:
+#0 C:\snack_gare\Controllers\Controller.php(44): require_once()
+#1 C:\snack_gare\Controllers\ContactController.php(14): App\Controllers\Controller->render('contact/index', Array)
+#2 [internal function]: App\Controllers\ContactController->index()
+#3 C:\snack_gare\Config\Main.php(93): call_user_func_array(Array, Array)
+#4 C:\snack_gare\Public\index.php(27): App\Config\Main->start()
+#5 {main}
+  thrown in C:\snack_gare\Views\layouts\default.php on line 131
+[28-Nov-2024 16:20:52 UTC] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in C:\snack_gare\Views\layouts\default.php:131
+Stack trace:
+#0 C:\snack_gare\Controllers\Controller.php(44): require_once()
+#1 C:\snack_gare\Controllers\ContactController.php(14): App\Controllers\Controller->render('contact/index', Array)
+#2 [internal function]: App\Controllers\ContactController->index()
+#3 C:\snack_gare\Config\Main.php(93): call_user_func_array(Array, Array)
+#4 C:\snack_gare\Public\index.php(27): App\Config\Main->start()
+#5 {main}
+  thrown in C:\snack_gare\Views\layouts\default.php on line 131
+[28-Nov-2024 16:21:27 UTC] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in C:\snack_gare\Views\layouts\default.php:131
+Stack trace:
+#0 C:\snack_gare\Controllers\Controller.php(44): require_once()
+#1 C:\snack_gare\Controllers\ContactController.php(14): App\Controllers\Controller->render('contact/index', Array)
+#2 [internal function]: App\Controllers\ContactController->index()
+#3 C:\snack_gare\Config\Main.php(93): call_user_func_array(Array, Array)
+#4 C:\snack_gare\Public\index.php(27): App\Config\Main->start()
+#5 {main}
+  thrown in C:\snack_gare\Views\layouts\default.php on line 131
+[28-Nov-2024 16:22:53 UTC] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in C:\snack_gare\Views\layouts\default.php:131
+Stack trace:
+#0 C:\snack_gare\Controllers\Controller.php(44): require_once()
+#1 C:\snack_gare\Controllers\ContactController.php(14): App\Controllers\Controller->render('contact/index', Array)
+#2 [internal function]: App\Controllers\ContactController->index()
+#3 C:\snack_gare\Config\Main.php(93): call_user_func_array(Array, Array)
+#4 C:\snack_gare\Public\index.php(27): App\Config\Main->start()
+#5 {main}
+  thrown in C:\snack_gare\Views\layouts\default.php on line 131
+[28-Nov-2024 16:22:59 UTC] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in C:\snack_gare\Views\layouts\default.php:131
+Stack trace:
+#0 C:\snack_gare\Controllers\Controller.php(44): require_once()
+#1 C:\snack_gare\Controllers\ContactController.php(14): App\Controllers\Controller->render('contact/index', Array)
+#2 [internal function]: App\Controllers\ContactController->index()
+#3 C:\snack_gare\Config\Main.php(93): call_user_func_array(Array, Array)
+#4 C:\snack_gare\Public\index.php(27): App\Config\Main->start()
+#5 {main}
+  thrown in C:\snack_gare\Views\layouts\default.php on line 131
+[28-Nov-2024 16:24:48 UTC] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in C:\snack_gare\Views\layouts\default.php:131
+Stack trace:
+#0 C:\snack_gare\Controllers\Controller.php(44): require_once()
+#1 C:\snack_gare\Controllers\ContactController.php(14): App\Controllers\Controller->render('contact/index', Array)
+#2 [internal function]: App\Controllers\ContactController->index()
+#3 C:\snack_gare\Config\Main.php(93): call_user_func_array(Array, Array)
+#4 C:\snack_gare\Public\index.php(27): App\Config\Main->start()
+#5 {main}
+  thrown in C:\snack_gare\Views\layouts\default.php on line 131
+[28-Nov-2024 16:25:56 UTC] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in C:\snack_gare\Views\layouts\default.php:131
+Stack trace:
+#0 C:\snack_gare\Controllers\Controller.php(44): require_once()
+#1 C:\snack_gare\Controllers\ContactController.php(14): App\Controllers\Controller->render('contact/index', Array)
+#2 [internal function]: App\Controllers\ContactController->index()
+#3 C:\snack_gare\Config\Main.php(93): call_user_func_array(Array, Array)
+#4 C:\snack_gare\Public\index.php(27): App\Config\Main->start()
+#5 {main}
+  thrown in C:\snack_gare\Views\layouts\default.php on line 131
+[28-Nov-2024 16:26:40 UTC] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in C:\snack_gare\Views\layouts\default.php:131
+Stack trace:
+#0 C:\snack_gare\Controllers\Controller.php(44): require_once()
+#1 C:\snack_gare\Controllers\ContactController.php(14): App\Controllers\Controller->render('contact/index', Array)
+#2 [internal function]: App\Controllers\ContactController->index()
+#3 C:\snack_gare\Config\Main.php(93): call_user_func_array(Array, Array)
+#4 C:\snack_gare\Public\index.php(27): App\Config\Main->start()
+#5 {main}
+  thrown in C:\snack_gare\Views\layouts\default.php on line 131
+[28-Nov-2024 16:27:34 UTC] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in C:\snack_gare\Views\layouts\default.php:131
+Stack trace:
+#0 C:\snack_gare\Controllers\Controller.php(44): require_once()
+#1 C:\snack_gare\Controllers\ContactController.php(14): App\Controllers\Controller->render('contact/index', Array)
+#2 [internal function]: App\Controllers\ContactController->index()
+#3 C:\snack_gare\Config\Main.php(93): call_user_func_array(Array, Array)
+#4 C:\snack_gare\Public\index.php(27): App\Config\Main->start()
+#5 {main}
+  thrown in C:\snack_gare\Views\layouts\default.php on line 131
+[28-Nov-2024 16:28:00 UTC] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in C:\snack_gare\Views\layouts\default.php:131
+Stack trace:
+#0 C:\snack_gare\Controllers\Controller.php(44): require_once()
+#1 C:\snack_gare\Controllers\ContactController.php(14): App\Controllers\Controller->render('contact/index', Array)
+#2 [internal function]: App\Controllers\ContactController->index()
+#3 C:\snack_gare\Config\Main.php(93): call_user_func_array(Array, Array)
+#4 C:\snack_gare\Public\index.php(27): App\Config\Main->start()
+#5 {main}
+  thrown in C:\snack_gare\Views\layouts\default.php on line 131
+[28-Nov-2024 16:32:25 UTC] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in C:\snack_gare\Views\layouts\default.php:131
+Stack trace:
+#0 C:\snack_gare\Controllers\Controller.php(44): require_once()
+#1 C:\snack_gare\Controllers\ContactController.php(15): App\Controllers\Controller->render('contact/index', Array)
+#2 [internal function]: App\Controllers\ContactController->index()
+#3 C:\snack_gare\Config\Main.php(93): call_user_func_array(Array, Array)
+#4 C:\snack_gare\Public\index.php(27): App\Config\Main->start()
+#5 {main}
+  thrown in C:\snack_gare\Views\layouts\default.php on line 131
+[28-Nov-2024 16:32:32 UTC] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in C:\snack_gare\Views\layouts\default.php:131
+Stack trace:
+#0 C:\snack_gare\Controllers\Controller.php(44): require_once()
+#1 C:\snack_gare\Controllers\ContactController.php(15): App\Controllers\Controller->render('contact/index', Array)
+#2 [internal function]: App\Controllers\ContactController->index()
+#3 C:\snack_gare\Config\Main.php(93): call_user_func_array(Array, Array)
+#4 C:\snack_gare\Public\index.php(27): App\Config\Main->start()
+#5 {main}
+  thrown in C:\snack_gare\Views\layouts\default.php on line 131
+[28-Nov-2024 16:33:52 UTC] PHP Warning:  Undefined array key "jours" in C:\snack_gare\Views\contact\index.php on line 10
+[28-Nov-2024 16:33:52 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\snack_gare\Views\contact\index.php on line 10
+[28-Nov-2024 16:33:52 UTC] PHP Warning:  Undefined array key "is_closed_lunch" in C:\snack_gare\Views\contact\index.php on line 13
+[28-Nov-2024 16:33:52 UTC] PHP Warning:  Array to string conversion in C:\snack_gare\Views\contact\index.php on line 23
+[28-Nov-2024 16:33:52 UTC] PHP Warning:  Array to string conversion in C:\snack_gare\Views\contact\index.php on line 23
+[28-Nov-2024 16:33:52 UTC] PHP Warning:  Array to string conversion in C:\snack_gare\Views\contact\index.php on line 23
+[28-Nov-2024 16:33:52 UTC] PHP Warning:  Array to string conversion in C:\snack_gare\Views\contact\index.php on line 23
+[28-Nov-2024 16:33:52 UTC] PHP Warning:  Array to string conversion in C:\snack_gare\Views\contact\index.php on line 23
+[28-Nov-2024 16:33:52 UTC] PHP Warning:  Array to string conversion in C:\snack_gare\Views\contact\index.php on line 23
+[28-Nov-2024 16:33:52 UTC] PHP Warning:  Array to string conversion in C:\snack_gare\Views\contact\index.php on line 23
+[28-Nov-2024 16:33:52 UTC] PHP Warning:  Undefined array key "jours" in C:\snack_gare\Views\contact\index.php on line 10
+[28-Nov-2024 16:33:52 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\snack_gare\Views\contact\index.php on line 10
+[28-Nov-2024 16:33:52 UTC] PHP Warning:  Undefined array key "is_closed_lunch" in C:\snack_gare\Views\contact\index.php on line 13
+[28-Nov-2024 16:33:52 UTC] PHP Warning:  Array to string conversion in C:\snack_gare\Views\contact\index.php on line 23
+[28-Nov-2024 16:33:52 UTC] PHP Warning:  Array to string conversion in C:\snack_gare\Views\contact\index.php on line 23
+[28-Nov-2024 16:33:52 UTC] PHP Warning:  Array to string conversion in C:\snack_gare\Views\contact\index.php on line 23
+[28-Nov-2024 16:33:52 UTC] PHP Warning:  Array to string conversion in C:\snack_gare\Views\contact\index.php on line 23
+[28-Nov-2024 16:33:52 UTC] PHP Warning:  Array to string conversion in C:\snack_gare\Views\contact\index.php on line 23
+[28-Nov-2024 16:33:52 UTC] PHP Warning:  Array to string conversion in C:\snack_gare\Views\contact\index.php on line 23
+[28-Nov-2024 16:33:52 UTC] PHP Warning:  Array to string conversion in C:\snack_gare\Views\contact\index.php on line 23
+[28-Nov-2024 16:33:52 UTC] PHP Warning:  Undefined array key "jours" in C:\snack_gare\Views\contact\index.php on line 10
+[28-Nov-2024 16:33:52 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\snack_gare\Views\contact\index.php on line 10
+[28-Nov-2024 16:33:52 UTC] PHP Warning:  Undefined array key "is_closed_lunch" in C:\snack_gare\Views\contact\index.php on line 13
+[28-Nov-2024 16:33:52 UTC] PHP Warning:  Array to string conversion in C:\snack_gare\Views\contact\index.php on line 23
+[28-Nov-2024 16:33:52 UTC] PHP Warning:  Array to string conversion in C:\snack_gare\Views\contact\index.php on line 23
+[28-Nov-2024 16:33:52 UTC] PHP Warning:  Array to string conversion in C:\snack_gare\Views\contact\index.php on line 23
+[28-Nov-2024 16:33:52 UTC] PHP Warning:  Array to string conversion in C:\snack_gare\Views\contact\index.php on line 23
+[28-Nov-2024 16:33:52 UTC] PHP Warning:  Array to string conversion in C:\snack_gare\Views\contact\index.php on line 23
+[28-Nov-2024 16:33:52 UTC] PHP Warning:  Array to string conversion in C:\snack_gare\Views\contact\index.php on line 23
+[28-Nov-2024 16:33:52 UTC] PHP Warning:  Array to string conversion in C:\snack_gare\Views\contact\index.php on line 23
+[28-Nov-2024 16:33:52 UTC] PHP Warning:  Undefined array key "jours" in C:\snack_gare\Views\contact\index.php on line 10
+[28-Nov-2024 16:33:52 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\snack_gare\Views\contact\index.php on line 10
+[28-Nov-2024 16:33:52 UTC] PHP Warning:  Undefined array key "is_closed_lunch" in C:\snack_gare\Views\contact\index.php on line 13
+[28-Nov-2024 16:33:52 UTC] PHP Warning:  Array to string conversion in C:\snack_gare\Views\contact\index.php on line 23
+[28-Nov-2024 16:33:52 UTC] PHP Warning:  Array to string conversion in C:\snack_gare\Views\contact\index.php on line 23
+[28-Nov-2024 16:33:52 UTC] PHP Warning:  Array to string conversion in C:\snack_gare\Views\contact\index.php on line 23
+[28-Nov-2024 16:33:52 UTC] PHP Warning:  Array to string conversion in C:\snack_gare\Views\contact\index.php on line 23
+[28-Nov-2024 16:33:52 UTC] PHP Warning:  Array to string conversion in C:\snack_gare\Views\contact\index.php on line 23
+[28-Nov-2024 16:33:52 UTC] PHP Warning:  Array to string conversion in C:\snack_gare\Views\contact\index.php on line 23
+[28-Nov-2024 16:33:52 UTC] PHP Warning:  Array to string conversion in C:\snack_gare\Views\contact\index.php on line 23
+[28-Nov-2024 16:33:52 UTC] PHP Warning:  Undefined array key "jours" in C:\snack_gare\Views\contact\index.php on line 10
+[28-Nov-2024 16:33:52 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\snack_gare\Views\contact\index.php on line 10
+[28-Nov-2024 16:33:52 UTC] PHP Warning:  Undefined array key "is_closed_lunch" in C:\snack_gare\Views\contact\index.php on line 13
+[28-Nov-2024 16:33:52 UTC] PHP Warning:  Array to string conversion in C:\snack_gare\Views\contact\index.php on line 23
+[28-Nov-2024 16:33:52 UTC] PHP Warning:  Array to string conversion in C:\snack_gare\Views\contact\index.php on line 23
+[28-Nov-2024 16:33:52 UTC] PHP Warning:  Array to string conversion in C:\snack_gare\Views\contact\index.php on line 23
+[28-Nov-2024 16:33:52 UTC] PHP Warning:  Array to string conversion in C:\snack_gare\Views\contact\index.php on line 23
+[28-Nov-2024 16:33:52 UTC] PHP Warning:  Array to string conversion in C:\snack_gare\Views\contact\index.php on line 23
+[28-Nov-2024 16:33:52 UTC] PHP Warning:  Array to string conversion in C:\snack_gare\Views\contact\index.php on line 23
+[28-Nov-2024 16:33:52 UTC] PHP Warning:  Array to string conversion in C:\snack_gare\Views\contact\index.php on line 23
+[28-Nov-2024 16:33:52 UTC] PHP Warning:  Undefined array key "jours" in C:\snack_gare\Views\contact\index.php on line 10
+[28-Nov-2024 16:33:52 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\snack_gare\Views\contact\index.php on line 10
+[28-Nov-2024 16:33:52 UTC] PHP Warning:  Undefined array key "is_closed_lunch" in C:\snack_gare\Views\contact\index.php on line 13
+[28-Nov-2024 16:33:52 UTC] PHP Warning:  Array to string conversion in C:\snack_gare\Views\contact\index.php on line 23
+[28-Nov-2024 16:33:52 UTC] PHP Warning:  Array to string conversion in C:\snack_gare\Views\contact\index.php on line 23
+[28-Nov-2024 16:33:52 UTC] PHP Warning:  Array to string conversion in C:\snack_gare\Views\contact\index.php on line 23
+[28-Nov-2024 16:33:52 UTC] PHP Warning:  Array to string conversion in C:\snack_gare\Views\contact\index.php on line 23
+[28-Nov-2024 16:33:52 UTC] PHP Warning:  Array to string conversion in C:\snack_gare\Views\contact\index.php on line 23
+[28-Nov-2024 16:33:52 UTC] PHP Warning:  Array to string conversion in C:\snack_gare\Views\contact\index.php on line 23
+[28-Nov-2024 16:33:52 UTC] PHP Warning:  Array to string conversion in C:\snack_gare\Views\contact\index.php on line 23
+[28-Nov-2024 16:33:52 UTC] PHP Warning:  Undefined array key "jours" in C:\snack_gare\Views\contact\index.php on line 10
+[28-Nov-2024 16:33:52 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\snack_gare\Views\contact\index.php on line 10
+[28-Nov-2024 16:33:52 UTC] PHP Warning:  Undefined array key "is_closed_lunch" in C:\snack_gare\Views\contact\index.php on line 13
+[28-Nov-2024 16:33:52 UTC] PHP Warning:  Array to string conversion in C:\snack_gare\Views\contact\index.php on line 23
+[28-Nov-2024 16:33:52 UTC] PHP Warning:  Array to string conversion in C:\snack_gare\Views\contact\index.php on line 23
+[28-Nov-2024 16:33:52 UTC] PHP Warning:  Array to string conversion in C:\snack_gare\Views\contact\index.php on line 23
+[28-Nov-2024 16:33:52 UTC] PHP Warning:  Array to string conversion in C:\snack_gare\Views\contact\index.php on line 23
+[28-Nov-2024 16:33:52 UTC] PHP Warning:  Array to string conversion in C:\snack_gare\Views\contact\index.php on line 23
+[28-Nov-2024 16:33:52 UTC] PHP Warning:  Array to string conversion in C:\snack_gare\Views\contact\index.php on line 23
+[28-Nov-2024 16:33:52 UTC] PHP Warning:  Array to string conversion in C:\snack_gare\Views\contact\index.php on line 23
+[28-Nov-2024 16:35:28 UTC] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in C:\snack_gare\Views\layouts\default.php:131
+Stack trace:
+#0 C:\snack_gare\Controllers\Controller.php(44): require_once()
+#1 C:\snack_gare\Controllers\ContactController.php(14): App\Controllers\Controller->render('contact/index', Array)
+#2 [internal function]: App\Controllers\ContactController->index()
+#3 C:\snack_gare\Config\Main.php(93): call_user_func_array(Array, Array)
+#4 C:\snack_gare\Public\index.php(27): App\Config\Main->start()
+#5 {main}
+  thrown in C:\snack_gare\Views\layouts\default.php on line 131
+[28-Nov-2024 16:39:19 UTC] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in C:\snack_gare\Views\layouts\default.php:131
+Stack trace:
+#0 C:\snack_gare\Controllers\Controller.php(49): require_once()
+#1 C:\snack_gare\Controllers\ContactController.php(14): App\Controllers\Controller->render('contact/index', Array)
+#2 [internal function]: App\Controllers\ContactController->index()
+#3 C:\snack_gare\Config\Main.php(93): call_user_func_array(Array, Array)
+#4 C:\snack_gare\Public\index.php(27): App\Config\Main->start()
+#5 {main}
+  thrown in C:\snack_gare\Views\layouts\default.php on line 131
+[28-Nov-2024 16:39:26 UTC] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in C:\snack_gare\Views\layouts\default.php:131
+Stack trace:
+#0 C:\snack_gare\Controllers\Controller.php(49): require_once()
+#1 C:\snack_gare\Controllers\ContactController.php(14): App\Controllers\Controller->render('contact/index', Array)
+#2 [internal function]: App\Controllers\ContactController->index()
+#3 C:\snack_gare\Config\Main.php(93): call_user_func_array(Array, Array)
+#4 C:\snack_gare\Public\index.php(27): App\Config\Main->start()
+#5 {main}
+  thrown in C:\snack_gare\Views\layouts\default.php on line 131
+[28-Nov-2024 16:39:39 UTC] PHP Fatal error:  Uncaught Error: Call to a member function findAll() on null in C:\snack_gare\Controllers\Controller.php:31
+Stack trace:
+#0 C:\snack_gare\Controllers\AvisController.php(29): App\Controllers\Controller->render('avis/form', Array)
+#1 C:\snack_gare\Controllers\AvisController.php(19): App\Controllers\AvisController->showForm()
+#2 [internal function]: App\Controllers\AvisController->form()
+#3 C:\snack_gare\Config\Main.php(93): call_user_func_array(Array, Array)
+#4 C:\snack_gare\Public\index.php(27): App\Config\Main->start()
+#5 {main}
+  thrown in C:\snack_gare\Controllers\Controller.php on line 31
+[28-Nov-2024 16:40:54 UTC] PHP Fatal error:  Uncaught Error: Call to a member function findAll() on null in C:\snack_gare\Controllers\Controller.php:31
+Stack trace:
+#0 C:\snack_gare\Controllers\AvisController.php(30): App\Controllers\Controller->render('avis/form', Array)
+#1 C:\snack_gare\Controllers\AvisController.php(19): App\Controllers\AvisController->showForm()
+#2 [internal function]: App\Controllers\AvisController->form()
+#3 C:\snack_gare\Config\Main.php(93): call_user_func_array(Array, Array)
+#4 C:\snack_gare\Public\index.php(27): App\Config\Main->start()
+#5 {main}
+  thrown in C:\snack_gare\Controllers\Controller.php on line 31
+[28-Nov-2024 16:40:55 UTC] PHP Fatal error:  Uncaught Error: Call to a member function findAll() on null in C:\snack_gare\Controllers\Controller.php:31
+Stack trace:
+#0 C:\snack_gare\Controllers\AvisController.php(30): App\Controllers\Controller->render('avis/form', Array)
+#1 C:\snack_gare\Controllers\AvisController.php(19): App\Controllers\AvisController->showForm()
+#2 [internal function]: App\Controllers\AvisController->form()
+#3 C:\snack_gare\Config\Main.php(93): call_user_func_array(Array, Array)
+#4 C:\snack_gare\Public\index.php(27): App\Config\Main->start()
+#5 {main}
+  thrown in C:\snack_gare\Controllers\Controller.php on line 31
+[28-Nov-2024 16:40:55 UTC] PHP Fatal error:  Uncaught Error: Call to a member function findAll() on null in C:\snack_gare\Controllers\Controller.php:31
+Stack trace:
+#0 C:\snack_gare\Controllers\AvisController.php(30): App\Controllers\Controller->render('avis/form', Array)
+#1 C:\snack_gare\Controllers\AvisController.php(19): App\Controllers\AvisController->showForm()
+#2 [internal function]: App\Controllers\AvisController->form()
+#3 C:\snack_gare\Config\Main.php(93): call_user_func_array(Array, Array)
+#4 C:\snack_gare\Public\index.php(27): App\Config\Main->start()
+#5 {main}
+  thrown in C:\snack_gare\Controllers\Controller.php on line 31
+[28-Nov-2024 16:40:55 UTC] PHP Fatal error:  Uncaught Error: Call to a member function findAll() on null in C:\snack_gare\Controllers\Controller.php:31
+Stack trace:
+#0 C:\snack_gare\Controllers\AvisController.php(30): App\Controllers\Controller->render('avis/form', Array)
+#1 C:\snack_gare\Controllers\AvisController.php(19): App\Controllers\AvisController->showForm()
+#2 [internal function]: App\Controllers\AvisController->form()
+#3 C:\snack_gare\Config\Main.php(93): call_user_func_array(Array, Array)
+#4 C:\snack_gare\Public\index.php(27): App\Config\Main->start()
+#5 {main}
+  thrown in C:\snack_gare\Controllers\Controller.php on line 31
+[28-Nov-2024 16:40:56 UTC] PHP Fatal error:  Uncaught Error: Call to a member function findAll() on null in C:\snack_gare\Controllers\Controller.php:31
+Stack trace:
+#0 C:\snack_gare\Controllers\AvisController.php(30): App\Controllers\Controller->render('avis/form', Array)
+#1 C:\snack_gare\Controllers\AvisController.php(19): App\Controllers\AvisController->showForm()
+#2 [internal function]: App\Controllers\AvisController->form()
+#3 C:\snack_gare\Config\Main.php(93): call_user_func_array(Array, Array)
+#4 C:\snack_gare\Public\index.php(27): App\Config\Main->start()
+#5 {main}
+  thrown in C:\snack_gare\Controllers\Controller.php on line 31
+[28-Nov-2024 16:44:05 UTC] PHP Fatal error:  Uncaught Error: Call to a member function findAll() on null in C:\snack_gare\Controllers\Controller.php:31
+Stack trace:
+#0 C:\snack_gare\Controllers\AvisController.php(32): App\Controllers\Controller->render('avis/form', Array)
+#1 C:\snack_gare\Controllers\AvisController.php(20): App\Controllers\AvisController->showForm()
+#2 [internal function]: App\Controllers\AvisController->form()
+#3 C:\snack_gare\Config\Main.php(93): call_user_func_array(Array, Array)
+#4 C:\snack_gare\Public\index.php(27): App\Config\Main->start()
+#5 {main}
+  thrown in C:\snack_gare\Controllers\Controller.php on line 31
+[28-Nov-2024 16:44:06 UTC] PHP Fatal error:  Uncaught Error: Call to a member function findAll() on null in C:\snack_gare\Controllers\Controller.php:31
+Stack trace:
+#0 C:\snack_gare\Controllers\AvisController.php(32): App\Controllers\Controller->render('avis/form', Array)
+#1 C:\snack_gare\Controllers\AvisController.php(20): App\Controllers\AvisController->showForm()
+#2 [internal function]: App\Controllers\AvisController->form()
+#3 C:\snack_gare\Config\Main.php(93): call_user_func_array(Array, Array)
+#4 C:\snack_gare\Public\index.php(27): App\Config\Main->start()
+#5 {main}
+  thrown in C:\snack_gare\Controllers\Controller.php on line 31
+[28-Nov-2024 16:44:09 UTC] PHP Fatal error:  Uncaught Error: Call to a member function findAll() on null in C:\snack_gare\Controllers\Controller.php:31
+Stack trace:
+#0 C:\snack_gare\Controllers\AvisController.php(32): App\Controllers\Controller->render('avis/form', Array)
+#1 C:\snack_gare\Controllers\AvisController.php(20): App\Controllers\AvisController->showForm()
+#2 [internal function]: App\Controllers\AvisController->form()
+#3 C:\snack_gare\Config\Main.php(93): call_user_func_array(Array, Array)
+#4 C:\snack_gare\Public\index.php(27): App\Config\Main->start()
+#5 {main}
+  thrown in C:\snack_gare\Controllers\Controller.php on line 31
+[28-Nov-2024 16:45:32 UTC] PHP Fatal error:  Uncaught Error: Call to a member function findAll() on null in C:\snack_gare\Controllers\AvisController.php:28
+Stack trace:
+#0 C:\snack_gare\Controllers\AvisController.php(20): App\Controllers\AvisController->showForm()
+#1 [internal function]: App\Controllers\AvisController->form()
+#2 C:\snack_gare\Config\Main.php(93): call_user_func_array(Array, Array)
+#3 C:\snack_gare\Public\index.php(27): App\Config\Main->start()
+#4 {main}
+  thrown in C:\snack_gare\Controllers\AvisController.php on line 28
+[28-Nov-2024 16:47:23 UTC] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in C:\snack_gare\Views\layouts\default.php:131
+Stack trace:
+#0 C:\snack_gare\Controllers\Controller.php(49): require_once()
+#1 C:\snack_gare\Controllers\ContactController.php(14): App\Controllers\Controller->render('contact/index', Array)
+#2 [internal function]: App\Controllers\ContactController->index()
+#3 C:\snack_gare\Config\Main.php(93): call_user_func_array(Array, Array)
+#4 C:\snack_gare\Public\index.php(27): App\Config\Main->start()
+#5 {main}
+  thrown in C:\snack_gare\Views\layouts\default.php on line 131
+[28-Nov-2024 16:56:01 UTC] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in C:\snack_gare\Views\layouts\default.php:131
+Stack trace:
+#0 C:\snack_gare\Controllers\Controller.php(49): require_once()
+#1 C:\snack_gare\Controllers\ContactController.php(14): App\Controllers\Controller->render('contact/index', Array)
+#2 [internal function]: App\Controllers\ContactController->index()
+#3 C:\snack_gare\Config\Main.php(93): call_user_func_array(Array, Array)
+#4 C:\snack_gare\Public\index.php(27): App\Config\Main->start()
+#5 {main}
+  thrown in C:\snack_gare\Views\layouts\default.php on line 131
+[28-Nov-2024 16:56:04 UTC] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in C:\snack_gare\Views\layouts\default.php:131
+Stack trace:
+#0 C:\snack_gare\Controllers\Controller.php(49): require_once()
+#1 C:\snack_gare\Controllers\ContactController.php(14): App\Controllers\Controller->render('contact/index', Array)
+#2 [internal function]: App\Controllers\ContactController->index()
+#3 C:\snack_gare\Config\Main.php(93): call_user_func_array(Array, Array)
+#4 C:\snack_gare\Public\index.php(27): App\Config\Main->start()
+#5 {main}
+  thrown in C:\snack_gare\Views\layouts\default.php on line 131
+[28-Nov-2024 16:57:35 UTC] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in C:\snack_gare\Views\layouts\default.php:131
+Stack trace:
+#0 C:\snack_gare\Controllers\Controller.php(49): require_once()
+#1 C:\snack_gare\Controllers\ContactController.php(14): App\Controllers\Controller->render('contact/index', Array)
+#2 [internal function]: App\Controllers\ContactController->index()
+#3 C:\snack_gare\Config\Main.php(93): call_user_func_array(Array, Array)
+#4 C:\snack_gare\Public\index.php(27): App\Config\Main->start()
+#5 {main}
+  thrown in C:\snack_gare\Views\layouts\default.php on line 131
+[28-Nov-2024 17:08:33 UTC] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in C:\snack_gare\Views\layouts\default.php:131
+Stack trace:
+#0 C:\snack_gare\Controllers\Controller.php(49): require_once()
+#1 C:\snack_gare\Controllers\ContactController.php(14): App\Controllers\Controller->render('contact/index', Array)
+#2 [internal function]: App\Controllers\ContactController->index()
+#3 C:\snack_gare\Config\Main.php(93): call_user_func_array(Array, Array)
+#4 C:\snack_gare\Public\index.php(27): App\Config\Main->start()
+#5 {main}
+  thrown in C:\snack_gare\Views\layouts\default.php on line 131
+[28-Nov-2024 17:08:33 UTC] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in C:\snack_gare\Views\layouts\default.php:131
+Stack trace:
+#0 C:\snack_gare\Controllers\Controller.php(49): require_once()
+#1 C:\snack_gare\Controllers\ContactController.php(14): App\Controllers\Controller->render('contact/index', Array)
+#2 [internal function]: App\Controllers\ContactController->index()
+#3 C:\snack_gare\Config\Main.php(93): call_user_func_array(Array, Array)
+#4 C:\snack_gare\Public\index.php(27): App\Config\Main->start()
+#5 {main}
+  thrown in C:\snack_gare\Views\layouts\default.php on line 131
+[28-Nov-2024 17:08:37 UTC] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in C:\snack_gare\Views\layouts\default.php:131
+Stack trace:
+#0 C:\snack_gare\Controllers\Controller.php(49): require_once()
+#1 C:\snack_gare\Controllers\ContactController.php(14): App\Controllers\Controller->render('contact/index', Array)
+#2 [internal function]: App\Controllers\ContactController->index()
+#3 C:\snack_gare\Config\Main.php(93): call_user_func_array(Array, Array)
+#4 C:\snack_gare\Public\index.php(27): App\Config\Main->start()
+#5 {main}
+  thrown in C:\snack_gare\Views\layouts\default.php on line 131
+[28-Nov-2024 17:11:38 UTC] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in C:\snack_gare\Views\layouts\default.php:131
+Stack trace:
+#0 C:\snack_gare\Controllers\Controller.php(49): require_once()
+#1 C:\snack_gare\Controllers\ContactController.php(14): App\Controllers\Controller->render('contact/index', Array)
+#2 [internal function]: App\Controllers\ContactController->index()
+#3 C:\snack_gare\Config\Main.php(93): call_user_func_array(Array, Array)
+#4 C:\snack_gare\Public\index.php(27): App\Config\Main->start()
+#5 {main}
+  thrown in C:\snack_gare\Views\layouts\default.php on line 131
+[28-Nov-2024 17:29:27 UTC] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in C:\snack_gare\Views\layouts\default.php:131
+Stack trace:
+#0 C:\snack_gare\Controllers\Controller.php(45): require_once()
+#1 C:\snack_gare\Controllers\ContactController.php(14): App\Controllers\Controller->render('contact/index', Array)
+#2 [internal function]: App\Controllers\ContactController->index()
+#3 C:\snack_gare\Config\Main.php(96): call_user_func_array(Array, Array)
+#4 C:\snack_gare\Public\index.php(27): App\Config\Main->start()
+#5 {main}
+  thrown in C:\snack_gare\Views\layouts\default.php on line 131
+[28-Nov-2024 17:29:31 UTC] PHP Warning:  Undefined property: App\Controllers\AvisController::$horaireRepository in C:\snack_gare\Controllers\AvisController.php on line 28
+[28-Nov-2024 17:29:31 UTC] PHP Fatal error:  Uncaught Error: Call to a member function findAll() on null in C:\snack_gare\Controllers\AvisController.php:28
+Stack trace:
+#0 C:\snack_gare\Controllers\AvisController.php(20): App\Controllers\AvisController->showForm()
+#1 [internal function]: App\Controllers\AvisController->form()
+#2 C:\snack_gare\Config\Main.php(96): call_user_func_array(Array, Array)
+#3 C:\snack_gare\Public\index.php(27): App\Config\Main->start()
+#4 {main}
+  thrown in C:\snack_gare\Controllers\AvisController.php on line 28
+[28-Nov-2024 17:30:14 UTC] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in C:\snack_gare\Views\layouts\default.php:131
+Stack trace:
+#0 C:\snack_gare\Controllers\Controller.php(45): require_once()
+#1 C:\snack_gare\Controllers\ContactController.php(14): App\Controllers\Controller->render('contact/index', Array)
+#2 [internal function]: App\Controllers\ContactController->index()
+#3 C:\snack_gare\Config\Main.php(96): call_user_func_array(Array, Array)
+#4 C:\snack_gare\Public\index.php(27): App\Config\Main->start()
+#5 {main}
+  thrown in C:\snack_gare\Views\layouts\default.php on line 131
+[28-Nov-2024 17:30:18 UTC] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in C:\snack_gare\Views\layouts\default.php:131
+Stack trace:
+#0 C:\snack_gare\Controllers\Controller.php(45): require_once()
+#1 C:\snack_gare\Controllers\ContactController.php(14): App\Controllers\Controller->render('contact/index', Array)
+#2 [internal function]: App\Controllers\ContactController->index()
+#3 C:\snack_gare\Config\Main.php(96): call_user_func_array(Array, Array)
+#4 C:\snack_gare\Public\index.php(27): App\Config\Main->start()
+#5 {main}
+  thrown in C:\snack_gare\Views\layouts\default.php on line 131
+[29-Nov-2024 10:39:05 UTC] PHP Warning:  require_once(C:\snack_gare/views/burgers/list.php): Failed to open stream: No such file or directory in C:\snack_gare\Controllers\Controller.php on line 36
+[29-Nov-2024 10:39:05 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\snack_gare/views/burgers/list.php' (include_path='.;C:\php\pear') in C:\snack_gare\Controllers\Controller.php:36
+Stack trace:
+#0 C:\snack_gare\Controllers\BurgerController.php(22): App\Controllers\Controller->render('burgers/list', Array)
+#1 [internal function]: App\Controllers\BurgerController->list()
+#2 C:\snack_gare\Config\Main.php(96): call_user_func_array(Array, Array)
+#3 C:\snack_gare\Public\index.php(27): App\Config\Main->start()
+#4 {main}
+  thrown in C:\snack_gare\Controllers\Controller.php on line 36
+[29-Nov-2024 10:39:20 UTC] PHP Warning:  require_once(C:\snack_gare/views/burgers/add.php): Failed to open stream: No such file or directory in C:\snack_gare\Controllers\Controller.php on line 36
+[29-Nov-2024 10:39:20 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\snack_gare/views/burgers/add.php' (include_path='.;C:\php\pear') in C:\snack_gare\Controllers\Controller.php:36
+Stack trace:
+#0 C:\snack_gare\Controllers\BurgerController.php(30): App\Controllers\Controller->render('burgers/add')
+#1 [internal function]: App\Controllers\BurgerController->add()
+#2 C:\snack_gare\Config\Main.php(96): call_user_func_array(Array, Array)
+#3 C:\snack_gare\Public\index.php(27): App\Config\Main->start()
+#4 {main}
+  thrown in C:\snack_gare\Controllers\Controller.php on line 36
+[29-Nov-2024 10:39:34 UTC] PHP Warning:  require_once(C:\snack_gare/views/burgers/list.php): Failed to open stream: No such file or directory in C:\snack_gare\Controllers\Controller.php on line 36
+[29-Nov-2024 10:39:34 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\snack_gare/views/burgers/list.php' (include_path='.;C:\php\pear') in C:\snack_gare\Controllers\Controller.php:36
+Stack trace:
+#0 C:\snack_gare\Controllers\BurgerController.php(22): App\Controllers\Controller->render('burgers/list', Array)
+#1 [internal function]: App\Controllers\BurgerController->list()
+#2 C:\snack_gare\Config\Main.php(96): call_user_func_array(Array, Array)
+#3 C:\snack_gare\Public\index.php(27): App\Config\Main->start()
+#4 {main}
+  thrown in C:\snack_gare\Controllers\Controller.php on line 36
+[29-Nov-2024 11:13:19 UTC] Erreur SQL : SQLSTATE[42S22]: Column not found: 1054 Unknown column 'csrf_token' in 'field list'
+[29-Nov-2024 12:49:49 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function App\Controllers\OptionController::list(), 0 passed and exactly 1 expected in C:\snack_gare\Controllers\OptionController.php:20
+Stack trace:
+#0 [internal function]: App\Controllers\OptionController->list()
+#1 C:\snack_gare\Config\Main.php(96): call_user_func_array(Array, Array)
+#2 C:\snack_gare\Public\index.php(27): App\Config\Main->start()
+#3 {main}
+  thrown in C:\snack_gare\Controllers\OptionController.php on line 20
+[29-Nov-2024 12:52:05 UTC] Erreur SQL : SQLSTATE[HY000]: General error: 1366 Incorrect decimal value: '' for column 'price' at row 1
+[29-Nov-2024 13:14:17 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function App\Controllers\OptionController::list(), 0 passed and exactly 1 expected in C:\snack_gare\Controllers\OptionController.php:21
+Stack trace:
+#0 [internal function]: App\Controllers\OptionController->list()
+#1 C:\snack_gare\Config\Main.php(96): call_user_func_array(Array, Array)
+#2 C:\snack_gare\Public\index.php(27): App\Config\Main->start()
+#3 {main}
+  thrown in C:\snack_gare\Controllers\OptionController.php on line 21
+[29-Nov-2024 13:14:34 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function App\Controllers\OptionController::list(), 0 passed and exactly 1 expected in C:\snack_gare\Controllers\OptionController.php:21
+Stack trace:
+#0 [internal function]: App\Controllers\OptionController->list()
+#1 C:\snack_gare\Config\Main.php(96): call_user_func_array(Array, Array)
+#2 C:\snack_gare\Public\index.php(27): App\Config\Main->start()
+#3 {main}
+  thrown in C:\snack_gare\Controllers\OptionController.php on line 21
+[29-Nov-2024 13:20:46 UTC] Erreur SQL : SQLSTATE[HY000]: General error: 1366 Incorrect decimal value: '' for column 'price' at row 1
+[29-Nov-2024 14:16:26 UTC] Erreur SQL : SQLSTATE[42S22]: Column not found: 1054 Unknown column 'category' in 'field list'
+[29-Nov-2024 14:37:04 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\snack_gare\Views\dashboard\boissons\list.php on line 26
+[29-Nov-2024 14:42:25 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\snack_gare\Views\dashboard\boissons\edit.php on line 16
+[29-Nov-2024 19:16:57 UTC] PHP Warning:  Undefined variable $burgers in C:\snack_gare\Views\Menus\index.php on line 11
+[29-Nov-2024 19:16:57 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in C:\snack_gare\Views\Menus\index.php on line 11
+[29-Nov-2024 19:16:57 UTC] PHP Warning:  Undefined array key "name" in C:\snack_gare\Views\Menus\index.php on line 41
+[29-Nov-2024 19:16:57 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\snack_gare\Views\Menus\index.php on line 41
+[29-Nov-2024 19:17:17 UTC] PHP Warning:  Undefined variable $burgers in C:\snack_gare\Views\Menus\index.php on line 11
+[29-Nov-2024 19:17:17 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in C:\snack_gare\Views\Menus\index.php on line 11
+[29-Nov-2024 19:17:17 UTC] PHP Warning:  Undefined array key "name" in C:\snack_gare\Views\Menus\index.php on line 41
+[29-Nov-2024 19:17:17 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\snack_gare\Views\Menus\index.php on line 41
+[29-Nov-2024 19:30:43 UTC] PHP Warning:  Undefined variable $options in C:\snack_gare\Views\Menus\index.php on line 40
+[29-Nov-2024 19:30:43 UTC] PHP Warning:  Trying to access array offset on null in C:\snack_gare\Views\Menus\index.php on line 40
+[29-Nov-2024 19:30:43 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in C:\snack_gare\Views\Menus\index.php on line 40
+[29-Nov-2024 19:30:43 UTC] PHP Warning:  Undefined variable $options in C:\snack_gare\Views\Menus\index.php on line 46
+[29-Nov-2024 19:30:43 UTC] PHP Warning:  Trying to access array offset on null in C:\snack_gare\Views\Menus\index.php on line 46
+[29-Nov-2024 19:30:43 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in C:\snack_gare\Views\Menus\index.php on line 46
+[29-Nov-2024 19:30:43 UTC] PHP Warning:  Undefined variable $options in C:\snack_gare\Views\Menus\index.php on line 52
+[29-Nov-2024 19:30:43 UTC] PHP Warning:  Trying to access array offset on null in C:\snack_gare\Views\Menus\index.php on line 52
+[29-Nov-2024 19:30:43 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in C:\snack_gare\Views\Menus\index.php on line 52
+[29-Nov-2024 19:35:42 UTC] PHP Warning:  Undefined array key "viandes" in C:\snack_gare\Views\Menus\index.php on line 40
+[29-Nov-2024 19:35:42 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in C:\snack_gare\Views\Menus\index.php on line 40
+[29-Nov-2024 19:35:42 UTC] PHP Warning:  Undefined array key "sauces" in C:\snack_gare\Views\Menus\index.php on line 46
+[29-Nov-2024 19:35:42 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in C:\snack_gare\Views\Menus\index.php on line 46
+[29-Nov-2024 19:35:42 UTC] PHP Warning:  Undefined array key "suppléments" in C:\snack_gare\Views\Menus\index.php on line 52
+[29-Nov-2024 19:35:42 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in C:\snack_gare\Views\Menus\index.php on line 52
+[29-Nov-2024 19:46:12 UTC] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 262144 bytes) in C:\snack_gare\Repositories\OptionRepository.php on line 11
+[29-Nov-2024 20:25:55 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\snack_gare\Views\dashboard\options\edit.php on line 13
+[29-Nov-2024 20:54:55 UTC] PHP Warning:  Undefined variable $kebabs in C:\snack_gare\Views\Menus\index.php on line 58
+[29-Nov-2024 20:54:55 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in C:\snack_gare\Views\Menus\index.php on line 58
+[29-Nov-2024 20:57:22 UTC] PHP Warning:  Undefined variable $kebabs in C:\snack_gare\Views\Menus\index.php on line 60
+[29-Nov-2024 20:57:22 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in C:\snack_gare\Views\Menus\index.php on line 60
+[29-Nov-2024 21:14:15 UTC] PHP Warning:  Undefined variable $sauces in C:\snack_gare\Views\Menus\index.php on line 73
+[29-Nov-2024 21:14:15 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in C:\snack_gare\Views\Menus\index.php on line 73
+[30-Nov-2024 10:48:16 UTC] PHP Warning:  Undefined variable $sauces in C:\snack_gare\Views\Menus\index.php on line 73
+[30-Nov-2024 10:48:16 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in C:\snack_gare\Views\Menus\index.php on line 73
+[30-Nov-2024 10:52:36 UTC] PHP Warning:  Undefined variable $sauces in C:\snack_gare\Views\Menus\index.php on line 73
+[30-Nov-2024 10:52:36 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in C:\snack_gare\Views\Menus\index.php on line 73
+[30-Nov-2024 11:49:26 UTC] PHP Warning:  Trying to access array offset on int in C:\snack_gare\Views\Menus\index.php on line 78
+[30-Nov-2024 11:49:26 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\snack_gare\Views\Menus\index.php on line 78
+[30-Nov-2024 11:49:26 UTC] PHP Warning:  Trying to access array offset on int in C:\snack_gare\Views\Menus\index.php on line 80
+[30-Nov-2024 11:49:26 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\snack_gare\Views\Menus\index.php on line 80
+[30-Nov-2024 11:49:26 UTC] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in C:\snack_gare\Views\Menus\index.php:78
+Stack trace:
+#0 C:\snack_gare\Controllers\Controller.php(34): require_once()
+#1 C:\snack_gare\Controllers\MenuController.php(46): App\Controllers\Controller->render('menus/index', Array)
+#2 [internal function]: App\Controllers\MenuController->index()
+#3 C:\snack_gare\Config\Main.php(96): call_user_func_array(Array, Array)
+#4 C:\snack_gare\Public\index.php(27): App\Config\Main->start()
+#5 {main}
+  thrown in C:\snack_gare\Views\Menus\index.php on line 78
+[30-Nov-2024 12:23:37 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\snack_gare\Views\dashboard\options\edit.php on line 13
+[30-Nov-2024 12:24:17 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\snack_gare\Views\dashboard\options\edit.php on line 13
+[30-Nov-2024 12:24:21 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\snack_gare\Views\dashboard\options\edit.php on line 13
+[30-Nov-2024 12:24:29 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\snack_gare\Views\dashboard\options\edit.php on line 13
+[30-Nov-2024 12:26:08 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\snack_gare\Views\dashboard\options\edit.php on line 13
+[30-Nov-2024 12:26:09 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\snack_gare\Views\dashboard\options\edit.php on line 13
+[30-Nov-2024 12:26:15 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\snack_gare\Views\dashboard\options\edit.php on line 13
+[30-Nov-2024 12:27:43 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\snack_gare\Views\dashboard\options\edit.php on line 13
+[30-Nov-2024 12:28:01 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\snack_gare\Views\dashboard\options\edit.php on line 13
+[30-Nov-2024 12:28:29 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\snack_gare\Views\dashboard\options\edit.php on line 14
+[30-Nov-2024 12:31:12 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\snack_gare\Views\dashboard\options\edit.php on line 14
+[30-Nov-2024 12:54:29 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\snack_gare\Views\dashboard\options\edit.php on line 14
+[30-Nov-2024 13:04:23 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\snack_gare\Views\dashboard\options\edit.php on line 14
+[30-Nov-2024 13:04:34 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\snack_gare\Views\dashboard\options\edit.php on line 14
+[30-Nov-2024 13:13:44 UTC] PHP Warning:  Undefined variable $kebabOption in C:\snack_gare\Views\Menus\index.php on line 83
+[30-Nov-2024 13:13:44 UTC] PHP Warning:  Undefined array key "category" in C:\snack_gare\Views\Menus\index.php on line 101
+[30-Nov-2024 13:13:44 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\snack_gare\Views\Menus\index.php on line 101
+[30-Nov-2024 13:13:44 UTC] PHP Warning:  Undefined array key "category" in C:\snack_gare\Views\Menus\index.php on line 101
+[30-Nov-2024 13:13:44 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\snack_gare\Views\Menus\index.php on line 101
+[30-Nov-2024 13:13:44 UTC] PHP Warning:  Undefined array key "category" in C:\snack_gare\Views\Menus\index.php on line 101
+[30-Nov-2024 13:13:44 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\snack_gare\Views\Menus\index.php on line 101
+[30-Nov-2024 13:13:44 UTC] PHP Warning:  Undefined array key "category" in C:\snack_gare\Views\Menus\index.php on line 101
+[30-Nov-2024 13:13:44 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\snack_gare\Views\Menus\index.php on line 101
+[30-Nov-2024 13:13:44 UTC] PHP Warning:  Undefined array key "category" in C:\snack_gare\Views\Menus\index.php on line 101
+[30-Nov-2024 13:13:44 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\snack_gare\Views\Menus\index.php on line 101
+[30-Nov-2024 13:15:13 UTC] PHP Warning:  Undefined variable $kebabOption in C:\snack_gare\Views\Menus\index.php on line 83
+[30-Nov-2024 13:15:16 UTC] PHP Warning:  Undefined variable $kebabOption in C:\snack_gare\Views\Menus\index.php on line 83
+[30-Nov-2024 13:15:19 UTC] PHP Warning:  Undefined variable $kebabOption in C:\snack_gare\Views\Menus\index.php on line 83
+[30-Nov-2024 13:18:28 UTC] PHP Warning:  Undefined array key "category" in C:\snack_gare\Views\Menus\index.php on line 101
+[30-Nov-2024 13:18:28 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\snack_gare\Views\Menus\index.php on line 101
+[30-Nov-2024 13:18:28 UTC] PHP Warning:  Undefined array key "category" in C:\snack_gare\Views\Menus\index.php on line 101
+[30-Nov-2024 13:18:28 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\snack_gare\Views\Menus\index.php on line 101
+[30-Nov-2024 13:18:28 UTC] PHP Warning:  Undefined array key "category" in C:\snack_gare\Views\Menus\index.php on line 101
+[30-Nov-2024 13:18:28 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\snack_gare\Views\Menus\index.php on line 101
+[30-Nov-2024 13:18:28 UTC] PHP Warning:  Undefined array key "category" in C:\snack_gare\Views\Menus\index.php on line 101
+[30-Nov-2024 13:18:28 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\snack_gare\Views\Menus\index.php on line 101
+[30-Nov-2024 13:18:28 UTC] PHP Warning:  Undefined array key "category" in C:\snack_gare\Views\Menus\index.php on line 101
+[30-Nov-2024 13:18:28 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\snack_gare\Views\Menus\index.php on line 101
+[30-Nov-2024 13:20:24 UTC] PHP Warning:  Undefined array key "category" in C:\snack_gare\Views\Menus\index.php on line 100
+[30-Nov-2024 13:20:24 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\snack_gare\Views\Menus\index.php on line 100
+[30-Nov-2024 13:20:24 UTC] PHP Warning:  Undefined array key "category" in C:\snack_gare\Views\Menus\index.php on line 100
+[30-Nov-2024 13:20:24 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\snack_gare\Views\Menus\index.php on line 100
+[30-Nov-2024 13:20:24 UTC] PHP Warning:  Undefined array key "category" in C:\snack_gare\Views\Menus\index.php on line 100
+[30-Nov-2024 13:20:24 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\snack_gare\Views\Menus\index.php on line 100
+[30-Nov-2024 13:20:24 UTC] PHP Warning:  Undefined array key "category" in C:\snack_gare\Views\Menus\index.php on line 100
+[30-Nov-2024 13:20:24 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\snack_gare\Views\Menus\index.php on line 100
+[30-Nov-2024 13:20:24 UTC] PHP Warning:  Undefined array key "category" in C:\snack_gare\Views\Menus\index.php on line 100
+[30-Nov-2024 13:20:24 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\snack_gare\Views\Menus\index.php on line 100
+[30-Nov-2024 13:56:27 UTC] PHP Warning:  Undefined variable $boissons in C:\snack_gare\Views\Menus\index.php on line 129
+[30-Nov-2024 13:56:27 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in C:\snack_gare\Views\Menus\index.php on line 129
+[30-Nov-2024 14:31:54 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\snack_gare\Views\dashboard\boissons\edit.php on line 16
+[30-Nov-2024 14:33:04 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\snack_gare\Views\dashboard\boissons\edit.php on line 16

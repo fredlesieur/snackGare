@@ -29,7 +29,9 @@
 
     <!-- CSS personnalisé -->
     <link rel="stylesheet" href="/assets/css/default.css">
-
+    <?php if (isset($css)) : ?>
+        <link rel="stylesheet" href="<?= htmlspecialchars($css) ?>">
+    <?php endif; ?>
     <title> Snack de la Gare</title>
 </head>
 
@@ -44,27 +46,58 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="/">Accueil</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/contact">Contacts</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/menus">Menus</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/avis">Avis</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/home">Accueil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/contact">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/menu">Menu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/avis/form">Avis</a></li>
+
+                    <!-- Lien connexion -->
                     <?php if (isset($_SESSION['id'])): ?>
                         <li class="nav-item"><a class="nav-link" href="/dashboard/index">Tableau de bord</a></li>
                         <li class="nav-item"><a class="nav-link" href="/user/logout">Déconnexion</a></li>
                     <?php else: ?>
-                        <li class="nav-item"><a class="nav-link" href="/user/showLoginForm">Connexion</a></li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#loginModal">Connexion</a>
+                        </li>
                     <?php endif; ?>
                 </ul>
             </div>
         </div>
     </nav>
+    <!-- Modal pour la connexion -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content custom-modal">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalLabel">Connexion</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="/user/login" method="POST">
+                        <div class="mb-3">
+                            <label for="username" class="form-label">Nom d'utilisateur</label>
+                            <input type="text" name="username" id="username" class="form-control" placeholder="Nom d'utilisateur" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Mot de passe</label>
+                            <input type="password" name="password" id="password" class="form-control" placeholder="Mot de passe" required>
+                        </div>
+                        <input type="hidden" name="csrf_token" value="<?= $_SESSION['csrf_token'] ?? '' ?>">
+                        <button type="submit" class="btn btn-primary w-100">Se connecter</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
     <div class="image-container">
         <img class="burger-image" src="/assets/logo/burger.webp" alt="Burger">
         <div class="command-text">
             <h2 class="size">Commander</h2>
             <div class="phone-container">
                 <i class="fa-solid fa-phone-volume phone-icon" aria-hidden="true"></i>
-                <span class="size2">04 76 38 59 22</span>
+                <a class="size2" href="tel:0476385922">04 76 38 59 22</a>
             </div>
         </div>
     </div>
@@ -74,48 +107,186 @@
     <main id="main-page" class="w-auto mt-4">
         <?= $content ?>
     </main>
-    <!-- footer -->
-    <footer class="footer">
-        <!-- Liens réseaux sociaux -->
-        <div class="social-icons ">
+<!-- footer -->
+<footer class="footer">
+    <div class="footer-sections">
+        <!-- Horaires -->
+        <div class="horaires">
+            <h2>Horaires d'ouverture</h2>
+            <?php if (!empty($_SESSION['horaires'])): ?>
+                <?php foreach ($_SESSION['horaires'] as $horaire): ?>
+                    <div>
+                        <strong><?= htmlspecialchars($horaire['jours']) ?> :</strong>
+                        <?php
+                            if ($horaire['is_closed_lunch'] == 1 && $horaire['is_closed_dinner'] == 1) {
+                                echo "Fermeture";
+                            } else {
+                                $horaires = [];
+                                if ($horaire['is_closed_lunch'] != 1) {
+                                    $horaires[] = date('H:i', strtotime($horaire['opening_time_lunch'])) . "-" . date('H:i', strtotime($horaire['closing_time_lunch']));
+                                }
+                                if ($horaire['is_closed_dinner'] != 1) {
+                                    $horaires[] = date('H:i', strtotime($horaire['opening_time_dinner'])) . "-" . date('H:i', strtotime($horaire['closing_time_dinner']));
+                                }
+                                echo implode(" et ", $horaires);
+                            }
+                        ?>
+                    </div>
+                <?php endforeach; ?>
+            <?php else: ?>
+                <em>Horaires non disponibles</em>
+            <?php endif; ?>
+        </div>
+
+        <!-- Réseaux Sociaux -->
+        <div class="social-icons">
             <a href="https://www.facebook.com" target="_blank" aria-label="Facebook">
                 <i class="fab fa-facebook"></i>
             </a>
             <a href="https://www.instagram.com" target="_blank" aria-label="Instagram">
-                <i class="fab fa-instagram p-3"></i>
+                <i class="fab fa-instagram"></i>
             </a>
             <a href="https://www.twitter.com" target="_blank" aria-label="Twitter">
                 <i class="fab fa-twitter"></i>
             </a>
         </div>
 
-        <!-- Horaires d'ouverture -->
-        <p class="hours">
-            Ouvert du lundi au vendredi <br>
-            de 11h30 à 13h30 <br>
-            et de 18h30 à 21h30 <br>
-            le dimanche de 18h30 à 21h30
-        </p>
+        <!-- Contact -->
+        <div class="contact">
+            <h2>Contact</h2>
+            <p class="addressFooter">
+                95 route de St Lattier<br>
+                38840 St Hilaire du Rosier<br>
+                <a class="tel" href="tel:0476385922">04 76 38 59 22</a>
+            </p>
+        </div>
+    </div>
 
-        <!-- Adresse et numéro de téléphone -->
-        <p class="address">
-            95 route de St Lattier<br>
-            38840 St Hilaire du Rosier<br>
-            <a href="tel:0476385922">04 76 38 59 22</a>
-        </p>
+    <!-- Liens légaux -->
+    <div class="legal-links">
+        <a href="#" class="link" data-bs-toggle="modal" data-bs-target="#modalMentionsLegales">Mentions légales</a> |
+        <a href="#" class="link" data-bs-toggle="modal" data-bs-target="#modalRGPD">RGPD</a> |
+        <a href="#" class="link" data-bs-toggle="modal" data-bs-target="#modalCGU">CGU</a>
+    </div>
+ <!-- Modal Mentions Légales -->
+ <div class="modal fade" id="modalMentionsLegales" tabindex="-1" aria-labelledby="modalMentionsLegalesLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalMentionsLegalesLabel">Mentions Légales</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p> Propriétaire du site : Snack de La Gare <br>
+                            Nom du responsable : Walter MORELL <br>
 
-        <!-- Liens légaux -->
-        <div class="legal-links">
-            <a href="/footer/mentionsLegales" class="link">Mentions légales</a> |
-            <a href="/footer/rgpd" class="link">RGPD</a> |
-            <a href="/footer/cgu" class="link">CGU</a>
+                            Adresse : 95 route de St Lattier 38840 St Hilaire du Rosier <br>
+
+                            Téléphone : 04 76 38 59 22 <br>
+                            Email : snackdelagare@gmail.com<br>
+                            Numéro SIRET : 009352696 <br>
+                            RCS : saint hilaire <br>
+                            Directeur de la publication : Frédéric LESIEUR <br>
+
+                            Hébergement : <br>
+                            Nom de l’hébergeur : Heroku <br>
+                            Adresse de l’hébergeur : San Francisco, Californie, États-Unis <br>
+
+                            Propriété intellectuelle : <br>
+                            Le contenu du site (textes, images, graphismes, logo, etc.) est la propriété exclusive du Snack de la Gare et est protégé par les lois relatives à la propriété intellectuelle. Toute reproduction totale ou partielle est strictement interdite sans l'accord préalable du Snack de la Gare. <br>
+                            <br>
+                            Limitation de responsabilité : <br>
+                            Le snack de la Gare ne saurait être tenue responsable des dommages directs ou indirects résultant de l'accès ou de l'utilisation de ce site.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="modalRGPD" tabindex="-1" aria-labelledby="modalRGPDLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalRGPDLabel">Politique de Confidentialité (RGPD)</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>1. **Collecte des données** <br>
+                            Les informations collectées via le formulaire de contact ou lors de la soumission d'avis (nom, email, etc.) sont nécessaires pour répondre aux mails des utilisateurs et afficher des avis sur le zoo. Ces données sont traitées par Le Snack de la Gare.<br>
+                            <br>
+                            2. **Utilisation des données** <br>
+                            Les données personnelles recueillies sur le site sont utilisées pour répondre aux demandes par email et pour permettre l'affichage d'avis des clients. <br>
+                            <br>
+                            3. **Conservation des données** <br>
+                            Les données collectées sont conservées pendant une durée de 1 an à compter du dernier contact avec l'utilisateur.<br>
+                            <br>
+                            4. **Droit d'accès, de rectification et d'opposition** <br>
+                            Conformément à la loi « Informatique et Libertés », vous disposez d’un droit d’accès, de rectification, de suppression et d'opposition des données vous concernant. Vous pouvez exercer ce droit en nous contactant à l'adresse suivante : contact.snakdelagare@gmail.com.<br>
+                            <br>
+                            5. **Cookies** <br>
+                            Le site utilise des cookies pour améliorer l'expérience utilisateur et mesurer l'audience. Vous pouvez configurer votre navigateur pour refuser les cookies.<br>
+                            <br>
+                            6. **Transmission des données à des tiers** <br>
+                            Le Snack de la Gare s'engage à ne pas vendre, louer ou céder les données personnelles à des tiers sans consentement préalable, sauf obligation légale.<br>
+                            <br>
+                            7. **Hébergement des données** <br>
+                            Les données sont hébergées par Heroku, situé à San Francisco, Californie, États-Unis.<br>
+                            <br>
+                            8. **Sécurité des données** <br>
+                            Le Snack de la Gare met en œuvre toutes les mesures techniques et organisationnelles pour protéger les données personnelles contre toute altération, perte ou accès non autorisé.
+                        </p>
+                        </p>
+                    </div>
+                </div>
+            </div>
         </div>
 
-        <!-- Copyright -->
-        <p class="copyright">
-            &copy; 2024 - Snack de la gare
-        </p>
-    </footer>
+
+
+        <!-- Modal CGU -->
+        <div class="modal fade" id="modalCGU" tabindex="-1" aria-labelledby="modalCGULabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalCGULabel">Conditions Générales d'Utilisation (CGU)</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p> 1. **Objet** <br>
+                            Les présentes CGU régissent l'accès et l'utilisation du site le Snack de la Gare. En accédant à ce site, l'utilisateur accepte sans réserve les présentes conditions. <br>
+                            <br>
+                            2. **Accès au site** <br>
+                            L'accès au site est possible 24/7, sauf interruption, programmée ou non, pour des raisons de maintenance ou en cas de force majeure. le Snack de la Gare ne saurait être tenue responsable en cas de modification, interruption ou suspension des services. <br>
+                            <br>
+                            3. **Services fournis** <br>
+                            Le site Snack de la Gare a pour objet de fournir des informations sur le restaurant, de répondre aux demandes des utilisateurs, et de permettre l’affichage des avis. <br>
+                            <br>
+                            4. **Propriété intellectuelle** <br>
+                            Le contenu du site est protégé par les lois relatives à la propriété intellectuelle. Toute reproduction, diffusion, modification ou utilisation du contenu, sans l'autorisation expresse de Snack de la Gare, est interdite. <br>
+                            <br>
+                            5. **Responsabilité** <br>
+                            L'utilisateur est seul responsable de l'utilisation des informations disponibles sur le site. Le Snack de la Gare décline toute responsabilité quant aux dommages résultant de l'utilisation des informations ou services proposés sur le site. <br>
+                            <br>
+                            6. **Liens hypertextes** <br>
+                            Le site peut contenir des liens vers d'autres sites web. Le Snack de la Gare n'est pas responsable du contenu de ces sites tiers et décline toute responsabilité à cet égard. <br>
+                            <br>
+                            7. **Données personnelles** <br>
+                            Les informations collectées lors de l'inscription ou de la navigation sur le site sont traitées conformément à la politique de confidentialité (voir ci-dessous). <br>
+                            <br>
+                            8. **Modification des CGU** <br>
+                            Le Snack de la Gare se réserve le droit de modifier à tout moment les présentes CGU. Il est conseillé à l'utilisateur de les consulter régulièrement.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        </div>
+    <!-- Copyright -->
+    <div class="copyright">
+        <p>&copy; 2024 - Snack de la gare</p>
+    </div>
+</footer>
+
 
 
     <!-- Scripts JavaScript -->

@@ -1,0 +1,150 @@
+/* Style principal de la bannière */
+.hero-banner {
+    background-color: #2e9ca0;
+    text-align: center;
+    padding: 4rem 2.5rem;
+    clip-path: polygon(18% 6%, 60% 0, 81% 5%, 81% 100%, 38% 96%, 18% 100%);
+    margin: 0 auto 1rem;
+    width: 100%;
+  
+}
+
+/* Style pour chaque horaire */
+.horaire {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    line-height: 1.2;
+}
+
+/* Style pour le jour */
+.horaire .jour {
+    font-weight: bold;
+    font-size: 1.3rem;
+    color: #0F2C33;
+}
+
+/* Style pour les horaires */
+.horaire .horaires {
+    font-size: 0.8rem;
+    color: #0F2C33;
+}
+
+/* maps */
+.contact-map {
+    text-align: center;
+    background-color: #0F2C33;
+    color: #f5f0e1;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+.contact-map h2 {
+    margin-bottom: 15px;
+    color: #f5f0e1;
+}
+
+.map-container {
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 800px;
+    border: 2px solid #EFA00F;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 350px;
+    border: 0;
+}
+
+.address {
+    margin-top: 15px;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    font-family: 'Roboto', sans-serif;
+}
+
+.address i {
+    color: #EFA00F;
+    margin-right: 5px;
+}
+
+/* Tablettes (min-width: 768px) */
+@media (min-width: 768px) {
+
+.hero-banner {
+    background-color: #2e9ca0;
+    text-align: center;
+    padding: 4rem 2.5rem;
+    clip-path: polygon(18% 6%, 60% 0, 81% 5%, 81% 100%, 38% 96%, 18% 100%);
+    margin: 0 auto 1rem;
+    max-width: 600px;
+  
+}
+.horaire .jour {
+    font-weight: bold;
+    font-size: 2rem;
+    color: #0F2C33;
+}
+/* Style pour les horaires */
+.horaire .horaires {
+    font-size: 1.3rem;
+    color: #0F2C33;
+}
+
+.address {
+    margin-top: 15px;
+    font-size: 1.8rem;
+    line-height: 1.5;
+    font-family: 'Roboto', sans-serif;
+}
+
+.address i {
+    color: #EFA00F;
+    margin-right: 5px;
+    font-size: 2rem; /* Taille de l'icône */
+    vertical-align: middle; /* Aligner l'icône verticalement avec le texte */
+}
+}
+/* Desktop (min-width: 1200px) */
+@media (min-width: 1200px) {
+
+.hero-banner {
+    background-color: #2e9ca0;
+    text-align: center;
+    padding: 4rem 2.5rem;
+    clip-path: polygon(18% 6%, 60% 0, 81% 5%, 81% 100%, 38% 96%, 18% 100%);
+    margin: 0 auto 1rem;
+    max-width: 1000px;
+  
+}
+.horaire .jour {
+    font-weight: bold;
+    font-size: 2.3rem;
+    color: #0F2C33;
+}
+
+/* Style pour les horaires */
+.horaire .horaires {
+    font-size: 1.5rem;
+    color: #0F2C33;
+}
+.address {
+    margin-top: 15px;
+    font-size: 2.5rem;
+    line-height: 1.5;
+    font-family: 'Roboto', sans-serif;
+}
+
+.address i {
+    color: #EFA00F;
+    margin-right: 5px;
+    font-size: 3rem; /* Taille de l'icône */
+    vertical-align: middle; /* Aligner l'icône verticalement avec le texte */
+}
+
+
+}

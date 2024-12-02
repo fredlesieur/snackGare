@@ -1,28 +1,41 @@
 /* Style de base */
 * {
-    font-size: 0.9rem; /* Taille de base, ajustable pour tout le design */
+    font-size: 0.9rem; /* Taille de base ajustable */
     box-sizing: border-box;
     text-decoration: none;
     list-style: none;
 }
 
 body {
-    margin: 0;
-    font-family: Arial, sans-serif; 
-    background-color: #0F2C33; 
-    color: #f5f0e1;
+    
+    max-width : 1800px;
+    margin-left :auto;
+    margin-right :auto;
+    font-family: Arial, sans-serif;
+    background-color: #0F2C33; /* Couleur de fond générale */
+    color: #E6D1B4; /* Couleur de texte par défaut */
+    overflow-x: hidden; /* Empêche le scroll horizontal */
 }
 
-/* liens */
+.tittlePages {
+    color: #2e9ca0;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 2rem;
+    text-align: center;
+    font-style: italic;
+    font-weight: 900;
+}
+/* Liens */
 a {
-    color: #f5f0e1 !important;
+    color: #E6D1B4 !important;
     text-decoration: none;
-    }
-a:hover {
-    color:#EFA00F ! important ;
+
 }
 
-
+a:hover {
+    color: #EFA00F !important;
+}
 
 /* Header */
 header {
@@ -38,10 +51,12 @@ header {
     display: flex;
     align-items: center;
 }
+
 .navbar-toggler {
     border: 2px solid #EFA00F;
     background-color: transparent;
 }
+
 .logo {
     width: 10rem;
 }
@@ -51,13 +66,15 @@ header {
     padding: 0;
     margin: 0;
     display: flex;
-    gap: 1rem;
+    gap: 0.5rem; /* Réduction de l'espacement entre les liens */
 }
 
 .navbar-nav .nav-item .nav-link {
-    color: #f5f0e1;
+    color: #E6D1B4;
     text-decoration: none;
     font-weight: bold;
+    font-size: 0.8rem; /* Taille réduite des liens */
+    padding: 0.3rem; /* Réduction des marges internes */
 }
 
 .navbar-nav .nav-link:hover {
@@ -68,50 +85,134 @@ header {
 .navbar-toggler-icon {
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='%23EFA00F' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
-/* banner */
+/* Style personnalisé pour le modal de connexion*/
+.custom-modal {
+    background-color: #2e9ca0; /* Fond sombre pour s'accorder à votre thème */
+    color: #E6D1B4; /* Texte clair */
+    border-radius: 10px; /* Arrondir les coins */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5); /* Ombre élégante */
+}
+
+.custom-modal .modal-header {
+    border-bottom: 1px solid #EFA00F; /* Séparateur doré */
+}
+
+.custom-modal .modal-title {
+    font-family: 'Roboto', sans-serif;
+    color: #E6D1B4; /* Couleur dorée */
+    font-size: 1.5rem;
+    text-shadow: 1px 1px #0F2C33; /* Légère ombre */
+}
+
+.custom-modal .btn-close {
+    background-color: transparent;
+    color: #E6D1B4;
+}
+
+.custom-modal .modal-body {
+    padding: 2rem;
+}
+
+.custom-modal .form-label {
+    font-weight: bold;
+    color: #E6D1B4; /* Texte doré */
+}
+
+.custom-modal .form-control {
+    background-color: #0F2C33; /* Fond du champ */
+    color: #E6D1B4; /* Texte clair */
+    border: 1px solid #EFA00F; /* Bordure dorée */
+    border-radius: 5px;
+}
+
+.custom-modal .form-control:focus {
+    border-color: #E6D1B4;
+    box-shadow: 0 0 5px #EFA00F; /* Lumière dorée autour */
+}
+
+.custom-modal .btn-primary {
+    background-color: #EFA00F; /* Bouton doré */
+    border-color: #EFA00F;
+    color: #06283d; /* Texte sombre */
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.custom-modal .btn-primary:hover {
+    background-color: #E6D1B4; /* Texte clair */
+    color: #06283d; /* Texte sombre */
+}
+/*modal des liens legaux*/
+.modal-content {
+    background-color: #0F2C33; /* Couleur de fond */
+    color: #E6D1B4; /* Texte clair */
+    border-radius: 10px; /* Bords arrondis */
+    padding: 1rem; /* Espacement interne */
+}
+
+.modal-header {
+    border-bottom: 1px solid #EFA00F; /* Ligne sous le titre */
+}
+
+.modal-title {
+    color: #EFA00F; /* Couleur du titre */
+    font-weight: bold;
+}
+
+.modal-body p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Banner */
 .burger-image {
-    width: 100%; /* Image s'ajuste à la largeur du conteneur */
-    height: auto; /* Conserve les proportions de l'image */
-    max-height: 300px; /* Hauteur maximum pour mobile */
-    object-fit: cover; /* Permet de couvrir le conteneur sans déformation */
+    display: block;
+    margin: 0 auto; /* Centre l'image horizontalement */
+    width: 100%; /* Prend la largeur de son conteneur */
+    height: auto; /* Respecte les proportions */
+    object-fit: cover; /* Évite l'étirement */
 }
 
 .command-text {
-    text-align: center; 
-    color: #EFA00F; 
-    margin: 10px 0; 
+    text-align: center;
+    color: #EFA00F;
+    margin: 10px 0;
 }
 
 .size {
-    font-size: 1.2rem; 
-    font-style: oblique;
+    font-size: 2rem; /* Taille par défaut pour mobile */
+    font-weight: bold;
+    text-align: center;
+    margin: 1rem 0;
+    color: #EFA00F;
 }
 
-.size2 {
-    font-size: 2rem; 
-}
-
+/* Téléphone */
 .phone-container {
-    display: flex; 
-    align-items: center; 
-    justify-content: center; 
-    color: #EFA00F; /
-    
+    display: flex;
+    align-items: center; /* Aligner verticalement au centre */
+    justify-content: center; /* Centrer horizontalement */
+    gap: 0.5rem; /* Espacement entre l'icône et le numéro */
+    color: #EFA00F; /* Couleur spécifique */
+    margin-top: 1rem;
 }
-.phone-icon {
-    transform: rotate(-45deg); 
-    transition: transform 0.3s ease;
-}
+
 .phone-container i {
-    margin-right: 1rem; 
-    font-size: 2rem; 
+    font-size: 2.5rem; /* Taille de l'icône pour mobile */
+    color:#E6D1B4;
+}
+
+.phone-container a{
+    font-size: 2rem; /* Taille du numéro pour mobile */
+    font-weight: bold;
+    text-align: center;
+
 }
 
 /* Footer */
 footer {
     background-color: #0F2C33;
     text-align: center;
-    padding: 1.5rem 1rem;
 }
 
 .footer-content {
@@ -132,6 +233,13 @@ footer {
 
 .footer-content .social-icons {
     display: flex;
+  
+}
+.social-icons a {
+  padding :20px;
+}
+.social-icons {
+    padding : 30px;
 }
 .fab {
     font-size: 1.8rem;
@@ -141,81 +249,128 @@ footer {
 .footer-bottom {
     font-size: 0.875rem;
     color: #ffffff;
-    margin-top: 1rem;
+}
+
+/* Footer Border */
+.footer-border .border-decoration {
+    transform: rotate(180deg);
+    position: relative;
+    margin: 0;
+    padding: 0;
+    bottom: 0;
+    width: 100%;
 }
 
 /* Media Queries */
 @media (min-width: 768px) {
-    * {
-        font-size: 1.2rem; 
-    }
     .logo {
-        width: 18rem; /* Taille pour les tablettes */
+        width: 18rem; /* Taille pour tablette */
     }
 
-    .navbar-nav {
-        gap: 2rem;
+    .navbar-nav{
+        gap: 0.8rem; /* Réduction de l'espacement entre les liens */
     }
 
-    footer {
-        padding: 2rem;
+    .nav-link a{
+        font-size: 1rem; /* Taille réduite pour tablette */
     }
-   /*banner*/
-   .burger-image {
-    max-height: 400px; /* Ajuster la hauteur pour les tablettes */
-}
 
-.command-text {
-    font-size: 6rem; /* Taille de police pour tablette */
-}
-
-.size {
-    font-size: 2.5rem; /* Taille du texte pour tablette */
-}
-
-.size2 {
-    font-size: 5rem; /* Taille du texte pour tablette */
-}
-
-.phone-container i {
-    font-size: 5rem; /* Ajustez la taille de l'icône pour tablette */
-    margin-right: 2rem; 
-}
-} 
-
-
-@media (min-width: 1200px) {
-
-    * {
-        font-size: 1.5rem; 
-    }
-    .logo {
-        width: 30rem;
-    }
-    .navbar-nav .nav-item .nav-link {
-        font-size: 1.2rem; 
-    }
-    .footer-content {
-        flex-direction: row;
-        justify-content: space-between;
-    }
-    /*banner*/
     .burger-image {
-        max-height: 500px; 
+        max-height: 400px; /* Hauteur ajustée pour tablette */
     }
 
+    .command-text {
+        font-size: 3rem; /* Taille de police pour tablette */
+    }
 
-/*commander*/
     .size {
-        font-size: 4rem;
+        font-size: 2.5rem; /* Taille ajustée pour tablette */
     }
-/* telephone*/
-    .size2 {
-        font-size: 7rem;
+
+    .phone-container {
+        flex-direction: row; /* Aligner l'icône et le numéro horizontalement */
+        justify-content: center;
+        gap: 1rem; /* Espacement augmenté */
     }
 
     .phone-container i {
-        font-size: 8rem; 
-        margin-right: 3rem;
+        font-size: 4rem; /* Taille de l'icône pour tablette */
+    }
+
+    .phone-container a {
+        font-size: 3rem; /* Taille du numéro pour tablette */
+    }
+    .fab {
+        font-size: 4rem;
+        color: #2e9ca0;
+    }
+}
+/* Styles pour les écrans Desktop (largeur minimum 1200px) */
+@media (min-width: 1200px) {
+    .navbar-nav .nav-item .nav-link {
+        font-size: 1.2rem; /* Taille de police pour desktop */
+    }
+    .footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        text-align: left;
+        padding: 40px 10%;
+    }
+
+    /* Section Horaires, Réseaux sociaux et Contact sur une même ligne */
+    .footer-sections {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        align-items: center;
+        margin-bottom: 30px;
+    }
+
+    /* Section Horaires */
+    .footer-sections .horaires, 
+    .footer-sections .contact, 
+    .footer-sections .social-icons {
+        flex: 1;
+        text-align: center; /* Centrer les éléments dans chaque section */
+    }
+
+    .footer-sections .social-icons {
+        display: flex;
+        justify-content: center;
+    }
+
+    .social-icons a {
+        margin: 0 10px; /* Espacement entre les icônes */
+    }
+
+    /* Liens légaux et Copyright sur 2 lignes */
+    .legal-links, .copyright {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        text-align: center;
+    }
+
+    .legal-links a {
+        margin: 0 10px;
+    }
+
+    .copyright {
+        font-size: 0.9rem;
+        margin-top: 10px;
+    }
+
+    .fab {
+        font-size: 6rem;
+        color: #2e9ca0;
+    }
+    .phone-container i {
+        font-size: 5rem; /* Taille de l'icône pour tablette */
+    }
+
+    .phone-container a {
+        font-size: 4rem; /* Taille du numéro pour tablette */
     }
 }

@@ -2,8 +2,18 @@
 
 namespace App\Controllers;
 
+use App\Repositories\AccueilRepository;
+
 abstract class Controller
 {
+    // Déclaration des repositories nécessaires
+    protected $accueilRepository;
+
+    public function __construct()
+    {
+        $this->accueilRepository = new AccueilRepository();
+    }
+
     /**
      * Méthode pour rendre une vue avec un layout.
      *
@@ -11,26 +21,24 @@ abstract class Controller
      * @param array $donnees Données à passer à la vue
      * @param bool $isDashboard Indique si le layout à utiliser est celui du dashboard
      */
-    public function render(string $file, array $donnees = [], bool $isDashboard = false): void
+    public function render(string $file, array $donnees = []): void
     {
+        // Ajouter les horaires si présents
+        $donnees['horaires'] = $_SESSION['horaires'] ?? [];
+    
         // Extraire les données pour la vue
         extract($donnees);
-
-        // Démarrer la capture de sortie
+    
+        // Capturer la sortie de la vue
         ob_start();
-
-        // Charger le fichier de vue
         require_once ROOT . 'views/' . $file . '.php';
-
-        // Récupérer le contenu généré par la vue
         $content = ob_get_clean();
-
+    
+        // Détecter automatiquement le layout en fonction du chemin de la vue
+        $isDashboard = strpos($file, 'dashboard/') === 0;
+    
         // Charger le layout approprié
-        if ($isDashboard) {
-            require_once ROOT . 'views/layouts/dashboard.php';
-        } else {
-            require_once ROOT . 'views/layouts/default.php';
-        }
+        require_once ROOT . 'views/layouts/' . ($isDashboard ? 'dashboard' : 'default') . '.php';
     }
+    
 }
-
