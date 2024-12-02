@@ -29,7 +29,7 @@ abstract class Controller
 
         // Capturer la sortie de la vue
         ob_start();
-        $fullPath = ROOT . '/views/' . $file . '.php';
+        $fullPath = ROOT . '/Views/' . $file . '.php';
         if (!file_exists($fullPath)) {
             die("Fichier introuvable : $fullPath");
         }
@@ -40,7 +40,7 @@ abstract class Controller
         $isDashboard = strpos($file, 'dashboard/') === 0;
 
         // Charger le layout approprié
-        $layoutPath = ROOT . '/views/layouts/' . ($isDashboard ? 'dashboard' : 'default') . '.php';
+        $layoutPath = ROOT . '/Views/layouts/' . ($isDashboard ? 'dashboard' : 'default') . '.php';
         if (!file_exists($layoutPath)) {
             die("Layout introuvable : $layoutPath");
         }
