@@ -2031,3 +2031,4 @@ Stack trace:
 #2 C:\snack_gare\Public\index.php(27): App\Config\Main->start()
 #3 {main}
   thrown in C:\snack_gare\Controllers\Controller.php on line 41
+[02-Dec-2024 19:30:09 UTC] PHP Warning:  Undefined variable $view in C:\snack_gare\Controllers\Controller.php on line 34

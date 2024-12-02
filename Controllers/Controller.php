@@ -6,7 +6,6 @@ use App\Repositories\AccueilRepository;
 
 abstract class Controller
 {
-    // Déclaration des repositories nécessaires
     protected $accueilRepository;
 
     public function __construct()
@@ -19,26 +18,32 @@ abstract class Controller
      *
      * @param string $file Chemin de la vue à charger
      * @param array $donnees Données à passer à la vue
-     * @param bool $isDashboard Indique si le layout à utiliser est celui du dashboard
      */
     public function render(string $file, array $donnees = []): void
     {
         // Ajouter les horaires si présents
         $donnees['horaires'] = $_SESSION['horaires'] ?? [];
-    
+
         // Extraire les données pour la vue
         extract($donnees);
-    
+
         // Capturer la sortie de la vue
         ob_start();
-        require_once ROOT . '/views/' . $file . '.php';
+        $fullPath = ROOT . '/views/' . $file . '.php';
+        if (!file_exists($fullPath)) {
+            die("Fichier introuvable : $fullPath");
+        }
+        require_once $fullPath;
         $content = ob_get_clean();
-    
+
         // Détecter automatiquement le layout en fonction du chemin de la vue
         $isDashboard = strpos($file, 'dashboard/') === 0;
-    
+
         // Charger le layout approprié
-        require_once ROOT . 'views/layouts/' . ($isDashboard ? 'dashboard' : 'default') . '.php';
+        $layoutPath = ROOT . '/views/layouts/' . ($isDashboard ? 'dashboard' : 'default') . '.php';
+        if (!file_exists($layoutPath)) {
+            die("Layout introuvable : $layoutPath");
+        }
+        require_once $layoutPath;
     }
-    
 }
