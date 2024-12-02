@@ -31,7 +31,7 @@ abstract class Controller
     
         // Capturer la sortie de la vue
         ob_start();
-        require_once ROOT . 'views/' . $file . '.php';
+        require_once ROOT . '/views/' . $file . '.php';
         $content = ob_get_clean();
     
         // Détecter automatiquement le layout en fonction du chemin de la vue

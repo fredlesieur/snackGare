@@ -12,7 +12,7 @@ use Dotenv\Dotenv;
 define('ROOT', dirname(__DIR__));
 
 // Chargement de l'autoloader de Composer
-require_once ROOT . 'vendor/autoload.php';
+ require_once ROOT . '/vendor/autoload.php';
 // Inclure l' autoloader
 require_once ROOT . '/Autoloader.php';
 Autoloader::register();
