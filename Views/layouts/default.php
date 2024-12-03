@@ -50,6 +50,7 @@
                     <li class="nav-item"><a class="nav-link" href="/contact">Contact</a></li>
                     <li class="nav-item"><a class="nav-link" href="/menu">Menu</a></li>
                     <li class="nav-item"><a class="nav-link" href="/avis/form">Avis</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/offre">Offres</a></li>
 
                     <!-- Lien connexion -->
                     <?php if (isset($_SESSION['id'])): ?>

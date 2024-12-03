@@ -2032,3 +2032,122 @@ Stack trace:
 #3 {main}
   thrown in C:\snack_gare\Controllers\Controller.php on line 41
 [02-Dec-2024 19:30:09 UTC] PHP Warning:  Undefined variable $view in C:\snack_gare\Controllers\Controller.php on line 34
+[03-Dec-2024 12:01:01 UTC] PHP Fatal error:  Uncaught Error: Class "App\Repository\OffreRepository" not found in /var/www/html/Controllers/OffreController.php:88
+Stack trace:
+#0 [internal function]: App\Controllers\OffreController->list()
+#1 /var/www/html/Config/Main.php(96): call_user_func_array(Array, Array)
+#2 /var/www/html/Public/index.php(27): App\Config\Main->start()
+#3 {main}
+  thrown in /var/www/html/Controllers/OffreController.php on line 88
+[03-Dec-2024 12:02:25 UTC] PHP Fatal error:  Uncaught Error: Class "App\Repository\OffreRepository" not found in /var/www/html/Controllers/OffreController.php:88
+Stack trace:
+#0 [internal function]: App\Controllers\OffreController->list()
+#1 /var/www/html/Config/Main.php(96): call_user_func_array(Array, Array)
+#2 /var/www/html/Public/index.php(27): App\Config\Main->start()
+#3 {main}
+  thrown in /var/www/html/Controllers/OffreController.php on line 88
+[03-Dec-2024 12:05:41 UTC] PHP Fatal error:  Uncaught Error: Class "App\Repository\OffreRepository" not found in /var/www/html/Controllers/OffreController.php:88
+Stack trace:
+#0 [internal function]: App\Controllers\OffreController->list()
+#1 /var/www/html/Config/Main.php(96): call_user_func_array(Array, Array)
+#2 /var/www/html/Public/index.php(27): App\Config\Main->start()
+#3 {main}
+  thrown in /var/www/html/Controllers/OffreController.php on line 88
+[03-Dec-2024 12:18:56 UTC] PHP Fatal error:  Uncaught Error: Class "App\Repository\OffreRepository" not found in /var/www/html/Controllers/OffreController.php:16
+Stack trace:
+#0 [internal function]: App\Controllers\OffreController->index()
+#1 /var/www/html/Config/Main.php(96): call_user_func_array(Array, Array)
+#2 /var/www/html/Public/index.php(27): App\Config\Main->start()
+#3 {main}
+  thrown in /var/www/html/Controllers/OffreController.php on line 16
+[03-Dec-2024 12:19:45 UTC] PHP Fatal error:  Uncaught Error: Class "App\Repository\OffreRepository" not found in /var/www/html/Controllers/OffreController.php:88
+Stack trace:
+#0 [internal function]: App\Controllers\OffreController->list()
+#1 /var/www/html/Config/Main.php(96): call_user_func_array(Array, Array)
+#2 /var/www/html/Public/index.php(27): App\Config\Main->start()
+#3 {main}
+  thrown in /var/www/html/Controllers/OffreController.php on line 88
+[03-Dec-2024 12:44:51 UTC] PHP Fatal error:  Uncaught Error: Class "App\Repository\OffreRepository" not found in /var/www/html/Controllers/OffreController.php:87
+Stack trace:
+#0 [internal function]: App\Controllers\OffreController->list()
+#1 /var/www/html/Config/Main.php(96): call_user_func_array(Array, Array)
+#2 /var/www/html/Public/index.php(27): App\Config\Main->start()
+#3 {main}
+  thrown in /var/www/html/Controllers/OffreController.php on line 87
+[03-Dec-2024 12:45:15 UTC] PHP Fatal error:  Uncaught Error: Class "App\Repository\OffreRepository" not found in /var/www/html/Controllers/OffreController.php:15
+Stack trace:
+#0 [internal function]: App\Controllers\OffreController->index()
+#1 /var/www/html/Config/Main.php(96): call_user_func_array(Array, Array)
+#2 /var/www/html/Public/index.php(27): App\Config\Main->start()
+#3 {main}
+  thrown in /var/www/html/Controllers/OffreController.php on line 15
+[03-Dec-2024 12:47:43 UTC] PHP Fatal error:  Uncaught Error: Class "App\Repository\OffreRepository" not found in /var/www/html/Controllers/OffreController.php:15
+Stack trace:
+#0 [internal function]: App\Controllers\OffreController->index()
+#1 /var/www/html/Config/Main.php(96): call_user_func_array(Array, Array)
+#2 /var/www/html/Public/index.php(27): App\Config\Main->start()
+#3 {main}
+  thrown in /var/www/html/Controllers/OffreController.php on line 15
+[03-Dec-2024 12:47:53 UTC] PHP Fatal error:  Uncaught Error: Class "App\Repository\OffreRepository" not found in /var/www/html/Controllers/OffreController.php:15
+Stack trace:
+#0 [internal function]: App\Controllers\OffreController->index()
+#1 /var/www/html/Config/Main.php(96): call_user_func_array(Array, Array)
+#2 /var/www/html/Public/index.php(27): App\Config\Main->start()
+#3 {main}
+  thrown in /var/www/html/Controllers/OffreController.php on line 15
+[03-Dec-2024 12:49:51 UTC] PHP Fatal error:  Uncaught Error: Class "App\Repository\OffreRepository" not found in /var/www/html/Controllers/OffreController.php:15
+Stack trace:
+#0 [internal function]: App\Controllers\OffreController->index()
+#1 /var/www/html/Config/Main.php(96): call_user_func_array(Array, Array)
+#2 /var/www/html/Public/index.php(27): App\Config\Main->start()
+#3 {main}
+  thrown in /var/www/html/Controllers/OffreController.php on line 15
+[03-Dec-2024 12:53:52 UTC] PHP Fatal error:  Uncaught Error: Class "App\Repository\OffreRepository" not found in /var/www/html/Controllers/OffreController.php:15
+Stack trace:
+#0 [internal function]: App\Controllers\OffreController->index()
+#1 /var/www/html/Config/Main.php(96): call_user_func_array(Array, Array)
+#2 /var/www/html/Public/index.php(27): App\Config\Main->start()
+#3 {main}
+  thrown in /var/www/html/Controllers/OffreController.php on line 15
+[03-Dec-2024 12:53:55 UTC] PHP Fatal error:  Uncaught Error: Class "App\Repository\OffreRepository" not found in /var/www/html/Controllers/OffreController.php:15
+Stack trace:
+#0 [internal function]: App\Controllers\OffreController->index()
+#1 /var/www/html/Config/Main.php(96): call_user_func_array(Array, Array)
+#2 /var/www/html/Public/index.php(27): App\Config\Main->start()
+#3 {main}
+  thrown in /var/www/html/Controllers/OffreController.php on line 15
+[03-Dec-2024 13:02:04 UTC] PHP Fatal error:  Uncaught Error: Class "App\Repository\OffreRepository" not found in /var/www/html/Controllers/OffreController.php:15
+Stack trace:
+#0 [internal function]: App\Controllers\OffreController->index()
+#1 /var/www/html/Config/Main.php(96): call_user_func_array(Array, Array)
+#2 /var/www/html/Public/index.php(27): App\Config\Main->start()
+#3 {main}
+  thrown in /var/www/html/Controllers/OffreController.php on line 15
+[03-Dec-2024 13:02:12 UTC] PHP Fatal error:  Uncaught Error: Class "App\Repository\OffreRepository" not found in /var/www/html/Controllers/OffreController.php:15
+Stack trace:
+#0 [internal function]: App\Controllers\OffreController->index()
+#1 /var/www/html/Config/Main.php(96): call_user_func_array(Array, Array)
+#2 /var/www/html/Public/index.php(27): App\Config\Main->start()
+#3 {main}
+  thrown in /var/www/html/Controllers/OffreController.php on line 15
+[03-Dec-2024 13:07:31 UTC] PHP Fatal error:  Uncaught Error: Class "App\Repository\OffreRepository" not found in /var/www/html/Controllers/OffreController.php:15
+Stack trace:
+#0 [internal function]: App\Controllers\OffreController->index()
+#1 /var/www/html/Config/Main.php(96): call_user_func_array(Array, Array)
+#2 /var/www/html/Public/index.php(27): App\Config\Main->start()
+#3 {main}
+  thrown in /var/www/html/Controllers/OffreController.php on line 15
+[03-Dec-2024 13:18:55 UTC] PHP Fatal error:  Uncaught Error: Class "App\Repository\OffreRepository" not found in /var/www/html/Controllers/OffreController.php:15
+Stack trace:
+#0 [internal function]: App\Controllers\OffreController->index()
+#1 /var/www/html/Config/Main.php(96): call_user_func_array(Array, Array)
+#2 /var/www/html/Public/index.php(27): App\Config\Main->start()
+#3 {main}
+  thrown in /var/www/html/Controllers/OffreController.php on line 15
+[03-Dec-2024 13:19:00 UTC] PHP Fatal error:  Uncaught Error: Class "App\Repository\OffreRepository" not found in /var/www/html/Controllers/OffreController.php:15
+Stack trace:
+#0 [internal function]: App\Controllers\OffreController->index()
+#1 /var/www/html/Config/Main.php(96): call_user_func_array(Array, Array)
+#2 /var/www/html/Public/index.php(27): App\Config\Main->start()
+#3 {main}
+  thrown in /var/www/html/Controllers/OffreController.php on line 15

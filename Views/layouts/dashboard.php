@@ -87,6 +87,16 @@
                     </ul>
                 </li>
 
+                <!-- offres -->
+                <li>
+                    <a class="btn-link" data-bs-toggle="collapse" href="#offre-menu" role="button" aria-expanded="false" aria-controls="offre-menu">
+                       Offres
+                    </a>
+                    <ul class="collapse" id="offre-menu">
+                        <li><a href="/offre/list">Lister les Offres</a></li>
+                        <li><a href="/offre/show">Ajouter une offre</a></li>
+                    </ul>
+                </li>
                 <!-- Avis -->
                 <li>
                     <a class="btn-link" data-bs-toggle="collapse" href="#avis-menu" role="button" aria-expanded="false" aria-controls="avis-menu">
@@ -168,18 +178,18 @@
                                 <li><a href="/boisson/list">Lister les boissons</a></li>
                                 <li><a href="/boisson/add">Ajouter une boisson</a></li>
                             </ul>
-
+                        </li>
                         <!--  Options -->
                         <li>
                             <a class="btn-link" data-bs-toggle="collapse" href="#menu-options" role="button" aria-expanded="false" aria-controls="menu-options">
-                               Options
+                                Options
                             </a>
                             <ul class="collapse" id="menu-options">
                                 <li><a href="/option/list">Lister les options</a></li>
                                 <li><a href="/option/add">Ajouter une option</a></li>
                             </ul>
                         </li>
-                        </li>
+
                     </ul>
                 </li>
 
