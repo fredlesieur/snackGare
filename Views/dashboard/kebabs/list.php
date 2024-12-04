@@ -1,15 +1,24 @@
-<h2 class="text-center mb-4">Liste des Kebabs</h2>
+<h1>Liste des Kebabs</h1>
 
+<!-- Messages de succès ou d'erreur -->
 <?php if (isset($_SESSION['flash_success'])): ?>
     <div class="alert alert-success">
-        <?= $_SESSION['flash_success']; ?>
+        <?= htmlspecialchars($_SESSION['flash_success']); ?>
         <?php unset($_SESSION['flash_success']); ?>
+    </div>
+<?php endif; ?>
+
+<?php if (isset($_SESSION['flash_error'])): ?>
+    <div class="alert alert-danger">
+        <?= htmlspecialchars($_SESSION['flash_error']); ?>
+        <?php unset($_SESSION['flash_error']); ?>
     </div>
 <?php endif; ?>
 
 <table class="table table-striped">
     <thead>
         <tr>
+            <th>#</th>
             <th>Nom</th>
             <th>Description</th>
             <th>Prix (Sandwich)</th>
@@ -19,18 +28,28 @@
         </tr>
     </thead>
     <tbody>
-        <?php foreach ($kebabs as $kebab): ?>
+        <?php if (!empty($kebabs)): ?>
+            <?php foreach ($kebabs as $index => $kebab): ?>
+                <tr>
+                    <td><?= $index + 1; ?></td>
+                    <td><?= htmlspecialchars($kebab['name']); ?></td>
+                    <td><?= htmlspecialchars($kebab['description']); ?></td>
+                    <td><?= htmlspecialchars($kebab['price_sandwich']); ?> €</td>
+                    <td><?= htmlspecialchars($kebab['price_menu']); ?> €</td>
+                    <td><?= htmlspecialchars($kebab['price_plate']); ?> €</td>
+                    <td>
+                        <a href="/kebab/edit/<?= htmlspecialchars($kebab['id']); ?>" class="btn btn-warning btn-sm">Modifier</a>
+                        <a href="/kebab/delete/<?= htmlspecialchars($kebab['id']); ?>" 
+                           class="btn btn-danger btn-sm" 
+                           onclick="return confirm('Supprimer ce kebab ?');">Supprimer</a>
+                    </td>
+                </tr>
+            <?php endforeach; ?>
+        <?php else: ?>
             <tr>
-                <td><?= htmlspecialchars($kebab['name']); ?></td>
-                <td><?= htmlspecialchars($kebab['description']); ?></td>
-                <td><?= htmlspecialchars($kebab['price_sandwich']); ?> €</td>
-                <td><?= htmlspecialchars($kebab['price_menu']); ?> €</td>
-                <td><?= htmlspecialchars($kebab['price_plate']); ?> €</td>
-                <td>
-                    <a href="/kebab/edit/<?= $kebab['id']; ?>" class="btn btn-primary btn-sm">Modifier</a>
-                    <a href="/kebab/delete/<?= $kebab['id']; ?>" class="btn btn-danger btn-sm" onclick="return confirm('Supprimer ce kebab ?');">Supprimer</a>
-                </td>
+                <td colspan="7">Aucun kebab trouvé.</td>
             </tr>
-        <?php endforeach; ?>
+        <?php endif; ?>
     </tbody>
 </table>
+

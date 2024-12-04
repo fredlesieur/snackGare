@@ -1,15 +1,24 @@
-<h2 class="text-center mb-4">Liste des Snacks</h2>
+<h1>Liste des Snacks</h1>
 
+<!-- Messages de succès ou d'erreur -->
 <?php if (isset($_SESSION['flash_success'])): ?>
     <div class="alert alert-success">
-        <?= $_SESSION['flash_success']; ?>
+        <?= htmlspecialchars($_SESSION['flash_success']); ?>
         <?php unset($_SESSION['flash_success']); ?>
+    </div>
+<?php endif; ?>
+
+<?php if (isset($_SESSION['flash_error'])): ?>
+    <div class="alert alert-danger">
+        <?= htmlspecialchars($_SESSION['flash_error']); ?>
+        <?php unset($_SESSION['flash_error']); ?>
     </div>
 <?php endif; ?>
 
 <table class="table table-striped">
     <thead>
         <tr>
+            <th>#</th>
             <th>Nom</th>
             <th>Description</th>
             <th>Prix</th>
@@ -17,16 +26,25 @@
         </tr>
     </thead>
     <tbody>
-        <?php foreach ($snacks as $snack): ?>
+        <?php if (!empty($snacks)): ?>
+            <?php foreach ($snacks as $index => $snack): ?>
+                <tr>
+                    <td><?= $index + 1; ?></td>
+                    <td><?= htmlspecialchars($snack['name']); ?></td>
+                    <td><?= htmlspecialchars($snack['description']); ?></td>
+                    <td><?= htmlspecialchars($snack['price']); ?> €</td>
+                    <td>
+                        <a href="/snack/edit/<?= htmlspecialchars($snack['id']); ?>" class="btn btn-warning btn-sm">Modifier</a>
+                        <a href="/snack/delete/<?= htmlspecialchars($snack['id']); ?>" 
+                           class="btn btn-danger btn-sm" 
+                           onclick="return confirm('Supprimer ce snack ?');">Supprimer</a>
+                    </td>
+                </tr>
+            <?php endforeach; ?>
+        <?php else: ?>
             <tr>
-                <td><?= htmlspecialchars($snack['name']); ?></td>
-                <td><?= htmlspecialchars($snack['description']); ?></td>
-                <td><?= htmlspecialchars($snack['price']); ?> €</td>
-                <td>
-                    <a href="/snack/edit/<?= $snack['id']; ?>" class="btn btn-primary btn-sm">Modifier</a>
-                    <a href="/snack/delete/<?= $snack['id']; ?>" class="btn btn-danger btn-sm" onclick="return confirm('Supprimer ce snack ?');">Supprimer</a>
-                </td>
+                <td colspan="5">Aucun snack trouvé.</td>
             </tr>
-        <?php endforeach; ?>
+        <?php endif; ?>
     </tbody>
 </table>

@@ -2,12 +2,17 @@
 
 namespace App\Controllers;
 
-use App\Repository\OffreRepository;
+use App\Repositories\OffreRepository;
 use Exception;
 use App\Utils\Redirect;
 
+
 class OffreController extends Controller
-{ 
+{
+    public function __construct()
+    {
+        parent::__construct();
+    }
 
     public function index() {
         try {
@@ -20,14 +25,17 @@ class OffreController extends Controller
             echo "Trace de l'erreur : " . $e->getTraceAsString();
         }
 
-        
-
-        $this->render("offres/index", compact("offres"));
+        $css = '/assets/css/offre.css';
+        $this->render("offres/index", compact('offres','css'));
     }
+
+
     public function show(): void
     {
-        $this->render('dashboard/offre/add');
+        $this->render('dashboard/offres/add');
     }
+
+
     // Fonction pour ajouter une offre
     public function add() {
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -42,7 +50,7 @@ class OffreController extends Controller
 
                 $mongo->add_offre($name, $description, $tarif);
                 $_SESSION['success'] = "L'offre a été ajouté avec succès.";
-                Redirect::to('/dashboard/index');
+                Redirect::to('/offre/list');
                 exit();
             } catch (Exception $e) {
                 echo "Erreur MongoDB : " . $e->getMessage();
@@ -54,35 +62,38 @@ class OffreController extends Controller
     }
 
 
-   // Fonction pour modifier un horaire
-public function edit($id) {
 
-    $mongo = new OffreRepository();
 
-    // Récupérer l'offre à modifier (ceci renvoie un document BSON)
-    $offre = $mongo->find($id);
-
-    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-        try {
-            // Récupérer les données du formulaire
-            $id = $_POST['id'];  // ID envoyé via un champ caché
-            $name = $_POST['name'];
-            $description = $_POST['description'];
-            $tarif = $_POST['tarif'];
-
-            // Utiliser le modèle pour mettre à jour l'offre(ne pas appeler edit_offre sur le document)
-            $mongo->edit_offre($id, $name, $description, $tarif);  // Appeler sur l'objet modèle $mongo
-            $_SESSION['success'] = "L'offre a été mis à jour avec succès.";
-            Redirect::to('/dashboard/index');
+    public function edit($id)
+    {
+        $mongo = new OffreRepository();
+        $offre = $mongo->find($id);
+        
+        if ($offre === null) {
+            $_SESSION['error'] = "Aucune offre trouvée avec cet ID.";
+            Redirect::to('/offre/list');
             exit();
-        } catch (Exception $e) {
-            echo "Erreur MongoDB : " . $e->getMessage();
         }
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            try {
+
+                $id = $_POST['id'];
+                $name = $_POST['name'];
+                $description = $_POST['description'];
+                $tarif = $_POST['tarif'];
+
+                $mongo->edit_offre($id, $name, $description, $tarif);
+                $_SESSION['success'] = "L'offre a été modifiée avec succès.";
+                Redirect::to('/offre/list');
+                exit();
+            } catch (Exception $e) {
+                echo "Erreur MongoDB : " . $e->getMessage();
+            }
+
+        }
+        $this->render('dashboard/offres/edit', compact('offre'));
     }
 
-  
-    $this->render('dashboard/offres/edit', compact('offre'));
-}
 
     // Fonction pour lister les horaires
     public function list() {
@@ -94,25 +105,22 @@ public function edit($id) {
             echo "Erreur MongoDB : " . $e->getMessage();
             return;
         }
-
+        $_SESSION['success'] = "L'offre a été modifiée avec succès.";
         $this->render('dashboard/offres/list', compact('offres'));
     }
 
  
-    public function delete($id) {
-        try {
+    public function delete($_id) {
+  
+    
             // Utilise la classe MongoDb pour la connexion à MongoDB
             $mongo = new OffreRepository();
             
             // Supprime l'offre correspondant à l'ID
-            $mongo->delete_offre($id);
+            $mongo->delete_offre($_id);
             
-            $_SESSION['success'] = "L'offre a été supprimé avec succès.";
-            Redirect::to('/dashboard/index');
-            exit();
-        } catch (Exception $e) {
-            echo "Erreur MongoDB : " . $e->getMessage();
-        }
-    }
-
+            $_SESSION['success'] = "L'offre a été supprimée avec succès.";
+            Redirect::to('/offre/list');  // Redirige vers le tableau de bord ou la liste
+            exit();   
+}
 }

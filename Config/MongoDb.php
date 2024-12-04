@@ -2,7 +2,7 @@
 
 namespace App\Config;
 
-use GuzzleHttp\Client;
+use MongoDB\Client;
 
 class MongoDb
 {

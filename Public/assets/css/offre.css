@@ -1,0 +1,33 @@
+.menu-section {
+        background-color: #2e9ca0;
+        text-align: center;
+        padding: 4rem 2.5rem;
+        clip-path: polygon(18% 6%, 60% 0, 81% 5%, 81% 100%, 38% 96%, 18% 100%);
+        margin: 0 auto 1rem;
+        width: 100%;
+}
+
+.menu-items {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+
+}
+
+.menu-item {
+        color: #0F2C33;
+        padding: 15px;
+        border-radius: 10px;
+        text-align: center;
+}
+
+h3 {
+        font-size: 1.8rem;
+}
+
+h5 {
+        font-size: 1.4rem;
+        color: #e6d1b4;
+
+}

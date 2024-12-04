@@ -2151,3 +2151,429 @@ Stack trace:
 #2 /var/www/html/Public/index.php(27): App\Config\Main->start()
 #3 {main}
   thrown in /var/www/html/Controllers/OffreController.php on line 15
+[03-Dec-2024 13:21:16 UTC] PHP Fatal error:  Uncaught Error: Class "App\Repository\OffreRepository" not found in /var/www/html/Controllers/OffreController.php:15
+Stack trace:
+#0 [internal function]: App\Controllers\OffreController->index()
+#1 /var/www/html/Config/Main.php(96): call_user_func_array(Array, Array)
+#2 /var/www/html/Public/index.php(27): App\Config\Main->start()
+#3 {main}
+  thrown in /var/www/html/Controllers/OffreController.php on line 15
+[03-Dec-2024 13:23:02 UTC] PHP Fatal error:  Uncaught Error: Class "App\Repository\OffreRepository" not found in /var/www/html/Controllers/OffreController.php:15
+Stack trace:
+#0 [internal function]: App\Controllers\OffreController->index()
+#1 /var/www/html/Config/Main.php(96): call_user_func_array(Array, Array)
+#2 /var/www/html/Public/index.php(27): App\Config\Main->start()
+#3 {main}
+  thrown in /var/www/html/Controllers/OffreController.php on line 15
+[03-Dec-2024 13:28:29 UTC] PHP Fatal error:  Uncaught Error: Class "App\Repository\OffreRepository" not found in /var/www/html/Controllers/OffreController.php:15
+Stack trace:
+#0 [internal function]: App\Controllers\OffreController->index()
+#1 /var/www/html/Config/Main.php(96): call_user_func_array(Array, Array)
+#2 /var/www/html/Public/index.php(27): App\Config\Main->start()
+#3 {main}
+  thrown in /var/www/html/Controllers/OffreController.php on line 15
+[03-Dec-2024 13:28:50 UTC] PHP Fatal error:  Uncaught Error: Class "App\Repository\OffreRepository" not found in /var/www/html/Controllers/OffreController.php:15
+Stack trace:
+#0 [internal function]: App\Controllers\OffreController->index()
+#1 /var/www/html/Config/Main.php(96): call_user_func_array(Array, Array)
+#2 /var/www/html/Public/index.php(27): App\Config\Main->start()
+#3 {main}
+  thrown in /var/www/html/Controllers/OffreController.php on line 15
+[03-Dec-2024 13:29:51 UTC] PHP Fatal error:  Uncaught TypeError: GuzzleHttp\Client::__construct(): Argument #1 ($config) must be of type array, string given, called in /var/www/html/Config/MongoDb.php on line 25 and defined in /var/www/html/vendor/guzzlehttp/guzzle/src/Client.php:57
+Stack trace:
+#0 /var/www/html/Config/MongoDb.php(25): GuzzleHttp\Client->__construct('mongodb+srv://f...')
+#1 /var/www/html/Config/MongoDb.php(13): App\Config\MongoDb->connect()
+#2 /var/www/html/Repositories/OffreRepository.php(13): App\Config\MongoDb->__construct()
+#3 /var/www/html/Controllers/OffreController.php(15): App\Repositories\OffreRepository->__construct()
+#4 [internal function]: App\Controllers\OffreController->index()
+#5 /var/www/html/Config/Main.php(96): call_user_func_array(Array, Array)
+#6 /var/www/html/Public/index.php(27): App\Config\Main->start()
+#7 {main}
+  thrown in /var/www/html/vendor/guzzlehttp/guzzle/src/Client.php on line 57
+[03-Dec-2024 13:32:06 UTC] PHP Fatal error:  Uncaught Error: Class "MongoDB\Client" not found in /var/www/html/Config/MongoDb.php:25
+Stack trace:
+#0 /var/www/html/Config/MongoDb.php(13): App\Config\MongoDb->connect()
+#1 /var/www/html/Repositories/OffreRepository.php(13): App\Config\MongoDb->__construct()
+#2 /var/www/html/Controllers/OffreController.php(15): App\Repositories\OffreRepository->__construct()
+#3 [internal function]: App\Controllers\OffreController->index()
+#4 /var/www/html/Config/Main.php(96): call_user_func_array(Array, Array)
+#5 /var/www/html/Public/index.php(27): App\Config\Main->start()
+#6 {main}
+  thrown in /var/www/html/Config/MongoDb.php on line 25
+[03-Dec-2024 13:40:25 UTC] PHP Warning:  Undefined array key "price" in /var/www/html/Views/dashboard/offres/list.php on line 24
+[03-Dec-2024 13:40:25 UTC] PHP Warning:  Undefined array key "id" in /var/www/html/Views/dashboard/offres/list.php on line 26
+[03-Dec-2024 13:40:25 UTC] PHP Warning:  Undefined array key "id" in /var/www/html/Views/dashboard/offres/list.php on line 27
+[03-Dec-2024 13:40:46 UTC] PHP Warning:  Undefined array key "price" in /var/www/html/Views/dashboard/offres/list.php on line 24
+[03-Dec-2024 13:40:46 UTC] PHP Warning:  Undefined array key "id" in /var/www/html/Views/dashboard/offres/list.php on line 26
+[03-Dec-2024 13:40:46 UTC] PHP Warning:  Undefined array key "id" in /var/www/html/Views/dashboard/offres/list.php on line 27
+[03-Dec-2024 13:43:09 UTC] PHP Warning:  Undefined array key "price" in /var/www/html/Views/dashboard/offres/list.php on line 24
+[03-Dec-2024 13:43:09 UTC] PHP Warning:  Undefined array key "id" in /var/www/html/Views/dashboard/offres/list.php on line 26
+[03-Dec-2024 13:43:09 UTC] PHP Warning:  Undefined array key "id" in /var/www/html/Views/dashboard/offres/list.php on line 27
+[03-Dec-2024 13:43:22 UTC] PHP Warning:  Undefined array key "price" in /var/www/html/Views/dashboard/offres/list.php on line 24
+[03-Dec-2024 13:43:22 UTC] PHP Warning:  Undefined array key "id" in /var/www/html/Views/dashboard/offres/list.php on line 26
+[03-Dec-2024 13:43:22 UTC] PHP Warning:  Undefined array key "id" in /var/www/html/Views/dashboard/offres/list.php on line 27
+[03-Dec-2024 13:43:47 UTC] PHP Warning:  Undefined array key "prix" in /var/www/html/Views/dashboard/offres/list.php on line 24
+[03-Dec-2024 13:43:47 UTC] PHP Warning:  Undefined array key "id" in /var/www/html/Views/dashboard/offres/list.php on line 26
+[03-Dec-2024 13:43:47 UTC] PHP Warning:  Undefined array key "id" in /var/www/html/Views/dashboard/offres/list.php on line 27
+[03-Dec-2024 13:43:52 UTC] PHP Warning:  Undefined array key "prix" in /var/www/html/Views/dashboard/offres/list.php on line 24
+[03-Dec-2024 13:43:52 UTC] PHP Warning:  Undefined array key "id" in /var/www/html/Views/dashboard/offres/list.php on line 26
+[03-Dec-2024 13:43:52 UTC] PHP Warning:  Undefined array key "id" in /var/www/html/Views/dashboard/offres/list.php on line 27
+[03-Dec-2024 13:43:55 UTC] PHP Warning:  Undefined array key "prix" in /var/www/html/Views/dashboard/offres/list.php on line 24
+[03-Dec-2024 13:43:55 UTC] PHP Warning:  Undefined array key "id" in /var/www/html/Views/dashboard/offres/list.php on line 26
+[03-Dec-2024 13:43:55 UTC] PHP Warning:  Undefined array key "id" in /var/www/html/Views/dashboard/offres/list.php on line 27
+[03-Dec-2024 13:45:56 UTC] PHP Warning:  Undefined array key "id" in /var/www/html/Views/dashboard/offres/list.php on line 26
+[03-Dec-2024 13:45:56 UTC] PHP Warning:  Undefined array key "id" in /var/www/html/Views/dashboard/offres/list.php on line 27
+[03-Dec-2024 13:46:34 UTC] PHP Warning:  Undefined array key "id" in /var/www/html/Views/dashboard/offres/list.php on line 26
+[03-Dec-2024 13:46:34 UTC] PHP Warning:  Undefined array key "id" in /var/www/html/Views/dashboard/offres/list.php on line 27
+[03-Dec-2024 13:53:22 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function App\Controllers\OffreController::edit(), 0 passed and exactly 1 expected in /var/www/html/Controllers/OffreController.php:58
+Stack trace:
+#0 [internal function]: App\Controllers\OffreController->edit()
+#1 /var/www/html/Config/Main.php(96): call_user_func_array(Array, Array)
+#2 /var/www/html/Public/index.php(27): App\Config\Main->start()
+#3 {main}
+  thrown in /var/www/html/Controllers/OffreController.php on line 58
+[03-Dec-2024 13:55:25 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function App\Controllers\OffreController::edit(), 0 passed and exactly 1 expected in /var/www/html/Controllers/OffreController.php:58
+Stack trace:
+#0 [internal function]: App\Controllers\OffreController->edit()
+#1 /var/www/html/Config/Main.php(96): call_user_func_array(Array, Array)
+#2 /var/www/html/Public/index.php(27): App\Config\Main->start()
+#3 {main}
+  thrown in /var/www/html/Controllers/OffreController.php on line 58
+[03-Dec-2024 13:55:36 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function App\Controllers\OffreController::edit(), 0 passed and exactly 1 expected in /var/www/html/Controllers/OffreController.php:58
+Stack trace:
+#0 [internal function]: App\Controllers\OffreController->edit()
+#1 /var/www/html/Config/Main.php(96): call_user_func_array(Array, Array)
+#2 /var/www/html/Public/index.php(27): App\Config\Main->start()
+#3 {main}
+  thrown in /var/www/html/Controllers/OffreController.php on line 58
+[03-Dec-2024 13:56:40 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function App\Controllers\OffreController::edit(), 0 passed and exactly 1 expected in /var/www/html/Controllers/OffreController.php:58
+Stack trace:
+#0 [internal function]: App\Controllers\OffreController->edit()
+#1 /var/www/html/Config/Main.php(96): call_user_func_array(Array, Array)
+#2 /var/www/html/Public/index.php(27): App\Config\Main->start()
+#3 {main}
+  thrown in /var/www/html/Controllers/OffreController.php on line 58
+[03-Dec-2024 13:56:43 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function App\Controllers\OffreController::edit(), 0 passed and exactly 1 expected in /var/www/html/Controllers/OffreController.php:58
+Stack trace:
+#0 [internal function]: App\Controllers\OffreController->edit()
+#1 /var/www/html/Config/Main.php(96): call_user_func_array(Array, Array)
+#2 /var/www/html/Public/index.php(27): App\Config\Main->start()
+#3 {main}
+  thrown in /var/www/html/Controllers/OffreController.php on line 58
+[03-Dec-2024 13:58:19 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function App\Controllers\OffreController::edit(), 0 passed and exactly 1 expected in /var/www/html/Controllers/OffreController.php:58
+Stack trace:
+#0 [internal function]: App\Controllers\OffreController->edit()
+#1 /var/www/html/Config/Main.php(96): call_user_func_array(Array, Array)
+#2 /var/www/html/Public/index.php(27): App\Config\Main->start()
+#3 {main}
+  thrown in /var/www/html/Controllers/OffreController.php on line 58
+[03-Dec-2024 13:58:22 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function App\Controllers\OffreController::edit(), 0 passed and exactly 1 expected in /var/www/html/Controllers/OffreController.php:58
+Stack trace:
+#0 [internal function]: App\Controllers\OffreController->edit()
+#1 /var/www/html/Config/Main.php(96): call_user_func_array(Array, Array)
+#2 /var/www/html/Public/index.php(27): App\Config\Main->start()
+#3 {main}
+  thrown in /var/www/html/Controllers/OffreController.php on line 58
+[03-Dec-2024 13:58:30 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function App\Controllers\OffreController::edit(), 0 passed and exactly 1 expected in /var/www/html/Controllers/OffreController.php:58
+Stack trace:
+#0 [internal function]: App\Controllers\OffreController->edit()
+#1 /var/www/html/Config/Main.php(96): call_user_func_array(Array, Array)
+#2 /var/www/html/Public/index.php(27): App\Config\Main->start()
+#3 {main}
+  thrown in /var/www/html/Controllers/OffreController.php on line 58
+[03-Dec-2024 14:00:21 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function App\Controllers\OffreController::edit(), 0 passed and exactly 1 expected in /var/www/html/Controllers/OffreController.php:58
+Stack trace:
+#0 [internal function]: App\Controllers\OffreController->edit()
+#1 /var/www/html/Config/Main.php(96): call_user_func_array(Array, Array)
+#2 /var/www/html/Public/index.php(27): App\Config\Main->start()
+#3 {main}
+  thrown in /var/www/html/Controllers/OffreController.php on line 58
+[03-Dec-2024 14:00:33 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function App\Controllers\OffreController::edit(), 0 passed and exactly 1 expected in /var/www/html/Controllers/OffreController.php:58
+Stack trace:
+#0 [internal function]: App\Controllers\OffreController->edit()
+#1 /var/www/html/Config/Main.php(96): call_user_func_array(Array, Array)
+#2 /var/www/html/Public/index.php(27): App\Config\Main->start()
+#3 {main}
+  thrown in /var/www/html/Controllers/OffreController.php on line 58
+[03-Dec-2024 14:09:16 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function App\Controllers\OffreController::edit(), 0 passed and exactly 1 expected in /var/www/html/Controllers/OffreController.php:58
+Stack trace:
+#0 [internal function]: App\Controllers\OffreController->edit()
+#1 /var/www/html/Config/Main.php(96): call_user_func_array(Array, Array)
+#2 /var/www/html/Public/index.php(27): App\Config\Main->start()
+#3 {main}
+  thrown in /var/www/html/Controllers/OffreController.php on line 58
+[03-Dec-2024 14:12:23 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function App\Controllers\OffreController::edit(), 0 passed and exactly 1 expected in /var/www/html/Controllers/OffreController.php:58
+Stack trace:
+#0 [internal function]: App\Controllers\OffreController->edit()
+#1 /var/www/html/Config/Main.php(96): call_user_func_array(Array, Array)
+#2 /var/www/html/Public/index.php(27): App\Config\Main->start()
+#3 {main}
+  thrown in /var/www/html/Controllers/OffreController.php on line 58
+[03-Dec-2024 14:16:11 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function App\Controllers\OffreController::edit(), 0 passed and exactly 1 expected in /var/www/html/Controllers/OffreController.php:58
+Stack trace:
+#0 [internal function]: App\Controllers\OffreController->edit()
+#1 /var/www/html/Config/Main.php(96): call_user_func_array(Array, Array)
+#2 /var/www/html/Public/index.php(27): App\Config\Main->start()
+#3 {main}
+  thrown in /var/www/html/Controllers/OffreController.php on line 58
+[03-Dec-2024 14:16:18 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function App\Controllers\OffreController::edit(), 0 passed and exactly 1 expected in /var/www/html/Controllers/OffreController.php:58
+Stack trace:
+#0 [internal function]: App\Controllers\OffreController->edit()
+#1 /var/www/html/Config/Main.php(96): call_user_func_array(Array, Array)
+#2 /var/www/html/Public/index.php(27): App\Config\Main->start()
+#3 {main}
+  thrown in /var/www/html/Controllers/OffreController.php on line 58
+[03-Dec-2024 14:19:30 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function App\Controllers\OffreController::edit(), 0 passed and exactly 1 expected in /var/www/html/Controllers/OffreController.php:58
+Stack trace:
+#0 [internal function]: App\Controllers\OffreController->edit()
+#1 /var/www/html/Config/Main.php(96): call_user_func_array(Array, Array)
+#2 /var/www/html/Public/index.php(27): App\Config\Main->start()
+#3 {main}
+  thrown in /var/www/html/Controllers/OffreController.php on line 58
+[03-Dec-2024 14:24:01 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function App\Controllers\OffreController::edit(), 0 passed and exactly 1 expected in /var/www/html/Controllers/OffreController.php:58
+Stack trace:
+#0 [internal function]: App\Controllers\OffreController->edit()
+#1 /var/www/html/Config/Main.php(96): call_user_func_array(Array, Array)
+#2 /var/www/html/Public/index.php(27): App\Config\Main->start()
+#3 {main}
+  thrown in /var/www/html/Controllers/OffreController.php on line 58
+[03-Dec-2024 14:44:05 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function App\Controllers\OffreController::edit(), 0 passed and exactly 1 expected in /var/www/html/Controllers/OffreController.php:58
+Stack trace:
+#0 [internal function]: App\Controllers\OffreController->edit()
+#1 /var/www/html/Config/Main.php(96): call_user_func_array(Array, Array)
+#2 /var/www/html/Public/index.php(27): App\Config\Main->start()
+#3 {main}
+  thrown in /var/www/html/Controllers/OffreController.php on line 58
+[03-Dec-2024 14:45:05 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function App\Controllers\OffreController::edit(), 0 passed and exactly 1 expected in /var/www/html/Controllers/OffreController.php:58
+Stack trace:
+#0 [internal function]: App\Controllers\OffreController->edit()
+#1 /var/www/html/Config/Main.php(96): call_user_func_array(Array, Array)
+#2 /var/www/html/Public/index.php(27): App\Config\Main->start()
+#3 {main}
+  thrown in /var/www/html/Controllers/OffreController.php on line 58
+[03-Dec-2024 14:45:13 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function App\Controllers\OffreController::edit(), 0 passed and exactly 1 expected in /var/www/html/Controllers/OffreController.php:58
+Stack trace:
+#0 [internal function]: App\Controllers\OffreController->edit()
+#1 /var/www/html/Config/Main.php(96): call_user_func_array(Array, Array)
+#2 /var/www/html/Public/index.php(27): App\Config\Main->start()
+#3 {main}
+  thrown in /var/www/html/Controllers/OffreController.php on line 58
+[03-Dec-2024 14:50:18 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function App\Controllers\OffreController::edit(), 0 passed and exactly 1 expected in /var/www/html/Controllers/OffreController.php:58
+Stack trace:
+#0 [internal function]: App\Controllers\OffreController->edit()
+#1 /var/www/html/Config/Main.php(96): call_user_func_array(Array, Array)
+#2 /var/www/html/Public/index.php(27): App\Config\Main->start()
+#3 {main}
+  thrown in /var/www/html/Controllers/OffreController.php on line 58
+[03-Dec-2024 14:50:24 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function App\Controllers\OffreController::edit(), 0 passed and exactly 1 expected in /var/www/html/Controllers/OffreController.php:58
+Stack trace:
+#0 [internal function]: App\Controllers\OffreController->edit()
+#1 /var/www/html/Config/Main.php(96): call_user_func_array(Array, Array)
+#2 /var/www/html/Public/index.php(27): App\Config\Main->start()
+#3 {main}
+  thrown in /var/www/html/Controllers/OffreController.php on line 58
+[03-Dec-2024 14:51:55 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function App\Controllers\OffreController::edit(), 0 passed and exactly 1 expected in /var/www/html/Controllers/OffreController.php:58
+Stack trace:
+#0 [internal function]: App\Controllers\OffreController->edit()
+#1 /var/www/html/Config/Main.php(96): call_user_func_array(Array, Array)
+#2 /var/www/html/Public/index.php(27): App\Config\Main->start()
+#3 {main}
+  thrown in /var/www/html/Controllers/OffreController.php on line 58
+[03-Dec-2024 14:53:28 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function App\Controllers\OffreController::edit(), 0 passed and exactly 1 expected in /var/www/html/Controllers/OffreController.php:58
+Stack trace:
+#0 [internal function]: App\Controllers\OffreController->edit()
+#1 /var/www/html/Config/Main.php(96): call_user_func_array(Array, Array)
+#2 /var/www/html/Public/index.php(27): App\Config\Main->start()
+#3 {main}
+  thrown in /var/www/html/Controllers/OffreController.php on line 58
+[03-Dec-2024 14:56:34 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function App\Controllers\OffreController::edit(), 0 passed and exactly 1 expected in /var/www/html/Controllers/OffreController.php:58
+Stack trace:
+#0 [internal function]: App\Controllers\OffreController->edit()
+#1 /var/www/html/Config/Main.php(96): call_user_func_array(Array, Array)
+#2 /var/www/html/Public/index.php(27): App\Config\Main->start()
+#3 {main}
+  thrown in /var/www/html/Controllers/OffreController.php on line 58
+[03-Dec-2024 15:11:30 UTC] PHP Parse error:  syntax error, unexpected token "public" in /var/www/html/Controllers/OffreController.php on line 94
+[03-Dec-2024 15:11:31 UTC] PHP Parse error:  syntax error, unexpected token "public" in /var/www/html/Controllers/OffreController.php on line 94
+[03-Dec-2024 15:11:50 UTC] PHP Parse error:  syntax error, unexpected token "public" in /var/www/html/Controllers/OffreController.php on line 94
+[03-Dec-2024 15:12:01 UTC] PHP Parse error:  syntax error, unexpected token "public" in /var/www/html/Controllers/OffreController.php on line 94
+[03-Dec-2024 15:14:00 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function App\Controllers\OffreController::edit(), 0 passed and exactly 1 expected in /var/www/html/Controllers/OffreController.php:58
+Stack trace:
+#0 [internal function]: App\Controllers\OffreController->edit()
+#1 /var/www/html/Config/Main.php(96): call_user_func_array(Array, Array)
+#2 /var/www/html/Public/index.php(27): App\Config\Main->start()
+#3 {main}
+  thrown in /var/www/html/Controllers/OffreController.php on line 58
+[03-Dec-2024 15:14:51 UTC] PHP Parse error:  syntax error, unexpected token "public" in /var/www/html/Controllers/OffreController.php on line 95
+[03-Dec-2024 15:15:00 UTC] PHP Parse error:  syntax error, unexpected token "public" in /var/www/html/Controllers/OffreController.php on line 95
+[03-Dec-2024 15:15:35 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function App\Controllers\OffreController::edit(), 0 passed and exactly 1 expected in /var/www/html/Controllers/OffreController.php:58
+Stack trace:
+#0 [internal function]: App\Controllers\OffreController->edit()
+#1 /var/www/html/Config/Main.php(96): call_user_func_array(Array, Array)
+#2 /var/www/html/Public/index.php(27): App\Config\Main->start()
+#3 {main}
+  thrown in /var/www/html/Controllers/OffreController.php on line 58
+[03-Dec-2024 15:17:57 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function App\Controllers\OffreController::edit(), 0 passed and exactly 1 expected in /var/www/html/Controllers/OffreController.php:58
+Stack trace:
+#0 [internal function]: App\Controllers\OffreController->edit()
+#1 /var/www/html/Config/Main.php(96): call_user_func_array(Array, Array)
+#2 /var/www/html/Public/index.php(27): App\Config\Main->start()
+#3 {main}
+  thrown in /var/www/html/Controllers/OffreController.php on line 58
+[03-Dec-2024 15:29:43 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function App\Controllers\OffreController::edit(), 0 passed and exactly 1 expected in /var/www/html/Controllers/OffreController.php:58
+Stack trace:
+#0 [internal function]: App\Controllers\OffreController->edit()
+#1 /var/www/html/Config/Main.php(96): call_user_func_array(Array, Array)
+#2 /var/www/html/Public/index.php(27): App\Config\Main->start()
+#3 {main}
+  thrown in /var/www/html/Controllers/OffreController.php on line 58
+[03-Dec-2024 15:34:05 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function App\Controllers\OffreController::edit(), 0 passed and exactly 1 expected in /var/www/html/Controllers/OffreController.php:58
+Stack trace:
+#0 [internal function]: App\Controllers\OffreController->edit()
+#1 /var/www/html/Config/Main.php(96): call_user_func_array(Array, Array)
+#2 /var/www/html/Public/index.php(27): App\Config\Main->start()
+#3 {main}
+  thrown in /var/www/html/Controllers/OffreController.php on line 58
+[03-Dec-2024 15:43:25 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function App\Controllers\OffreController::delete(), 0 passed and exactly 1 expected in /var/www/html/Controllers/OffreController.php:113
+Stack trace:
+#0 [internal function]: App\Controllers\OffreController->delete()
+#1 /var/www/html/Config/Main.php(96): call_user_func_array(Array, Array)
+#2 /var/www/html/Public/index.php(27): App\Config\Main->start()
+#3 {main}
+  thrown in /var/www/html/Controllers/OffreController.php on line 113
+[03-Dec-2024 15:50:40 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function App\Controllers\OffreController::edit(), 0 passed and exactly 1 expected in /var/www/html/Controllers/OffreController.php:58
+Stack trace:
+#0 [internal function]: App\Controllers\OffreController->edit()
+#1 /var/www/html/Config/Main.php(96): call_user_func_array(Array, Array)
+#2 /var/www/html/Public/index.php(27): App\Config\Main->start()
+#3 {main}
+  thrown in /var/www/html/Controllers/OffreController.php on line 58
+[03-Dec-2024 15:50:52 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function App\Controllers\OffreController::delete(), 0 passed and exactly 1 expected in /var/www/html/Controllers/OffreController.php:113
+Stack trace:
+#0 [internal function]: App\Controllers\OffreController->delete()
+#1 /var/www/html/Config/Main.php(96): call_user_func_array(Array, Array)
+#2 /var/www/html/Public/index.php(27): App\Config\Main->start()
+#3 {main}
+  thrown in /var/www/html/Controllers/OffreController.php on line 113
+[03-Dec-2024 15:52:36 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function App\Controllers\OffreController::edit(), 0 passed and exactly 1 expected in /var/www/html/Controllers/OffreController.php:58
+Stack trace:
+#0 [internal function]: App\Controllers\OffreController->edit()
+#1 /var/www/html/Config/Main.php(96): call_user_func_array(Array, Array)
+#2 /var/www/html/Public/index.php(27): App\Config\Main->start()
+#3 {main}
+  thrown in /var/www/html/Controllers/OffreController.php on line 58
+[03-Dec-2024 16:10:19 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function App\Controllers\OffreController::edit(), 0 passed and exactly 1 expected in /var/www/html/Controllers/OffreController.php:62
+Stack trace:
+#0 [internal function]: App\Controllers\OffreController->edit()
+#1 /var/www/html/Config/Main.php(96): call_user_func_array(Array, Array)
+#2 /var/www/html/Public/index.php(27): App\Config\Main->start()
+#3 {main}
+  thrown in /var/www/html/Controllers/OffreController.php on line 62
+[03-Dec-2024 16:10:26 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function App\Controllers\OffreController::edit(), 0 passed and exactly 1 expected in /var/www/html/Controllers/OffreController.php:62
+Stack trace:
+#0 [internal function]: App\Controllers\OffreController->edit()
+#1 /var/www/html/Config/Main.php(96): call_user_func_array(Array, Array)
+#2 /var/www/html/Public/index.php(27): App\Config\Main->start()
+#3 {main}
+  thrown in /var/www/html/Controllers/OffreController.php on line 62
+[03-Dec-2024 16:14:28 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function App\Controllers\OffreController::edit(), 0 passed and exactly 1 expected in /var/www/html/Controllers/OffreController.php:64
+Stack trace:
+#0 [internal function]: App\Controllers\OffreController->edit()
+#1 /var/www/html/Config/Main.php(96): call_user_func_array(Array, Array)
+#2 /var/www/html/Public/index.php(27): App\Config\Main->start()
+#3 {main}
+  thrown in /var/www/html/Controllers/OffreController.php on line 64
+[03-Dec-2024 16:14:34 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function App\Controllers\OffreController::edit(), 0 passed and exactly 1 expected in /var/www/html/Controllers/OffreController.php:64
+Stack trace:
+#0 [internal function]: App\Controllers\OffreController->edit()
+#1 /var/www/html/Config/Main.php(96): call_user_func_array(Array, Array)
+#2 /var/www/html/Public/index.php(27): App\Config\Main->start()
+#3 {main}
+  thrown in /var/www/html/Controllers/OffreController.php on line 64
+[03-Dec-2024 16:24:31 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function App\Controllers\OffreController::edit(), 0 passed and exactly 1 expected in /var/www/html/Controllers/OffreController.php:70
+Stack trace:
+#0 [internal function]: App\Controllers\OffreController->edit()
+#1 /var/www/html/Config/Main.php(96): call_user_func_array(Array, Array)
+#2 /var/www/html/Public/index.php(27): App\Config\Main->start()
+#3 {main}
+  thrown in /var/www/html/Controllers/OffreController.php on line 70
+[03-Dec-2024 16:29:33 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function App\Controllers\OffreController::edit(), 0 passed and exactly 1 expected in /var/www/html/Controllers/OffreController.php:70
+Stack trace:
+#0 [internal function]: App\Controllers\OffreController->edit()
+#1 /var/www/html/Config/Main.php(96): call_user_func_array(Array, Array)
+#2 /var/www/html/Public/index.php(27): App\Config\Main->start()
+#3 {main}
+  thrown in /var/www/html/Controllers/OffreController.php on line 70
+[03-Dec-2024 16:59:54 UTC] PHP Parse error:  syntax error, unexpected token "public" in /var/www/html/Config/Main.php on line 107
+[03-Dec-2024 17:00:25 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function App\Controllers\OffreController::edit(), 0 passed and exactly 1 expected in /var/www/html/Controllers/OffreController.php:70
+Stack trace:
+#0 [internal function]: App\Controllers\OffreController->edit()
+#1 /var/www/html/Config/Main.php(94): call_user_func_array(Array, Array)
+#2 /var/www/html/Public/index.php(27): App\Config\Main->start()
+#3 {main}
+  thrown in /var/www/html/Controllers/OffreController.php on line 70
+[03-Dec-2024 17:06:41 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function App\Controllers\OffreController::edit(), 0 passed and exactly 1 expected in /var/www/html/Controllers/OffreController.php:70
+Stack trace:
+#0 [internal function]: App\Controllers\OffreController->edit()
+#1 /var/www/html/Config/Main.php(97): call_user_func_array(Array, Array)
+#2 /var/www/html/Public/index.php(27): App\Config\Main->start()
+#3 {main}
+  thrown in /var/www/html/Controllers/OffreController.php on line 70
+[03-Dec-2024 17:16:01 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function App\Controllers\OffreController::edit(), 0 passed and exactly 1 expected in /var/www/html/Controllers/OffreController.php:70
+Stack trace:
+#0 [internal function]: App\Controllers\OffreController->edit()
+#1 /var/www/html/Config/Main.php(97): call_user_func_array(Array, Array)
+#2 /var/www/html/Public/index.php(27): App\Config\Main->start()
+#3 {main}
+  thrown in /var/www/html/Controllers/OffreController.php on line 70
+[03-Dec-2024 17:20:24 UTC] PHP Warning:  Undefined array key "csrf_token" in /var/www/html/Controllers/OffreController.php on line 119
+[03-Dec-2024 17:20:40 UTC] PHP Warning:  Undefined array key "csrf_token" in /var/www/html/Controllers/OffreController.php on line 119
+[03-Dec-2024 17:21:02 UTC] PHP Warning:  Undefined array key "csrf_token" in /var/www/html/Controllers/OffreController.php on line 119
+[04-Dec-2024 09:10:05 UTC] Début de associateImages pour l'élément 13.
+[04-Dec-2024 09:10:05 UTC] Images à associer : Array
+(
+    [0] => 56
+    [1] => 61
+)
+
+[04-Dec-2024 09:10:06 UTC] Anciennes associations supprimées pour accueil_id : 13
+[04-Dec-2024 09:10:06 UTC] Association ajoutée : accueil_id = 13, image_id = 56
+[04-Dec-2024 09:10:06 UTC] Association ajoutée : accueil_id = 13, image_id = 61
+[04-Dec-2024 09:10:06 UTC] Associations mises à jour avec succès pour l'élément 13.
+[04-Dec-2024 09:11:31 UTC] Début de associateImages pour l'élément 13.
+[04-Dec-2024 09:11:31 UTC] Images à associer : Array
+(
+    [0] => 56
+    [1] => 61
+)
+
+[04-Dec-2024 09:11:31 UTC] Anciennes associations supprimées pour accueil_id : 13
+[04-Dec-2024 09:11:31 UTC] Association ajoutée : accueil_id = 13, image_id = 56
+[04-Dec-2024 09:11:31 UTC] Association ajoutée : accueil_id = 13, image_id = 61
+[04-Dec-2024 09:11:31 UTC] Associations mises à jour avec succès pour l'élément 13.
+[04-Dec-2024 09:25:01 UTC] PHP Warning:  Undefined variable $page in /var/www/html/Views/home/index.php on line 18
+[04-Dec-2024 09:25:02 UTC] PHP Warning:  Trying to access array offset on null in /var/www/html/Views/home/index.php on line 18
+[04-Dec-2024 09:25:02 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /var/www/html/Views/home/index.php on line 18
+[04-Dec-2024 09:25:02 UTC] PHP Warning:  Undefined variable $page in /var/www/html/Views/home/index.php on line 19
+[04-Dec-2024 09:25:02 UTC] PHP Warning:  Trying to access array offset on null in /var/www/html/Views/home/index.php on line 19
+[04-Dec-2024 09:25:02 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /var/www/html/Views/home/index.php on line 19
+[04-Dec-2024 09:25:02 UTC] PHP Warning:  Undefined variable $page in /var/www/html/Views/home/index.php on line 18
+[04-Dec-2024 09:25:02 UTC] PHP Warning:  Trying to access array offset on null in /var/www/html/Views/home/index.php on line 18
+[04-Dec-2024 09:25:02 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /var/www/html/Views/home/index.php on line 18
+[04-Dec-2024 09:25:02 UTC] PHP Warning:  Undefined variable $page in /var/www/html/Views/home/index.php on line 19
+[04-Dec-2024 09:25:02 UTC] PHP Warning:  Trying to access array offset on null in /var/www/html/Views/home/index.php on line 19
+[04-Dec-2024 09:25:02 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /var/www/html/Views/home/index.php on line 19
+[04-Dec-2024 09:25:02 UTC] PHP Warning:  Undefined variable $page in /var/www/html/Views/home/index.php on line 18
+[04-Dec-2024 09:25:02 UTC] PHP Warning:  Trying to access array offset on null in /var/www/html/Views/home/index.php on line 18
+[04-Dec-2024 09:25:02 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /var/www/html/Views/home/index.php on line 18
+[04-Dec-2024 09:25:02 UTC] PHP Warning:  Undefined variable $page in /var/www/html/Views/home/index.php on line 19
+[04-Dec-2024 09:25:02 UTC] PHP Warning:  Trying to access array offset on null in /var/www/html/Views/home/index.php on line 19
+[04-Dec-2024 09:25:02 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /var/www/html/Views/home/index.php on line 19
+[04-Dec-2024 09:25:02 UTC] PHP Warning:  Undefined variable $page in /var/www/html/Views/home/index.php on line 18
+[04-Dec-2024 09:25:02 UTC] PHP Warning:  Trying to access array offset on null in /var/www/html/Views/home/index.php on line 18
+[04-Dec-2024 09:25:02 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /var/www/html/Views/home/index.php on line 18
+[04-Dec-2024 09:25:02 UTC] PHP Warning:  Undefined variable $page in /var/www/html/Views/home/index.php on line 19
+[04-Dec-2024 09:25:02 UTC] PHP Warning:  Trying to access array offset on null in /var/www/html/Views/home/index.php on line 19
+[04-Dec-2024 09:25:02 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /var/www/html/Views/home/index.php on line 19
+[04-Dec-2024 09:36:01 UTC] PHP Parse error:  syntax error, unexpected token "endforeach" in /var/www/html/Views/home/index.php on line 57
+[04-Dec-2024 09:36:13 UTC] PHP Parse error:  syntax error, unexpected token "endforeach" in /var/www/html/Views/home/index.php on line 57

@@ -1,13 +1,12 @@
 /* Style de base */
 * {
-    font-size: 0.9rem; /* Taille de base ajustable */
     box-sizing: border-box;
     text-decoration: none;
     list-style: none;
 }
 
 body {
-    
+    font-size: 0.9rem; /* Taille de base ajustable */
     max-width : 1800px;
     margin-left :auto;
     margin-right :auto;
@@ -18,17 +17,23 @@ body {
 }
 
 .tittlePages {
-    color: #2e9ca0;
+    color: #E6D1B4;
     margin-top: 20px;
     margin-bottom: 20px;
-    font-size: 2rem;
+    font-size: 1.5rem;
     text-align: center;
     font-style: italic;
     font-weight: 900;
 }
 /* Liens */
+.nav-item a{
+    color: #E6D1B4!important;
+}
+.size a {
+    color: #EFA00F !important;
+}
 a {
-    color: #E6D1B4 !important;
+    color: #2e9ca0 !important;
     text-decoration: none;
 
 }
@@ -199,7 +204,7 @@ header {
 
 .phone-container i {
     font-size: 2.5rem; /* Taille de l'icône pour mobile */
-    color:#E6D1B4;
+    color:#2e9ca0;
 }
 
 .phone-container a{

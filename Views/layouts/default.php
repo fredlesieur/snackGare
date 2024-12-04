@@ -95,7 +95,7 @@
     <div class="image-container">
         <img class="burger-image" src="/assets/logo/burger.webp" alt="Burger">
         <div class="command-text">
-            <h2 class="size">Commander</h2>
+          <h2 class="size">  <a href="/contact">Commander</a></h2>
             <div class="phone-container">
                 <i class="fa-solid fa-phone-volume phone-icon" aria-hidden="true"></i>
                 <a class="size2" href="tel:0476385922">04 76 38 59 22</a>
@@ -113,7 +113,7 @@
     <div class="footer-sections">
         <!-- Horaires -->
         <div class="horaires">
-            <h2>Horaires d'ouverture</h2>
+            <h2><a href="/contact">Horaires d'ouverture</a></h2>
             <?php if (!empty($_SESSION['horaires'])): ?>
                 <?php foreach ($_SESSION['horaires'] as $horaire): ?>
                     <div>
@@ -154,7 +154,7 @@
 
         <!-- Contact -->
         <div class="contact">
-            <h2>Contact</h2>
+            <h2><a href="/contact">Contact</a></h2>
             <p class="addressFooter">
                 95 route de St Lattier<br>
                 38840 St Hilaire du Rosier<br>

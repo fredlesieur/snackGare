@@ -266,7 +266,7 @@ body {
     }
 }
 /* ======= Formulaire de création d'utilisateur ======= */
-form {
+.register {
     background-color: #2e9ca0!important;
     color: #ffffff !important;
     padding: 1.5rem;
@@ -274,8 +274,8 @@ form {
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-form input,
-form select {
+.register input,
+.register select {
     width: 100%;
     padding: 0.8rem;
     margin-bottom: 1rem;
@@ -284,7 +284,7 @@ form select {
     font-size: 1rem;
 }
 
-form .btn-primary {
+.register .btn-primary {
     background-color: #0F2C33 !important;
     border: none;
     font-weight: bold;
@@ -294,7 +294,7 @@ form .btn-primary {
     cursor: pointer;
 }
 
-form .btn-primary:hover {
+.register .btn-primary:hover {
     background-color: #EFA00F!important;
     color: #0F2C33 !important;
 }
@@ -308,13 +308,13 @@ form .btn-primary:hover {
 
 .alert-success {
     background-color: #d4edda;
-    color: #155724;
+    color: #197e30;
     border: 1px solid #c3e6cb;
 }
 
 .alert-danger {
     background-color: #f8d7da;
-    color: #721c24;
+    color: #ec2d0b;
     border: 1px solid #f5c6cb;
 }
 

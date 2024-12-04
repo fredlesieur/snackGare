@@ -165,7 +165,7 @@
                             </a>
                             <ul class="collapse" id="menu-snacks">
                                 <li><a href="/snack/list">Lister les snacks</a></li>
-                                <li><a href="/snack/add">Ajouter un snack</a></li>
+                                <li><a href="/snack/show">Ajouter un snack</a></li>
                             </ul>
                         </li>
 

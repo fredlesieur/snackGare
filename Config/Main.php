@@ -6,6 +6,7 @@ use App\Controllers\HomeController;
 
 class Main
 {
+
     public function start()
     {
         // Démarrage de la session

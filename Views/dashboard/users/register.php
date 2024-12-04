@@ -6,7 +6,7 @@
     <div class="alert alert-danger"><?= $_SESSION['error']; unset($_SESSION['error']); ?></div>
 <?php endif; ?>
 
-<form action="/user/register" method="POST">
+<form class="register" action="/user/register" method="POST">
     <input type="hidden" name="csrf_token" value="<?= $_SESSION['csrf_token'] ?? '' ?>">
 
     <label for="username">Nom d'utilisateur:</label>

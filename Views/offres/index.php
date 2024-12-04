@@ -1,21 +1,20 @@
-<div class="container">
-      <h2 class="text-center">Nos offres du moment</h2><br>
-
+<div class="offre-title">
+    <h2 class="text-center tittlePages">Nos offres du moment</h2>
+</div>
       <!-- Vérifie s'il y a des horaires disponibles -->
-      <?php if (!empty($offres)): ?>
-        <div class="row">
+<section class="menu-section">
+    <?php if (!empty($offres)): ?>
+        <div class="menu-items text-center">
             <?php foreach ($offres as $offre): ?>
-                <!-- Chaque horaire est dans une colonne avec un cadre autour -->
-                <div class="col-12 col-md-6 mb-4">
-                    <div class="p-4 border rounded shadow-sm text-center hours homewhite"> 
-                        <h3><u><?= htmlspecialchars($offre["name"]); ?></u></h3><br>
-                        <p><i>Description : </i> <em><?= htmlspecialchars($offre["description"]); ?></em></p>
-                        <p><strong>Tarif :</strong> <strong><?= htmlspecialchars($offre["tarif"]); ?></strong></p><br>
-                    </div>
+                <div class="menu-item text-center">
+                    <h3><strong><?= htmlspecialchars($offre["name"]); ?></h3></strong>  
+                    <h5><?= htmlspecialchars($offre["tarif"]); ?></h5><br>
+                    <p> <?= htmlspecialchars($offre["description"]); ?></p>
                 </div>
+        
             <?php endforeach; ?>
         </div>
       <?php else: ?>
           <p class="text-center">Aucun offre disponible pour le moment.</p>
       <?php endif; ?>
-  </div>
+</section>
