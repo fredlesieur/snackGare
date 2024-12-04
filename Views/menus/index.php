@@ -2,15 +2,16 @@
 
 <div class="menu-container">
 
-    <div class="menu-title">
-        <h2 class="text-center">Nos Burgers</h2>
+    <div class="menu-title container"> 
+        <h2 class="titreh2">Nos Burgers</h2>
+        <img src="https://res.cloudinary.com/dkpfhgnyx/image/upload/v1732725198/images/cbvh9unha90nrxtnlqmk.webp" alt="burger" class="size-img">     
     </div>
     <!-- Section Burgers -->
     <section class="menu-section burgers">
         <div class="menu-items">
             <?php foreach ($burgers as $burger): ?>
                 <div class="menu-item">
-                    <h3><?= htmlspecialchars($burger['name']); ?></h3>
+                    <h3><?= htmlspecialchars($burger['name']); ?></h3> 
                     <p><?= htmlspecialchars($burger['description']); ?></p>
                     <p class="bleum">Solo <?= number_format($burger['price'], 2); ?> € | Menu <?= number_format($burger['price_menu'], 2); ?> €</p>
                 </div>
@@ -20,8 +21,9 @@
     </section>
 
     <!-- Section Tacos -->
-    <div class="menu-title">
-        <h2>Nos Tacos</h2>
+    <div class="menu-title container"> 
+        <h2 class="titreh2">Nos Tacos</h2>
+        <img src="https://res.cloudinary.com/dkpfhgnyx/image/upload/v1732725402/images/sbxrimuxnrku2af7nmyy.webp" alt="burger" class="size-img">     
     </div>
     <section class="menu-section tacos">
 
@@ -56,8 +58,9 @@
     </section>
 
     <!-- Section kebabs -->
-    <div class="menu-title">
-        <h2>Nos Kebabs</h2>
+    <div class="menu-title container"> 
+        <h2 class="titreh2">Nos Kebabs</h2>
+        <img src="https://res.cloudinary.com/dkpfhgnyx/image/upload/v1732725363/images/fnig9rapeaddoqf4q3cq.webp" alt="burger" class="size-img">     
     </div>
     <section class="menu-section kebabs">
         <div class="menu-items border_deco">
@@ -94,8 +97,9 @@
 
     <!-- Section salades -->
 
-    <div class="menu-title">
-        <h2 class="text-center">Nos Salades</h2>
+    <div class="menu-title container"> 
+        <h2 class="titreh2">Nos Salades</h2>
+        <img src="https://res.cloudinary.com/dkpfhgnyx/image/upload/v1733331510/images/rgsftmrtqidphssozf7d.webp" alt="burger" class="size-img">     
     </div>
     <section class="menu-section salades">
         <div class="menu-items">
@@ -110,8 +114,9 @@
     </section>
 
     <!-- Section snacks -->
-    <div class="menu-title">
-        <h2 class="text-center">Notre Snacks</h2>
+    <div class="menu-title container"> 
+        <h2 class="titreh2">Notre Snacks</h2>
+        <img src="https://res.cloudinary.com/dkpfhgnyx/image/upload/v1733332399/snack_z682s0.jpg" alt="burger" class="size-img">     
     </div>
     <section class="menu-section snacks">
         <div class="menu-items">
@@ -125,8 +130,9 @@
         </div>
     </section>
     <!-- Section Boissons -->
-    <div class="menu-title">
-        <h2 class="text-center">Nos Boissons</h2>
+    <div class="menu-title container"> 
+        <h2 class="titreh2">Boissons</h2>
+        <img src="https://res.cloudinary.com/dkpfhgnyx/image/upload/v1733334976/boissons_t4grfp.jpg" alt="bouteille et verre" class="size-img">     
     </div>
     <section class="menu-section boissons">
         <div class="menu-items">

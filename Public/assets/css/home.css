@@ -50,12 +50,16 @@ body {
     padding: 0.8rem 1.5rem;
     background-color: #E6D1B4;
     color: #06283d !important;
+    border:2px solid #E6D1B4;
     text-decoration: none;
     font-size: 1rem;
     border-radius: 5px;
     font-weight: bold;
 }
-
+.hero-banner .btn-order:hover {
+    background-color: #06283d;
+    color: #E6D1B4 !important;
+}
 .linkhours {
     margin-bottom: 1.5rem;
     color:#EFA00F

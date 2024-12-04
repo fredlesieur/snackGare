@@ -7,13 +7,25 @@
     margin-right: auto;
 }
 
-.menu-title h2 {
-    color: #E6D1B4;
-    font-size: 2.5rem;
-    margin-bottom: 40px;
+.container {
+    display: flex; /* Utilisation de Flexbox pour aligner les éléments */
+    justify-content: center; /* Centre les éléments horizontalement */
+    align-items: center; /* Centre les éléments verticalement */
+    gap: 10px; /* Espace entre l'image et le texte (facultatif) */
+    margin-bottom:20px;
+  }
+
+.size-img{
+    width: 20%;
+    height: auto;
+    border-radius: 20px;
 }
 
-
+.titreh2{
+    color: #E6D1B4;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
 .menu-section {
     background-color: #2e9ca0;
     border-top-left-radius: 40px;
@@ -104,4 +116,22 @@ h2, h4 {
 }
 .options p {
     color:#E6D1B4;
+}
+
+/* Tablettes (min-width: 768px) */
+@media (min-width: 768px) {
+ .titreh2{
+    color: #E6D1B4;
+    font-size: 1.5rem;
+    font-weight: bold;
+ }
+}
+
+/* Desktops (min-width: 1024px) */
+@media (min-width: 1024px) {
+    .titreh2{
+    color: #E6D1B4;
+    font-size: 2rem;
+    font-weight: bold;
+ }
 }

@@ -5,8 +5,8 @@
     <div class="hero-banner">
         <div class="text-container">
             <h2 class="main-title">Tous les jours<br><span class="text-center">sauf le samedi</span></h2>
-            <h3 class="linkhours">Voir nos horaires</h3>
-            <a href="#" class="btn-order">Commander</a>
+            <h3 class="linkhours"><a href="/contact">Voir nos horaires</a></h3>
+          <a href="/menu" class="btn-order">Commander</a>
         </div>
     </div>
 

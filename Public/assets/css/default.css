@@ -29,8 +29,14 @@ body {
 .nav-item a{
     color: #E6D1B4!important;
 }
+.nav-item a:hover{
+    color: #EFA00F!important;
+}
 .size a {
     color: #EFA00F !important;
+}
+.size a:hover {
+    color: #2e9ca0 !important;
 }
 a {
     color: #2e9ca0 !important;
@@ -41,7 +47,13 @@ a {
 a:hover {
     color: #EFA00F !important;
 }
+.linkhours a {
 
+    color: #EFA00F !important;
+}
+.linkhours a:hover {
+    color: #06283d !important;
+}
 /* Header */
 header {
     background-color: #0F2C33;
@@ -65,13 +77,19 @@ header {
 .logo {
     width: 10rem;
 }
-
+.navbar {
+    max-width: 1800px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #0F2C33;
+}
 .navbar-nav {
     list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
     gap: 0.5rem; /* Réduction de l'espacement entre les liens */
+    
 }
 
 .navbar-nav .nav-item .nav-link {
@@ -149,7 +167,7 @@ header {
 }
 /*modal des liens legaux*/
 .modal-content {
-    background-color: #0F2C33; /* Couleur de fond */
+    background-color: #2e9ca0; /* Couleur de fond */
     color: #E6D1B4; /* Texte clair */
     border-radius: 10px; /* Bords arrondis */
     padding: 1rem; /* Espacement interne */
@@ -172,10 +190,11 @@ header {
 /* Banner */
 .burger-image {
     display: block;
-    margin: 0 auto; /* Centre l'image horizontalement */
+    margin-top: 3rem;
     width: 100%; /* Prend la largeur de son conteneur */
     height: auto; /* Respecte les proportions */
     object-fit: cover; /* Évite l'étirement */
+    margin-top: 50px;
 }
 
 .command-text {
@@ -274,6 +293,7 @@ footer {
 
     .navbar-nav{
         gap: 0.8rem; /* Réduction de l'espacement entre les liens */
+       
     }
 
     .nav-link a{
@@ -281,7 +301,8 @@ footer {
     }
 
     .burger-image {
-        max-height: 400px; /* Hauteur ajustée pour tablette */
+     
+        margin-top: 5.5rem;
     }
 
     .command-text {
@@ -321,7 +342,6 @@ footer {
         align-items: center;
         justify-content: space-between;
         text-align: left;
-        padding: 40px 10%;
     }
 
     /* Section Horaires, Réseaux sociaux et Contact sur une même ligne */
@@ -330,7 +350,6 @@ footer {
         justify-content: space-between;
         width: 100%;
         align-items: center;
-        margin-bottom: 30px;
     }
 
     /* Section Horaires */

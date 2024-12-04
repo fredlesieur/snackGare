@@ -36,7 +36,7 @@
 </head>
 
 <body class="container-fluid p-3">
-    <nav class="navbar navbar-expand-xl">
+    <nav class="navbar navbar-expand-xl fixed-top">
         <div class="container-fluid">
             <a href="/" class="navbar-brand">
                 <img class="logo" src="/assets/logo/logo_snack.png" alt="Snack de la Gare logo">
