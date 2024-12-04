@@ -1,4 +1,4 @@
-<h1>Liste des utilisateurs</h1>
+<h1 class="title" >Liste des utilisateurs</h1>
 
 <!-- Messages de succès ou d'erreur -->
 <?php if (isset($_SESSION['flash_success'])): ?>

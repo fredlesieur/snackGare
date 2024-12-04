@@ -2,7 +2,7 @@
 // Définir la variable $script pour charger le fichier JavaScript
 $script = '<script src="/assets/javascript/hoursClosed.js"></script>';
 ?>
-
+<h2 class="title">Ajout un horaire</h2>
 <?php if (isset($_SESSION['flash_success'])): ?>
     <div class="alert alert-success">
         <?= $_SESSION['flash_success']; ?>

@@ -9,5 +9,5 @@
     <input type="number" step="0.01" name="price" value="" required>
     <label>Prix Menu :</label>
     <input type="number" step="0.01" name="price_menu" value="" required>
-    <button type="submit">Enregistrer</button>
+    <button type="submit" class="btn btn-primary">Ajouter</button>
 </form>

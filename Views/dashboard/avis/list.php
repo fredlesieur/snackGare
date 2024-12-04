@@ -34,7 +34,7 @@
                         <form action="/avis/approve" method="post" style="display:inline;">
                             <input type="hidden" name="csrf_token" value="<?= $_SESSION['csrf_token'] ?? '' ?>">
                             <input type="hidden" name="id" value="<?= htmlspecialchars($review['id']) ?>">
-                            <button type="submit" class="btn btn-success btn-sm">Valider</button>
+                            <button type="submit" class="btn btn-primary btn-sm">Valider</button>
                         </form>
                         <!-- Bouton Supprimer -->
                         <form action="/avis/delete" method="post" style="display:inline;">

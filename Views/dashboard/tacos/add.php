@@ -12,8 +12,7 @@
 
     <label>Prix (Menu) :</label>
     <input type="number" step="0.01" name="price_menu" class="form-control" required>
-
-    <button type="submit" class="btn btn-success mt-3">Ajouter</button>
+    <button type="submit" class="btn btn-primary">Ajouter</button>
 </form>
 
 

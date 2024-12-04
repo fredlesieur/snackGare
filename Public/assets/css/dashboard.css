@@ -294,20 +294,7 @@ body {
     color: #333; /* Texte des champs */
     background-color: #f9f9f9; /* Fond des champs */
 }
-.register .btn-primary {
-    background-color: #0F2C33 !important;
-    border: none;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-    padding: 0.8rem 1.5rem;
-    border-radius: 5px;
-    cursor: pointer;
-}
 
-.register .btn-primary:hover {
-    background-color: #EFA00F!important;
-    color: #0F2C33 !important;
-}
 .alert {
     padding: 1rem;
     margin-bottom: 1rem;
@@ -322,6 +309,55 @@ body {
     border: 1px solid #c3e6cb;
 }
 
+.btn-primary {
+    background-color: #0F2C33;
+    color: white;
+    border: solid 2px #042d4e;
+    border-radius: 10px;
+    padding: 10px;
+    width: 5rem;
+}
+
+.btn-primary:hover {
+    background-color: #0f69b3;
+    color: white;
+    border: solid 2px #042d4e;
+    border-radius: 10px;
+    padding: 10px;
+    width: 5rem;
+}
+.btn-danger {
+    background-color: #9e2f07;
+    color: white;
+    border: solid 2px #b6331c;
+    border-radius: 10px;
+    padding: 10px;
+    width: 6rem;
+}
+.btn-danger:hover {
+    background-color: #640505;
+    color: white;
+    border: solid 2px #b6331c;
+    border-radius: 10px;
+    padding: 10px;
+    width: 6rem;
+}
+.btn-warning {
+    background-color: #EFA00F !important;
+    color: #0F2C33;
+    border: solid 2px #f1b545 !important;
+    border-radius: 10px;
+    padding: 10px;
+    width: 6rem;
+}
+.btn-warning:hover {
+    background-color: #f0c576 !important;
+    color: #0F2C33;
+    border: solid 2px #EFA00F !important;
+    border-radius: 10px;
+    padding: 10px;
+    width: 6rem;
+}
 .alert-danger {
     background-color: #f8d7da;
     color: #ec2d0b;
@@ -361,4 +397,6 @@ body {
     color: #fff; /* Texte blanc au survol */
     cursor: pointer;
 }
-
+.title{
+    color:#f5f0e1;
+}

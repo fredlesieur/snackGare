@@ -1,3 +1,5 @@
+<h2 class="title">Ajout d'un utilisateur</h2>
+
 <?php if (isset($_SESSION['success'])): ?>
     <div class="alert alert-success"><?= $_SESSION['success']; unset($_SESSION['success']); ?></div>
 <?php endif; ?>
@@ -21,6 +23,6 @@
         <option value="collaborateur">Collaborateur</option>
     </select>
 
-    <button type="submit">Créer</button>
+    <button type="submit" class="btn btn-primary">Ajouter</button>
 </form>
 
