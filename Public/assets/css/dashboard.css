@@ -272,6 +272,7 @@ body {
     padding: 1.5rem;
     border-radius: 8px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    width:100%;
 }
 
 .register input,
@@ -283,7 +284,16 @@ body {
     border-radius: 5px;
     font-size: 1rem;
 }
-
+.register textarea {
+    width: 100%; /* Champs prennent toute la largeur */
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #333; /* Texte des champs */
+    background-color: #f9f9f9; /* Fond des champs */
+}
 .register .btn-primary {
     background-color: #0F2C33 !important;
     border: none;
@@ -316,5 +326,39 @@ body {
     background-color: #f8d7da;
     color: #ec2d0b;
     border: 1px solid #f5c6cb;
+}
+/* Style global pour les tableaux */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+}
+
+.table th,
+.table td {
+    text-align: center; /* Centre le texte horizontalement */
+    vertical-align: middle; /* Centre le texte verticalement */
+    padding: 1rem; /* Ajoute de l'espace autour du texte */
+    border: 1px solid #ccc; /* Bordure légère */
+}
+
+.table th {
+    background-color: #2e9ca0; /* Couleur de fond pour les en-têtes */
+    color: #fff; /* Texte blanc pour les en-têtes */
+    font-weight: bold;
+}
+
+.table tr:nth-child(even) {
+    background-color: #aed5d6; /* Couleur de fond pour les lignes paires */
+}
+
+.table tr:nth-child(odd) {
+    background-color: #ffffff; /* Couleur de fond pour les lignes impaires */
+}
+
+.table tr:hover {
+    background-color: #2e9ca0; /* Couleur de survol */
+    color: #fff; /* Texte blanc au survol */
+    cursor: pointer;
 }
 

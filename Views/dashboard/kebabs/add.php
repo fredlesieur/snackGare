@@ -1,5 +1,5 @@
 <h2>Ajouter un Kebab</h2>
-<form method="post" action="/kebab/save">
+<form class="register" method="post" action="/kebab/save">
     <input type="hidden" name="csrf_token" value="<?= htmlspecialchars($_SESSION['csrf_token']); ?>">
 
     <label>Nom :</label>

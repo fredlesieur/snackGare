@@ -1,5 +1,5 @@
 <h2>Ajouter un Snack</h2>
-<form method="post" action="/snack/save">
+<form class="register" method="post" action="/snack/save">
     <input type="hidden" name="csrf_token" value="<?= htmlspecialchars($_SESSION['csrf_token']); ?>">
 
     <label>Nom :</label>

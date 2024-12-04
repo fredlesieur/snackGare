@@ -1,5 +1,5 @@
 <h2>Ajouter une Formule de Tacos</h2>
-<form method="post" action="/tacos/save">
+<form class="register" method="post" action="/tacos/save">
 <input type="hidden" name="csrf_token" value="<?= htmlspecialchars($_SESSION['csrf_token']); ?>">
     <label>Nom :</label>
     <input type="text" name="name" class="form-control" required>

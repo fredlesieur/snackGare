@@ -1,5 +1,5 @@
 <h1>Ajouter une image</h1>
-<form method="POST" enctype="multipart/form-data">
+<form class="register" method="POST" enctype="multipart/form-data">
 <input type="hidden" name="csrf_token" value="<?= htmlspecialchars($_SESSION['csrf_token']); ?>">
 
     <div class="form-group">

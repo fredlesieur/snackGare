@@ -17,7 +17,7 @@ $script = '<script src="/assets/javascript/hoursClosed.js"></script>';
     </div>
 <?php endif; ?>
 
-<form method="POST" action="/horaire/add">
+<form class="register" method="POST" action="/horaire/add">
     <input type="hidden" name="csrf_token" value="<?= $_SESSION['csrf_token'] ?? '' ?>">
 
     <!-- Jour -->

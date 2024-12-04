@@ -1,4 +1,4 @@
-<form method="POST" action="/accueil/add" enctype="multipart/form-data">
+<form class="register" method="POST" action="/accueil/add" enctype="multipart/form-data">
     <input type="hidden" name="csrf_token" value="<?= htmlspecialchars($_SESSION['csrf_token']); ?>">
 
     <div class="mb-3">

@@ -1,5 +1,5 @@
 <h2>Ajouter une Salade</h2>
-<form method="post" action="/salade/save">
+<form class="register" method="post" action="/salade/save">
     <input type="hidden" name="csrf_token" value="<?= htmlspecialchars($_SESSION['csrf_token']); ?>">
 
     <label>Nom :</label>

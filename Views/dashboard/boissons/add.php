@@ -1,5 +1,5 @@
 <h2>Ajouter une Boisson</h2>
-<form method="post" action="/boisson/save">
+<form class="register" method="post" action="/boisson/save">
     <input type="hidden" name="csrf_token" value="<?= htmlspecialchars($_SESSION['csrf_token']); ?>">
 
     <label>Nom :</label>

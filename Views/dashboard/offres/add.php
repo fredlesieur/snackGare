@@ -1,5 +1,5 @@
 <h2>Ajouter une Offre</h2>
-<form method="post" action="/offre/add">
+<form class="register" method="post" action="/offre/add">
     <input type="hidden" name="csrf_token" value="<?= htmlspecialchars($_SESSION['csrf_token']); ?>">
 
     <label>nom :</label>

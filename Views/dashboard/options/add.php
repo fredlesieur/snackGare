@@ -1,5 +1,5 @@
 <h2>Ajouter une Option</h2>
-<form method="post" action="/option/add">
+<form class="register" method="post" action="/option/add">
     <input type="hidden" name="csrf_token" value="<?= htmlspecialchars($_SESSION['csrf_token']); ?>">
 
     <label>Catégorie :</label>
