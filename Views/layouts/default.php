@@ -95,7 +95,7 @@
     <div class="image-container">
         <img class="burger-image" src="/assets/logo/burger.webp" alt="Burger">
         <div class="command-text">
-          <h2 class="size">  <a href="/contact">Commander</a></h2>
+          <h2 class="size">  <a href="/menu">Commander</a></h2>
             <div class="phone-container">
                 <i class="fa-solid fa-phone-volume phone-icon" aria-hidden="true"></i>
                 <a class="size2" href="tel:0476385922">04 76 38 59 22</a>
@@ -141,7 +141,7 @@
 
         <!-- Réseaux Sociaux -->
         <div class="social-icons">
-            <a href="https://www.facebook.com" target="_blank" aria-label="Facebook">
+            <a href="https://www.facebook.com/profile.php?id=100038549299473" target="_blank" aria-label="Facebook">
                 <i class="fab fa-facebook"></i>
             </a>
             <a href="https://www.instagram.com" target="_blank" aria-label="Instagram">
