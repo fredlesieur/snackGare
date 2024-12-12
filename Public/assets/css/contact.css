@@ -20,19 +20,19 @@
 .horaire .jour {
     font-weight: bold;
     font-size: 1.3rem;
-    color: #0F2C33;
+    color: #06283d;
 }
 
 /* Style pour les horaires */
 .horaire .horaires {
     font-size: 0.8rem;
-    color: #0F2C33;
+    color: #06283d;
 }
 
 /* maps */
 .contact-map {
     text-align: center;
-    background-color: #0F2C33;
+    background-color: #06283d;
     color: #f5f0e1;
     padding: 20px;
     margin-top: 20px;
@@ -87,12 +87,12 @@
 .horaire .jour {
     font-weight: bold;
     font-size: 2rem;
-    color: #0F2C33;
+    color: #06283d;
 }
 /* Style pour les horaires */
 .horaire .horaires {
     font-size: 1.3rem;
-    color: #0F2C33;
+    color: #06283d;
 }
 
 .address {
@@ -124,13 +124,13 @@
 .horaire .jour {
     font-weight: bold;
     font-size: 2.3rem;
-    color: #0F2C33;
+    color: #06283d;
 }
 
 /* Style pour les horaires */
 .horaire .horaires {
     font-size: 1.5rem;
-    color: #0F2C33;
+    color: #06283d;
 }
 .address {
     margin-top: 15px;

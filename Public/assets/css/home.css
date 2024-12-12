@@ -2,7 +2,7 @@
 body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
-    background-color: #0F2C33;
+    background-color: #06283d;
     color: #E6D1B4;
 }
 
@@ -136,7 +136,7 @@ body {
 
 /* Footer */
 footer {
-    background-color: #0F2C33;
+    background-color: #06283d;
     text-align: center;
     padding: 1rem 0.5rem;
     color: #E6D1B4;
