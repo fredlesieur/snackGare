@@ -2,7 +2,7 @@
 body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
-    background-color: #06283d;
+    background-color: #0F2C33;
     color: #E6D1B4;
 }
 
@@ -49,7 +49,7 @@ body {
 .hero-banner .btn-order {
     padding: 0.8rem 1.5rem;
     background-color: #E6D1B4;
-    color: #06283d !important;
+    color: #0F2C33 !important;
     border:2px solid #E6D1B4;
     text-decoration: none;
     font-size: 1rem;
@@ -57,7 +57,7 @@ body {
     font-weight: bold;
 }
 .hero-banner .btn-order:hover {
-    background-color: #06283d;
+    background-color: #0F2C33;
     color: #E6D1B4 !important;
 }
 .linkhours {
@@ -79,7 +79,7 @@ body {
     font-size: 1.8rem;
     margin-bottom: 1rem;
     color: #EFA00F;
-    text-shadow: 2px 2px #06283d;
+    text-shadow: 2px 2px #0F2C33;
 }
 
 .section p {
@@ -136,7 +136,7 @@ body {
 
 /* Footer */
 footer {
-    background-color: #06283d;
+    background-color: #0F2C33;
     text-align: center;
     padding: 1rem 0.5rem;
     color: #E6D1B4;

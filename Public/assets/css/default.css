@@ -11,7 +11,7 @@ body {
     margin-left :auto;
     margin-right :auto;
     font-family: Arial, sans-serif;
-    background-color: #06283d; /* Couleur de fond générale */
+    background-color: #0F2C33; /* Couleur de fond générale */
     color: #E6D1B4; /* Couleur de texte par défaut */
     overflow-x: hidden; /* Empêche le scroll horizontal */
 }
@@ -52,11 +52,11 @@ a:hover {
     color: #EFA00F !important;
 }
 .linkhours a:hover {
-    color: #06283d !important;
+    color: #0F2C33 !important;
 }
 /* Header */
 header {
-    background-color: #06283d;
+    background-color: #0F2C33;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -81,7 +81,7 @@ header {
     max-width: 1800px;
     margin-left: auto;
     margin-right: auto;
-    background-color: #06283d;
+    background-color: #0F2C33;
 }
 .navbar-nav {
     list-style: none;
@@ -124,7 +124,7 @@ header {
     font-family: 'Roboto', sans-serif;
     color: #E6D1B4; /* Couleur dorée */
     font-size: 1.5rem;
-    text-shadow: 1px 1px #06283d; /* Légère ombre */
+    text-shadow: 1px 1px #0F2C33; /* Légère ombre */
 }
 
 .custom-modal .btn-close {
@@ -142,7 +142,7 @@ header {
 }
 
 .custom-modal .form-control {
-    background-color: #06283d; /* Fond du champ */
+    background-color: #0F2C33; /* Fond du champ */
     color: #E6D1B4; /* Texte clair */
     border: 1px solid #EFA00F; /* Bordure dorée */
     border-radius: 5px;
@@ -156,14 +156,14 @@ header {
 .custom-modal .btn-primary {
     background-color: #EFA00F; /* Bouton doré */
     border-color: #EFA00F;
-    color: #06283d; /* Texte sombre */
+    color: #0F2C33; /* Texte sombre */
     font-weight: bold;
     transition: background-color 0.3s ease;
 }
 
 .custom-modal .btn-primary:hover {
     background-color: #E6D1B4; /* Texte clair */
-    color: #06283d; /* Texte sombre */
+    color: #0F2C33; /* Texte sombre */
 }
 /*modal des liens legaux*/
 .modal-content {
@@ -235,7 +235,7 @@ header {
 
 /* Footer */
 footer {
-    background-color: #06283d;
+    background-color: #0F2C33;
     text-align: center;
 }
 

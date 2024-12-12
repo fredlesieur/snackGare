@@ -1,5 +1,5 @@
 .menu-container {
-    background-color: #06283d;
+    background-color: #0F2C33;
     color: #E6D1B4;
     font-family: 'Roboto', sans-serif;
     max-width: 768px;
@@ -30,7 +30,7 @@
     background-color: #2e9ca0;
     border-top-left-radius: 40px;
     border-bottom-right-radius: 40px;
-    color:#06283d;
+    color:#0F2C33;
     width:100%;
     padding: 20px;
     text-align: center;
@@ -42,7 +42,7 @@
     color: #fff;
 }
 .bleum {
-    color: #06283d;
+    color: #0F2C33;
     font-weight: 700;
 }
 .bleuc{
@@ -78,12 +78,12 @@
     color:#E6D1B4;
 }
 .prix {
-    color:#06283d;
+    color:#0F2C33;
 }
 .menu-item h3 {
     font-size: 1rem;
     margin-bottom: 10px;
-    color: #06283d;
+    color: #0F2C33;
     font-weight: bold;
 }
 
@@ -101,14 +101,14 @@
 
 h2, h4 {
     text-align: center;
-    color:#06283d;
+    color:#0F2C33;
 }
 .border_deco {
    background-color: #E6D1B4;
    border-top-left-radius: 40px;
    border-bottom-right-radius: 40px;
    border-end-start-radius: 10px;
-   color:#06283d;
+   color:#0F2C33;
    width:100%;
    padding:15px;
    text-align: center;

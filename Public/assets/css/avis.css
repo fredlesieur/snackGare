@@ -15,7 +15,7 @@
     font-size: 1.8rem;
     color: #EFA00F; /* Couleur dorée */
     margin-bottom: 15px;
-    text-shadow: 1px 1px #06283d; /* Ombre légère */
+    text-shadow: 1px 1px ##0F2C33; /* Ombre légère */
 }
 
 /* Sous-titre */
@@ -69,7 +69,7 @@
 .form-container .form-control, 
 .form-container .form-select {
     background-color: #f5f0e1; /* Fond transparent */
-    color: #0f2c33; /* Texte blanc */
+    color: #0F2C33; /* Texte blanc */
     padding: 10px;
     font-size: 1rem;
     margin-bottom: 15px;
