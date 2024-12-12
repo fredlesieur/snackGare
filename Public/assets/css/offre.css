@@ -31,3 +31,9 @@ h5 {
         color: #e6d1b4;
 
 }
+/* Tablettes (min-width: 768px) */
+@media (max-width: 768px) {
+        .menu-section {
+                padding : 3rem 4.5rem;
+        }
+}
