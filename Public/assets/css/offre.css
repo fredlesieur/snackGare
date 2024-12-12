@@ -3,7 +3,7 @@
         border-top-left-radius: 40px;
         border-bottom-right-radius: 40px;
         color:#0F2C33;
-        width:100%;
+        max-width:768px;
         padding: 20px;
         text-align: center;
         margin-bottom: 30px;
