@@ -43,12 +43,11 @@ h5 {
                 padding: 2rem 1.5rem;
         }
         .menu-item {
-                padding: 20px;
+                padding: 50px;
         }
-        h3 {
-                font-size: 1.5rem;
-        }
-        h5 {
-                font-size: 1.2rem;
+        body {
+        margin:0;
+        padding:0;
+        width:100%;
         }
 }
