@@ -17,7 +17,7 @@
                 <div class="text-container">
                     <h2>
                         <?php if ($section['title'] === 'En ce moment'): ?>
-                            <a href="/offres"><?= htmlspecialchars($section['title'] ?? 'Titre indisponible'); ?></a>
+                            <a href="/offre"><?= htmlspecialchars($section['title'] ?? 'Titre indisponible'); ?></a>
                         <?php elseif ($section['title'] === 'Nos spécialités'): ?>
                             <a href="/menu"><?= htmlspecialchars($section['title'] ?? 'Titre indisponible'); ?></a>
                         <?php else: ?>
